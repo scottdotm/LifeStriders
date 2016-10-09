@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Physician's Form</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+          <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
+     </head>
+     <body>
+          <div class="container" id="wrapperOverall">
+               <div class="container row theWrapper">
+                    <!--Insert form name -->
+                    <div id="formPhysicianForm" class ="well ">
+                         <div class="row" style="margin-top: 15px;">
+                              <div class="col-md-8" style="margin-left: 2.0em;">  
+                                   <h1 style="color: #CC0000;">LifeStriders</h1>
+                              </div>
+                              <div class="col-md-1"> </div>
+                              <div class="col-md-2 text-right">
+                                   Phone: 262.309.9297 <wbr>
+                                   Fax: 866.404.3105  <wbr>
+                                   counseling@lifestriders.org  <wbr>
+
+                                   <br>
+
+                                   Sll W29667 Summit Avenue (US HWY 18) <wbr>
+                                   Waukesha, WI 53188  <wbr>
+
+                              </div>
+                         </div>
+                         <div class='row'>
+                              <div class='text-center'>
+                                   <h2>Physician's Order for Individual Counseling/Group Therapy/Occupational Therapy</h2>
+                                   <h3>(Must be signed by treating Medical Specialist</h3>
+                              </div>
+                              <form method="post">
+                                   <div class="form-group">
+                                        <label for="clientName">Client Name: </label>
+                                        <input type="text" class="form-control" id="clientName">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="birthDate">Birthdate: </label>
+                                        <input type="date" class="form-control" id="birthdate">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="address">Address: </label>
+                                        <input type="text" class="form-control" id="address">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="phone">Phone Number: </label>
+                                        <input type="tel" class="form-control" id="phone">
+                                   </div>
+                                   <!-- Needs to be implemented -->
+                                   <div class="form-group">
+                                        <label for="hasBeenDeemed">Has been deemed eligible for: </label>
+                                        <br>
+                                        Occupational therapy services based on evaluation  <input type="radio" id="OccuTherapy" value='Occupational therapy services based on evaluation'>
+                                        <br>
+                                        Individual Counseling and/or Group Therapy services based on evaluation  <input type='radio' id='igTherapy' value='Individual Counseling and/or Group Therapy services based on evaluation'>
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="medDiag">Medical Diagnosis/Description of Disability: </label>
+                                        <input type="text" class="form-control" id="medDiag">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="preCon">Precautions/Contraindications: </label>
+                                        <input type="text" class="form-control" id="preCon">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="addCom">Additional Comments: </label>
+                                        <input type="text" class="form-control" id="addCom">
+                                   </div>
+                                   <h3>This referral form will be valid for 1 year, unless services are terminated, there is a change in the above mentioned participants
+                                        medical status, or an updated order is necessary.</h3>
+                                   <div class="form-group">
+                                        <label for="physName">Physician's Name: </label>
+                                        <input type="text" class="form-control" id="physName">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="physPhone">Physician's Phone: </label>
+                                        <input type="tel" class="form-control" id="physPhone">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="physAddress">Physician's Address: </label>
+                                        <input type="text" class="form-control" id="physAddress">
+                                   </div>
+                                   <!-- This is where the big question of signatures comes into place -->
+                                   <div class="form-group">
+                                        <label for="physSig">Physician's Signature: </label>
+                                        <input type="text" class="form-control" id="physSig">
+                                   </div>
+                                   <div class="form-group">
+                                        <label for="todayDate">Todays Date: </label>
+                                        <input type="text" class="form-control" id="todayDate">
+                                   </div>
+                                   <input type="button" id="printPreviewButton" class="btn btn-danger" value="Sumit for Print Preview">
+                               </form>
+                         </div>
+                    </div>
+               </div>
+               <div class="container row theWrapper">
+                    <div id="printPreviewPhysicianFormOVER"  class="container row"> 
+                         <div class="row">
+                              <div id="printPreviewPhysicianForm" class=" col-md-12 container">
+                                   <div class=" row" style="margin-top: 15px;">
+                                        <div class="col-md-8" style="margin-left: 2.0em;" >  
+                                             <h1 style="color: #CC0000;">LifeStriders</h1>
+                                        </div>
+                                        <div class="col-md-1"> </div>
+                                        <div class="col-md-2 text-right">
+                                             <!-- make a list with no bullet points -->
+                                             Phone: 262.309.9297 <wbr>
+                                             Fax: 866.404.3105 <wbr>
+                                             counseling@lifestriders.org <wbr>
+                                             <br>
+                                             Sll W29667 Summit Avenue (US HWY 18) <wbr>
+                                             Waukesha, WI 53188 <wbr>
+                                        </div>
+                                   </div>
+                                   <br>
+                                   <p>Welcome to LifeStriders. We look foward to helping you reach your personal Life Strides. This form requests information about your needs
+                                        and informs you of the services offered and the policies we adhere to. Please take a few moments to complete these forms. The questions on
+                                        the following pages are designed to help us best meet your treatment needs. <span style="font-weight:bold;"> <wbr> If the person seeking care is a child, the parent / guardian
+                                             should complete this form.</span>  If you have any questions, we will be happy to answer them <p>
+                                   <h3 class="text-center">Physician's Form</h3>
+                                   <!--Client-->
+                                   <p id="printPreviewCN"></p>
+                                   <p id="printPreviewBD"></p>
+                                   <p id="printPreviewAD"></p>
+                                   <p id="printPreviewPH"></p>
+                                   <p id="printPreviewMD"></p>
+                                   <p id="printPreviewPC"></p>
+                                   <p id="printPreviewAC"></p>
+                                   <!--Physican-->
+                                   <p id="printPreviewPN"></p>
+                                   <p id="printPreviewPP"></p>
+                                   <p id="printPreviewPD"></p>
+                                   <p id="printPreviewPS"></p>
+                                   <p id="printPreviewTD"></p>
+                                  
+                              </div>
+                              <input class="btn btn-danger" type="submit" id="printButton" value="Print">
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+          <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
+          <script src="Scripts/physicianForm.js" type="text/javascript"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     </body>
+</html>

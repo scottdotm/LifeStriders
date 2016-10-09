@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 6, 2016, 3:39:46 PM
+    Author     : Matthew_2
+*/
+body{
+    background-color: #EDE4BD;
+}
+#wrapperOverall {
+    background-color: #EDE4BD;
+}
+#printPreviewConsultingForm{
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
+#printPreviewPhysicianForm{
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
+#printPreviewConsultingFormOVER, #formConsultingForm{
+    background-color: #fff;
+ 
+}
+#printPreviewPhysicianFormOVER, #formPhysicianForm{
+    background-color: #fff;
+ 
+}
+
+#printButton{
+    margin-top: -2px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+.wrapperOverall{
+    background-color: #EDE4BD;
+}
+.theWrapper{
+       margin-top: 20px;
+}
