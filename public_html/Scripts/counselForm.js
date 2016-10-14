@@ -8,7 +8,7 @@ $(document).ready(function (e) {
     $('#printPreviewConsultingFormOVER').hide();
 
 
-
+//Matt's way of creating print preview
     $('#printPreviewButton').click(function (e) {
          //Contact
         var todayDate = $('#todayDate').val();

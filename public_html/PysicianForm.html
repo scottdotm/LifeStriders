@@ -6,6 +6,7 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
           <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
+          <link rel="shortcut icon" href="">
      </head>
      <body>
           <div class="container" id="wrapperOverall">
@@ -40,8 +41,8 @@
                                         <input type="text" class="form-control" id="clientName">
                                    </div>
                                    <div class="form-group">
-                                        <label for="birthDate">Birthdate: </label>
-                                        <input type="date" class="form-control" id="birthdate">
+                                        <label for="birthDate">Birth Date: </label>
+                                        <input type="date" class="form-control" id="birthDate">
                                    </div>
                                    <div class="form-group">
                                         <label for="address">Address: </label>
@@ -51,7 +52,7 @@
                                         <label for="phone">Phone Number: </label>
                                         <input type="tel" class="form-control" id="phone">
                                    </div>
-                                   <!-- Needs to be implemented -->
+                                   <!-- Needs to be implementing -->
                                    <div class="form-group">
                                         <label for="hasBeenDeemed">Has been deemed eligible for: </label>
                                         <br>
@@ -119,25 +120,29 @@
                                         </div>
                                    </div>
                                    <br>
-                                   <p>Welcome to LifeStriders. We look foward to helping you reach your personal Life Strides. This form requests information about your needs
+                                   <p>Welcome to LifeStriders. We look forward to helping you reach your personal Life Strides. This form requests information about your needs
                                         and informs you of the services offered and the policies we adhere to. Please take a few moments to complete these forms. The questions on
                                         the following pages are designed to help us best meet your treatment needs. <span style="font-weight:bold;"> <wbr> If the person seeking care is a child, the parent / guardian
                                              should complete this form.</span>  If you have any questions, we will be happy to answer them <p>
                                    <h3 class="text-center">Physician's Form</h3>
+                                   <!--These are the imports for the Physician's Form javascript file - make sure not to reuse naming convensions-->
                                    <!--Client-->
-                                   <p id="printPreviewCN"></p>
-                                   <p id="printPreviewBD"></p>
-                                   <p id="printPreviewAD"></p>
-                                   <p id="printPreviewPH"></p>
-                                   <p id="printPreviewMD"></p>
-                                   <p id="printPreviewPC"></p>
-                                   <p id="printPreviewAC"></p>
-                                   <!--Physican-->
-                                   <p id="printPreviewPN"></p>
-                                   <p id="printPreviewPP"></p>
-                                   <p id="printPreviewPD"></p>
-                                   <p id="printPreviewPS"></p>
-                                   <p id="printPreviewTD"></p>
+                                   <h3> Client Information</h3>
+                                   <!--<p id="testing"></p>-->
+                                   <p id="CN"></p>
+                                   <p id="BD"></p>
+                                   <p id="AD"></p>
+                                   <p id="PH"></p>
+                                   <p id="MD"></p>
+                                   <p id="PC"></p>
+                                   <p id="AC"></p>
+                                   <!--Physician-->
+                                   <h3> Physician Information </h3>
+                                   <p id="PN"></p>
+                                   <p id="PP"></p>
+                                   <p id="PD"></p>
+                                   <p id="PS"></p>
+                                   <p id="TD"></p>
                                   
                               </div>
                               <input class="btn btn-danger" type="submit" id="printButton" value="Print">
