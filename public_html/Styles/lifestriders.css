@@ -23,6 +23,11 @@ body{
     
     -webkit-print-color-adjust: exact;
 }
+#printPreviewVolunteerForm{
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
 #printPreviewConsultingFormOVER, #formConsultingForm{
     background-color: #fff;
  
