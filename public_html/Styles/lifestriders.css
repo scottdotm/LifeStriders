@@ -36,6 +36,10 @@ body{
     background-color: #fff;
  
 }
+#printPreviewVolunteerFormOVER, #formVolunteerForm{
+    background-color: #fff;
+ 
+}
 
 #printButton{
     margin-top: -2px;
@@ -47,4 +51,15 @@ body{
 }
 .theWrapper{
        margin-top: 20px;
+}
+.box {
+  border: 1px solid black ;
+  width: 10px;
+  padding: 5px;
+  display:inline-block;
+}
+.field{
+     padding: 20px;
+     display:inline-block;
+     /*line-height: 0.8;*/
 }
