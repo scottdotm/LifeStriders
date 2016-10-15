@@ -22,7 +22,8 @@ $(document).ready(function (e) {
                     var getFullIndex = [item.id];
                     return getFullIndex.toString();
                }
-               for (i = -1, len = formfield.length; i<len ; i++) {
+               for (i = 0, len = formfield.length; i<len ; i++) {
+                    $('#printPreviewDisplay').append("<li class='list-group-item'>"+formfield.map(getDisplay)[i]+"</li>");
                     $(formfield.map(getId)[i]).html(formfield.map(getDisplay)[i]);
                }
           } catch (err){
@@ -38,6 +39,3 @@ $(document).ready(function (e) {
           $("#printPreviewVolunteerForm").printArea(options);
      });
 });
-     
-          
- 
