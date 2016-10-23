@@ -1,20 +1,32 @@
 <!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
 <html>
      <head>
           <title>Counseling Registration  Form</title>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+
           <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
-          <link rel="shortcut icon" href="">
+
+
      </head>
      <body>
+
           <div class="container" id="wrapperOverall">
+
                <div class="container row theWrapper">
-                    <div id="formConsultingForm" class ="well ">
+
+                    <div id="formConsultingForm" class ="well">
+                         <h1 class="text-center"> Counseling Form </h1>
                          <div class="row" style="margin-top: 15px;">
+
                               <div class="col-md-8" style="margin-left: 2.0em;">  
-                                   <h1 style="color: #CC0000;">LifeStriders</h1>
+                                   <h2 style="color: #CC0000;">LifeStriders</h1>
                               </div>
                               <div class="col-md-1"> </div>
                               <div class="col-md-2 text-right">
@@ -29,91 +41,336 @@
 
                               </div>
                          </div>
+
                          <br>
-                         <p>Welcome to LifeStriders. We look forward to helping you reach your personal Life Strides. This form requests information about your needs
+
+                         <p>Welcome to LifeStriders. We look foward to helping you reach your personal Life Strides. This form requests information about your needs
                               and informs you of the services offered and the policies we adhere to. Please take a few moments to complete these forms. The questions on
                               the following pages are designed to help us best meet your treatment needs. <span style="font-weight:bold;"> If the person seeking care is a child, the parent / guardian
                                    should complete this form.</span>  If you have any questions, we will be happy to answer them <p>
+
                          <h3 class="text-center">Client Information Form</h3>
+
                          <form method="post">
-                              <div class="row">
-                                   <div class="col-md-3">
-                                        <h3>Contact</h3>
-                                        <div class="form-group">
-                                             <label for="todayDate">Todays Date: </label>
-                                             <input type="date" class="form-control" id="todayDate">
+
+                              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                             <h4 class="panel-title">
+                                                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                       Client Information
+                                                  </a>
+                                             </h4>
                                         </div>
-                                        <div class="form-group">
-                                             <label for="firstName">First Name: </label>
-                                             <input type="text" class="form-control" id="firstName" placeholder="First-Name..">
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="lastName">Last Name: </label>
-                                             <input type="text" class="form-control" id="lastName" placeholder="Last-Name..">
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="age">Age: </label>
-                                             <input type="number" class="form-control" id="age" placeholder="Age..">
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="phone">Phone Number: </label>
-                                             <input type="tel" class="form-control" id="phone" placeholder="Phone Number..">
-                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                             <div class="panel-body">
+
+                                                  <div class="form-group">
+                                                       <label for="firstName">First Name: </label>
+                                                       <input type="text" class="form-control" id="firstName" placeholder="First-Name..">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="lastName">Last Name: </label>
+                                                       <input type="text" class="form-control" id="lastName" placeholder="Last-Name..">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="birthDate">Birth Date: </label>
+                                                       <input type="date" class="form-control" id="birthDate">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                       <label for="sex"> Sex: </label>
+                                                       <select class="form-control" id="sex">
+                                                            <option> Male </option>
+                                                            <option> Female </option>
+                                                            <option> I wish not to say </option>
+                                                       </select>
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                       <label for="marital"> Marital Status: </label>
+                                                       <select class="form-control" id="marital">
+                                                            <option> Married </option>
+                                                            <option> Single </option>
+                                                            <option> Separated  </option>
+                                                            <option> Divorced </option>
+                                                            <option> Widowed </option>
+                                                       </select>
+                                                  </div>
+
+                                                  <label for="clientAddress"> Where Do you Live?  </label>
+                                                  <div id="clientAddress" class="form-inline form-group input-group-sm ">
+                                                       <label class="label label-default" for="cAddress">Address </label>
+                                                       <input type="text" class="form-control  input-sm" id="cAddress" placeholder="Address">
 
 
+                                                       <label class="label label-default" for="cCity">City </label>
+                                                       <input type="text" class="form-control input-sm" id="cCity" placeholder="City">
 
+                                                       <label class="label label-default" for="cState">State </label>
+                                                       <input type="text" class="form-control input-sm" id="cState" placeholder="State">
+
+                                                       <label class="label label-default" for="cZipCode">Zip Code </label>
+                                                       <input type="text" class="form-control input-sm" id="cZipCode" placeholder="Zip Code">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                       <label for="homePhone">Home Phone #: </label>
+                                                       <input type="tel" class="form-control" id="homePhone" placeholder="(xxx)-xxx-xxxx">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                       <label for="myEmail">My E-Mail: </label>
+                                                       <input type="email" class="form-control" id="myEmail" placeholder="My Email...">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                       <label for="workPhone">Work Phone #: </label>
+                                                       <input type="tel" class="form-control" id="workPhone" placeholder="(xxx)-xxx-xxxx">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="cellPhone">Cell Phone #: </label>
+                                                       <input type="tel" class="form-control" id="cellPhone" placeholder="(xxx)-xxx-xxxx">
+                                                  </div>
+
+
+                                                  <div class="form-group">
+                                                       <label for="employerName"> Employer's Name: </label>
+                                                       <input type="text" class="form-control" id="employerName" placeholder="Employer's Name...">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="socSecNum"> Your SSN: </label>
+                                                       <input type="text" class="form-control" id="socSecNum" placeholder="SSN...">
+                                                  </div>
+
+
+                                                  <div class="form-group">
+                                                       <label for="parentName"> If minor: Parents Name </label>
+                                                       <input type="text" class="form-control" id="parentName" placeholder="Parents Name..">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="hisherDOB"> His / Her Date of Birth </label>
+                                                       <input type="date" class="form-control" id="hisherDOB">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="hisherSSN"> His / Her SSN:  </label>
+                                                       <input type="text" class="form-control" id="hisherSSN" placeholder="His / Her SSN...">
+                                                  </div>
+
+
+                                                  <div class="form-group">
+                                                       <label for="emerCon"> Emergency Contact: </label>
+                                                       <input type="text" class="form-control" id="emerCon" placeholder="Emergency Contract...">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="emerRelation"> Relationship: </label>
+                                                       <input type="text" class="form-control" id="emerRelation" placeholder="Relationship...">
+                                                  </div>
+                                                  <div class="form-group">
+                                                       <label for="emerPhone"> Phone #: </label>
+                                                       <input type="tel" class="form-control" id="emerPhone" placeholder="(xxx)-xxx-xxxx">
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                       <label for="hearAbout"> How did you hear about LifeStriders?  </label>
+                                                       <textarea id="hearAbout" class="form-control" rows="3"></textarea>
+                                                  </div>
+                                             </div>
+                                        </div>
                                    </div>
-                                   <!-- Medications are going to be some sort of input for how many medications are they taking -->
-                                   <!-- NEEDS INPUT FOR HOW MANY MEDICATIONS BEING TAKEN CURRENTLY (Max 6 on current form)-->
-                                   <div class="col-md-3">
-                                        <H3>Medications</h3>
-                                        <div class="form-group">
-                                             <label for="perscBy">Prescribed by: </label>
-                                             <input type="text" class="form-control" id="perscBy" placeholder="Perscribed by doctor...">
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                             <h4 class="panel-title">
+                                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                                     aria-controls="collapseTwo">
+                                                       Medical Information
+                                                  </a>
+                                             </h4>
                                         </div>
-                                        <div class="form-group">
-                                             <label for="medication">Medication: </label>
-                                             <input type="text" class="form-control" id="medication" placeholder="Medication...">
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="dosage">Dosage: </label>
-                                             <input type="text" class="form-control" id="dosage" placeholder="Dosage...">
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="howLongTaken">Taken how long?: </label>
-                                             <input type="text" class="form-control" id="howLongTaken" placeholder="How long taken...">
-                                        </div>
-                                   </div>
-                                   <div class='row'>
-                                        <H3>Current Medical Condition</h3>
-                                        <div class='col-md-1'>
-                                        <div class="form-group">
-                                             <label for="allergie">Allergies: </label>
-                                             <input type="checkbox" class="form-control" id="allergie">
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="asthma">Asthma: </label>
-                                             <input type="checkbox" class="form-control" id="asthma">
-                                        </div>
-                                             <div class="form-group">
-                                             <label for="arthritis">Arthritis: </label>
-                                             <input type="checkbox" class="form-control" id="arthritis">
-                                        </div>
-                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                             <div class="panel-body">
+                                                  <label for='medSec1'> 1) Please fill in all current medications you are taking: </label>
+                                                  <div id='medSec1' class='formgroup'>
+                                                       <div class="medication-group" id="medication-group">
+                                                            Please list all current medications you are taking
+                                                            <br>
+                                                            <div id="meds">
+                                                                 <div class="input-group medication-1">
+                                                                      <label for="medication-1-name">Medication</label>
+                                                                      <input type="text" class="form-control medication-name" id="medication-1-name">
+                                                                      <label for="medication-1-prescriber">Prescribed By</label>
+                                                                      <input type="text" class="form-control medication-prescriber" id="medication-1-prescriber">
+                                                                      <label for="medication-1-dosage">Dosage</label>
+                                                                      <input type="text" class="form-control medication-dosage" id="medication-1-dosage">
+                                                                      <label for="medication-1-duration">Taken How Long?</label>
+                                                                      <input type="text" class="form-control medication-duration" id="medication-1-duration">
+                                                                 </div>
+                                                            </div>
+                                                            <br>
+                                                            <button type="button" id="add-medication" value="add">More</button>
+                                                       </div>
 
+                                                  </div>
+
+                                                  <br>
+
+                                                  <label for='medSec2'> 2) Allergy (Medication): </label>
+                                                  <div id='medSec2' class='formgroup'>
+
+                                                       <textarea id="allegMed" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+
+                                                  <div id='medSec3' class='formgroup'>
+                                                       <label for='currentCare'> 3) Are You currently under a physicians's care?: </label>
+                                                       <input type="text" class="form-control form-inline" id="currentCare" placeholder="...">
+
+
+                                                       <label for="currentName"> &nbsp;&nbsp; Name: </label>
+                                                       <input type="text" class="form-control" id="currentName" placeholder="Name...">
+                                                       <label for="currentDateSeen"> &nbsp; &nbsp; Date Last Seen: </label>
+                                                       <input type="Date" class="form-control" id="currentDateSeen">
+                                                       <label for="currentProblem"> &nbsp;&nbsp; Problem: </label>
+                                                       <input type="text" class="form-control" id="currentProblem" placeholder="Problem...">
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <div id='medSec4' class='formgroup'>
+                                                       <label for='medDoctorName'>4) Medical Doctor: </label>
+                                                       <input type="text" class="form-control" id="medDoctorName" placeholder="Medical Doctor...">
+
+                                                       <label for="medDocPhone"> &nbsp;&nbsp; Phone #: </label>
+                                                       <input type="tel" class="form-control" id="medDocPhone" placeholder="(xxx)-xxx-xxxx">
+
+                                                       <label for="medDocDate"> &nbsp; &nbsp; Date of Last Physical Exam: </label>
+                                                       <input type="Date" class="form-control" id="medDocDate">
+                                                  </div>
+
+                                                  <br>
+
+                                                  <label for='medSec5'> 5) Current Medical Conditions: (Please Check) </label>
+                                                  <div id='medSec5' class='formgroup'>
+                                                       <!-- Zach's check list -->
+                                                       <p></p>
+                                                  </div>
+
+                                                  <br>
+
+
+                                                  <div id='medSec6' class='formgroup'>
+                                                       <label for='sigMedProb'> 6) Significant past medical problems if not indicated above: </label>
+                                                       <textarea id="sigMedProb" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <div id='medSec7' class='formgroup'>
+                                                       <label for='pastSurg'> 7) Past Surgery: </label>
+                                                       <textarea id="pastSurg" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <div id='medSec8' class='formgroup'>
+                                                       <label for='pastAccid'> 8) Past Accidents: </label>
+                                                       <textarea id="pastAccid" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <div id='medSec9' class="form-group">
+                                                       <label for="rateHealth"> 9) How do you rate your current physical health? </label>
+                                                       <select class="form-control" id="rateHealth">
+                                                            <option> Excellent </option>
+                                                            <option> Good </option>
+                                                            <option> Fair  </option>
+                                                            <option> Poor </option>
+                                                       </select>
+                                                  </div>
+
+                                                  <br>
+
+                                                  <div id='medSec10' class='formgroup'>
+                                                       <label for='reasonSeekTreat'> 10) Please describe your reasons for seeking treatment at this time. If there is a particular event which triggered you decision to seek treatment <wbr>
+                                                            now please list the event(s): </label>
+                                                       <textarea id="reasonSeekTreat" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <!-- On paper / pdf version 11 was skipped and went to 12/13 right away  -->
+
+                                                  <div id='medSec11' class='formgroup'>
+                                                       <label for='expectTreatment'> 11) What results do you expect from treatment? </label>
+                                                       <textarea id="expectTreatment" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <!-- On paper / pdf version 11 was skipped and went to 12/13 right away  -->
+
+                                                  <div id='medSec12' class='formgroup'>
+                                                       <label for='mentalHealthTreatment'> 12) If you received mental health treatment in the past, please list the aspects of treatment that you feel worked the best and what did not work for <wbr>
+                                                            you. </label>
+                                                       <textarea id="mentalHealthTreatment" class="form-control" rows="3"></textarea>
+
+                                                  </div>
+
+                                                  <br>
+
+                                                  <label for='medSec13'> 13) How is the issue(s) for which you are seeking treatment affecting the following areas of your life? </label>
+                                                  <div id='medSec13' class='formgroup'>
+                                                       <!-- Zach's table -->
+                                                       <p></p>
+                                                  </div>
+                                             </div>
+                                        </div>
                                    </div>
                               </div>
-                              <input type="button" id="printPreviewButton" class="btn btn-danger" value="Sumit for Print Preview">
+
+                              <br>
+                              <br>
+
+                              <h4 class='text-center'>Treat <br> Philosophy</h4>
+
+                              <p> At LifeStriders we believe in providing goal-directed, client-centered therapy in a manner that best meets the individual needs of our <wbr>
+                                   clients. This means that treatment goals are established after a thorough assessment. All treatment is then planned with the goal in mind <wbr>
+                                   and progress is made toward accomplishment of that goal in a time efficient manner. If you ever have any questions about the nature <wbr> 
+                                   of the treatments or anything else about your care, please don't hesitate to ask.</p>
+
+                              <p style="font-weight: bold;">I understand and agree to all the above information.</p>
+
+                              <br>
+                              <hr class="divider" style=" height: 1.2px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);">
+
+                              <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
                          </form>
                     </div>
                </div>
+
+               <!--   -----------------------------------------------------------------------------------------      -->
+
                <div class="container row theWrapper">
+
                     <div id="printPreviewConsultingFormOVER"  class="container row"> 
+
                          <div class="row">
+                              <h1 style="margin-top: 25px;" class="text-center"> Counseling Form </h1>
                               <div id="printPreviewConsultingForm" class=" col-md-12 container">
+
                                    <div class=" row" style="margin-top: 15px;">
                                         <div class="col-md-8" style="margin-left: 2.0em;" >  
-                                             <h1 style="color: #CC0000;">LifeStriders</h1>
+                                             <h2 style="color: #CC0000;">LifeStriders</h1>
                                         </div>
                                         <div class="col-md-1"> </div>
                                         <div class="col-md-2 text-right">
@@ -121,44 +378,171 @@
                                              Phone: 262.309.9297 <wbr>
                                              Fax: 866.404.3105 <wbr>
                                              counseling@lifestriders.org <wbr>
+
                                              <br>
+
                                              Sll W29667 Summit Avenue (US HWY 18) <wbr>
                                              Waukesha, WI 53188 <wbr>
+
                                         </div>
                                    </div>
+
                                    <br>
+
                                    <p>Welcome to LifeStriders. We look foward to helping you reach your personal Life Strides. This form requests information about your needs
                                         and informs you of the services offered and the policies we adhere to. Please take a few moments to complete these forms. The questions on
                                         the following pages are designed to help us best meet your treatment needs. <span style="font-weight:bold;"> <wbr> If the person seeking care is a child, the parent / guardian
                                              should complete this form.</span>  If you have any questions, we will be happy to answer them <p>
+
                                    <h3 class="text-center">Client Information Form</h3>
+
                                    <!--  add labels not in js doc   -->
-                                   <h3>Contact</h3>
+                                   <label for="printPreviewTD">Todays Date: </label>
                                    <p id="printPreviewTD"></p>
+                                   <label for="printPreviewFN">First Name: </label>
                                    <p id="printPreviewFN"></p>
+                                   <label for="printPreviewLN">Last Name: </label>
                                    <p id="printPreviewLN"></p>
-                                   <p id="printPreviewAGE"></p>
-                                   <H3>Medications</h3>
-                                   <p id="printPreviewPB"></p>
-                                   <p id="printPreviewME"></p>
-                                   <p id="printPreviewDO"></p>
-                                   <p id="printPreviewHT"></p>
-                                   <H3>Current Medical Condition</h3>
-                                   <p id="printPreviewAL"></p>
-                                   <p id="printPreviewAS"></p>
-                                   <p id="printPreviewAR"></p>
+                                   <label for="printPreviewBD">Birth Date: </label>
+                                   <p id="printPreviewBD"></p>
+                                   <label for="printPreviewSX">Sex: </label>
+                                   <p id="printPreviewSX"></p>
+                                   <label for="printPreviewMS">Marital Status: </label>
+                                   <p id="printPreviewMS"></p>
 
 
+                                   <label for="pAddress">Address: </label>
+                                   <p id="pAddress"> </p>
+                                   <label for="pCity"> City: </label>
+                                   <p id="pCity"> </p>
+                                   <label for="pState"> State: </label>
+                                   <p id="pState"> </p>
+                                   <label for="pZipCode"> Zip Code: </label>
+                                   <p id="pZipCode"> </p>
+
+                                   <label for="pHomePhone"> Home Phone #: </label>
+                                   <p id="pHomePhone"> </p>
+                                   <label for="pMyEmail"> My Email: </label>
+                                   <p id="pMyEmail"> </p>
+                                   <label for="pWorkPhone"> Work Phone #: </label>
+                                   <p id="pWorkPhone"> </p>
+                                   <label for="pCellPhone"> Cell Phone #: </label>
+                                   <p id="pCellPhone"> </p>
+
+                                   <label for="pEmployersName"> Employer's Name: </label>
+                                   <p id="pEmployersName"> </p>
+                                   <label for="pSocSecNum"> Your SSN: </label>
+                                   <p id="pSocSecNum"> </p>
+
+
+                                   <label for="pParentName"> If Minor: Parents Name </label>
+                                   <p id="pParentName"> </p>
+                                   <label for="pHisHerDOB"> His / Her DOB: </label>
+                                   <p id="pHisHerDOB"> </p>
+                                   <label for="pHisHerSSN"> His / Her SSN: </label>
+                                   <p id="pHisHerSSN"> </p>
+
+                                   <label for="pEmerCon"> Emergency Contract: </label>
+                                   <p id="pEmerCon"> </p>
+                                   <label for="pEmerRel"> Relationship: </label>
+                                   <p id="pEmerRel"> </p>
+                                   <label for="pEmerPhone"> Phone #: </label>
+                                   <p id="pEmerPhone"> </p>
+
+                                   <label for="pHearAbout"> How did you hear about Lifestriders? </label>
+                                   <p id="pHearAbout"> </p>
+
+                                   <br>
                                    <hr>
+
+                                   <h3 class="text-center"> Medical Form</h3>
+
+                                   <label for='pMedSec1'> 1) All current medications you are taking: </label>
+                                   <!-- Zach's table -->
+
+                                   <p></p>
+
+                                   <label for='pMedSec2'> 2) Allergy (Medication): </label>
+                                   <p id="pAllegMed"> </p>
+
+                                   <label for='pCurrentCare'> 3) Currently under a physicians's care? </label>
+                                   <p id="pCurrentCare"> </p>
+
+                                   <label for='pCurrentName'> Name: </label>
+                                   <p id="pCurrentName"> </p>
+                                   <label for='pCurrentDateSeen'> Date Last Seen: </label>
+                                   <p id="pCurrentDateSeen"> </p>
+                                   <label for='pCurrentProblem'> Problem: </label>
+                                   <p id="pCurrentProblem"> </p>
+
+                                   <label for='pMedDocName'> 4) Medical Doctor: </label>
+                                   <p id="pMedDocName"> </p>
+                                   <label for='pMedDocPhone'> Phone: </label>
+                                   <p id="pMedDocPhone"> </p>
+                                   <label for='pMedDocDate'> Date of Last Physical Exam: </label>
+                                   <p id="pMedDocDate"> </p>
+
+                                   <label for='medSec5'> 5) Current Medical Conditions: </label>
+                                   <p></p>
+
+                                   <label for='pSigMedProb'> 6) Significant Medical Problems: </label>
+                                   <p id='pSigMedProb'></p>
+
+                                   <label for='pPastSurg'> 7) Past Surgery: </label>
+                                   <p id='pPastSurg'></p>
+
+                                   <label for='pPastAccid'> 8) Past Accidents: </label>
+                                   <p id='pPastAccid'></p>
+
+                                   <label for='pRateHealth'> 9) Physical Health Rating: </label>
+                                   <p id='pRateHealth'></p>
+
+                                   <label for='pReasonSeekTreat'> 10) Reasons for Seeking Treatment: </label>
+                                   <p id='pReasonSeekTreat'></p>
+
+                                   <label for='pExpectTreatment'> 11) Results from Treatment Expected: </label>
+                                   <p id='pExpectTreatment'></p>
+
+                                   <label for='pMentalHealthTreatment'> 12) Mental Health Treatment Past:  </label>
+                                   <p id='pMentalHealthTreatment'></p>
+
+                                   <label for='pSec13'> 13) Issues seeking affection:  </label>
+                                   <p id='pSec13'></p>
+
+
+                                   <br>
+                                   <br>
+
+                                   <h4 class='text-center'>Treat <br> Philosophy</h4>
+
+                                   <p> At LifeStriders we believe in providing goal-directed, client-centered therapy in a manner that best meets the individual needs of our <wbr>
+                                        clients. This means that treatment goals are established after a thorough assessment. All treatment is then planned with the goal in mind <wbr>
+                                        and progress is made toward accomplishment of that goal in a time efficient manner. If you ever have any questions about the nature <wbr> 
+                                        of the treatments or anything else about your care, please don't hesitate to ask.</p>
+
+                                   <p style="font-weight: bold;">I understand and agree to all the above information.</p>
+
+                                   <hr class="divider" style=" height: 1.2px; background: #333; background-image: linear-gradient(to right, #ccc, #333, #ccc);">
+                                   <br>
+
+
+
                               </div>
-                              <input class="btn btn-danger" type="submit" id="printButton" value="Print">
+
+                              <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                          </div>
+
                     </div>
+
                </div>
           </div>
+
           <script src="http://code.jquery.com/jquery-latest.min.js"></script>
           <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
           <script src="Scripts/counselForm.js" type="text/javascript"></script>
+
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
      </body>
 </html>
