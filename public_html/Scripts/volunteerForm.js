@@ -4,7 +4,8 @@
 //Scott M.
 //10/13/2016
 
-$(document).ready(function (e) {
+$(document).ready(function (e) {     
+     
      /*   
       * UserException can be used to throw custom exceptions in Javascript,
       * this helped myself with debuging the logic located within this Javascript file.
