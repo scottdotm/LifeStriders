@@ -59,7 +59,7 @@ $(document).ready(function (e) {
                          {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
                          {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
                     ];
-                    volChecklist = [
+                    checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
                          "Where to go in case of tornado",
@@ -83,15 +83,16 @@ $(document).ready(function (e) {
                          "No weapons, illegal drugs or paraphernalia policy",
                          "Clothing"
                     ];
-                    for (i = 0, len = volChecklist.length; i < len; i++) {
-                         $('#volunteerChecklist').append("<div class='box'></div><div class='field'>" + volChecklist[i] + "</div><br>");
+                    console.log(checklist.toString());
+                    for (i = 0, len = checklist.length; i < len; i++) {
+                         $('#volunteerChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else if (age < 18) {
                     formfield = [
                          {display: "Parent/Guardian Name: " + $('#guaName').val(), id: '#PN'},
                          {display: "Parent/Guardian Signature: " + $('#guaSig').val(), id: '#PS'}
                     ];
-                    minorChecklist = [
+                    checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
                          "Where to go in case of tornado",
@@ -123,8 +124,8 @@ $(document).ready(function (e) {
                          "Clothing",
                          "Communication between instructor and volunteers about comfort in job being done"
                     ];
-                    for (i = 0, len = minorChecklist.length; i < len; i++) {
-                         $('#minorChecklist').append("<div class='box'></div><div class='field'>" + minorChecklist[i] + "</div><br>");
+                    for (i = 0, len = checklist.length; i < len; i++) {
+                         $('#minorChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else {
                     window.location = "VolunteerForm.html";
@@ -154,6 +155,9 @@ $(document).ready(function (e) {
                     $('#printPreviewDisplay').append("<li class='list-group-item'>" + formfield.map(getDisplay)[i] + "</li>");
                     $(formfield.map(getId)[i]).html(formfield.map(getDisplay)[i]);
                }
+               //Empty all arrays
+               formfield = [];
+               checklist = [];
           } catch (err) {
                alert(err.message);
           }
