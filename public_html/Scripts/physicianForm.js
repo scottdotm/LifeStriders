@@ -48,7 +48,3 @@ $(document).ready(function (e) {
           $("#printPreviewPhysicianForm").printArea(options);
      });
 });
-    
-    
-
-

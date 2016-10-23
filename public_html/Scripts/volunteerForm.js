@@ -1,12 +1,14 @@
+/* global volCheckList, minorCheckList */
+
 //JavaScript Document
-//Scott
+//Scott M.
 //10/13/2016
 
 $(document).ready(function (e) {
      /*   
       * UserException can be used to throw custom exceptions in Javascript,
       * this helped myself with debuging the logic located within this Javascript file.
-     */
+      */
      function UserException(message) {
           this.message = message;
           this.name = "UserException";
@@ -21,12 +23,13 @@ $(document).ready(function (e) {
           if (age >= 18) {
                vfield = "<div class='form-group'><label for='volName'>Volunteer Name: </label>\n\<input type='text' class='form-control' id='volName'></div>\n\
                        <div class='form-group'><label for='volSig'>Volunteer Signature: </label><input type='text' class='form-control' id='volSig'></div>";
-               $('#testing').append(vfield);
+               $('#dismissalfield').append(vfield);
           } else if (age < 18) {
                gfield = "<div class='form-group'><label for='guaName'>Parent/Guardian Name: </label><input type='text' class='form-control' id='guaName'></div>\n\
                        <div class='form-group'><label for='guaSig'>Parent/Guardian Signature: </label><input type='text' class='form-control' id='guaSig'></div>";
-               $('#testing').append(gfield);
+               $('#dismissalfield').append(gfield);
           } else {
+               window.location = "VolunteerForm.html";
                throw new UserException("Invalid Age");
           }
      } catch (err) {
@@ -49,20 +52,83 @@ $(document).ready(function (e) {
 
 
 
-
+               //------------------------------------------------------------//
                //This will be taken from the given date in the above form.
                if (age >= 18) {
                     formfield = [
                          {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
                          {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
                     ];
+                    volChecklist = [
+                         "Tour of facility",
+                         "Fire extinguishers, first aid kits, and emergency number locations",
+                         "Where to go in case of tornado",
+                         "Bathrooms and bubbler",
+                         "Sign in and name tags",
+                         "Job of a barn helper",
+                         "Make sure stall doors are all the way open and locks are out of the way when taking horses in and out of stalls",
+                         "Pasture etiquette",
+                         "Fence gates, latched and closed behind you, unless you are leaving them open for horses to graze",
+                         "Never go out to pastures alone unless you have graduated to a white name tag",
+                         "Check all water tanks",
+                         "Use a carrot stick when feeding grain in paddocks and never do by yourself",
+                         "Make sure to check with staff which paddocks horses should be returned to",
+                         "Boarder horses are not to be handled by volunteers unless approved by Program Manager",
+                         "Individual personalities of equines, body language of horses",
+                         "How to hold a lead rope",
+                         "How to groom, needing initials to do it by yourself",
+                         "No more than 2 people to a horse while grooming",
+                         "How to sign up and / or cancel volunteer times",
+                         "No “striking” policy",
+                         "No weapons, illegal drugs or paraphernalia policy",
+                         "Clothing"
+                    ];
+                    for (i = 0, len = volChecklist.length; i < len; i++) {
+                         $('#volunteerChecklist').append("<div class='box'></div><div class='field'>" + volChecklist[i] + "</div><br>");
+                    }
                } else if (age < 18) {
                     formfield = [
                          {display: "Parent/Guardian Name: " + $('#guaName').val(), id: '#PN'},
                          {display: "Parent/Guardian Signature: " + $('#guaSig').val(), id: '#PS'}
                     ];
+                    minorChecklist = [
+                         "Tour of facility",
+                         "Fire extinguishers, first aid kits, and emergency number locations",
+                         "Where to go in case of tornado",
+                         "Bathrooms and bubbler",
+                         "Sign in and name tags",
+                         "Tack room lay out and organization",
+                         "Where treats are located and how many treats to feed",
+                         "How clients should offer treats to horses",
+                         "Quick Release ties and no horse left alone protocol",
+                         "Stalls",
+                         "Please don’t tie horses unless necessary, and never tie the horse with a rider on",
+                         "Loading areas and protocol as well as gates",
+                         "Safety stirrups",
+                         "How to hold a lead rope",
+                         "How to position correctly as a side walker",
+                         "Different holds – on and off of the horse",
+                         "Emergency dismounts - practice",
+                         "Job of a leader",
+                         "Job of a side walker",
+                         "Job of a barn helper, i.e. hoof picking, grooming, turn out",
+                         "Ability to walk (fast) and trot along side or leading",
+                         "Come into center for any questions",
+                         "Individual personalities of equines",
+                         "Pasture etiquette",
+                         "Be respectful of clients",
+                         "No “Striking” Policy",
+                         "How to sign up and/or cancel volunteer times",
+                         "No Weapons, illegal drugs or paraphernalia policy",
+                         "Clothing",
+                         "Communication between instructor and volunteers about comfort in job being done"
+                    ];
+                    for (i = 0, len = minorChecklist.length; i < len; i++) {
+                         $('#minorChecklist').append("<div class='box'></div><div class='field'>" + minorChecklist[i] + "</div><br>");
+                    }
                } else {
-                    throw new UserException("Invalid Age");
+                    window.location = "VolunteerForm.html";
+                    throw new UserException("Error in Print Preview Javascript.");
                }
                ;
                /*
