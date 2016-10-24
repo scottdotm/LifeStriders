@@ -21,11 +21,13 @@ $(document).ready(function (e) {
           //This will be taken from the given date in the above form.
           var age = prompt("How old are you", "00");
           if (age >= 18) {
-               vfield = "<div class='form-group'><label for='volName'>Volunteer Name: </label>\n\<input type='text' class='form-control' id='volName'></div>\n\
+               
+               var vfield = "<div class='form-group'><label for='volName'>Volunteer Name: </label>\n\<input type='text' class='form-control' id='volName'></div>\n\
                        <div class='form-group'><label for='volSig'>Volunteer Signature: </label><input type='text' class='form-control' id='volSig'></div>";
                $('#dismissalfield').append(vfield);
           } else if (age < 18) {
-               gfield = "<div class='form-group'><label for='guaName'>Parent/Guardian Name: </label><input type='text' class='form-control' id='guaName'></div>\n\
+               
+               var gfield = "<div class='form-group'><label for='guaName'>Parent/Guardian Name: </label><input type='text' class='form-control' id='guaName'></div>\n\
                        <div class='form-group'><label for='guaSig'>Parent/Guardian Signature: </label><input type='text' class='form-control' id='guaSig'></div>";
                $('#dismissalfield').append(gfield);
           } else {
@@ -48,18 +50,24 @@ $(document).ready(function (e) {
                 * unless new data is entered into our map in which case, new functions are needed to 
                 * exctract data from the map.
                 */
-
+               var formfield = [
+                 {display: "Last Name: " + $('#lastName').val(), id: '#LN'},
+                 {display: "First Name: " + $('#firstName').val(), id: '#FN'},
+                 {display: "Date of Birth: " + $('#dob').val(), id: '#DOB'},
+                 {display: "Phone Number: " + $('#phone').val(), id: '#PN'}
+                 ];
 
 
 
                //------------------------------------------------------------//
                //This will be taken from the given date in the above form.
                if (age >= 18) {
-                    formfield = [
+                    formfield.push(
                          {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
                          {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
-                    ];
-                    checklist = [
+                                 );
+                         
+                    var checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
                          "Where to go in case of tornado",
@@ -83,15 +91,14 @@ $(document).ready(function (e) {
                          "No weapons, illegal drugs or paraphernalia policy",
                          "Clothing"
                     ];
-                    console.log(checklist.toString());
                     for (i = 0, len = checklist.length; i < len; i++) {
                          $('#volunteerChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else if (age < 18) {
-                    formfield = [
+                    formfield.push(
                          {display: "Parent/Guardian Name: " + $('#guaName').val(), id: '#PN'},
                          {display: "Parent/Guardian Signature: " + $('#guaSig').val(), id: '#PS'}
-                    ];
+                    );
                     checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
@@ -163,9 +170,6 @@ $(document).ready(function (e) {
           }
           $('html,body').scrollTop(0);
           $('#formVolunteerForm').hide();
-//          $('#myModal').on('shown.bs.modal', function () {
-//               $('#myInput').focus();
-//          });
           $('#printPreviewVolunteerFormOVER').show();
      });
      $("#printButton").click(function () {
