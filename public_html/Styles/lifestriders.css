@@ -60,5 +60,8 @@ body{
 }
 h2{
      text-align: center;
-
+}
+img{
+     max-width: 30%;
+     height: auto;
 }
