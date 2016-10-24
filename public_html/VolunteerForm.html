@@ -10,9 +10,44 @@
           <link rel="shortcut icon" href="">
      </head>
      <body>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h2 class="modal-title" id="myModalLabel">Submitting Filled Out Form</h2>
+                         </div>
+                         <div class="modal-body">
+                              <p>
+                                   You are submitting the filed out form to the print preview
+                                   screen, this screen resembles what the printout form will
+                                   look like (with filled out information).  After viewing
+                                   this screen, please click "Print" to be taken to the actual
+                                   print screen.
+                              </p>
+                         </div>
+                         <div class="modal-footer">
+                              <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-remove-sign" >
+                                        Close
+                                   </span>
+                              </button>
+                              <!-- Button class used for import of glyphicon,
+                              this will need to be changed when the user uses
+                              Internet Explorer due to input/button conflicts-->
+                              <button form="form1" type="button" id="printPreviewButton" class="btn btn-danger" value="Submit" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-ok-sign">
+                                        Print Preview
+                                   </span>
+                              </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- /Modal -->
           <div class="container" id="wrapperOverall">
                <div class="container row theWrapper">
-                    <!--Insert form name -->
                     <div id="formVolunteerForm" class ="well ">
                          <div class="row" style="margin-top: 15px;">
                               <div class="col-md-8" style="margin-left: 2.0em;">  
@@ -34,7 +69,7 @@
                          </div>
                          <br>
                          <h3 class="text-center">Volunteer Information Form</h3>
-                         <form method="POST">
+                         <form method="POST" id="form1">
                               <div class="row">
                                    <div class="col-md-12">
                                         <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
@@ -147,7 +182,14 @@
                                              </ul>
                                         </div>
                                    </div>
-                                   <input type="button" id="printPreviewButton" class="btn btn-danger" value="Sumit for Print Preview">
+                                   <!-- Button trigger modal -->
+                                   <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                                        <span class="glyphicon glyphicon-modal-window">
+                                             Submit
+                                        </span>
+                                   </button>
+
+                                   <!--<input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit for Print Preview">-->
                               </div>
                          </form>
                     </div>

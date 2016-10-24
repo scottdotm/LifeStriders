@@ -163,6 +163,9 @@ $(document).ready(function (e) {
           }
           $('html,body').scrollTop(0);
           $('#formVolunteerForm').hide();
+//          $('#myModal').on('shown.bs.modal', function () {
+//               $('#myInput').focus();
+//          });
           $('#printPreviewVolunteerFormOVER').show();
      });
      $("#printButton").click(function () {

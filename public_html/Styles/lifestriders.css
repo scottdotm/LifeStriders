@@ -5,6 +5,13 @@
 body{
     background-color: #EDE4BD;
 }
+h2{
+     text-align: center;
+}
+img{
+     max-width: 30%;
+     height: auto;
+}
 #wrapperOverall {
     background-color: #EDE4BD;
 }
@@ -35,11 +42,13 @@ body{
     background-color: #fff;
  
 }
-
 #printButton{
     margin-top: -2px;
     margin-left: 25px;
     margin-bottom: 25px;
+}
+#cancel{
+     float: left;
 }
 .wrapperOverall{
     background-color: #EDE4BD;
@@ -58,10 +67,4 @@ body{
      display:inline-block;
 /*     line-height: 0.8;*/
 }
-h2{
-     text-align: center;
-}
-img{
-     max-width: 30%;
-     height: auto;
-}
+
