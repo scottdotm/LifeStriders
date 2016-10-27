@@ -1,0 +1,658 @@
+<!--test-->
+<html>
+    <head>
+        <title>Riding Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="container" id="wrapperOverall">
+            <div class="container row theWrapper">
+                <!--Insert form name -->
+                <div id="formRiderForm" class ="well ">
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-8" style="margin-left: 2.0em;">  
+                            <h1 style="color: #CC0000;">LifeStriders</h1>
+                            <img src="Assets/PATHlogo.png" class="img-fluid" alt="Responsive image">
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2 text-right">
+                            Phone: 262.309.9297 <wbr>
+                            Fax: 866.404.3105  <wbr>
+                            counseling@lifestriders.org  <wbr>
+
+                            <br>
+
+                            Sll W29667 Summit Avenue (US HWY 18) <wbr>
+                            Waukesha, WI 53188  <wbr>
+
+                        </div>
+                    </div>
+                    <h3 class="text-center">Therapeutic Riding Form</h3>
+                    <form method="post">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Authorization for Emergency Medical Treatment Form
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <input  id="opt1" type="radio" name="riderType" value="therapeutic" checked> Therapeutic Riding<br>
+                                            <input  id="opt2" type="radio" name="riderType" value="occupational"> Occupational Therapy/Hippotherapy
+                                            <br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="firstName">First Name: </label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="First-Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name: </label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Last-Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthDate">Birth Date: </label>
+                                            <input type="date" class="form-control" id="birthDate" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="homePhone">Home Phone: </label>
+                                            <input type="text" class="form-control" id="homePhone" placeholder="Phone-Number..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email: </label>
+                                            <input type="text" class="form-control" id="email"placeholder="Email..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Address: </label>
+                                            <input type="text" class="form-control" id="address" placeholder="Address..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city">City: </label>
+                                            <input type="text" class="form-control" id="city" placeholder="City..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state">State: </label>
+                                            <input type="text" class="form-control" id="state" placeholder="State..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="zip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="zip" placeholder="Zip Code..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="doctor">Physician's Name: </label>
+                                            <input type="text" class="form-control" id="address" placeholder="Physician's Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="medical">Medical Facility: </label>
+                                            <input type="text" class="form-control" id="medical" placeholder="Medical Facility..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="insurance">Health Insurance Company: </label>
+                                            <input type="text" class="form-control" id="insurance" placeholder="Health Insurance Co..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="policyNo">Policy Number: </label>
+                                            <input type="text" class="form-control" id="policyNo" placeholder="Policy Number..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="primaryDob">Primary Insured's DOB: </label>
+                                            <input type="date" class="form-control" id="primaryDob" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="allergies"> Allergies to Medications?  </label>
+                                            <textarea id="allergies" class="form-control" rows="3" placeholder="List Medications Here.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="medications"> Current Medications? </label>
+                                            <textarea id="medications" class="form-control" rows="3" placeholder="List Current Medications"></textarea>
+                                        </div>
+                                        <h4>In the event of an emergency, contact: </h4>  
+                                        <div class="form-group">
+                                            <div class="col-md-4">
+                                                <label for="contactName1">Name: </label>
+                                                <input type="text" class="form-control" id="contactName1" placeholder="First and Last Name..">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="relation1">Relation: </label>
+                                                <input type="text" class="form-control" id="relation1" placeholder="Relationship..">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="contactNum1">Phone: </label>
+                                                <input type="text" class="form-control" id="contactNum1" placeholder="Contact Number..">
+                                            </div>
+                                            <br>
+                                            <div class="col-md-4">
+                                                <label for="contactName2">Name: </label>
+                                                <input type="text" class="form-control" id="contactName2" placeholder="First and Last Name..">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="relation2">Relation: </label>
+                                                <input type="text" class="form-control" id="relation2" placeholder="Relationship..">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="contactNum2">Phone: </label>
+                                                <input type="text" class="form-control" id="contactNum2" placeholder="Contact Number..">
+                                            </div>
+                                            <br>
+                                            <div class="col-md-4">
+                                                <label for="contactName3">Name: </label>
+                                                <input type="text" class="form-control" id="contactName3" placeholder="First and Last Name..">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="relation3">Relation: </label>
+                                                <input type="text" class="form-control" id="relation3" placeholder="Relationship..">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="contactNum3">Phone: </label>
+                                                <input type="text" class="form-control" id="contactNum3" placeholder="Contact Number..">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4>In the event emergency medical aid/treatment is required due to illness or injury during the process of receiving services, or while being on the property of the agency, I authorize LifeStriders to:</h4>
+
+                                            <p>1. Secure and retain medical treatment and transportation if needed.<br>
+                                                2. Release client records upon request to the authorized individual or agency involved in the medical emergency treatment.</p>
+                                        </div>
+                                        <h4>Consent Plan</h4>
+                                        <p>This authorization includes x-ray, surgery, hospitalization, medication and any treatment procedure deemed “life saving'' by the physician. This provision will only be invoked if the person(s) above is unable to be reached.</p>
+                                        <div class="form-group">
+                                            <label for="signedDate">Date: </label>
+                                            <input type="date" class="form-control" id="signedDate" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="consentSign">Consent Signature: </label>
+                                            <input type="text" class="form-control" id="consentSign" placeholder="Client, Parent, Foster parent or Legal Gaurdian..">
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                           aria-controls="collapseTwo">
+                                            Participant’s Application and Health History
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name: </label>
+                                            <input type="text" class="form-control" id="firstName" placeholder="First-Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name: </label>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Last-Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gender">Gender</label><br>
+                                            <input type="radio" name="gender" value="male" checked> Male
+                                            <input type="radio" name="gender" value="female"> Female
+                                            <br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="birthDate">Birth Date: </label>
+                                            <input type="date" class="form-control" id="birthDate" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="height">Height: </label>
+                                            <input type="text" class="form-control" id="height" placeholder="Height..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="weight">Weight: </label>
+                                            <input type="text" class="form-control" id="weight" placeholder="Weight..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="veteran">Veteran</label><br>
+                                            <input type="radio" name="veteran" value="no" checked> No
+                                            <input type="radio" name="veteran" value="yes"> Yes
+                                            <br>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ethnicity">Ethnicity: </label>
+                                            <input type="text" class="form-control" id="ethnicity" placeholder="For Grant Writing Purposes Only..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="address">Address: </label>
+                                            <input type="text" class="form-control" id="address" placeholder="Address..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="city">City: </label>
+                                            <input type="text" class="form-control" id="city" placeholder="City..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="state">State: </label>
+                                            <input type="text" class="form-control" id="state" placeholder="State..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="zip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="zip" placeholder="Zip Code..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="phone">Phone: </label>
+                                            <input type="text" class="form-control" id="phone" placeholder="Phone-Number..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="altPhone">Alternate Phone Number: </label>
+                                            <input type="text" class="form-control" id="altPhone" placeholder="Alternate Number..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email: </label>
+                                            <input type="text" class="form-control" id="email"placeholder="Email..">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" name="company" value="employer" checked>      Employer
+                                            <input type="radio" name="company" value="school">      School
+                                            <input type="radio" name="company" calue="other">      Other <br>  
+                                            <label for="companyName">Name: </label>
+                                            <input type="text" class="form-control" id="companyName"placeholder="School/Employer..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyAddress">Address: </label>
+                                            <input type="text" class="form-control" id="companyAddress" placeholder="Company Address..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyCity">City: </label>
+                                            <input type="text" class="form-control" id="companyCity" placeholder="Company City..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyState">State: </label>
+                                            <input type="text" class="form-control" id="companyState" placeholder="Company State..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyZip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="companyZip" placeholder="Company Zip Code..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="companyPhone">Phone: </label>
+                                            <input type="text" class="form-control" id="companyPhone" placeholder="Company Phone..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianFirstName">Parent/Legal Gaurdian First Name: </label>
+                                            <input type="text" class="form-control" id="gaurdianFirstName" placeholder="First..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianLastName">Parent/Legal Gaurdian Last Name: </label>
+                                            <input type="text" class="form-control" id="gaurdianLastName" placeholder="Last..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianAddress">Address: </label>
+                                            <input type="text" class="form-control" id="gaurdianAddress" placeholder="Gaurdian Address..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianCity">City: </label>
+                                            <input type="text" class="form-control" id="gaurdianCity" placeholder="Gaurdian City..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianState">State: </label>
+                                            <input type="text" class="form-control" id="gaurdianState" placeholder="Gaurdian State..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianZip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="gaurdianZip" placeholder="Gaurdian Zip Code..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="gaurdianPhone">Phone: </label>
+                                            <input type="text" class="form-control" id="gaurdianPhone" placeholder="Gaurdian Phone..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="referral">Referral Source: </label>
+                                            <input type="text" class="form-control" id="referral" placeholder="Referral..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="referralNum">Contact Number: </label>
+                                            <input type="text" class="form-control" id="referralNum" placeholder="Referral Number..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="hearAbout">How Did you Hear About the Program: </label>
+                                            <textarea class="form-control" id="hearAbout" row="3" placeholder="Let us know here.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="diagnosis">Diagnosis: </label>
+                                            <textarea class="form-control" id="diagnosis" row="3" placeholder="Diagnosis(s).."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                           aria-controls="collapseThree">
+                                            Participant’s Health History
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <table style="width:100%" class="form-group">
+                                            <caption>Please Indicate Current or Past Problems in the Following Areas: </caption>
+                                            <tr>
+                                                <th></th>
+                                                <th>Yes</th>
+                                                <th>Comments</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Vision</td>
+                                                <td><input type="checkbox" name="vision" value="vision"></td>
+                                                <td><textarea class="form-control" id="visionComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hearing</td>
+                                                <td><input type="checkbox" name="hearing" value="hearing"></td>
+                                                <td><textarea class="form-control" id="hearingComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sensation</td>
+                                                <td><input type="checkbox" name="sensation" value="sensation"></td>
+                                                <td><textarea class="form-control" id="sensationComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Communication</td>
+                                                <td><input type="checkbox" name="comm" value="comm"></td>
+                                                <td><textarea class="form-control" id="commComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Heart</td>
+                                                <td><input type="checkbox" name="heart" value="heart"></td>
+                                                <td><textarea class="form-control" id="heartComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Breathing</td>
+                                                <td><input type="checkbox" name="breathing" value="breathing"></td>
+                                                <td><textarea class="form-control" id="breathingComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Digestion</td>
+                                                <td><input type="checkbox" name="digest" value="digest"></td>
+                                                <td><textarea class="form-control" id="digestComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Elimination</td>
+                                                <td><input type="checkbox" name="eliminate" value="eliminate"></td>
+                                                <td><textarea class="form-control" id="eliminateComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Circulation</td>
+                                                <td><input type="checkbox" name="circulate" value="circulate"></td>
+                                                <td><textarea class="form-control" id="circulateComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Emotional</td>
+                                                <td><input type="checkbox" name="emotion" value="emotion"></td>
+                                                <td><textarea class="form-control" id="emotionComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Behavioral</td>
+                                                <td><input type="checkbox" name="behave" value="behave"></td>
+                                                <td><textarea class="form-control" id="behaveComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pain</td>
+                                                <td><input type="checkbox" name="pain" value="pain"></td>
+                                                <td><textarea class="form-control" id="painComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bone/Joint</td>
+                                                <td><input type="checkbox" name="bone" value="bone"></td>
+                                                <td><textarea class="form-control" id="boneComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Muscular</td>
+                                                <td><input type="checkbox" name="muscle" value="muscle"></td>
+                                                <td><textarea class="form-control" id="muscleComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thinking/Cognition</td>
+                                                <td><input type="checkbox" name="think" value="think"></td>
+                                                <td><textarea class="form-control" id="thinkComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Allergies</td>
+                                                <td><input type="checkbox" name="allergy" value="allergy"></td>
+                                                <td><textarea class="form-control" id="allergyComment" row="2" placeholder="Comment here.."></textarea></td>
+                                            </tr>
+                                        </table> 
+                                        <div class="form-group">
+                                            <label for="medications">What Medications are you Currently Taking Including Over the Counter? </label>
+                                            <textarea class="form-control" id="medications" row="3" placeholder="Medications.."></textarea>
+                                        </div>
+                                        <h4>Describe your abilities/difficulties in the following area (include assistance required or equipment needed):</h4>
+                                        <div class="form-group">
+                                            <label for="function">FUNCTION (i.e. Mobility skills such as transfers, walking, wheelchair use, driving/bus riding)</label>
+                                            <textarea class="form-control" id="function" row="3" placeholder="i.e. Mobility skills such as transfers, walking, wheelchair use, driving/bus riding.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="social">SOCIAL (i.e. Work/school including grade completed, leisure interests, relationships-family structure, support systems, companion animals, fears/concerns, etc.)</label>
+                                            <textarea class="form-control" id="social" row="3" placeholder="i.e. Work/school including grade completed, leisure interests, relationships-family structure, support systems, companion animals, fears/concerns, etc..."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="goals">GOALS (i.e. Why are you applying for participation? What would you like to accomplish?)</label>
+                                            <textarea class="form-control" id="goals" row="3" placeholder="i.e. Why are you applying for participation? What would you like to accomplish.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tips">TIPS (phrases, gestures, prompts, insights, anything that might help our volunteers / instructors)</label>
+                                            <textarea class="form-control" id="tips" row="3" placeholder="phrases, gestures, prompts, insights, anything that might help our volunteers / instructors.."></textarea>
+                                        </div>
+                                        <table style="width:100%" class="form-group">
+                                            <caption>How is the issue for which you are seeking treatment affecting the following areas of your life? </caption>
+                                            <tr>
+                                                <th></th>
+                                                <th>No Effect</th>
+                                                <th>Little Effect</th>
+                                                <th>Some Effect</th>
+                                                <th>Significant Effect</th>
+                                                <th>Not Applicable</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Friendships</td>
+                                                <td><input type="radio" name="friendships" value="noEffect"></td>
+                                                <td><input type="radio" name="friendships" value="littleEffect"></td>
+                                                <td><input type="radio" name="friendships" value="someEffect"></td>
+                                                <td><input type="radio" name="friendships" value="significantEffect"></td>
+                                                <td><input type="radio" name="friendships" value="notApplicable" checked></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Family</td>
+                                                <td><input type="radio" name="family" value="noEffect"></td>
+                                                <td><input type="radio" name="family" value="littleEffect"></td>
+                                                <td><input type="radio" name="family" value="someEffect"></td>
+                                                <td><input type="radio" name="family" value="significantEffect"></td>
+                                                <td><input type="radio" name="family" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Job/School Performance</td>
+                                                <td><input type="radio" name="jobSchool" value="noEffect"></td>
+                                                <td><input type="radio" name="jobSchool" value="littleEffect"></td>
+                                                <td><input type="radio" name="jobSchool" value="someEffect"></td>
+                                                <td><input type="radio" name="jobSchool" value="significantEffect"></td>
+                                                <td><input type="radio" name="jobSchool" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial Situation</td>
+                                                <td><input type="radio" name="financial" value="noEffect"></td>
+                                                <td><input type="radio" name="financial" value="littleEffect"></td>
+                                                <td><input type="radio" name="financial" value="someEffect"></td>
+                                                <td><input type="radio" name="financial" value="significantEffect"></td>
+                                                <td><input type="radio" name="financial" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Physical Health</td>
+                                                <td><input type="radio" name="phisical" value="noEffect"></td>
+                                                <td><input type="radio" name="phisical" value="littleEffect"></td>
+                                                <td><input type="radio" name="phisical" value="someEffect"></td>
+                                                <td><input type="radio" name="phisical" value="significantEffect"></td>
+                                                <td><input type="radio" name="phisical" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mood</td>
+                                                <td><input type="radio" name="mood" value="noEffect"></td>
+                                                <td><input type="radio" name="mood" value="littleEffect"></td>
+                                                <td><input type="radio" name="mood" value="someEffect"></td>
+                                                <td><input type="radio" name="mood" value="significantEffect"></td>
+                                                <td><input type="radio" name="mood" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ability to Concentrate</td>
+                                                <td><input type="radio" name="concentrate" value="noEffect"></td>
+                                                <td><input type="radio" name="concentrate" value="littleEffect"></td>
+                                                <td><input type="radio" name="concentrate" value="someEffect"></td>
+                                                <td><input type="radio" name="concentrate" value="significantEffect"></td>
+                                                <td><input type="radio" name="concentrate" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Eating Habits</td>
+                                                <td><input type="radio" name="eating" value="noEffect"></td>
+                                                <td><input type="radio" name="eating" value="littleEffect"></td>
+                                                <td><input type="radio" name="eating" value="someEffect"></td>
+                                                <td><input type="radio" name="eating" value="significantEffect"></td>
+                                                <td><input type="radio" name="eating" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sleeping Habits</td>
+                                                <td><input type="radio" name="sleeping" value="noEffect"></td>
+                                                <td><input type="radio" name="sleeping" value="littleEffect"></td>
+                                                <td><input type="radio" name="sleeping" value="someEffect"></td>
+                                                <td><input type="radio" name="sleeping" value="significantEffect"></td>
+                                                <td><input type="radio" name="sleeping" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ability to Form Lasting Relationships</td>
+                                                <td><input type="radio" name="relationships" value="noEffect"></td>
+                                                <td><input type="radio" name="relationships" value="littleEffect"></td>
+                                                <td><input type="radio" name="relationships" value="someEffect"></td>
+                                                <td><input type="radio" name="relationships" value="significantEffect"></td>
+                                                <td><input type="radio" name="relationships" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ability to Control Anger</td>
+                                                <td><input type="radio" name="anger" value="noEffect"></td>
+                                                <td><input type="radio" name="anger" value="littleEffect"></td>
+                                                <td><input type="radio" name="anger" value="someEffect"></td>
+                                                <td><input type="radio" name="anger" value="significantEffect"></td>
+                                                <td><input type="radio" name="anger" value="notApplicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"class="form-control" id="other" placeholder="Other"></td>
+                                                <td><input type="radio" name="other" value="noEffect"></td>
+                                                <td><input type="radio" name="other" value="littleEffect"></td>
+                                                <td><input type="radio" name="other" value="someEffect"></td>
+                                                <td><input type="radio" name="other" value="significantEffect"></td>
+                                                <td><input type="radio" name="other" value="notApplicable" checked></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="container row theWrapper">
+
+                <div id="printPreviewRiderFormOVER"  class="container row"> 
+
+                    <div class="row">
+                        <h1 style="margin-top: 25px;" class="text-center"> Rider Form </h1>
+                        <div id="printPreviewRiderForm" class=" col-md-12 container">
+
+                            <div class=" row" style="margin-top: 15px;">
+                                <div class="col-md-8" style="margin-left: 2.0em;" >  
+                                    <h2 style="color: #CC0000;">LifeStriders</h1>
+                                </div>
+                                <div class="col-md-1"> </div>
+                                <div class="col-md-2 text-right">
+                                    <!-- make a list with no bullet points -->
+                                    Phone: 262.309.9297 <wbr>
+                                    Fax: 866.404.3105 <wbr>
+                                    counseling@lifestriders.org <wbr>
+
+                                    <br>
+
+                                    Sll W29667 Summit Avenue (US HWY 18) <wbr>
+                                    Waukesha, WI 53188 <wbr>
+
+                                </div>
+                            </div>
+
+                            <br>
+
+
+
+                            <h3 class="text-center">Rider Form</h3>
+
+                            
+                            <label for="pRiderType">Rider Type: </label>
+                            <p id="pRiderType"></p>
+                            <label for="pFirstName">First Name: </label>
+                            <p id="pFirstName"></p>
+
+                            <label for="plastName">Last Name: </label>
+                            <p id="pLastName"></p>
+
+                            <label for="pBirthDate">Birth Date: </label>
+                            <p id="pBirthDate"></p>
+
+                            <label for="pHomePhone">Home Phone: </label>
+                            <p id="pHomePhone"></p>
+
+                            <label for="pEmail">Email: </label>
+                            <p id="pEmail"></p>
+
+                            <label for="pAddress">Address: </label>
+                            <p id="pAddress"></p>
+
+                            <label for="pCity">City: </label>
+                            <p id="pCity"></p>
+
+                            <label for="pState">State: </label>
+                            <p id="pState"></p>
+
+                            <label for="pZip">Zip Code: </label>
+                            <p id="pZip"></p>
+
+                            <label for="pDoctor">Physician's Name: </label>
+                            <p id="pDoctor"></p>
+
+                            <label for="pMedical">Medical Facility: </label>
+                            <p id="pMedical"></p>
+
+                            <label for="pInsurance">Health Insurance Company: </label>
+                            <p id="pInsurance"></p>
+
+                            <label for="pPolicyNo">Policy Number: </label>
+                            <p id="pPolicyNo"></p>
+
+                            <label for="pPrimaryDob">Primary Insured's DOB: </label>
+                            <p id="pPrimaryDob"></p>
+
+                            <label for="pAllergies"> Allergies to Medications?  </label>
+                            <p id="pAllergies"></p>
+
+                            <label for="pMedications"> Current Medications? </label>
+                            <p id="pMedications"></p>
+
+                        </div>
+                        <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
+        <script src="Scripts/ridingForm.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
