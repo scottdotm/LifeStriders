@@ -4,7 +4,7 @@
 //Scott M.
 //10/13/2016
 
-$(document).ready(function (e) {     
+$(document).ready(function (e) {
      /*   
       * UserException can be used to throw custom exceptions in Javascript,
       * this helped myself with debuging the logic located within this Javascript file.
@@ -21,14 +21,14 @@ $(document).ready(function (e) {
           //This will be taken from the given date in the above form.
           var age = prompt("How old are you", "00");
           if (age >= 18) {
-               
-               var vfield = "<div class='form-group'><label for='volName'>Volunteer Name: </label>\n\<input type='text' class='form-control' id='volName'></div>\n\
-                       <div class='form-group'><label for='volSig'>Volunteer Signature: </label><input type='text' class='form-control' id='volSig'></div>";
+               var volName = "<div class='form-group'><label for='volName'>Volunteer Name: </label>\n\<input type='text' class='form-control' id='volName'></div>";
+               var volSig = "<div class='form-group'><label for='volSig'>Volunteer Signature: </label><input type='text' class='form-control' id='volSig'></div>";
+               var vfield = volName + volSig;
                $('#dismissalfield').append(vfield);
           } else if (age < 18) {
-               
-               var gfield = "<div class='form-group'><label for='guaName'>Parent/Guardian Name: </label><input type='text' class='form-control' id='guaName'></div>\n\
-                       <div class='form-group'><label for='guaSig'>Parent/Guardian Signature: </label><input type='text' class='form-control' id='guaSig'></div>";
+               var guaName = "<div class='form-group'><label for='guaName'>Parent/Guardian Name: </label><input type='text' class='form-control' id='guaName'></div>";
+               var guaSig = "<div class='form-group'><label for='guaSig'>Parent/Guardian Signature: </label><input type='text' class='form-control' id='guaSig'></div>";
+               var gfield = guaName + guaSig;
                $('#dismissalfield').append(gfield);
           } else {
                window.location = "VolunteerForm.html";
@@ -51,11 +51,11 @@ $(document).ready(function (e) {
                 * exctract data from the map.
                 */
                var formfield = [
-                 {display: "Last Name: " + $('#lastName').val(), id: '#LN'},
-                 {display: "First Name: " + $('#firstName').val(), id: '#FN'},
-                 {display: "Date of Birth: " + $('#dob').val(), id: '#DOB'},
-                 {display: "Phone Number: " + $('#phone').val(), id: '#PN'}
-                 ];
+                    {display: "Last Name: " + $('#lastName').val(), id: '#LN'},
+                    {display: "First Name: " + $('#firstName').val(), id: '#FN'},
+                    {display: "Date of Birth: " + $('#dob').val(), id: '#DOB'},
+                    {display: "Phone Number: " + $('#phone').val(), id: '#PN'}
+               ];
 
 
 
@@ -63,10 +63,10 @@ $(document).ready(function (e) {
                //This will be taken from the given date in the above form.
                if (age >= 18) {
                     formfield.push(
-                         {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
-                         {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
-                                 );
-                         
+                            {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
+                            {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
+                    );
+
                     var checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
@@ -96,8 +96,8 @@ $(document).ready(function (e) {
                     }
                } else if (age < 18) {
                     formfield.push(
-                         {display: "Parent/Guardian Name: " + $('#guaName').val(), id: '#PN'},
-                         {display: "Parent/Guardian Signature: " + $('#guaSig').val(), id: '#PS'}
+                            {display: "Parent/Guardian Name: " + $('#guaName').val(), id: '#PN'},
+                            {display: "Parent/Guardian Signature: " + $('#guaSig').val(), id: '#PS'}
                     );
                     checklist = [
                          "Tour of facility",
