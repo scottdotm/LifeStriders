@@ -3,34 +3,14 @@
 //Hide one div and show a div. tado
 
 $(document).ready(function (e) {
-    var d = new Date();
-    var curr_date = d.getDate();
-    //Months are zero based
-    var curr_month = d.getMonth() + 1;
-    var curr_year = d.getFullYear();
-    $('html,body').scrollTop(0);
-    $('#printPreviewConsultingFormOVER').hide();
-    
-    
 
-    var medId = 1;
-    $("#add-medication").click(function(){
-        medId++;
-        $("#meds").append('<div class="input-group medication-'+medId+'">'+
-            '\n\<label for="medication-'+medId+'-name">Medication</label>'+
-            '\n\<input type="text" class="medication-name" id="medication-'+medId+'-name">'+
-            '\n\<label for="medication-'+medId+'-prescriber">Prescribed By</label>'+
-            '\n\<input type="text" class="medication-prescriber" id="medication-'+medId+'-prescriber">'+
-            '\n\<label for="medication-'+medId+'-dosage">Dosage</label>'+
-            '\n\<input type="text" class="medication-dosage" id="medication-'+medId+'-dosage">'+
-            '\n\<label for="medication-'+medId+'-duration">Taken How Long?</label>'+
-            '\n\<input type="text" class="medication-duration" id="medication-'+medId+'-duration">'+
-            '\n\</div>')
-    });
+    $('#printPreviewConsultingFormOVER').hide();
+
+
 
     $('#printPreviewButton').click(function (e) {
-        var todaysdate = curr_month + "-" + curr_date + "-" + curr_year;
-        $('#printPreviewTD').html(todaysdate);
+
+        $('#printPreviewTD').html($('#todayDate').val());
         $('#printPreviewFN').html($('#firstName').val());
         $('#printPreviewLN').html($('#lastName').val());
         $('#printPreviewBD').html($('#birthDate').val());
@@ -50,9 +30,14 @@ $(document).ready(function (e) {
         $('#pEmployersName').html($('#employerName').val());
         $('#pSocSecNum').html($('#socSecNum').val());
 
-        $('#pParentName').html($('#parentName').val());
-        $('#pHisHerDOB').html($('#hisherDOB').val());
-        $('#pHisHerSSN').html($('#hisherSSN').val());
+
+        if ($('#parentName').val().length === 0 || $('#hisherDOB').val().length === 0 || $('#hisherSSN').val().length === 0) {
+            $('.listRow5').hide();
+        } else {
+            $('#pParentName').html($('#parentName').val());
+            $('#pHisHerDOB').html($('#hisherDOB').val());
+            $('#pHisHerSSN').html($('#hisherSSN').val());
+        }
 
         $('#pEmerCon').html($('#emerCon').val());
         $('#pEmerRel').html($('#emerRelation').val());
@@ -70,24 +55,23 @@ $(document).ready(function (e) {
         $('#pMedDocName').html($('#medDoctorName').val());
         $('#pMedDocPhone').html($('#medDocPhone').val());
         $('#pMedDocDate').html($('#medDocDate').val());
-        
+
         $('#pSigMedProb').html($('#sigMedProb').val());
 
         $('#pPastSurg').html($('#pastSurg').val());
-        
+
         $('#pPastAccid').html($('#pastAccid').val());
-        
+
         $('#pRateHealth').html($('#rateHealth').val());
-        
+
         $('#pReasonSeekTreat').html($('#reasonSeekTreat').val());
-        
+
         $('#pExpectTreatment').html($('#expectTreatment').val());
-        
+
         $('#pMentalHealthTreatment').html($('#mentalHealthTreatment').val());
 
         //--------------------------------------------------------
-        
-        $('html,body').scrollTop(0);
+
         $('#printPreviewConsultingFormOVER').show();
         $('#formConsultingForm').hide();
     });
@@ -106,5 +90,3 @@ $(document).ready(function (e) {
 
 
 });
-
-
