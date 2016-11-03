@@ -116,11 +116,6 @@ $(document).ready(function (e) {
      $('#printPreviewButton').click(function () {
           //This is not ideal, however I am begining to automate the process of creating the print preview screen
           try {
-               var physSig = $('#physSig').val();
-               if (physSig === null || physSig === ''){
-                    alert("Physican Signature is required");
-                    window.location = "PysicianForm.html";
-               }
                var submitfield = [
                     {label: "Client Name: ", display: $('#clientName').val(), id: '#ClN'},
                     {label: "Birth Date: ", display: $('#birthDate').val(), id: '#BD'},
@@ -148,7 +143,6 @@ $(document).ready(function (e) {
                     var getFullIndex = [item.id];
                     return getFullIndex.toString();
                }
-               
                for (i = 0, len = submitfield.length; i < len; i++) {
                     $('#printPreviewDisplay').append("<li class='list-group-item'>"+ "<strong>" + submitfield.map(getLabel)[i] + "</strong>" + submitfield.map(getDisplay)[i] + "</li>");
                     $(submitfield.map(getId)[i]).html(submitfield.map(getLabel)[i] + submitfield.map(getDisplay)[i]);
