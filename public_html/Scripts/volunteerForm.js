@@ -13,31 +13,18 @@ $(document).ready(function (e) {
           this.message = message;
           this.name = "UserException";
      }
-     /*
-      * This will ask for Volunteer's age, and give the user either standard name/volunteer fields,
-      * or give them Parental Guardian fields.
-      */
-     try {
-          //This will be taken from the given date in the above form.
-          var age = prompt("How old are you", "00");
-          if (age >= 18) {
-               var volName = "<div class='form-group'><label for='volName'>Volunteer Name: </label>\n\<input type='text' class='form-control' id='volName'></div>";
-               var volSig = "<div class='form-group'><label for='volSig'>Volunteer Signature: </label><input type='text' class='form-control' id='volSig'></div>";
-               var vfield = volName + volSig;
-               $('#dismissalfield').append(vfield);
-          } else if (age < 18) {
-               var guaName = "<div class='form-group'><label for='guaName'>Parent/Guardian Name: </label><input type='text' class='form-control' id='guaName'></div>";
-               var guaSig = "<div class='form-group'><label for='guaSig'>Parent/Guardian Signature: </label><input type='text' class='form-control' id='guaSig'></div>";
-               var gfield = guaName + guaSig;
-               $('#dismissalfield').append(gfield);
-          } else {
-               window.location = "VolunteerForm.html";
-               throw new UserException("Invalid Age");
-          }
-     } catch (err) {
-          alert(err.message);
-     }
      ;
+     //New age logic happening on blur of the age field
+     $('#dob').blur(function () {
+          dob = $('#dob').val();
+          var dobConcat = dob.substring(0, 4);
+          var guardianAge = new Date();
+          var x = guardianAge.getFullYear();
+          age = x - dobConcat;
+          //Proof that the age property is working properly.
+//          console.log(age);
+     });
+          
      $('#printPreviewVolunteerFormOVER').hide();
      $('#printPreviewButton').click(function () {
           try {
@@ -50,12 +37,15 @@ $(document).ready(function (e) {
                 * unless new data is entered into our map in which case, new functions are needed to 
                 * exctract data from the map.
                 */
+               
                var formfield = [
                     {display: "Last Name: " + $('#lastName').val(), id: '#LN'},
                     {display: "First Name: " + $('#firstName').val(), id: '#FN'},
-                    {display: "Date of Birth: " + $('#dob').val(), id: '#DOB'},
+                    //dob called in a global javascript variable.
+                    {display: "Date of Birth: " + dob, id: '#DOB'},
                     {display: "Phone Number: " + $('#phone').val(), id: '#PN'}
                ];
+               var checklist = [];
 
 
 
@@ -67,7 +57,7 @@ $(document).ready(function (e) {
                             {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
                     );
 
-                    var checklist = [
+                    checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
                          "Where to go in case of tornado",
@@ -136,7 +126,7 @@ $(document).ready(function (e) {
                     }
                } else {
                     window.location = "VolunteerForm.html";
-                    throw new UserException("Error in Print Preview Javascript.");
+                    throw new UserException("Please fill out Age");
                }
                ;
                /*
