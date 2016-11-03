@@ -82,6 +82,7 @@ hr {
     background: #333; 
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+/* These should be the same tag -  they are exactly the same styling */
 #signHr1{
     height: 1.2px;
     background: #333;  
