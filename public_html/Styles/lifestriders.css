@@ -9,42 +9,35 @@ body{
     background-color: #EDE4BD;
     font-family: Gill Sans MT;
 }
-
 /* Div that encompasses the input page and the print preview */
 .wrapperOverall{
     background-color: #EDE4BD;
 }
-/* Div that encompasses just the form fields page */
-.inputWrapper{
+/* Div that encompasses either the input or printPreview page */
+.pageWrapper{
     margin-top: 20px;
 }
 
-#printPreviewConsultingForm{
+/* when adding this don't get ride of id in html show the hide/show still works */
+.printPreviewDiv{
     background-color: #fff;
     -webkit-print-color-adjust: exact;
 }
-#printPreviewPhysicianForm{
-    background-color: #fff;
-    -webkit-print-color-adjust: exact;
-}
-#printPreviewConsultingFormOVER, #formConsultingForm{
+/* pageWrapper/printPreviewOVER  */
+.printPreviewOVER{
     background-color: #fff;
 }
-#printPreviewPhysicianFormOVER, #formPhysicianForm{
-    background-color: #fff;
-}
-
 /* Print field button (prevents it from being in the corner and having nothing underneath) */
 #printButton{
     margin-top: -2px;
     margin-left: 25px;
     margin-bottom: 25px;
 }
-
 /* ------------------------------------------------- */
 h1 {
     margin-top: 35px;
 }
+/* Lifestrider red head */
 .lsH2Div{
     margin-left: 2.0em;
     font-family: Eras Demi ITC;
@@ -54,6 +47,7 @@ h1 {
     color: #CC0000;
     font-weight: bold;
 }
+/* Div with Lifestriders(red) and the address / info */
 .headElementsDiv{
     margin-top: 14px; 
 }
@@ -64,20 +58,24 @@ hr {
     background: #333; 
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
-/* Combine into one  */
-#signHr1{
+/* Thicker hr line for signature  */
+.signHr{
     height: 1.2px;
     background: #333;  
     margin-bottom: 4px;
     border-bottom: .75px solid black;
 }
-#signHr2{
-    height: 1.2px;
-    background: #333;  
-    margin-bottom: 4px;
-    border-bottom: .75px solid black;
+/* span tags inside a label for the signHr line */
+.hrSignLeftElem{
+    margin-right: 14px;
 }
-
+.hrSignMidElem{
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.hrSignRightElem{
+     margin-left: 14px;
+}
 /* Bold the element */
 .boldElement{
     font-weight: bold;
@@ -97,7 +95,7 @@ hr {
     margin-right:1.2%;
     margin-left:1.2%;
 }
-/* ---------------- */
+/* -------------For Print Preview--------------------------------- */
 /* To These Classes add .text-center, .list-inline (bootstrap classes) */
 .listRowTop{
     margin-top: 30px;
@@ -126,8 +124,7 @@ hr {
     margin-right: 7.5%;
     margin-left: 7.5%;
 }
-/* ---------------- */
-
+/* --------------- */
 /* If there is a sub section */
 .leftIndent{
     margin-left: 7.2%;
@@ -152,4 +149,5 @@ hr {
 .clientCopyPriNot {
     list-style: none;
 }
+/* ---------------------------------------------- */
 
