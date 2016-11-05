@@ -2,59 +2,69 @@
     Created on : Oct 6, 2016, 3:39:46 PM
     Author     : Matthew_2
 */
+
+/* LifeStriders should use Eras Demi ITC. Body test should use Gill Sans MT.  */
+
 body{
     background-color: #EDE4BD;
+    font-family: Gill Sans MT;
 }
-#wrapperOverall {
+
+/* Div that encompasses the input page and the print preview */
+.wrapperOverall{
     background-color: #EDE4BD;
 }
+/* Div that encompasses just the form fields page */
+.inputWrapper{
+    margin-top: 20px;
+}
+
 #printPreviewConsultingForm{
     background-color: #fff;
-
     -webkit-print-color-adjust: exact;
 }
 #printPreviewPhysicianForm{
     background-color: #fff;
-
     -webkit-print-color-adjust: exact;
 }
 #printPreviewConsultingFormOVER, #formConsultingForm{
     background-color: #fff;
-
 }
 #printPreviewPhysicianFormOVER, #formPhysicianForm{
     background-color: #fff;
-
 }
 
+/* Print field button (prevents it from being in the corner and having nothing underneath) */
 #printButton{
     margin-top: -2px;
     margin-left: 25px;
     margin-bottom: 25px;
 }
-.wrapperOverall{
-    background-color: #EDE4BD;
-}
-.theWrapper{
-    margin-top: 20px;
-}
 
 /* ------------------------------------------------- */
-
+h1 {
+    margin-top: 35px;
+}
 .lsH2Div{
     margin-left: 2.0em;
+    font-family: Eras Demi ITC;
 }
 /* Lifestriders red  */
 .lsH2Div h2{
     color: #CC0000;
     font-weight: bold;
 }
+.headElementsDiv{
+    margin-top: 14px; 
+}
 
+/* Page Seperator */
 hr {
     height: 1.2px;
     background: #333; 
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
 }
+/* Combine into one  */
 #signHr1{
     height: 1.2px;
     background: #333;  
@@ -68,18 +78,13 @@ hr {
     border-bottom: .75px solid black;
 }
 
-.headElementsDiv{
-    margin-top: 14px; 
-}
-
-.boldSpan{
+/* Bold the element */
+.boldElement{
     font-weight: bold;
 }
-
-h1 {
-    margin-top: 35px;
-}
+    
 /* ---------------------- */
+/* For Todays Date (or indivally something by itself) */
 .underlineSP{
     border-bottom: .75px solid black;
     width: 175px;
@@ -87,103 +92,63 @@ h1 {
     padding-right: 1.8%;
     padding-bottom: 2px;
 }
-/*
-.underline{
-    border-bottom: .75px solid black;
-    max-width: 85%;
-  
-
-} */
 #clientInformationPrintDiv{
     max-width: 98.5%;
     margin-right:1.2%;
     margin-left:1.2%;
 }
 /* ---------------- */
-.listRow{
+/* To These Classes add .text-center, .list-inline (bootstrap classes) */
+.listRowTop{
     margin-top: 30px;
     margin-bottom: 20px;
     border-bottom: .75px solid black;
-
-
-}
-.listRow li{
+    }
+.listRowStandard{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-bottom: .75px solid black;
+    }
+/* --------------- */
+.listRowLi5Elems li{
     margin-right: 3.35%;
     margin-left: 3.35%;
 }
-/* -------- */
-.listRow2{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: .75px solid black;
-}
-.listRow2 li{
+.listRowLi4Elems li{
     margin-right: 5.42%;
     margin-left: 5.42%;
 }
-/* -------- */
-.listRow3{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: .75px solid black;
-}
-.listRow3 li{
-    margin-right: 3.05%;
-    margin-left: 3.05%;
-}
-/* -------- */
-.listRow4{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: .75px solid black;
-}
-.listRow4 li{
-    margin-right: 7.5%;
-    margin-left: 7.5%;
-}
-/* -------- */
-.listRow5{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: .75px solid black;
-}
-.listRow5 li{
+.listRowLi3Elems li{
     margin-right: 6.0%;
     margin-left: 6.0%;
 }
-/* -------- */
-.listRow6{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-bottom: .75px solid black;
-}
-.listRow6 li{
-    margin-right: 5.5%;
-    margin-left: 5.5%;
-
-}
-
-/* ---------------- */
-
-.leftIndent{
+.listRowLi2Elems li{
+    margin-right: 7.5%;
     margin-left: 7.5%;
 }
+/* ---------------- */
+
+/* If there is a sub section */
+.leftIndent{
+    margin-left: 7.2%;
+} 
+/* Short answer indent */
 .leftIndent2{
     margin-left: 2.2%;
 }
+/* Css for checkboxes in printView (add &nbsp;(s)) */
 .printCheckBoxs{
     height: 20px;
     width: 20px;
     border: 1px solid black
 }
-.BoldH4 {
-    font-weight: bold;
-}
+/* Bold and underline text (for this I used a h4 but it doesn't matter') */
 .clientCopyH4{
-   font-weight: bold;
-   text-decoration: underline;
-   font-size: 99.55%;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 99.55%;
 }
+/* Getting Ride of Bullet points */
 .clientCopyPriNot {
     list-style: none;
 }
