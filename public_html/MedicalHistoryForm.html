@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <title>Medical History Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <div class="container" id="wrapperOverall">
+            <div class="container row theWrapper">
+                <!--Insert form name -->
+                <div id="formMedicalHistoryForm" class ="well ">
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-8" style="margin-left: 2.0em;">  
+                            <h1 style="color: #CC0000; font-family: 'Eras Demi ITC';">LifeStriders</h1>
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2 text-right">
+                            Phone: 262.309.9297 <wbr>
+                            Fax: 866.404.3105  <wbr>
+                            counseling@lifestriders.org  <wbr>
+
+                            <br>
+
+                            Sll W29667 Summit Avenue (US HWY 18) <wbr>
+                            Waukesha, WI 53188  <wbr>
+
+                        </div>
+                    </div>
+                    <br>
+                    <h3 class="text-center">Participant's Medical History</h3>
+                    <form method="POST">
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="medHisPart">Participant: </label>
+                                <input type="text" class="form-control" id="medHisPart" placeholder="Participant's-Name..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisDob">DOB: </label>
+                                <input type="date" class="form-control" id="medHisDob" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisHeight">Height: </label>
+                                <input type="text" class="form-control" id="medHisHeight" placeholder="FT' IN''..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisWeight">Weight: </label>
+                                <input type="text" class="form-control" id="medHisWeight" placeholder="lbs..">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="medHisAddress">Address: </label>
+                                <input type="text" class="form-control" id="medHisAddress" placeholder="Address..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisCity">City: </label>
+                                <input type="text" class="form-control" id="medHisCity" placeholder="City..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisState">State: </label>
+                                <input type="text" class="form-control" id="medHisState" placeholder="State..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisZip">Zip Code: </label>
+                                <input type="text" class="form-control" id="medHisZip" placeholder="Zip Code..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisDiagnosis">Diagnosis: </label>
+                                <input type="text" class="form-control" id="medHisDiagnosis" placeholder="Diagnosis..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisOnset">Date of Onset: </label>
+                                <input type="date" class="form-control" id="medHisOnset" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisSurgeries">Past/Prospective Surgeries: </label>
+                                <textarea class="form-control" id="medHisSurgeries" row="2" placeholder="Surgeries.."></textarea> 
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisMedications">Medications: </label>
+                                <textarea class="form-control" id="medHisMedications" row="2" placeholder="Medications.."></textarea> 
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisSeizureType">Seizure Type: </label>
+                                <input type="text" class="form-control" id="medHisSeizureType" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisControlled">Veteran</label><br>
+                                <input type="radio" name="medHisControlled" value="yes" > Yes
+                                <input type="radio" name="medHisControlled" value="no"> No
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisLastSeizureDate">Last Seizure Date: </label>
+                                <input type="date" class="form-control" id="medHisLastSeizureDate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisShunt">Shunt Present</label><br>
+                                <input type="radio" name="medHisShunt" value="yes" > Yes
+                                <input type="radio" name="medHisShunt" value="no"> No
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisRevisionDate">Date of Last Revision: </label>
+                                <input type="date" class="form-control" id="medHisRevisionDate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisNeeds">Special Precautions/Needs: </label>
+                                <textarea class="form-control" id="medHisNeeds" row="2" placeholder="Special Precautions/Needs.."></textarea> 
+                            </div>
+                            <h3>
+                                Mobility
+                            </h3>
+                            <div class="form-group">
+                                <label for="medHisIndependent">Independent Ambulation: </label><br>
+                                <input type="radio" name="medHisIndependent" value="no"> No
+                                <input type="radio" name="medHisIndependent" value="yes" > Yes
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisAssisted">Assisted Ambulation: </label><br>
+                                <input type="radio" name="medHisAssisted" value="no"> No
+                                <input type="radio" name="medHisAssisted" value="yes" > Yes
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisWheelchair">Wheelchair: </label><br>
+                                <input type="radio" name="medHisWheelchair" value="no"> No
+                                <input type="radio" name="medHisWheelchair" value="yes" > Yes
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisBraces">Braces/Assistive Devices: </label>
+                                <textarea class="form-control" id="medHisBraces" row="2" placeholder="Braces/Assistive Devices.."></textarea> 
+                            </div>
+                            <h3>
+                                For Those with Down Syndrome:
+                            </h3>
+                            <div class="form-group">
+                                <label for="medHisAtlantoDensDate">AtlantoDens Interval X-rays, date: </label>
+                                <input type="date" class="form-control" id="medHisAtlantoDensDate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisResult+">Result +: </label>
+                                <input type="text" class="form-control" id="medHisResult+" placeholder="+">
+                                <label for="medHisResult-">Result -: </label>
+                                <input type="text" class="form-control" id="medHisResult-" placeholder="-">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisSymptoms">Neurologic Symptoms of AtlantoAxial Instability: </label>
+                                <textarea class="form-control" id="medHisSymptoms" row="2" placeholder="Symptoms.."></textarea> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

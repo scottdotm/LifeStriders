@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Consent for Release Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <div class="container" id="wrapperOverall">
+            <div class="container row theWrapper">
+                <!--Insert form name -->
+                <div id="formReleaseForm" class ="well ">
+                    <div class="row" style="margin-top: 15px;">
+                        <div class="col-md-8" style="margin-left: 2.0em;">  
+                            <h1 style="color: #CC0000; font-family: 'Eras Demi ITC';">LifeStriders</h1>
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2 text-right">
+                            Phone: 262.309.9297 <wbr>
+                            Fax: 866.404.3105  <wbr>
+                            counseling@lifestriders.org  <wbr>
+
+                            <br>
+
+                            Sll W29667 Summit Avenue (US HWY 18) <wbr>
+                            Waukesha, WI 53188  <wbr>
+
+                        </div>
+                    </div>
+                    <br>
+                    <h3 class="text-center">Participant’s Consent for Release of Information</h3>
+                    <form method="POST">
+                        
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="consentDoctorName">I Hereby Authorize: </label>
+                                <input type="text" class="form-control" id="consentDoctorName" placeholder="Doctor-Name..">
+                            </div>
+                            <div class="form-group">
+                                <label for="consentPartName">to release information from the records of: </label>
+                                <input type="text" class="form-control" id="consentPartName" placeholder="Participant's-Name..">
+                            </div>
+                            <div class="form-group">
+                                <label for="consentPartDob">DOB: </label>
+                                <input type="date" class="form-control" id="consentPartDob" placeholder="DOB..">
+                            </div>
+                            <div class="form-group">
+                                <label><input  id="medHistory" type="checkbox" value="medHistory" >Medical History</label><br>
+                                <label><input  id="physicalTherapy" type="checkbox" value="physicalTherapy">Physical Therapy evaluation, assessment and program plan</label><br>
+                                <label><input  id="occupationalTherapy" type="checkbox" value="occupationalTherapy">Occupational Therapy evaluation, assessment and program plan</label><br>
+                                <label><input  id="speechTherapy" type="checkbox" value="speechTherapy">Speech Therapy evaluation, assessment and program plan(I.E.P)</label><br>
+                                <label><input  id="classroom" type="checkbox" value="classroom" >Classroom Individual Education Plan</label><br>
+                                <label><input  id="psychosocial" type="checkbox" value="psychosocial">Psychosocial evaluation, assessment and program plan</label><br>
+                                <label><input  id="cognitive" type="checkbox" value="cognitive" >Cognitive-Behavioral Management plan</label><br>
+                                <label><input  id="releaseOther" type="checkbox" value="releaseOther" >Other ______________________________________________________________________</label>
+                            </div>
+                            <label for="releaseSign">Consent Signature</label>
+                            <p id="releaseSign">___________________________________________</p>
+
+                            <label for="releaseSignedDate">Date: </label>
+                            <p id="releaseSignedDate"></p>
+                            <br>
+                            
+                            <p>
+                                please send materials to: <br>
+                                LifeStriders Therapeudic Riding Center<br>
+                                S11 W29667 Summit Avenue (US HWY 18)<br>
+                                Waukesha, WI 53188
+                            </p>
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
