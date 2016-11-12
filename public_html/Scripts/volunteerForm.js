@@ -39,11 +39,18 @@ $(document).ready(function (e) {
                 */
                
                var formfield = [
-                    {display: "Last Name: " + $('#lastName').val(), id: '#LN'},
-                    {display: "First Name: " + $('#firstName').val(), id: '#FN'},
+                    {label: "Last Name: ", display: $('#lastName').val(), id: '#LN'},
+                    {label: "First Name: ", display: $('#firstName').val(), id: '#FN'},
                     //dob called in a global javascript variable.
-                    {display: "Date of Birth: " + dob, id: '#DOB'},
-                    {display: "Phone Number: " + $('#phone').val(), id: '#PN'}
+                    {label: "Date of Birth: ", display: dob, id: '#DOB'},
+                    {label: "Address: ", display: $('#address').val(), id: '#ADD'},
+                    {label: "City: ", display: $('#city').val(), id: '#CIT'},
+                    {label: "State: ", display: $('#state').val(), id: '#STA'},
+                    {label: "Zip: ", display: $('#zip').val(), id: '#ZIP'},
+                    {label: "Phone Number: ", display: $('#phone').val(), id: '#PN'},
+                    {label: "Email: ", display: $('#email').val(), id: '#EMA'},
+                    
+                    {label: "Employer: ", display: $('#employer').val(), id: '#EMP'}
                ];
                var checklist = [];
 
@@ -52,10 +59,9 @@ $(document).ready(function (e) {
                //------------------------------------------------------------//
                //This will be taken from the given date in the above form.
                if (age >= 18) {
-                    formfield.push(
-                            {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
-                            {display: "Volunteer Signature: " + $('#volSig').val(), id: '#VS'}
-                    );
+                    
+                    $('#dismissalfield').append("<br><hr id='signHr1' class='divider'><label>Volunteer's Full Name</label> <br>");
+                    $('#dismissalfield').append("<br><hr id='signHr2' class='divider'><label>Volunteer's Signature</label>");
 
                     checklist = [
                          "Tour of facility",
@@ -85,10 +91,10 @@ $(document).ready(function (e) {
                          $('#volunteerChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else if (age < 18) {
-                    formfield.push(
-                            {display: "Parent/Guardian Name: " + $('#guaName').val(), id: '#PN'},
-                            {display: "Parent/Guardian Signature: " + $('#guaSig').val(), id: '#PS'}
-                    );
+                    
+                    $('#dismissalfield').append("<br><hr id='signHr1' class='divider'><label>Guardian's Full Name</label> <br>");
+                    $('#dismissalfield').append("<br><hr id='signHr2' class='divider'><label>Guardian's Signature</label>");
+            
                     checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
@@ -125,10 +131,14 @@ $(document).ready(function (e) {
                          $('#minorChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else {
-                    window.location = "VolunteerForm.html";
+//                    window.location = "VolunteerForm.html";
                     throw new UserException("Please fill out Age");
                }
                ;
+               function getLabel(item, index) {
+                    var getFullLabel = [item.label];
+                    return getFullLabel.toString();
+               }
                /*
                 * Need to extract Display from map.
                 */
@@ -149,8 +159,8 @@ $(document).ready(function (e) {
                 * div in the HTML.
                 */
                for (i = 0, len = formfield.length; i < len; i++) {
-                    $('#printPreviewDisplay').append("<li class='list-group-item'>" + formfield.map(getDisplay)[i] + "</li>");
-                    $(formfield.map(getId)[i]).html(formfield.map(getDisplay)[i]);
+                    $('#printPreviewDisplay').append("<li class='list-group-item'>"+ "<strong>" + formfield.map(getLabel)[i] + "</strong>" + formfield.map(getDisplay)[i] + "</li>");
+                    $(formfield.map(getId)[i]).html(formfield.map(getLabel)[i] + formfield.map(getDisplay)[i]);
                }
                //Empty all arrays
                formfield = [];
