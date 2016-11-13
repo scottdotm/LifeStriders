@@ -23,7 +23,7 @@ body{
     background-color: #fff;
     -webkit-print-color-adjust: exact;
 }
-/* pageWrapper/printPreviewOVER  */
+/* ~/pageWrapper/printPreviewOVER  */
 .printPreviewOVER{
     background-color: #fff;
 }
