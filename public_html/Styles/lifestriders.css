@@ -28,6 +28,22 @@ body{
     
     -webkit-print-color-adjust: exact;
 }
+#printPreviewMedicalHistoryForm{
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
+#printPreviewReleaseForm{
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
+#printPreviewPhysician
+StatementForm{
+    background-color: #fff;
+    
+    -webkit-print-color-adjust: exact;
+}
 #printPreviewConsultingFormOVER, #formConsultingForm{
     background-color: #fff;
  
@@ -40,7 +56,18 @@ body{
     background-color: #fff;
  
 }
-
+#printPreviewMedicalHistoryFormOVER, #formMedicalHistoryForm{
+    background-color: #fff;
+ 
+}
+#printPreviewReleaseFormOVER, #formReleaseForm{
+    background-color: #fff;
+ 
+}
+#printPreviewPhysicianStatementFormOVER, #formPhysicianStatementForm{
+    background-color: #fff;
+ 
+}
 #printButton{
     margin-top: -2px;
     margin-left: 25px;

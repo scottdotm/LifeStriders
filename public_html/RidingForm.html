@@ -14,7 +14,7 @@
                     <div class="row" style="margin-top: 15px;">
                         <div class="col-md-8" style="margin-left: 2.0em;">  
                             <h1 style="color: #CC0000;">LifeStriders</h1>
-                            <img src="Assets/PATHlogo.png" class="img-fluid" alt="Responsive image">
+                            <!--img src="Assets/PATHlogo.png" class="img-fluid" alt="Responsive image"-->
                         </div>
                         <div class="col-md-1"> </div>
                         <div class="col-md-2 text-right">
@@ -47,75 +47,76 @@
                                 </div>
                                 <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                                     <div class="panel-body">
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <input  id="EMTopt1" type="radio" name="EMTriderType" value="therapeutic" checked> Therapeutic Riding<br>
                                             <input  id="EMTopt2" type="radio" name="EMTriderType" value="occupational"> Occupational Therapy/Hippotherapy
                                             <br>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTfirstName">First Name: </label>
                                             <input type="text" class="form-control" id="EMTfirstName" placeholder="First-Name..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTlastName">Last Name: </label>
                                             <input type="text" class="form-control" id="EMTlastName" placeholder="Last-Name..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTbirthDate">Birth Date: </label>
                                             <input type="date" class="form-control" id="EMTbirthDate" >
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMThomePhone">Home Phone: </label>
                                             <input type="text" class="form-control" id="EMThomePhone" placeholder="Phone-Number..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTemail">Email: </label>
                                             <input type="text" class="form-control" id="EMTemail" placeholder="Email..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-5">
                                             <label for="EMTaddress">Address: </label>
                                             <input type="text" class="form-control" id="EMTaddress" placeholder="Address..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-3">
                                             <label for="EMTcity">City: </label>
                                             <input type="text" class="form-control" id="EMTcity" placeholder="City..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="EMTstate">State: </label>
                                             <input type="text" class="form-control" id="EMTstate" placeholder="State..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="EMTzip">Zip Code: </label>
                                             <input type="text" class="form-control" id="EMTzip" placeholder="Zip Code..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-6">
                                             <label for="EMTdoctor">Physician's Name: </label>
                                             <input type="text" class="form-control" id="EMTdoctor" placeholder="Physician's Name..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-6">
                                             <label for="EMTmedical">Medical Facility: </label>
                                             <input type="text" class="form-control" id="EMTmedical" placeholder="Medical Facility..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTinsurance">Health Insurance Company: </label>
                                             <input type="text" class="form-control" id="EMTinsurance" placeholder="Health Insurance Co..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTpolicyNo">Policy Number: </label>
                                             <input type="text" class="form-control" id="EMTpolicyNo" placeholder="Policy Number..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="EMTprimaryDob">Primary Insured's DOB: </label>
                                             <input type="date" class="form-control" id="EMTprimaryDob" >
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-6">
                                             <label for="EMTmedicationAllergies"> Allergies to Medications?  </label>
                                             <textarea id="EMTmedicationAllergies" class="form-control" rows="3" placeholder="List Medications Here.."></textarea>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-6">
                                             <label for="EMTcurrentMedications"> Current Medications? </label>
                                             <textarea id="EMTcurrentMedications" class="form-control" rows="3" placeholder="List Current Medications"></textarea>
                                         </div>
+                                        <br>
                                         <h4>In the event of an emergency, contact: </h4>  
                                         <div class="form-group">
                                             <div class="col-md-4">
@@ -157,24 +158,27 @@
                                                 <input type="text" class="form-control" id="EMTcontactNum3" placeholder="Contact Number..">
                                             </div>
                                         </div>
-                                        <div class="form-group">
+                                        <br>
+                                        
+                                            
                                             <h4>In the event emergency medical aid/treatment is required due to illness or injury during the process of receiving services, or while being on the property of the agency, I authorize LifeStriders to:</h4>
 
                                             <p>
                                                 1. Secure and retain medical treatment and transportation if needed.<br>
                                                 2. Release client records upon request to the authorized individual or agency involved in the medical emergency treatment.
                                             </p>
-                                        </div>
+                                        
                                         <h4>Consent Plan</h4>
                                         <p>This authorization includes x-ray, surgery, hospitalization, medication and any treatment procedure deemed “life saving'' by the physician. This provision will only be invoked if the person(s) above is unable to be reached.</p>
-                                        <div class="form-group">
+                                        <!-- Hides the option to enter an electronic signature for future purposes-->
+                                        <!--div class="form-group">
                                             <label for="EMTsignedDate">Date: </label>
                                             <input type="date" class="form-control" id="EMTsignedDate" >
                                         </div>
                                         <div class="form-group">
                                             <label for="EMTconsentSign">Consent Signature: </label>
                                             <input type="text" class="form-control" id="EMTconsentSign" placeholder="Client, Parent, Foster parent or Legal Gaurdian..">
-                                        </div>
+                                        </div-->
                                         </form>
                                     </div>
                                 </div>
@@ -193,134 +197,137 @@
                                 </div>
                                 <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                                     <div class="panel-body">
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAfirstName">First Name: </label>
                                             <input type="text" class="form-control" id="PAfirstName" placeholder="First-Name..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAlastName">Last Name: </label>
                                             <input type="text" class="form-control" id="PAlastName" placeholder="Last-Name..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="PAgender">Gender</label><br>
                                             <input type="radio" id="PAoptMale" name="PAgender" value="male" > Male
                                             <input type="radio" id="PAoptFemale" name="PAgender" value="female"> Female
                                             <br>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="PAbirthDate">Birth Date: </label>
                                             <input type="date" class="form-control" id="PAbirthDate" >
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-3">
                                             <label for="PAheight">Height: </label>
                                             <input type="text" class="form-control" id="PAheight" placeholder="Height..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-3">
                                             <label for="PAweight">Weight: </label>
                                             <input type="text" class="form-control" id="PAweight" placeholder="Weight..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="PAveteran">Veteran</label><br>
                                             <input type="radio" id="PAoptNo" name="PAveteran" value="no" checked> No
                                             <input type="radio" id="PAoptYes" name="PAveteran" value="yes"> Yes
                                             <br>
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAethnicity">Ethnicity: </label>
                                             <input type="text" class="form-control" id="PAethnicity" placeholder="For Grant Writing Purposes Only..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-5">
                                             <label for="PAaddress">Address: </label>
                                             <input type="text" class="form-control" id="PAaddress" placeholder="Address..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-3">
                                             <label for="PAcity">City: </label>
                                             <input type="text" class="form-control" id="PAcity" placeholder="City..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="PAstate">State: </label>
                                             <input type="text" class="form-control" id="PAstate" placeholder="State..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-2">
                                             <label for="PAzip">Zip Code: </label>
                                             <input type="text" class="form-control" id="PAzip" placeholder="Zip Code..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAphone">Phone: </label>
                                             <input type="text" class="form-control" id="PAphone" placeholder="Phone-Number..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAaltPhone">Alternate Phone Number: </label>
                                             <input type="text" class="form-control" id="PAaltPhone" placeholder="Alternate Number..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAemail">Email: </label>
                                             <input type="text" class="form-control" id="PAemail"placeholder="Email..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <input type="radio" id="PAoptEmployer" name="PAcompany" value="employer" checked>      Employer
                                             <input type="radio" id="PAoptSchool" name="PAcompany" value="school">      School
-                                            <input type="radio" id="PAoptOther" name="PAcompany" value="other">      Other <br>  
+                                            <input type="radio" id="PAoptOther" name="PAcompany" value="other">      Other 
+                                        </div>
+                                        <div class="form-group col-md-4">
                                             <label for="PAcompanyName">Name: </label>
                                             <input type="text" class="form-control" id="PAcompanyName"placeholder="School/Employer..">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="PAcompanyAddress">Address: </label>
-                                            <input type="text" class="form-control" id="PAcompanyAddress" placeholder="Company Address..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="PAcompanyCity">City: </label>
-                                            <input type="text" class="form-control" id="PAcompanyCity" placeholder="Company City..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="PAcompanyState">State: </label>
-                                            <input type="text" class="form-control" id="PAcompanyState" placeholder="Company State..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="PAcompanyZip">Zip Code: </label>
-                                            <input type="text" class="form-control" id="PAcompanyZip" placeholder="Company Zip Code..">
-                                        </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAcompanyPhone">Phone: </label>
                                             <input type="text" class="form-control" id="PAcompanyPhone" placeholder="Company Phone..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-5">
+                                            <label for="PAcompanyAddress">Address: </label>
+                                            <input type="text" class="form-control" id="PAcompanyAddress" placeholder="Company Address..">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="PAcompanyCity">City: </label>
+                                            <input type="text" class="form-control" id="PAcompanyCity" placeholder="Company City..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAcompanyState">State: </label>
+                                            <input type="text" class="form-control" id="PAcompanyState" placeholder="Company State..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAcompanyZip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="PAcompanyZip" placeholder="Company Zip Code..">
+                                        </div>                                       
+                                        <div class="form-group col-md-4">
                                             <label for="PAguardianFirstName">Parent/Legal Guardian First Name: </label>
                                             <input type="text" class="form-control" id="PAguardianFirstName" placeholder="First..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAguardianLastName">Parent/Legal Guardian Last Name: </label>
                                             <input type="text" class="form-control" id="PAguardianLastName" placeholder="Last..">
                                         </div>
-                                        <div class="form-group">
-                                            <label for="PAguardianAddress">Address: </label>
-                                            <input type="text" class="form-control" id="PAguardianAddress" placeholder="Gaurdian Address..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="PAguardianCity">City: </label>
-                                            <input type="text" class="form-control" id="PAguardianCity" placeholder="Gaurdian City..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="PAguardianState">State: </label>
-                                            <input type="text" class="form-control" id="PAguardianState" placeholder="Gaurdian State..">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="PAguardianZip">Zip Code: </label>
-                                            <input type="text" class="form-control" id="PAguardianZip" placeholder="Gaurdian Zip Code..">
-                                        </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAguardianPhone">Phone: </label>
                                             <input type="text" class="form-control" id="PAguardianPhone" placeholder="Gaurdian Phone..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-5">
+                                            <label for="PAguardianAddress">Address: </label>
+                                            <input type="text" class="form-control" id="PAguardianAddress" placeholder="Gaurdian Address..">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="PAguardianCity">City: </label>
+                                            <input type="text" class="form-control" id="PAguardianCity" placeholder="Gaurdian City..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAguardianState">State: </label>
+                                            <input type="text" class="form-control" id="PAguardianState" placeholder="Gaurdian State..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAguardianZip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="PAguardianZip" placeholder="Gaurdian Zip Code..">
+                                        </div>
+                                        
+                                        <div class="form-group col-md-4">
                                             <label for="PAreferral">Referral Source: </label>
                                             <input type="text" class="form-control" id="PAreferral" placeholder="Referral..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAreferralNum">Contact Number: </label>
                                             <input type="text" class="form-control" id="PAreferralNum" placeholder="Referral Number..">
                                         </div>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-4">
                                             <label for="PAhearAbout">How Did you Hear About the Program: </label>
                                             <textarea class="form-control" id="PAhearAbout" row="3" placeholder="Let us know here.."></textarea>
                                         </div>
@@ -343,9 +350,13 @@
                                 </div>
                                 <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                                     <div class="panel-body">
-                                        <div class="form-group">
+                                        <div class="form-group col-md-6">
                                             <label for="PHHdiagnosis">Diagnosis: </label>
                                             <textarea class="form-control" id="PHHdiagnosis" row="3" placeholder="Diagnosis(s).."></textarea>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="PHHmedications">What Medications are you Currently Taking Including Over the Counter? </label>
+                                            <textarea class="form-control" id="PHHmedications" row="3" placeholder="Medications.."></textarea>
                                         </div>
                                         <table style="width:100%" class="form-group">
                                             <caption>Please Indicate Current or Past Problems in the Following Areas: </caption>
@@ -435,10 +446,7 @@
                                                 <td><textarea class="form-control" id="PHHallergyComment" row="2" placeholder="Comment here.."></textarea></td>
                                             </tr>
                                         </table> 
-                                        <div class="form-group">
-                                            <label for="PHHmedications">What Medications are you Currently Taking Including Over the Counter? </label>
-                                            <textarea class="form-control" id="PHHmedications" row="3" placeholder="Medications.."></textarea>
-                                        </div>
+                                        
                                         <h4>Describe your abilities/difficulties in the following area (include assistance required or equipment needed):</h4>
                                         <div class="form-group">
                                             <label for="PHHfunction">FUNCTION (i.e. Mobility skills such as transfers, walking, wheelchair use, driving/bus riding)</label>
@@ -690,6 +698,7 @@
 
                             <label for="ppEMTRiderType">Rider Type: </label>
                             <p id="ppEMTRiderType"></p>
+                            
                             <label for="ppEMTFirstName">First Name: </label>
                             <p id="ppEMTFirstName"></p>
 
