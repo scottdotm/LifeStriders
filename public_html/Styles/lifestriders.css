@@ -23,12 +23,6 @@
     margin-bottom: 25px;
 }
 
-
-
-.q45{
-    padding-right: 5%;
-}
-
 body{
     background-color: #EDE4BD;
     font-family: Gill Sans MT;
@@ -175,3 +169,7 @@ hr {
 }
 /* ---------------------------------------------- */
 
+// This spaces question 4 and 5 on the progress reporting page
+.q45 {
+    padding-right: 5%;
+}
