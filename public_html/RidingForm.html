@@ -7,28 +7,32 @@
         <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="container" id="wrapperOverall">
-            <div class="container row theWrapper">
-                <!--Insert form name -->
-                <div id="formRiderForm" class ="well ">
-                    <div class="row" style="margin-top: 15px;">
-                        <div class="col-md-8" style="margin-left: 2.0em;">  
-                            <h1 style="color: #CC0000;">LifeStriders</h1>
-                            <!--img src="Assets/PATHlogo.png" class="img-fluid" alt="Responsive image"-->
+        <div class="container wrapperOverall">
+
+            <div class="container row pageWrapper">
+
+                <div id="formRiderForm" class ="well">
+                    <h1 class="text-center"> Rider Form </h1>
+                    <div class="row headElementsDiv">
+
+                        <div class="col-md-8 lsH2Div">  
+                            <h2>LifeStriders</h1>
                         </div>
                         <div class="col-md-1"> </div>
                         <div class="col-md-2 text-right">
-                            Phone: 262.309.9297 <wbr>
-                            Fax: 866.404.3105  <wbr>
-                            counseling@lifestriders.org  <wbr>
+                            Phone: 262.309.9297 <br>
+                            Fax: 866.404.3105 <br> 
+                            counseling@lifestriders.org <br>
 
                             <br>
 
-                            Sll W29667 Summit Avenue (US HWY 18) <wbr>
-                            Waukesha, WI 53188  <wbr>
+                            Sll W29667 Summit Avenue (US HWY 18) <br>
+                            Waukesha, WI 53188 <br>
 
                         </div>
                     </div>
+
+                    <br>
                     <h3 class="text-center">Therapeutic Riding Form</h3>
                     <form method="post">
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -660,29 +664,29 @@
             <!--Start of the Print Preview Page which is hidden when the form first loads-->
             <!--*************************************************************************************************************************************************-->
 
-            <div class="container row theWrapper">
+            <div class="container row pageWrapper">
 
-                <div id="printPreviewRiderFormOVER"  class="container row"> 
+                <div id="printPreviewRiderFormOVER" class="container printPreviewOVER row"> 
 
                     <div class="row">
                         <h1 style="margin-top: 25px;" class="text-center"> Rider Form </h1>
                         <div id="printPreviewRiderForm" class=" col-md-12 container">
 
-                            <div class=" row" style="margin-top: 15px;">
-                                <div class="col-md-8" style="margin-left: 2.0em;" >  
-                                    <h2 style="color: #CC0000;">LifeStriders</h1>
+                            <div class="row headElementsDiv">
+                                <div class="col-md-8 lsH2Div" >  
+                                    <h2>LifeStriders</h2>
                                 </div>
                                 <div class="col-md-1"> </div>
                                 <div class="col-md-2 text-right">
                                     <!-- make a list with no bullet points -->
-                                    Phone: 262.309.9297 <wbr>
-                                    Fax: 866.404.3105 <wbr>
-                                    counseling@lifestriders.org <wbr>
+                                    Phone: 262.309.9297 <br>
+                                    Fax: 866.404.3105 <br>
+                                    counseling@lifestriders.org <br>
 
                                     <br>
 
-                                    Sll W29667 Summit Avenue (US HWY 18) <wbr>
-                                    Waukesha, WI 53188 <wbr>
+                                    Sll W29667 Summit Avenue (US HWY 18) <br>
+                                    Waukesha, WI 53188 <br>
 
                                 </div>
                             </div>
@@ -1337,9 +1341,9 @@
 
 
 
-
+                            <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                         </div>
-                        <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
+                        
                     </div>
                 </div>
             </div>

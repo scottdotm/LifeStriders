@@ -2,9 +2,7 @@
     Created on : Oct 6, 2016, 3:39:46 PM
     Author     : Matthew_2
 */
-#wrapperOverall {
-    background-color: #EDE4BD;
-}
+
 #printPreviewConsultingForm, #printPreviewRiderForm, #printPreviewPhysicianForm, #printPreviewVolunteerForm, 
 #printPreviewMedicalHistoryForm, #printPreviewReleaseForm, #printPreviewPhysicianStatementForm{
     background-color: #fff;
@@ -13,7 +11,8 @@
 }
 #printPreviewConsultingFormOVER, #formConsultingForm, #printPreviewPhysicianFormOVER, #formPhysicianForm, 
 #printPreviewVolunteerFormOVER, #formVolunteerForm, #printPreviewMedicalHistoryFormOVER, #formMedicalHistoryForm, 
-#printPreviewReleaseFormOVER, #formReleaseForm, #printPreviewPhysicianStatementFormOVER, #formPhysicianStatementForm{
+#printPreviewReleaseFormOVER, #formReleaseForm, #printPreviewPhysicianStatementFormOVER, #formPhysicianStatementForm, 
+#printPreviewRiderFormOVER, #formRiderForm{
     background-color: #fff;
  
 }
@@ -23,20 +22,9 @@
     margin-left: 25px;
     margin-bottom: 25px;
 }
-.theWrapper{
-       margin-top: 20px;
-}
-.box {
-  border: 1px solid black ;
-  width: 10px;
-  padding: 5px;
-  display:inline-block;
-}
-.field{
-     padding: 10px;
-     display:inline-block;
-/*     line-height: 0.8;*/
-}
+
+
+
 .q45{
     padding-right: 5%;
 }
