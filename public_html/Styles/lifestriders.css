@@ -80,6 +80,10 @@ hr {
 .boldElement{
     font-weight: bold;
 }
+.sectionHeader{
+    font-size: 1.185em;
+    text-decoration: underline;
+}
     
 /* ---------------------- */
 /* For Todays Date (or indivally something by itself) */
@@ -133,6 +137,7 @@ hr {
 .leftIndent2{
     margin-left: 2.2%;
 }
+
 /* Css for checkboxes in printView (add &nbsp;(s)) */
 .printCheckBoxs{
     height: 20px;

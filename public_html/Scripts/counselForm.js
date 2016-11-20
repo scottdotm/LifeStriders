@@ -3,12 +3,14 @@
 //Hide one div and show a div. tado
 
 $(document).ready(function (e) {
+ 
 
     $('#printPreviewConsultingFormOVER').hide();
 
 
-
     $('#printPreviewButton').click(function (e) {
+        
+
 
         $('#printPreviewTD').html($('#todayDate').val());
         $('#printPreviewFN').html($('#firstName').val());
@@ -72,6 +74,7 @@ $(document).ready(function (e) {
 
         //--------------------------------------------------------
 
+
         $('#printPreviewConsultingFormOVER').show();
         $('#formConsultingForm').hide();
     });
@@ -87,6 +90,19 @@ $(document).ready(function (e) {
 
 
 
-
+//   $.validator.setDefaults({
+//        debug: true//,
+//        //success: "valid"
+//    });
+//    
+//    var form = $('#counselingInputForm');
+//        form.validate();
+//        $('#printPreviewButton').click(function(){
+//            alert("Valid: " + form.valid());
+//            
+//            
+//            
+//            
+//        });
 
 });

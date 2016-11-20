@@ -51,38 +51,40 @@ and open the template in the editor.
 
                     <h3 class="text-center">Client Information Form</h3>
 
-                    <form method="post">
+                    <form id="counselingInputForm" name="counselingInputForm" method="post">
 
-                        <div class="form-group">
-                            <label for="todayDate">Todays Date: </label>
-                            <input type="date" class="form-control" id="todayDate"  >
-                        </div>
+                        <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="todayDate">Todays Date: </label>
+                            <input type="date" class="col-sm-11 form-control" id="todayDate"  >
 
-                        <div class="form-group">
-                            <label for="firstName">First Name: </label>
-                            <input type="text" class="form-control" id="firstName" placeholder="First-Name..">
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name: </label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Last-Name..">
-                        </div>
-                        <div class="form-group">
-                            <label for="birthDate">Birth Date: </label>
-                            <input type="date" class="form-control" id="birthDate">
                         </div>
 
-                        <div class="form-group">
-                            <label for="sex"> Sex: </label>
-                            <select class="form-control" id="sex">
+                        <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="firstName">Name: </label>
+                            <input type="text" class="col-sm-5 form-control" id="firstName" placeholder="First-Name.." required>
+
+                            <input type="text" class="col-sm-5 form-control" id="lastName" placeholder="Last-Name..">
+
+                        </div>
+
+                        <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="birthDate">Birth Date: </label>
+                            <input type="date" class="col-sm-11 form-control" id="birthDate">
+                        </div>
+
+                        <div class="row form-group form-inline">
+
+                            <label class="col-sm-1" for="sex"> Sex: </label>
+                            <select class="col-sm-11 form-control" id="sex">
                                 <option> Male </option>
                                 <option> Female </option>
                                 <option> I wish not to say </option>
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label for="marital"> Marital Status: </label>
-                            <select class="form-control" id="marital">
+                        
+                        <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="marital"> Marital Status: </label>
+                            <select class="col-sm-12 form-control" id="marital">
                                 <option> Married </option>
                                 <option> Single </option>
                                 <option> Separated  </option>
@@ -91,85 +93,89 @@ and open the template in the editor.
                             </select>
                         </div>
 
-                        <label  for="clientAddress"> Where Do you Live?  </label>
-                        <div id="clientAddress" class="form-inline form-group input-group-sm ">
-                            <label class="label label-default" for="cAddress">Address </label>
-                            <input type="text" class="form-control  input-sm" id="cAddress" placeholder="Address">
+                        
+                        <div id="clientAddress" class="row form-inline form-group input-group-sm ">
+                            <label class="col-sm-2" for="clientAddress"> Where Do you Live?  </label>
+                            
+                            
+                            <input type="text" class="form-control col-sm-3 input-sm" id="cAddress" placeholder="Address">
 
 
-                            <label class="label label-default" for="cCity">City </label>
-                            <input type="text" class="form-control" id="cCity" placeholder="City">
+                          
+                            <input type="text" class="form-control col-sm-3" id="cCity" placeholder="City">
 
-                            <label class="label label-default" for="cState">State </label>
-                            <input type="text" class="form-control" id="cState" placeholder="State">
+                            
+                            <input type="text" class="form-control col-sm-3" id="cState" placeholder="State">
 
-                            <label class="label label-default" for="cZipCode">Zip Code </label>
-                            <input type="text"  class="form-control" id="cZipCode" placeholder="Zip Code">
+                       
+                            <input type="text"  class="form-control col-sm-3" id="cZipCode" placeholder="Zip Code">
+                        </div>
+
+                        <div class="row form-group form-inline">
+                            <div class="form-group">
+                                <label class="col-sm-4" for="homePhone">Home Phone #: </label>
+                                <input type="tel" class=" col-sm-7 form-control" id="homePhone" placeholder="(xxx)-xxx-xxxx">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4" for="myEmail">My E-Mail: </label>
+                                <input type="email" class="col-sm-7 form-control" id="myEmail" placeholder="My Email...">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-4" for="workPhone">Work Phone #: </label>
+                                <input type="tel" class="col-sm-7 form-control" id="workPhone" placeholder="(xxx)-xxx-xxxx">
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-4" for="cellPhone">Cell Phone #: </label>
+                                <input type="tel" class="col-sm-7 form-control" id="cellPhone" placeholder="(xxx)-xxx-xxxx">
+                            </div>
+                        </div>
+
+
+                         <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="employerName"> Employer's Name: </label>
+                            <input type="text" class="form-control col-sm-11" id="employerName" placeholder="Employer's Name...">
+                        </div>
+                         <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="socSecNum"> Your SSN: </label>
+                            <input type="text" class="form-control col-sm-11" id="socSecNum" placeholder="SSN...">
+                        </div>
+
+
+                        <label class="sectionHeader boldElement">If minor:</label>
+                       <div class="row form-group form-inline">
+                           
+                            
+                            <label class="col-sm-1" for="parentName">  Parents Name </label>
+                            <input type="text" class="form-control col-sm-11" id="parentName" placeholder="Parents Name..">
+                       
+                            <label class="col-sm-1" for="hisherDOB"> His / Her Date of Birth </label>
+                            <input type="date" class="form-control col-sm-11" id="hisherDOB">
+                       
+                            <label class="col-sm-1" for="hisherSSN"> His / Her SSN:  </label>
+                            <input type="text" class="form-control col-sm-11" id="hisherSSN" placeholder="His / Her SSN...">
+                        </div>
+
+
+                        <label class="sectionHeader boldElement">Emergency Contact: </label>
+                          <div class="row form-group form-inline">
+                            <label class="col-sm-1" for="emerCon"> Name: </label>
+                            <input type="text" class="form-control col-sm-11" id="emerCon" placeholder="Emergency Contract...">
+                       
+                            <label class="col-sm-1" for="emerRelation"> Relationship: </label>
+                            <input type="text" class="leftIndent2 form-control col-sm-11" id="emerRelation" placeholder="Relationship...">
+                        
+                            <label class="col-sm-1" for="emerPhone"> Phone #: </label>
+                            <input type="tel" class=" form-control col-sm-11" id="emerPhone" placeholder="(xxx)-xxx-xxxx">
                         </div>
 
                         <div class="form-group">
-                            <label for="homePhone">Home Phone #: </label>
-                            <input type="tel" class="form-control" id="homePhone" placeholder="(xxx)-xxx-xxxx">
+                            <label  for="hearAbout"> How did you hear about LifeStriders?  </label>
+                            <textarea id="hearAbout" class="form-control input-sm" rows="3"></textarea>
                         </div>
 
-                        <div class="form-group">
-                            <label for="myEmail">My E-Mail: </label>
-                            <input type="email" class="form-control" id="myEmail" placeholder="My Email...">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="workPhone">Work Phone #: </label>
-                            <input type="tel" class="form-control" id="workPhone" placeholder="(xxx)-xxx-xxxx">
-                        </div>
-                        <div class="form-group">
-                            <label for="cellPhone">Cell Phone #: </label>
-                            <input type="tel" class="form-control" id="cellPhone" placeholder="(xxx)-xxx-xxxx">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="employerName"> Employer's Name: </label>
-                            <input type="text" class="form-control" id="employerName" placeholder="Employer's Name...">
-                        </div>
-                        <div class="form-group">
-                            <label for="socSecNum"> Your SSN: </label>
-                            <input type="text" class="form-control" id="socSecNum" placeholder="SSN...">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="parentName"> If minor: Parents Name </label>
-                            <input type="text" class="form-control" id="parentName" placeholder="Parents Name..">
-                        </div>
-                        <div class="form-group">
-                            <label for="hisherDOB"> His / Her Date of Birth </label>
-                            <input type="date" class="form-control" id="hisherDOB">
-                        </div>
-                        <div class="form-group">
-                            <label for="hisherSSN"> His / Her SSN:  </label>
-                            <input type="text" class="form-control" id="hisherSSN" placeholder="His / Her SSN...">
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="emerCon"> Emergency Contact: </label>
-                            <input type="text" class="form-control" id="emerCon" placeholder="Emergency Contract...">
-                        </div>
-                        <div class="form-group">
-                            <label for="emerRelation"> Relationship: </label>
-                            <input type="text" class="form-control" id="emerRelation" placeholder="Relationship...">
-                        </div>
-                        <div class="form-group">
-                            <label for="emerPhone"> Phone #: </label>
-                            <input type="tel" class="form-control" id="emerPhone" placeholder="(xxx)-xxx-xxxx">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="hearAbout"> How did you hear about LifeStriders?  </label>
-                            <textarea id="hearAbout" class="form-control" rows="3"></textarea>
-                        </div>
-
-                        <br>
+                        <br><br>
                         <hr class="divider">
 
                         <h3 class="text-center"> Medical Form</h3>
@@ -185,7 +191,7 @@ and open the template in the editor.
                         <label for='medSec2'> 2) Allergy (Medication): </label>
                         <div id='medSec2' class='formgroup'>
 
-                            <textarea id="allegMed" class="form-control" rows="3"></textarea>
+                            <textarea id="allegMed" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
@@ -232,7 +238,7 @@ and open the template in the editor.
 
                         <div id='medSec6' class='formgroup'>
                             <label for='sigMedProb'> 6) Significant past medical problems if not indicated above: </label>
-                            <textarea id="sigMedProb" class="form-control" rows="3"></textarea>
+                            <textarea id="sigMedProb" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
@@ -240,7 +246,7 @@ and open the template in the editor.
 
                         <div id='medSec7' class='formgroup'>
                             <label for='pastSurg'> 7) Past Surgery: </label>
-                            <textarea id="pastSurg" class="form-control" rows="3"></textarea>
+                            <textarea id="pastSurg" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
@@ -248,15 +254,15 @@ and open the template in the editor.
 
                         <div id='medSec8' class='formgroup'>
                             <label for='pastAccid'> 8) Past Accidents: </label>
-                            <textarea id="pastAccid" class="form-control" rows="3"></textarea>
+                            <textarea id="pastAccid" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
                         <br>
 
                         <div id='medSec9' class="form-group">
-                            <label for="rateHealth"> 9) How do you rate your current physical health? </label>
-                            <select class="form-control" id="rateHealth">
+                            <label  for="rateHealth"> 9) How do you rate your current physical health? </label>
+                            <select class="form-control " id="rateHealth">
                                 <option> Excellent </option>
                                 <option> Good </option>
                                 <option> Fair  </option>
@@ -269,7 +275,7 @@ and open the template in the editor.
                         <div id='medSec10' class='formgroup'>
                             <label for='reasonSeekTreat'> 10) Please describe your reasons for seeking treatment at this time. If there is a particular event which triggered you decision to seek treatment <wbr>
                                 now please list the event(s): </label>
-                            <textarea id="reasonSeekTreat" class="form-control" rows="3"></textarea>
+                            <textarea id="reasonSeekTreat" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
@@ -279,7 +285,7 @@ and open the template in the editor.
 
                         <div id='medSec11' class='formgroup'>
                             <label for='expectTreatment'> 11) What results do you expect from treatment? </label>
-                            <textarea id="expectTreatment" class="form-control" rows="3"></textarea>
+                            <textarea id="expectTreatment" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
@@ -290,7 +296,7 @@ and open the template in the editor.
                         <div id='medSec12' class='formgroup'>
                             <label for='mentalHealthTreatment'> 12) If you received mental health treatment in the past, please list the aspects of treatment that you feel worked the best and what did not work for <wbr>
                                 you. </label>
-                            <textarea id="mentalHealthTreatment" class="form-control" rows="3"></textarea>
+                            <textarea id="mentalHealthTreatment" class="form-control input-sm" rows="3"></textarea>
 
                         </div>
 
@@ -480,82 +486,82 @@ and open the template in the editor.
 
                             <h3 class="text-center"> Medical Form</h3>
                             <div class="container-fluid">
-                            <label for='pMedSec1'> 1) All current medications you are taking: </label>
-                            <!-- Zach's table -->
+                                <label for='pMedSec1'> 1) All current medications you are taking: </label>
+                                <!-- Zach's table -->
 
-                            <p class='leftIndent' ></p>
+                                <p class='leftIndent' ></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pMedSec2'> 2) Allergy (Medication): </label>
-                            <p class='leftIndent'  id="pAllegMed"> </p>
+                                <label for='pMedSec2'> 2) Allergy (Medication): </label>
+                                <p class='leftIndent'  id="pAllegMed"> </p>
 
-                            <br>
+                                <br>
 
-                            <label for='pCurrentCare'> 3) Currently under a physicians's care? </label>
-                            <p class='leftIndent2' id="pCurrentCare"> </p>
+                                <label for='pCurrentCare'> 3) Currently under a physicians's care? </label>
+                                <p class='leftIndent2' id="pCurrentCare"> </p>
 
-                            <label for='pCurrentName' class='leftIndent' > Name: </label>
-                            <p id="pCurrentName" class='leftIndent' > </p>
-                            <label for='pCurrentDateSeen' class='leftIndent' > Date Last Seen: </label>
-                            <p id="pCurrentDateSeen" class='leftIndent' > </p>
-                            <label for='pCurrentProblem' class='leftIndent' > Problem: </label>
-                            <p id="pCurrentProblem" class='leftIndent' > </p>
+                                <label for='pCurrentName' class='leftIndent' > Name: </label>
+                                <p id="pCurrentName" class='leftIndent' > </p>
+                                <label for='pCurrentDateSeen' class='leftIndent' > Date Last Seen: </label>
+                                <p id="pCurrentDateSeen" class='leftIndent' > </p>
+                                <label for='pCurrentProblem' class='leftIndent' > Problem: </label>
+                                <p id="pCurrentProblem" class='leftIndent' > </p>
 
 
-                            <br>
+                                <br>
 
-                            <label for='pMedDocName'> 4) Medical Doctor: </label>
-                            <p class='leftIndent2' id="pMedDocName"> </p>
-                            <label for='pMedDocPhone' class='leftIndent' > Phone: </label>
-                            <p id="pMedDocPhone" class='leftIndent' > </p>
-                            <label for='pMedDocDate' class='leftIndent' > Date of Last Physical Exam: </label>
-                            <p id="pMedDocDate" class='leftIndent' > </p>
+                                <label for='pMedDocName'> 4) Medical Doctor: </label>
+                                <p class='leftIndent2' id="pMedDocName"> </p>
+                                <label for='pMedDocPhone' class='leftIndent' > Phone: </label>
+                                <p id="pMedDocPhone" class='leftIndent' > </p>
+                                <label for='pMedDocDate' class='leftIndent' > Date of Last Physical Exam: </label>
+                                <p id="pMedDocDate" class='leftIndent' > </p>
 
-                            <br>
+                                <br>
 
-                            <label for='medSec5'> 5) Current Medical Conditions: </label>
-                            <p class='leftIndent' ></p>
+                                <label for='medSec5'> 5) Current Medical Conditions: </label>
+                                <p class='leftIndent' ></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pSigMedProb'> 6) Significant Medical Problems: </label>
-                            <p class='leftIndent'  id='pSigMedProb'></p>
+                                <label for='pSigMedProb'> 6) Significant Medical Problems: </label>
+                                <p class='leftIndent'  id='pSigMedProb'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pPastSurg'> 7) Past Surgery: </label>
-                            <p class='leftIndent'  id='pPastSurg'></p>
+                                <label for='pPastSurg'> 7) Past Surgery: </label>
+                                <p class='leftIndent'  id='pPastSurg'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pPastAccid'> 8) Past Accidents: </label>
-                            <p  class='leftIndent' id='pPastAccid'></p>
+                                <label for='pPastAccid'> 8) Past Accidents: </label>
+                                <p  class='leftIndent' id='pPastAccid'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pRateHealth'> 9) Physical Health Rating: </label>
-                            <p  class='leftIndent2' id='pRateHealth'></p>
+                                <label for='pRateHealth'> 9) Physical Health Rating: </label>
+                                <p  class='leftIndent2' id='pRateHealth'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pReasonSeekTreat'> 10) Reasons for Seeking Treatment: </label>
-                            <p class='leftIndent'  id='pReasonSeekTreat'></p>
+                                <label for='pReasonSeekTreat'> 10) Reasons for Seeking Treatment: </label>
+                                <p class='leftIndent'  id='pReasonSeekTreat'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pExpectTreatment'> 11) Results from Treatment Expected: </label>
-                            <p  class='leftIndent' id='pExpectTreatment'></p>
+                                <label for='pExpectTreatment'> 11) Results from Treatment Expected: </label>
+                                <p  class='leftIndent' id='pExpectTreatment'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pMentalHealthTreatment'> 12) Mental Health Treatment Past:  </label>
-                            <p  class='leftIndent' id='pMentalHealthTreatment'></p>
+                                <label for='pMentalHealthTreatment'> 12) Mental Health Treatment Past:  </label>
+                                <p  class='leftIndent' id='pMentalHealthTreatment'></p>
 
-                            <br>
+                                <br>
 
-                            <label for='pSec13'> 13) Issues seeking affection:  </label>
-                            <p  class='leftIndent' id='pSec13'></p>
+                                <label for='pSec13'> 13) Issues seeking affection:  </label>
+                                <p  class='leftIndent' id='pSec13'></p>
 
                             </div>
 
@@ -707,36 +713,36 @@ and open the template in the editor.
                                 <p>In the latter two cases, I am required by law to inform potential victims and legal authorities so that protective measures can be taken. Included on the last page of this
                                     package is a copy of the Privacy Notice as required by the Federal Health Insurance Portability and Accountability Act related to legal duties with respect to health
                                     information.</p>
-                                
+
                                 <p><span class="boldElement">Financial Policy: LifeStriders </span> is committed first and foremost to your health and well-being.Please understand that payment of 
-                                   your bill is considered part of your treatment. In this regard, the following is a statement of our Treatment and Financial Policies, which 
-                                   we require you to read and sign prior to treatment.</p>
-                                
+                                    your bill is considered part of your treatment. In this regard, the following is a statement of our Treatment and Financial Policies, which 
+                                    we require you to read and sign prior to treatment.</p>
+
                                 <p>LifeStriders, Inc. strives to provide you with affordable mental health support services. You will be responsible to pay a fee that may range between
                                     <span class="boldElement">$40.00 - $140.00</span> per therapeutic hour (<span class="boldElement">45-50 </span> minutes) or sliding scale fee depending on eligibility and fund availability. However, if you are not eligible at the time
                                     services are rendered you are responsible for full payment. All payments must be paid at the time services are rendered.</p>
-                                
+
                                 <p>Please note that there will be a $20.00 charge for all returned checks</p>
-                                
+
                                 <p><span class="boldElement">Cancellation Policy: </span> Twenty-four hours advance notice is required for all cancellations. You will be charged a missed
-                                   appointment fee as cutomary. If you need to cancel an appointment, please leave a message in your Counselor's voice mailbox or email 
-                                   <span class="boldElement">24</span> hours in advance.</p>
-                                
+                                    appointment fee as cutomary. If you need to cancel an appointment, please leave a message in your Counselor's voice mailbox or email 
+                                    <span class="boldElement">24</span> hours in advance.</p>
+
                                 <p><span class="boldElement"> Emergency Procedures: </span> If you are having a medical and/or life threatening emergency call <span class="boldElement">911</span> or go to the nearest Emergency
                                     Room.</p>
-                                
+
                                 <p><span class='boldElement'>Chris Lines: </span>County Mental Health Division (414) 257-6995. Suicide Intervention/Mental Health Crisis Line <span class='boldElement'> (414) 
-                                    257-7222</span> </p> 
-                                    
+                                        257-7222</span> </p> 
+
                                 <p>If you need to contact a LifeStriders counselor, leave a message according to the instructions on the phone service and your call will be
-                                   returned. There maybe a charge for lengthy telephone consultations.</p>
-                                
+                                    returned. There maybe a charge for lengthy telephone consultations.</p>
+
                                 <p><span class="boldElement">Phone: </span>262-309-9297</p>
                                 <p>Email: counseling@lifestriders.org, veronica@lifestriders.org</p>
 
                             </div>
                             <br>
-                            
+
                             <hr class="divider">
 
                             <div class="row headElementsDiv">
@@ -758,11 +764,11 @@ and open the template in the editor.
                                 </div>
                             </div>
                             <h4 class='text-center boldElement'>Clents Copy of Privacy Notice</h4>
-                            
+
                             <div class='container-fluid'>
-                            <p>LifeStriders, Inc, must maintain the privacy of your personal health information and give you this notice that describes our legal duties and privacy practices concerning 
-                               your personal health information.</p>
-                            
+                                <p>LifeStriders, Inc, must maintain the privacy of your personal health information and give you this notice that describes our legal duties and privacy practices concerning 
+                                    your personal health information.</p>
+
                                 <ul class='list-group clientCopyPriNot'>
                                     <li><span class="clientCopyH4">Without your-written authorization</span>, we can use your health information for the following purposes: </li>
                                     <li><span class='boldElement'>1) Treatment. </span>A provider may use the information in your medical record to determine which treatment option best addresses your health needs. The treatment
@@ -793,18 +799,18 @@ and open the template in the editor.
                                     authorization form, you may <span class='boldElement'>withdraw your authorization </span>at any time, as long as your withdrawal is in writing. If you wish to withdraw your authorization,
                                     please submit your written withdrawal to the Medical Records Department at LifeStriders, Inc.</p>
                             </div>
-                            
+
                             <div class='container-fluid'>
                                 <p class="clientCopyH4">Your Health Information Rights</p>
                                 <p>You have several rights with regard to your health information. If you wish to exercise any of the following rights, please contact your individual provider. Specifically,
-                                   you have the right to:</p>
+                                    you have the right to:</p>
                                 <ul class='list-group clientCopyPriNot'>
                                     <li><span class='boldElement'>1) Inspect and copy your health information. </span> With a few exceptions, you have the right to inspect and obtain a copy of your health information. However, This
                                         right does not apply to psychotherapy notes or information gathered for judicial proceedings, for example. In addition, we may charge you a reasonable fee if you 
                                         want a copy of your health information.</li>
                                     <li><span class="boldElement">2) Request to correct your health information.</span> If you believe your health information is incorrect, you may ask us to correct the information. 
-                                       You may be asked to make such requests - in writing and to give a reason as to why your health information should be changed. However, if we did not create the
-                                       health information that you believe is incorrect, or if we disagree with you and believe your health information is correct, we may deny your request.</li>
+                                        You may be asked to make such requests - in writing and to give a reason as to why your health information should be changed. However, if we did not create the
+                                        health information that you believe is incorrect, or if we disagree with you and believe your health information is correct, we may deny your request.</li>
                                     <li><span class="boldElement">3) Request restrictions on certain uses and disclosures.</span> You have the right to ask for restrictions on how your health information is used or to whom your 
                                         information is disclosed, even if the restriction affects your treatment or our payment or health care operation activities. You can as to limit the health
                                         information provided to family or friends involved in your care or payment of medical bills. However, we are not required to agree in all circumstances to your
@@ -817,7 +823,7 @@ and open the template in the editor.
                                     <li><span class="boldElement">7) Complaints.</span> if you believe your privacy rights have been violated, you may file a complaint with us and with the Federal Department of Health and Human Services. </li>
                                 </ul>
                                 <p>Again if you have any questions or concerns regarding your privacy rights or the information in these notices, please contact your individual provider. This 
-                                   notice of Medical Information Privacy is a Federal regulation (HIPPA). Effective 4/14/2003.</p>
+                                    notice of Medical Information Privacy is a Federal regulation (HIPPA). Effective 4/14/2003.</p>
                             </div>
 
                             <br>
@@ -834,7 +840,12 @@ and open the template in the editor.
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
         <script src="Scripts/counselForm.js" type="text/javascript"></script>
-
+        <script src="Scripts/jqBootstrapValidation.js" type="text/javascript"></script>
+        <script>
+            $(function () {
+                $("input,select,textarea").not("[type=submit]").jqBootstrapValidation();
+            });
+        </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
