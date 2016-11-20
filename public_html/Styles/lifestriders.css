@@ -154,5 +154,11 @@ hr {
 .clientCopyPriNot {
     list-style: none;
 }
+
+
+@media print {
+    footer {page-break-after: always}
+}
+
 /* ---------------------------------------------- */
 
