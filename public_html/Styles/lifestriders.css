@@ -155,7 +155,7 @@ hr {
 .q45 {
     padding-right: 5%;
 }
-
+/* Adds a page break on the browsers built in print preview page*/
 @media print {
     footer {page-break-after: always;}
 }
