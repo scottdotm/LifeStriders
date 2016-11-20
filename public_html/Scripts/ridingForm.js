@@ -81,13 +81,6 @@ $(document).ready(function (e) {
         $('#ppPAPhone').html($('#PAphone').val());
         $('#ppPAAltPhone').html($('#PAaltPhone').val());
         $('#ppPAEmail').html($('#PAemail').val());
-        if ($('#PAoptEmployer').is(':checked')) {
-            $('#ppPACompany').text('Employer');
-        } else if ($('#PAoptSchool').is(':checked')) {
-            $('#ppPACompany').text('School');
-        } else if ($('#PAoptOther').is(':checked')) {
-            $('#ppPACompany').text('Other');
-        }
         $('#ppPACompanyName').html($('#PAcompanyName').val());
         $('#ppPACompanyAddress').html($('#PAcompanyAddress').val());
         $('#ppPACompanyCity').html($('#PAcompanyCity').val());

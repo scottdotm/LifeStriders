@@ -145,13 +145,17 @@ hr {
     text-decoration: underline;
     font-size: 99.55%;
 }
-/* Getting Ride of Bullet points */
+/* Getting Rid of Bullet points */
 .clientCopyPriNot {
     list-style: none;
 }
 /* ---------------------------------------------- */
 
-// This spaces question 4 and 5 on the progress reporting page
+/* This spaces question 4 and 5 on the progress reporting page*/
 .q45 {
     padding-right: 5%;
+}
+
+@media print {
+    footer {page-break-after: always;}
 }
