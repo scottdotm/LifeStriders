@@ -197,7 +197,24 @@ and open the template in the editor.
 
                                                        <label for='medSec1'> 1) Please fill in all current medications you are taking: </label>
                                                        <div id='medSec1' class='formgroup'>
-                                                            <!-- Zach's table -->
+                                                             <div class="medication-group" id="medication-group">
+            Please list all current medications you are taking
+            <br>
+            <div id="meds">
+            <div class="input-group medication-1">
+            <label for="medication-1-name">Medication</label>
+            <input type="text" class="medication-name" id="medication-1-name">
+            <label for="medication-1-prescriber">Prescribed By</label>
+            <input type="text" class="medication-prescriber" id="medication-1-prescriber">
+            <label for="medication-1-dosage">Dosage</label>
+            <input type="text" class="medication-dosage" id="medication-1-dosage">
+            <label for="medication-1-duration">Taken How Long?</label>
+            <input type="text" class="medication-duration" id="medication-1-duration">
+            </div>
+            </div>
+            <br>
+            <button type="button" id="add-medication" value="add">More</button>
+        </div>
 
                                                        </div>
 
@@ -243,9 +260,28 @@ and open the template in the editor.
                                                        <br>
 
                                                        <label for='medSec5'> 5) Current Medical Conditions: (Please Check) </label>
-                                                       <div id='medSec5' class='formgroup'>
-                                                            <!-- Zach's check list -->
-                                                            <p></p>
+                                                       <div class="row">
+                                                       <div id="medSec5" class="form-group">
+            <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Allergies"><input type="checkbox" name="medical-condition" id="Allergies" value="Allergies"> Allergies</label></div>
+            <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Athsma"><input type="checkbox" name="medical-condition" id="Athsma" value="Athsma"> Athsma</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Arthritis"><input type="checkbox" name="medical-condition" id="Arthritis" value="Arthritis"> Arthritis</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Back"><input type="checkbox" name="medical-condition" id="Back" value="Back Trouble"> Back Trouble</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Cancer"><input type="checkbox" name="medical-condition" id="Cancer" value="Cancer"> Cancer</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Pain"><input type="checkbox" name="medical-condition" id="Pain" value="Chronic Pain"> Chronic Pain</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Diabetes"><input type="checkbox" name="medical-condition" id="Diabetes" value="Diabetes"> Diabetes</label></div>
+            <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Constipation"><input type="checkbox" name="medical-condition" id="Constipation" value="Frequent Constipation">Frequent Constipation</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Headaches"><input type="checkbox" name="medical-condition" id="Headaches" value="Frequent Headaches">Frequent Headaches</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Bowels"><input type="checkbox" name="medical-condition" id="Bowels" value="Iritable Bowels">Iritable Bowels</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Stomach"><input type="checkbox" name="medical-condition" id="Stomach" value="Stomach Problem">Stomach Problem</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Skin"><input type="checkbox" name="medical-condition" id="Skin" value="Skin Problem">Skin Problem</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Vision"><input type="checkbox" name="medical-condition" id="Vision" value="Vision Problem">Vision Problem</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Heart"><input type="checkbox" name="medical-condition" id="Heart" value="Heart Problem">Heart Problem</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Hay"><input type="checkbox" name="medical-condition" id="Hay" value="Hay Fever">Hay Fever</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Hearing"><input type="checkbox" name="medical-condition" id="Hearing" value="Hearing Problem">Hearing Problem</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Blood"><input type="checkbox" name="medical-condition" id="Blood" value="High Blood Pressure">High Blood Pressure</label></div>
+        	<div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Other"><input type="checkbox" name="medical-condition" id="Other" value="Other">Other</label></div>
+        
+                                                            </div>
                                                        </div>
 
                                                        <br>
