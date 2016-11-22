@@ -52,7 +52,7 @@ $(document).ready(function (e) {
         $('#ppEMTRelation3').html($('#EMTrelation3').val());
         $('#ppEMTContactNum3').html($('#EMTcontactNum3').val());
         $('#ppEMTSignedDate').html(todaysdate);
-        $('#ppEMTConsentSign').html("_____________________________________________________");
+        
 
         //***********************************************************************
         // Participant’s Application 
