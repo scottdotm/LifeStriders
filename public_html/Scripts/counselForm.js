@@ -32,7 +32,7 @@ $(document).ready(function (e) {
 
 
         if ($('#parentName').val().length === 0 || $('#hisherDOB').val().length === 0 || $('#hisherSSN').val().length === 0) {
-            $('.listRow5').hide();
+            $('#listRow5').hide();
         } else {
             $('#pParentName').html($('#parentName').val());
             $('#pHisHerDOB').html($('#hisherDOB').val());

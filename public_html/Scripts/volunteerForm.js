@@ -1,3 +1,5 @@
+/* global volCheckList, minorCheckList */
+
 //JavaScript Document
 //Scott M.
 //10/13/2016

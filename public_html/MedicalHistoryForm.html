@@ -1,0 +1,515 @@
+<html>
+    <head>
+        <title>Medical History Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
+    </head>
+    <body>
+        <div class="container wrapperOverall">
+
+            <div class="container row pageWrapper">
+
+                <div id="formMedicalHistoryForm" class ="well">
+                    <h1 class="text-center"> Participant's Medical History </h1>
+                    <div class="row headElementsDiv">
+
+                        <div class="col-md-8 lsH2Div">  
+                            <h2>LifeStriders</h1>
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2 text-right">
+                            Phone: 262.309.9297 <br>
+                            Fax: 866.404.3105 <br> 
+                            counseling@lifestriders.org <br>
+
+                            <br>
+
+                            Sll W29667 Summit Avenue (US HWY 18) <br>
+                            Waukesha, WI 53188 <br>
+
+                        </div>
+                    </div>
+
+                    <br>
+                    <h3 class="text-center">Participant's Medical History</h3>
+                    <form method="POST">
+
+                        <div class="row">
+                            <div class="form-group">
+                                <label for="medHisPartFirst">Participant First Name: </label>
+                                <input type="text" class="form-control" id="medHisPartFirst" placeholder="Participant's First Name..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisPartLast">Participant Last Name: </label>
+                                <input type="text" class="form-control" id="medHisPartLast" placeholder="Participant's Last Name..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisDob">DOB: </label>
+                                <input type="date" class="form-control" id="medHisDob" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisHeight">Height: </label>
+                                <input type="text" class="form-control" id="medHisHeight" placeholder="FT' IN''..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisWeight">Weight: </label>
+                                <input type="text" class="form-control" id="medHisWeight" placeholder="lbs..">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="medHisAddress">Address: </label>
+                                <input type="text" class="form-control" id="medHisAddress" placeholder="Address..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisCity">City: </label>
+                                <input type="text" class="form-control" id="medHisCity" placeholder="City..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisState">State: </label>
+                                <input type="text" class="form-control" id="medHisState" placeholder="State..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisZip">Zip Code: </label>
+                                <input type="text" class="form-control" id="medHisZip" placeholder="Zip Code..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisDiagnosis">Diagnosis: </label>
+                                <input type="text" class="form-control" id="medHisDiagnosis" placeholder="Diagnosis..">
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisOnset">Date of Onset: </label>
+                                <input type="date" class="form-control" id="medHisOnset" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisSurgeries">Past/Prospective Surgeries: </label>
+                                <textarea class="form-control" id="medHisSurgeries" row="2" placeholder="Surgeries.."></textarea> 
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisMedications">Medications: </label>
+                                <textarea class="form-control" id="medHisMedications" row="2" placeholder="Medications.."></textarea> 
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisSeizureType">Seizure Type: </label>
+                                <input type="text" class="form-control" id="medHisSeizureType" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisControlled">Controlled:</label><br>
+                                <label for="medHisControlledOptYes"><input type="radio" name="medHisControlled" id="medHisControlledOptYes" value="yes" > Yes</label>
+                                <label for="medHisControlledOptNo"><input type="radio" name="medHisControlled" id="medHisControlledOptNo" value="no"> No</label>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisLastSeizureDate">Last Seizure Date: </label>
+                                <input type="date" class="form-control" id="medHisLastSeizureDate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisShunt">Shunt Present:</label><br>
+                                <label for="medHisShuntOptYes"><input type="radio" name="medHisShunt" id="medHisShuntOptYes" value="yes" > Yes</label>
+                                <label for="medHisShuntOptNo"><input type="radio" name="medHisShunt" id="medHisShuntOptNo" value="no"> No</label>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisRevisionDate">Date of Last Revision: </label>
+                                <input type="date" class="form-control" id="medHisRevisionDate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisNeeds">Special Precautions/Needs: </label>
+                                <textarea class="form-control" id="medHisNeeds" row="2" placeholder="Special Precautions/Needs.."></textarea> 
+                            </div>
+                            <h3>
+                                Mobility
+                            </h3>
+                            <div class="form-group">
+                                <label for="medHisIndependent">Independent Ambulation: </label><br>
+                                <label for="medHisIndependentOptNo"><input type="radio" name="medHisIndependent" id="medHisIndependentOptNo" value="no"> No</label>
+                                <label for="medHisIndependentOptYes"><input type="radio" name="medHisIndependent" id="medHisIndependentOptYes" value="yes" > Yes</label>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisAssisted">Assisted Ambulation: </label><br>
+                                <label for="medHisAssistedOptNo"><input type="radio" name="medHisAssisted" id="medHisAssistedOptNo" value="no"> No</label>
+                                <label for="medHisAssistedOptYes"><input type="radio" name="medHisAssisted" id="medHisAssistedOptYes" value="yes" > Yes</label>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisWheelchair">Wheelchair: </label><br>
+                                <label for="medHisWheelchairOptNo"><input type="radio" name="medHisWheelchair" id="medHisWheelchairOptNo" value="no"> No</label>
+                                <label for="medHisWheelchairOptYes"><input type="radio" name="medHisWheelchair" id="medHisWheelchairOptYes" value="yes" > Yes</label>
+                                <br>
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisBraces">Braces/Assistive Devices: </label>
+                                <textarea class="form-control" id="medHisBraces" row="2" placeholder="Braces/Assistive Devices.."></textarea> 
+                            </div>
+                            <h3>
+                                For Those with Down Syndrome:
+                            </h3>
+                            <div class="form-group">
+                                <label for="medHisAtlantoDensDate">AtlantoDens Interval X-rays, date: </label>
+                                <input type="date" class="form-control" id="medHisAtlantoDensDate" >
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisResult">Result: </label>
+                                <input type="text" class="form-control" id="medHisResult" placeholder="Result..">                                
+                            </div>
+                            <div class="form-group">
+                                <label for="medHisSymptoms">Neurologic Symptoms of AtlantoAxial Instability: </label>
+                                <textarea class="form-control" id="medHisSymptoms" row="2" placeholder="Symptoms.."></textarea> 
+                            </div>
+                            <table style="width:100%" class="form-group">
+                                <caption>Please Indicate Current or Past Difficulties in the Following Systems/Areas, including surgeries: </caption>
+                                <tr>
+                                    <th></th>
+                                    <th>Yes</th>
+                                    <th>Comments</th>
+                                </tr>
+                                <tr>
+                                    <td>Auditory</td>
+                                    <td><input type="checkbox" id="medHisAuditory" name="medHisAuditory" value="medHisAuditory"></td>
+                                    <td><textarea class="form-control" id="medHisAuditoryComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Visual</td>
+                                    <td><input type="checkbox" id="medHisVisual" name="medHisVisual" value="medHisVisual"></td>
+                                    <td><textarea class="form-control" id="medHisVisualComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Tactile Sensation</td>
+                                    <td><input type="checkbox" id="medHisTactSensation" name="medHisTactSensation" value="medHisTactSensation"></td>
+                                    <td><textarea class="form-control" id="medHisTactSensationComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Speech</td>
+                                    <td><input type="checkbox" id="medHisSpeech" name="medHisSpeech" value="medHisSpeech"></td>
+                                    <td><textarea class="form-control" id="medHisSpeechComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Cardiac</td>
+                                    <td><input type="checkbox" id="medHisCardiac" name="medHisCardiac" value="medHisCardiac"></td>
+                                    <td><textarea class="form-control" id="medHisCardiacComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Circulatory</td>
+                                    <td><input type="checkbox" id="medHisCirculatory" name="medHisCirculatory" value="medHisCirculatory"></td>
+                                    <td><textarea class="form-control" id="medHisCirculatoryComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Integumentary/Skin</td>
+                                    <td><input type="checkbox" id="medHisIntegumentary" name="medHisIntegumentary" value="medHisIntegumentary"></td>
+                                    <td><textarea class="form-control" id="medHisIntegumentaryComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Immunity</td>
+                                    <td><input type="checkbox" id="medHisImmunity" name="medHisImmunity" value="medHisImmunity"></td>
+                                    <td><textarea class="form-control" id="medHisImmunityComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Pulmonary</td>
+                                    <td><input type="checkbox" id="medHisPulmonary" name="medHisPulmonary" value="medHisPulmonary"></td>
+                                    <td><textarea class="form-control" id="medHisPulmonaryComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Neurologic</td>
+                                    <td><input type="checkbox" id="medHisNeurologic" name="medHisNeurologic" value="medHisNeurologic"></td>
+                                    <td><textarea class="form-control" id="medHisNeurologicComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Muscular</td>
+                                    <td><input type="checkbox" id="medHisMuscular" name="medHisMuscular" value="medHisMuscular"></td>
+                                    <td><textarea class="form-control" id="medHisMuscularComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Balance</td>
+                                    <td><input type="checkbox" id="medHisBalance" name="medHisBalance" value="medHisBalance"></td>
+                                    <td><textarea class="form-control" id="medHisBalanceComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Orthopedic</td>
+                                    <td><input type="checkbox" id="medHisOrthopedic" name="medHisOrthopedic" value="medHisOrthopedic"></td>
+                                    <td><textarea class="form-control" id="medHisOrthopedicComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Allergies</td>
+                                    <td><input type="checkbox" id="medHisAllergies" name="medHisAllergies" value="medHisAllergies"></td>
+                                    <td><textarea class="form-control" id="medHisAllergiesComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Learning Disability</td>
+                                    <td><input type="checkbox" id="medHisLearningDisability" name="medHisLearningDisability" value="medHisLearningDisability"></td>
+                                    <td><textarea class="form-control" id="medHisLearningDisabilityComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Cognitive</td>
+                                    <td><input type="checkbox" id="medHisCognitive" name="medHisCognitive" value="medHisCognitive"></td>
+                                    <td><textarea class="form-control" id="medHisCognitiveComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Emotional/Psychological</td>
+                                    <td><input type="checkbox" id="medHisEmotional" name="medHisEmotional" value="medHisEmotional"></td>
+                                    <td><textarea class="form-control" id="medHisEmotionalComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td>Pain</td>
+                                    <td><input type="checkbox" id="medHisPain" name="medHisPain" value="medHisPain"></td>
+                                    <td><textarea class="form-control" id="medHisPainComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="form-control" id="medHisOtherText" placeholder="Other.."></td>
+                                    <td><input type="checkbox" id="medHisOther" name="medHisOther" value="medHisOther"></td>
+                                    <td><textarea class="form-control" id="medHisOtherComment" row="2" placeholder="Comment here.."></textarea></td>
+                                </tr>
+                            </table> 
+                        </div>
+                        <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
+                    </form>
+                </div>
+            </div>
+            
+            <!--*************************************************************************************************************************************************-->
+            <!--Start of the Print Preview Page which is hidden when the form first loads-->
+            <!--*************************************************************************************************************************************************-->
+
+            <div class="container row pageWrapper">
+
+                <div id="printPreviewMedicalHistoryFormOVER" class="container printPreviewOVER row"> 
+
+                    <div class="row">
+                        <h1  class="text-center"> Medical History Form </h1>
+                        <div id="printPreviewMedicalHistoryForm" class="printPreviewDiv col-md-12 container">
+
+                            <div class="row headElementsDiv">
+                                <div class="col-md-8 lsH2Div" >  
+                                    <h2>LifeStriders</h2>
+                                </div>
+                                <div class="col-md-1"> </div>
+                                <div class="col-md-2 text-right">
+                                    <!-- make a list with no bullet points -->
+                                    Phone: 262.309.9297 <br>
+                                    Fax: 866.404.3105 <br>
+                                    counseling@lifestriders.org <br>
+
+                                    <br>
+
+                                    Sll W29667 Summit Avenue (US HWY 18) <br>
+                                    Waukesha, WI 53188 <br>
+
+                                </div>
+                            </div>
+
+                            <br>
+                            
+                            
+                            
+                            <!--*************************************************************************************************************************************************-->
+                            <!--Start of the Participant's Medical History Form Print Preview Page which is hidden when the form first loads-->
+                            <!--*************************************************************************************************************************************************-->
+                            <label for="ppMedHisPartFirst">Participant's First Name:</label>
+                            <p id='ppMedHisPartFirst'></p>
+                            
+                            <label for="ppMedHisPartLast">Participant's Last Name:</label>
+                            <p id="ppMedHisPartLast"></p>
+                            
+                            <label for="ppMedHisDob">DOB:</label>
+                            <p id="ppMedHisDob"></p>
+                            
+                            <label for="ppMedHisHeight">Height:</label>
+                            <p id="ppMedHisHeight"></p>
+                            
+                            <label for="ppMedHisWeight">Weight:</label>
+                            <p id="ppMedHisWeight"></p>
+                            
+                            <label for="ppMedHisAddress">Address:</label>
+                            <p id="ppMedHisAddress"></p>
+                            
+                            <label for="ppMedHisCity">City:</label>
+                            <p id="ppMedHisCity"></p>
+                            
+                            <label for="ppMedHisState">State:</label>
+                            <p id="ppMedHisState"></p>
+                            
+                            <label for="ppMedHisZip">Zip:</label>
+                            <p id="ppMedHisZip"></p>
+                            
+                            <label for="ppMedHisDiagnosis">Diagnosis:</label>
+                            <p id="ppMedHisDiagnosis"></p>
+                            
+                            <label for="ppMedHisOnset">Date of Onset:</label>
+                            <p id="ppMedHisOnset"></p>
+                            
+                            <label for="ppMedHisSurgeries">Past/Prospective Surgeries:</label>
+                            <p id="ppMedHisSurgeries"></p>
+                            
+                            <label for="ppMedHisMedications">Medications:</label>
+                            <p id="ppMedHisMedications"></p>
+                            
+                            <label for="ppMedHisSeizureType">Seizure Type:</label>
+                            <p id="ppMedHisSeizureType"></p>
+                            
+                            <label for="ppMedHisControlled">Controlled?:</label>
+                            <p id="ppMedHisControlled"></p>
+                            
+                            <label for="ppMedHisLastSeizureDate">Date of Last Seizure:</label>
+                            <p id="ppMedHisLastSeizureDate"></p>
+                            
+                            <label for="ppMedHisShunt">Shunt Present:</label>
+                            <p id="ppMedHisShunt"></p>
+                            
+                            <label for="ppMedHisRevisionDate">Date of Last Revision:</label>
+                            <p id="ppMedHisRevisionDate"></p>
+                            
+                            <label for="ppMedHisNeeds">Special Precautions/Needs:</label>
+                            <p id="ppMedHisNeeds"></p>
+                            
+                            <label for="ppMedHisIndependent">Independent Ambulation:</label>
+                            <p id="ppMedHisIndependent"></p>
+                            
+                            <label for="ppMedHisAssisted">Assisted Ambulation:</label>
+                            <p id="ppMedHisAssisted"></p>
+                            
+                            <label for="ppMedHisWheelchair">Wheelchair:</label>
+                            <p id="ppMedHisWheelchair"></p>
+                            
+                            <label for="ppMedHisBraces">Braces/Assistive Devices:</label>
+                            <p id="ppMedHisBraces"></p>
+                            
+                            <label for="ppMedHisAtlantoDensDate">AtlantoDens Interval X-rays Date:</label>
+                            <p id="ppMedHisAtlantoDensDate"></p>
+                            
+                            <label for="ppMedHisResult">Result:</label>
+                            <p id="ppMedHisResult"></p>
+                            
+                            <label for="ppMedHisSymptoms">Neurologic Symptoms of AlantoAxial Instability:</label>
+                            <p id="ppMedHisSymptoms"></p>
+                            
+                            <label for="ppMedHisAuditory">Auditory:</label>
+                            <p id="ppMedHisAuditory"></p>
+                            
+                            <label for="ppMedHisAuditoryComment">Auditory Comment:</label>
+                            <p id="ppMedHisAuditoryComment"></p>
+                            
+                            <label for="ppMedHisVisual">Visual:</label>
+                            <p id="ppMedHisVisual"></p>
+                            
+                            <label for="ppMedHisVisualComment">Visual Comment:</label>
+                            <p id="ppMedHisVisualComment"></p>
+                            
+                            <label for="ppMedHisTactSensation">Tactile Sensation:</label>
+                            <p id="ppMedHisTactSensation"></p>
+                            
+                            <label for="ppMedHisTactSensationComment">Tactile Sensation Comment:</label>
+                            <p id="ppMedHisTactSensationComment"></p>
+                            
+                            <label for="ppMedHisSpeech">Speech:</label>
+                            <p id="ppMedHisSpeech"></p>
+                            
+                            <label for="ppMedHisSpeechComment">Speech Comment:</label>
+                            <p id="ppMedHisSpeechComment"></p>
+                            
+                            <label for="ppMedHisCardiac">Cardiac:</label>
+                            <p id="ppMedHisCardiac"></p>
+                            
+                            <label for="ppMedHisCardiacComment">Cardiac Comment:</label>
+                            <p id="ppMedHisCardiacComment"></p>
+                            
+                            <label for="ppMedHisCirculatory">Circulatory:</label>
+                            <p id="ppMedHisCirculatory"></p>
+                            
+                            <label for="ppMedHisCirculatoryComment">Circulatory Comment:</label>
+                            <p id="ppMedHisCirculatoryComment"></p>
+                            
+                            <label for="ppMedHisIntegumentary">Integumentary/Skin:</label>
+                            <p id="ppMedHisIntegumentary"></p>
+                            
+                            <label for="ppMedHisIntegumentaryComment">Integumentary/Skin Comment:</label>
+                            <p id="ppMedHisIntegumentaryComment"></p>
+                            
+                            <label for="ppMedHisImmunity">Immunity:</label>
+                            <p id="ppMedHisImmunity"></p>
+                            
+                            <label for="ppMedHisImmunityComment">Immunity Comment:</label>
+                            <p id="ppMedHisImmunityComment"></p>
+                            
+                            <label for="ppMedHisPulmonary">Pulmonary:</label>
+                            <p id="ppMedHisPulmonary"></p>
+                            
+                            <label for="ppMedHisPulmonaryComment">Pulmonary Comment:</label>
+                            <p id="ppMedHisPulmonaryComment"></p>
+                            
+                            <label for="ppMedHisNeurologic">Neurologic:</label>
+                            <p id="ppMedHisNeurologic"></p>
+                            
+                            <label for="ppMedHisNeurologicComment">Neurologic Comment:</label>
+                            <p id="ppMedHisNeurologicComment"></p>
+                            
+                            <label for="ppMedHisMuscular">Muscular:</label>
+                            <p id="ppMedHisMuscular"></p>
+                            
+                            <label for="ppMedHisMuscularComment">Muscular Comment:</label>
+                            <p id="ppMedHisMuscularComment"></p>
+                            
+                            <label for="ppMedHisBalance">Balance:</label>
+                            <p id="ppMedHisBalance"></p>
+                            
+                            <label for="ppMedHisBalanceComment">Balance Comment:</label>
+                            <p id="ppMedHisBalanceComment"></p>
+                            
+                            <label for="ppMedHisOrthopedic">Orthopedic:</label>
+                            <p id="ppMedHisOrthopedic"></p>
+                            
+                            <label for="ppMedHisOrthopedicComment">Orthopedic Comment:</label>
+                            <p id="ppMedHisOrthopedicComment"></p>
+                            
+                            <label for="ppMedHisAllergies">Allergies:</label>
+                            <p id="ppMedHisAllergies"></p>
+                            
+                            <label for="ppMedHisAllergiesComment">Allergies Comment:</label>
+                            <p id="ppMedHisAllergiesComment"></p>
+                            
+                            <label for="ppMedHisLearningDisability">Learning Disability:</label>
+                            <p id="ppMedHisLearningDisability"></p>
+                            
+                            <label for="ppMedHisLearningDisabilityComment">Learning Disability Comment:</label>
+                            <p id="ppMedHisLearningDisabilityComment"></p>
+                            
+                            <label for="ppMedHisCognitive">Cognitive:</label>
+                            <p id="ppMedHisCognitive"></p>
+                            
+                            <label for="ppMedHisCognitiveComment">Cognitive Comment:</label>
+                            <p id="ppMedHisCognitiveComment"></p>
+                            
+                            <label for="ppMedHisEmotional">Emotional/Psychological:</label>
+                            <p id="ppMedHisEmotional"></p>
+                            
+                            <label for="ppMedHisEmotionalComment">Emotional/Psychological Comment:</label>
+                            <p id="ppMedHisEmotionalComment"></p>
+                            
+                            <label for="ppMedHisPain">Pain:</label>
+                            <p id="ppMedHisPain"></p>
+                            
+                            <label for="ppMedHisPainComment">Pain Comment:</label>
+                            <p id="ppMedHisPainComment"></p>
+                            
+                            <label for="ppMedHisOtherText">Other:</label>
+                            <p id="ppMedHisOtherText"></p>
+                            
+                            <label for="ppMedHisOther">Other:</label>
+                            <p id="ppMedHisOther"></p>
+                            
+                            <label for="ppMedHisOtherComment">Other Comment:</label>
+                            <p id="ppMedHisOtherComment"></p>
+                            
+                            <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
+        <script src="Scripts/medicalHistoryForm.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
