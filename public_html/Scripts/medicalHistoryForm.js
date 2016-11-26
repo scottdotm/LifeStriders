@@ -12,6 +12,131 @@ $(document).ready(function (e) {
     $('html,body').scrollTop(0);
     // Hides the Print Preview Half of this Form
     $('#printPreviewMedicalHistoryFormOVER').hide();
+
+    /* toggles the comment text area on the health history*/
+    $('.healthCheck').change(function () {
+        if ($(this).is(':checked')) {
+
+            if (this.value == "medHisAuditory") {
+                $('#PHH1').show(function () {
+                    $('#medHisAuditoryComment').focus();
+                })
+            } else if (this.value == "medHisVisual") {
+                $('#PHH2').show(function () {
+                    $('#medHisVisualComment').focus();
+                })
+            } else if (this.value == "medHisTactSensation") {
+                $('#PHH3').show(function () {
+                    $('#medHisTactSensationComment').focus();
+                })
+            } else if (this.value == "medHisSpeech") {
+                $('#PHH4').show(function () {
+                    $('#medHisSpeechComment').focus();
+                })
+            } else if (this.value == "medHisCardiac") {
+                $('#PHH5').show(function () {
+                    $('#medHisCardiacComment').focus();
+                })
+            } else if (this.value == "medHisCirculatory") {
+                $('#PHH6').show(function () {
+                    $('#medHisCirculatoryComment').focus();
+                })
+            } else if (this.value == "medHisIntegumentary") {
+                $('#PHH7').show(function () {
+                    $('#medHisIntegumentaryComment').focus();
+                })
+            } else if (this.value == "medHisImmunity") {
+                $('#PHH8').show(function () {
+                    $('#medHisImmunityComment').focus();
+                })
+            } else if (this.value == "medHisPulmonary") {
+                $('#PHH9').show(function () {
+                    $('#medHisPulmonaryComment').focus();
+                })
+            } else if (this.value == "medHisNeurologic") {
+                $('#PHH10').show(function () {
+                    $('#medHisNeurologicComment').focus();
+                })
+            } else if (this.value == "medHisMuscular") {
+                $('#PHH11').show(function () {
+                    $('#medHisMuscularComment').focus();
+                })
+            } else if (this.value == "medHisBalance") {
+                $('#PHH12').show(function () {
+                    $('#medHisBalanceComment').focus();
+                })
+            } else if (this.value == "medHisOrthopedic") {
+                $('#PHH13').show(function () {
+                    $('#medHisOrthopedicComment').focus();
+                })
+            } else if (this.value == "medHisAllergies") {
+                $('#PHH14').show(function () {
+                    $('#medHisAllergiesComment').focus();
+                })
+            } else if (this.value == "medHisLearningDisability") {
+                $('#PHH15').show(function () {
+                    $('#medHisLearningDisabilityComment').focus();
+                })
+            } else if (this.value == "medHisCognitive") {
+                $('#PHH16').show(function () {
+                    $('#medHisCognitiveComment').focus();
+                })
+            } else if (this.value == "medHisEmotional") {
+                $('#PHH17').show(function () {
+                    $('#medHisEmotionalComment').focus();
+                })
+            } else if (this.value == "medHisPain") {
+                $('#PHH18').show(function () {
+                    $('#medHisPainComment').focus();
+                })
+            } else if (this.value == "medHisOther") {
+                $('#PHH19').show(function () {
+                    $('#medHisOtherComment').focus();
+                })
+            }
+        } else {
+            if (this.value == "medHisAuditory") {
+                $('#PHH1').hide();
+            } else if (this.value == "medHisVisual") {
+                $('#PHH2').hide();
+            } else if (this.value == "medHisTactSensation") {
+                $('#PHH3').hide();
+            } else if (this.value == "medHisSpeech") {
+                $('#PHH4').hide();
+            } else if (this.value == "medHisCardiac") {
+                $('#PHH5').hide();
+            } else if (this.value == "medHisCirculatory") {
+                $('#PHH6').hide();
+            } else if (this.value == "medHisIntegumentary") {
+                $('#PHH7').hide();
+            } else if (this.value == "medHisImmunity") {
+                $('#PHH8').hide();
+            } else if (this.value == "medHisPulmonary") {
+                $('#PHH9').hide();
+            } else if (this.value == "medHisNeurologic") {
+                $('#PHH10').hide();
+            } else if (this.value == "medHisMuscular") {
+                $('#PHH11').hide();
+            } else if (this.value == "medHisBalance") {
+                $('#PHH12').hide();
+            } else if (this.value == "medHisOrthopedic") {
+                $('#PHH13').hide();
+            } else if (this.value == "medHisAllergies") {
+                $('#PHH14').hide();
+            } else if (this.value == "medHisLearningDisability") {
+                $('#PHH15').hide();
+            } else if (this.value == "medHisCognitive") {
+                $('#PHH16').hide();
+            } else if (this.value == "medHisEmotional") {
+                $('#PHH17').hide();
+            } else if (this.value == "medHisPain") {
+                $('#PHH18').hide();
+            } else if (this.value == "medHisOther") {
+                $('#PHH19').hide();
+            }
+        }
+    });
+
     // Brings up the hidden half of the page with the fields filled out for print preview
     $('#printPreviewButton').click(function (e) {
         // Formats the date as mm-dd-yyyy
@@ -20,7 +145,7 @@ $(document).ready(function (e) {
         //***********************************************************************
         //Medical History Form
         //***********************************************************************
-        
+
         $('#ppMedHisPartFirst').html($('#medHisPartFirst').val());
         $('#ppMedHisPartLast').html($('#medHisPartLast').val());
         $('#ppMedHisDob').html($('#medHisDob').val());
@@ -67,7 +192,7 @@ $(document).ready(function (e) {
         $('#ppMedHisAtlantoDensDate').html($('#medHisAtlantoDensDate').val());
         $('#ppMedHisResult').html($('#medHisResult').val());
         $('#ppMedHisSymptoms').html($('#medHisSymptoms').val());
-        
+
         if ($('#medHisAuditory').is(':checked')) {
             $('#ppMedHisAuditory').html("Yes");
             $('#ppMedHisAuditoryComment').html($('#medHisAuditoryComment').val());
@@ -183,11 +308,16 @@ $(document).ready(function (e) {
         } else {
             $('#ppMedHisOther').html("No");
         }
-        
-        
-        
+        if ($('#medHisOther').val() == "") {
+            $('#ppMedHisOther').hide();
+            $('#ppMedHisOtherComment').hide();
+        } else {
+            $('#ppMedHisOtherComment').html($('#medHisOtherComment').val());
+        }
+        $('#ppMedHisSignedDate').html(todaysdate)
+
         //-----------------------------------------------------------------------
-        
+
         $('html,body').scrollTop(0);
         $('#printPreviewMedicalHistoryFormOVER').show();
         $('#formMedicalHistoryForm').hide();
