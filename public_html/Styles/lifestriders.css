@@ -124,6 +124,10 @@ hr {
     margin-right: 7.5%;
     margin-left: 7.5%;
 }
+.listRowLi1Elem li{
+    margin-right: 8%;
+    margin-left: 8%;
+}
 /* --------------- */
 /* If there is a sub section */
 .leftIndent{
