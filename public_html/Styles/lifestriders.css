@@ -206,3 +206,23 @@ td.tdSignName{
     padding-bottom: 1px;
     width: 35%;
 }
+
+/*radio button and text box on same line*/
+.inline-radio label{
+    vertical-align: middle
+}
+.inline-radio input[type=text]{
+    width: 40%;
+    display:inline-block;
+}
+/* Padding for health history print preview page yes/no comment display*/
+.padding {
+    padding: 2.5%;
+}
+
+#PAnext, #PHHnext, #EMTnext{
+    float: right;
+}
+#PHHprevious, #EMTprevious, #PRprevious{
+    float: left;
+}

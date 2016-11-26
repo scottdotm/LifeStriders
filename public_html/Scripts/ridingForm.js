@@ -13,54 +13,93 @@ $(document).ready(function (e) {
     // Hides the Print Preview Half of this Form
     $('#printPreviewRiderFormOVER').hide();
     
+    /* Scrolls the page to the top each time a next or previous button is clicked*/
+    $('#PAnext,#PHHnext,#EMTnext,#PHHprevious,#EMTprevious,#PRprevious').click(function() {
+        $('html,body').scrollTop(325);
+    });
+    
+   
+
     /* adds another emergency contact and stops at 3*/
     var count = 1;
     $('#addEMT').click(function () {
         count++;
-        $('#EMT'+count).show();
-        $('#ppEMT'+count).show();
-        
+        $('#EMT' + count).show();
+        $('#ppEMT' + count).show();
+
         if (count === 3) {
-            $('#addEMT').prop("disabled",true);
+            $('#addEMT').prop("disabled", true);
         }
 
     });
     /* toggles the comment text area on the health history*/
     $('.healthCheck').change(function () {
         if ($(this).is(':checked')) {
-            
+
             if (this.value == "vision") {
-                $('#PHH1').show();
+                $('#PHH1').show(function() {
+                    $('#PHHvisionComment').focus();
+                })
             } else if (this.value == "hearing") {
-                $('#PHH2').show();
+                $('#PHH2').show(function() {
+                    $('#PHHhearingComment').focus();
+                })
             } else if (this.value == "sensation") {
-                $('#PHH3').show();
+                $('#PHH3').show(function() {
+                    $('#PHHsensationComment').focus();
+                })
             } else if (this.value == "comm") {
-                $('#PHH4').show();
+                $('#PHH4').show(function() {
+                    $('#PHHcommComment').focus();
+                })
             } else if (this.value == "heart") {
-                $('#PHH5').show();
+                $('#PHH5').show(function() {
+                    $('#PHHheartComment').focus();
+                })
             } else if (this.value == "breathing") {
-                $('#PHH6').show();
+                $('#PHH6').show(function() {
+                    $('#PHHbreathingComment').focus();
+                })
             } else if (this.value == "digest") {
-                $('#PHH7').show();
+                $('#PHH7').show(function() {
+                    $('#PHHdigestComment').focus();
+                })
             } else if (this.value == "eliminate") {
-                $('#PHH8').show();
+                $('#PHH8').show(function() {
+                    $('#PHHeliminateComment').focus();
+                })
             } else if (this.value == "circulate") {
-                $('#PHH9').show();
+                $('#PHH9').show(function() {
+                    $('#PHHcirculateComment').focus();
+                })
             } else if (this.value == "emotion") {
-                $('#PHH10').show();
+                $('#PHH10').show(function() {
+                    $('#PHHemotionComment').focus();
+                })
             } else if (this.value == "behave") {
-                $('#PHH11').show();
+                $('#PHH11').show(function() {
+                    $('#PHHbehaveComment').focus();
+                })
             } else if (this.value == "pain") {
-                $('#PHH12').show();
+                $('#PHH12').show(function() {
+                    $('#PHHpainComment').focus();
+                })
             } else if (this.value == "bone") {
-                $('#PHH13').show();
+                $('#PHH13').show(function() {
+                    $('#PHHboneComment').focus();
+                })
             } else if (this.value == "muscle") {
-                $('#PHH14').show();
+                $('#PHH14').show(function() {
+                    $('#PHHmuscleComment').focus();
+                })
             } else if (this.value == "think") {
-                $('#PHH15').show();
+                $('#PHH15').show(function() {
+                    $('#PHHthinkComment').focus();
+                })
             } else if (this.value == "allergy") {
-                $('#PHH16').show();
+                $('#PHH16').show(function() {
+                    $('#PHHallergyComment').focus();
+                })
             }
         } else {
             if (this.value == "vision") {
@@ -300,8 +339,14 @@ $(document).ready(function (e) {
         $('#ppPHHSleeping').html($("input[name='sleeping']:checked").val());
         $('#ppPHHRelationships').html($("input[name='relationships']:checked").val());
         $('#ppPHHAnger').html($("input[name='anger']:checked").val());
+        if ($('#PHHother').val() == "") {
+            $('#ppPHHOtherText').hide();
+            $('#ppPHHOther').hide();
+        }else{
         $('#ppPHHOtherText').html($('#PHHother').val());
         $('#ppPHHOther').html($("input[name='other']:checked").val());
+        }
+        
 
         //***********************************************************************
         //Authorization for Emergency Medical Treatment Form
