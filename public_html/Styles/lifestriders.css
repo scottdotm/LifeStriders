@@ -124,6 +124,10 @@ hr {
     margin-right: 7.5%;
     margin-left: 7.5%;
 }
+.listRowLi1Elem li{
+    margin-right: 8%;
+    margin-left: 8%;
+}
 /* --------------- */
 /* If there is a sub section */
 .leftIndent{
@@ -160,11 +164,71 @@ hr {
     footer {page-break-after: always;}
 }
 
-table, th, td {
+/*table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
 
 th, td {
     padding: 5px;
+}*/
+
+td.td1{
+    width: 30%;
+}
+
+td.td2{
+    width: 10%;
+}
+
+td.td3{
+    width: 70%;
+}
+
+/* Styling for the signature, name, and date*/
+table.sign{
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 25px;
+}
+thead.thSign{
+    border-bottom: 2px solid black;
+    padding-bottom: 0px;
+    
+}
+td.tdSign{
+    border: none;
+    padding-bottom: 1px;
+}
+td.tdSignDate {
+    border: none;
+    padding-bottom: 1px;
+    text-align: right;
+}
+td.tdSignName{
+    border: none;
+    padding-bottom: 1px;
+    width: 35%;
+}
+
+/*radio button and text box on same line*/
+.inline-radio label{
+    vertical-align: middle
+}
+.inline-radio input[type=text]{
+    width: 40%;
+    display:inline-block;
+}
+/* Padding for health history print preview page yes/no comment display*/
+.padding {
+    padding: 2.5%;
+}
+.paddingRight {
+    padding-right: 2.5%;
+}
+#PAnext, #PHHnext, #EMTnext{
+    float: right;
+}
+#PHHprevious, #EMTprevious, #PRprevious{
+    float: left;
 }

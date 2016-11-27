@@ -39,7 +39,7 @@ and open the template in the editor.
                     </div>
 
                     <br>
-                    
+
                     <h3 class="text-center">Participant’s Consent for Release of Information</h3>
                     <form method="POST">
 
@@ -59,6 +59,8 @@ and open the template in the editor.
 
                             <label for="consentQestion3">The Information is to be released to:</label><br>
                             <select id="consentQuestion3" class="form-control">
+                                <option value="0">-- Select One --</option>
+                                <option value="Veronica Sosa/Chrystal Schipper/Amber Osterberger/LifeStriders Therapists/Intelirev">All</option>
                                 <option value="Veronica Sosa">Veronica Sosa</option>
                                 <option value="Chrystal Schipper">Chrystal Schipper</option>
                                 <option value="Amber Osterberger">Amber Osterberger</option>
@@ -67,41 +69,53 @@ and open the template in the editor.
                             </select>
                             <h3>For the purpose of developing a therapeutic riding/equine activity program for the above named participant. The information to be released is marked below.</h3>
                             <div class="form-group">
-                                <label><input  id="consentMedHistory" type="checkbox"  value="Medical History" >Medical History</label><br>
-                                <label><input  id="consentPhysicalTherapy" type="checkbox" value="Physical Therapy evaluation, assessment and program plan">Physical Therapy evaluation, assessment and program plan</label><br>
-                                <label><input  id="consentOccupationalTherapy" type="checkbox" value="Occupational Therapy evaluation, assessment and program plan">Occupational Therapy evaluation, assessment and program plan</label><br>
-                                <label><input  id="consentSpeechTherapy" type="checkbox" value="Speech Therapy evaluation, assessment and program plan(I.E.P)">Speech Therapy evaluation, assessment and program plan(I.E.P)</label><br>
-                                <label><input  id="consentClassroom" type="checkbox" value="Classroom Individual Education Plan" >Classroom Individual Education Plan</label><br>
-                                <label><input  id="consentPsychosocial" type="checkbox" value="Psychosocial evaluation, assessment and program plan">Psychosocial evaluation, assessment and program plan</label><br>
-                                <label><input  id="consentCognitive" type="checkbox" value="Cognitive-Behavioral Management plan" >Cognitive-Behavioral Management plan</label><br>
-                                <label for="consentOther"><input  id="consentOther" type="checkbox" value="Other" >Other</label>
-                                <input type="text" class="form-control" id="consentOtherText" placeholder="Other..">
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentMedHistory" type="checkbox"  value="Medical History" >Medical History</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentPhysicalTherapy" type="checkbox" value="Physical Therapy evaluation">Physical Therapy evaluation, assessment and program plan</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentOccupationalTherapy" type="checkbox" value="Occupational Therapy evaluation">Occupational Therapy evaluation, assessment and program plan</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentSpeechTherapy" type="checkbox" value="Speech Therapy evaluation">Speech Therapy evaluation, assessment and program plan(I.E.P)</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentClassroom" type="checkbox" value="Classroom Individual Education Plan" >Classroom Individual Education Plan</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentPsychosocial" type="checkbox" value="Psychosocial evaluation">Psychosocial evaluation, assessment and program plan</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label><input  id="consentCognitive" type="checkbox" value="Cognitive-Behavioral Management plan" >Cognitive-Behavioral Management plan</label><br>
+                                </div>
+                                <div class="radio inline-radio">
+                                    <label>
+                                        <input  id="consentOther" type="checkbox" value="Other" >
+                                    </label>
+                                    <label for="consentOther">Other: </label>
+                                    <input type="text" class="form-control" id="consentOtherText" placeholder="Other..">
+                                </div>
+
                             </div>
-                            <label for="consentSign">Consent Signature</label>
-                            <p id="consentSign">___________________________________________</p>
 
-                            <label for="consentSignedDate">Date: </label>
-                            <p id="consentSignedDate"></p>
-                            <br>
 
-                            <p>
-                                please send materials to: <br>
-                                LifeStriders Therapeudic Riding Center<br>
-                                S11 W29667 Summit Avenue (US HWY 18)<br>
-                                Waukesha, WI 53188
-                            </p>
+
 
                         </div>
+                        <br>
                         <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
                     </form>
+
                 </div>
             </div>
-            
+
             <!--   ----------------------------------------------------------------------------------------------------------------------------------------------      -->
-            
-            
-            
-             <div class="container row pageWrapper">
+
+
+
+            <div class="container row pageWrapper">
 
                 <div id="printPreviewReleaseFormOVER" class="container printPreviewOVER row"> 
 
@@ -134,53 +148,102 @@ and open the template in the editor.
                             <!--Start of the Consent For Release Form Print Preview Page which is hidden when the form first loads-->
                             <!--*************************************************************************************************************************************************-->
 
-                            <label for="ppConsentDoctorName">Doctor's Name:</label>
-                            <p id="ppConsentDoctorName"></p>
+                            <h3 class="text-center">Consent for Release of Information</h3>
 
-                            <label for="ppConsentPartName">Participant's Name:</label>
-                            <p id="ppConsentPartName"></p>
+                            <ul class="list-inline text-center listRowTop listRowLi3Elems">
+                                <li>
+                                    <label for="ppConsentDoctorName">Doctor's Name:</label>
+                                    <p id="ppConsentDoctorName"></p>
+                                </li>
+                                <li>
+                                    <label for="ppConsentPartName">Participant's Name:</label>
+                                    <p id="ppConsentPartName"></p>
+                                </li>
+                                <li>
+                                    <label for="ppConsentPartDob">Participant's DOB:</label>
+                                    <p id="ppConsentPartDob"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi1Elem">
+                                <li>
+                                    <label for="ppConsentQuestion3">The Information is to be released to:</label>
+                                    <p id="ppConsentQuestion3"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                <li>
+                                    <label id="ppConsentMedHistoryL"></label>
+                                    <p id="ppConsentMedHistory"></p>
+                                </li>
+                                <li>
+                                    <label id="ppConsentPhysicalTherapyL"></label>
+                                    <p id="ppConsentPhysicalTherapy"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                <li>
+                                    <label id="ppConsentOccupationalTherapyL"></label>
+                                    <p id="ppConsentOccupationalTherapy"></p>
+                                </li>
+                                <li>
+                                    <label id="ppConsentSpeechTherapyL"></label>
+                                    <p id="ppConsentSpeechTherapy"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                <li>
+                                    <label id="ppConsentClassroomL"></label>
+                                    <p id="ppConsentClassroom"></p>
+                                </li>
+                                <li>
+                                    <label id="ppConsentPsychosocialL"></label>
+                                    <p id="ppConsentPsychosocial"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                <li>
+                                    <label id="ppConsentCognitiveL"></label>
+                                    <p id="ppConsentCognitive"></p>
+                                </li>
+                                <li>
+                                    <label id="ppConsentOtherL"></label>
+                                    <p id="ppConsentOther"></p>
+                                </li>
+                            </ul>
+                            <p>
+                                Please send materials to: <br>
+                                LifeStriders Therapeudic Riding Center<br>
+                                S11 W29667 Summit Avenue (US HWY 18)<br>
+                                Waukesha, WI 53188
+                            </p>
 
-                            <label for="ppConsentPartDob">Participant's DOB:</label>
-                            <p id="ppConsentPartDob"></p>
 
-                            <label for="ppConsentQuestion3">The Information is to be released to:</label>
-                            <p id="ppConsentQuestion3"></p>
+                            <table class="sign">
+                                <thead class="thSign">
+                                    <tr>
+                                        <td class="tdSignName"></td>
+                                        <td class="tdSign">X</td>
+                                        <td class="tdSignDate" id="consentSignedDate"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tdSignName">Client/Parent/Guardian Name</td>
+                                        <td class="tdSign">Signature</td>
+                                        <td class="tdSignDate">Date</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                            <label id="ppConsentMedHistoryL"></label>
-                            <p id="ppConsentMedHistory"></p>
 
-                            <label id="ppConsentPhysicalTherapyL"></label>
-                            <p id="ppConsentPhysicalTherapy"></p>
-
-                            <label id="ppConsentOccupationalTherapyL"></label>
-                            <p id="ppConsentOccupationalTherapy"></p>
-
-                            <label id="ppConsentSpeechTherapyL"></label>
-                            <p id="ppConsentSpeechTherapy"></p>
-
-                            <label id="ppConsentClassroomL"></label>
-                            <p id="ppConsentClassroom"></p>
-
-                            <label id="ppConsentPsychosocialL"></label>
-                            <p id="ppConsentPsychosocial"></p>
-
-                            <label id="ppConsentCognitiveL"></label>
-                            <p id="ppConsentCognitive"></p>
-
-                            <label id="ppConsentOtherL"></label>
-                            <p id="ppConsentOther"></p>
-
-                            <label for="ppConsentSign">Consent Signature:</label>
-                            <p id="ppConsentSign">___________________________________________</p>
-
-                            <label for="ppConsentSignedDate">Date: </label>
-                            <p id="ppConsentSignedDate"></p>
-                            
-                            <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                         </div>
-                        
+
+
                     </div>
+                    <br>
+                    <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                 </div>
+
             </div>
         </div>
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>

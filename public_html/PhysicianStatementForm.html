@@ -42,74 +42,67 @@
                                 by a licensed/credentialed health professional (e.g. PT, OT, Speech, Psychologist, etc.) in the implementation 
                                 of an effective equestrian program.
                             </p><br>
-                            <div class="form-group">
+                            <div class="form-group col-md-4">
                                 <label for="physicianStatementFirst">First Name of Participant:</label>
                                 <input type="text" class="form-control" id="physicianStatementFirst" placeholder="Participant First Name..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-4">
                                 <label for="physicianStatementLast">Last Name of Participant:</label>
                                 <input type="text" class="form-control" id="physicianStatementLast" placeholder="Participant Last Name..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-4">
                                 <label for="physicianStatementPhysicianName">Physician's Name:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianName" placeholder="Physician's Name..">
                             </div>
-                            <div class="form-group">
-                                <label for="physicianStatementPhysicianTitle">Title:</label><br>
-                                <input type="radio" name="physicianStatementPhysicianTitle" value="MD" checked> MD
-                                <input type="radio" name="physicianStatementPhysicianTitle" value="DO"> DO
-                                <input type="radio" name="physicianStatementPhysicianTitle" value="NP"> NP
-                                <input type="radio" name="physicianStatementPhysicianTitle" value="PA"> PA
-                                <input type="radio" name="physicianStatementPhysicianTitle" value="Other">Other
+                            <div class="form-group inline-radio">
+                                <label>Title:</label><br>
+                                <label for="MD" class="paddingRight"><input type="radio" id="MD" name="physicianStatementPhysicianTitle" value="MD" checked> MD</label>
+                                <label for="DO" class="paddingRight"><input type="radio" id="DO" name="physicianStatementPhysicianTitle" value="DO"> DO</label>
+                                <label for="NP" class="paddingRight"><input type="radio" id="NP" name="physicianStatementPhysicianTitle" value="NP"> NP</label>
+                                <label for="PA" class="paddingRight"><input type="radio" id="PA" name="physicianStatementPhysicianTitle" value="PA"> PA</label>
+                                <label>
+                                    <input type="radio" id="physicianStatementPhysicianTitle" name="physicianStatementPhysicianTitle" value="Other">
+                                </label>
+                                <label for="physicianStatementPhysicianTitle">Other: </label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianTitleOther" placeholder="Other..">
-                                <br>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-5">
                                 <label for="physicianStatementPhysicianAddress">Address:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianAddress" placeholder="Physician's Address..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-3">
                                 <label for="physicianStatementPhysicianCity">City:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianCity" placeholder="Physician's City..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-2">
                                 <label for="physicianStatementPhysicianState">State:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianState" placeholder="Physician's State..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-2">
                                 <label for="physicianStatementPhysicianZip">Zip Code:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianZip" placeholder="Physician's Zip Code..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-4">
                                 <label for="physicianStatementPhysicianPhone">Phone Number:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianPhone" placeholder="(###)-###-####..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-4">
                                 <label for="physicianStatementPhysicianEmail">Email:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianEmail" placeholder="Physician's Email..">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group col-md-4">
                                 <label for="physicianStatementPhysicianLicense">License/UPIN Number:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianLicense" placeholder="License/UPIN Number..">
                             </div>
-                            <div class="form-group">
-                                <label for="physicianStatementPhysicianSign">Signature:</label>
-                                <input type="text" class="form-control" id="physicianStatementPhysicianSign" placeholder="Sign Here..">
-                            </div>
-                            <div class="form-group">
-                                <label for="physicianStatementPhysicianSignDate">Date:</label>
-                                <input type="date" class="form-control" id="physicianStatementPhysicianSignDate" >
-                            </div>
                             
-
                         </div>
                         <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
                     </form>
                 </div>
             </div>
-            
+
             <!--   ----------------------------------------------------------------------------------------------------------------------------------------------      -->
-            
+
             <div class="container row pageWrapper">
 
                 <div id="printPreviewPhysicianStatementFormOVER" class="container printPreviewOVER row"> 
@@ -138,7 +131,7 @@
                             </div>
 
                             <br>
-                            
+
                             <!--*************************************************************************************************************************************************-->
                             <!--Start of the Consent For Physician Statement Form Print Preview Page which is hidden when the form first loads-->
                             <!--*************************************************************************************************************************************************-->
@@ -175,16 +168,16 @@
 
                             <label for="ppPhysicianStatementPhysicianLicense">License/UPIN Number:</label>
                             <p id="ppPhysicianStatementPhysicianLicense"></p>
-                           
+
                             <label for="ppConsentSign">Consent Signature:</label>
                             <p id="ppConsentSign">___________________________________________</p>
 
                             <label for="ppPhysicianStatementSignedDate">Date: </label>
                             <p id="ppPhysicianStatementSignedDate"></p>
-                            
+
                             <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

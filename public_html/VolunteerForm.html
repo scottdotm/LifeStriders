@@ -5,7 +5,7 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-          <link rel="stylesheet" href="Styles/lifestridersV.css" type="text/css"/>
+          <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
           <link rel="shortcut icon" href="">
      </head>
      <body>
@@ -25,6 +25,9 @@
                                    this screen, please click "Print" to be taken to the actual
                                    print screen.
                               </p>
+                              <br>
+                              <div id='error'>
+                              </div>
                          </div>
                          <div class="modal-footer">
                               <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
@@ -35,7 +38,7 @@
                               <!-- Button class used for import of glyphicon,
                               this will need to be changed when the user uses
                               Internet Explorer due to input/button conflicts-->
-                              <button form="form1" type="button" id="printPreviewButton" class="btn btn-danger" value="Submit" data-dismiss="modal">
+                              <button type="button" id="printPreviewButton" class="btn btn-danger" value="Submit" data-dismiss="modal">
                                    <span class="glyphicon glyphicon-ok-sign">
                                         Print Preview
                                    </span>
@@ -47,7 +50,8 @@
           <!-- /Modal -->
           <div class="container" id="wrapperOverall">
                <div class="container row theWrapper">
-                    <div id="formVolunteerForm" class ="well ">
+                    <div id="formVolunteerForm" class ="container row">
+                         <!-- LifeStriders Info -->
                          <div class="row" style="margin-top: 15px;">
                               <div class="col-md-8" style="margin-left: 2.0em;">  
                                    <h1 style="color: #CC0000;">LifeStriders</h1>
@@ -66,11 +70,12 @@
 
                               </div>
                          </div>
+                         <!-- /LifeStriders Info -->
                          <br>
                          <h3 class="text-center">Volunteer Information Form</h3>
-                         <p id='error'>
-                         </p>
-                         <form id="volunteerForm" method="POST">  
+                         <!-- Volunteer Form -->
+                         <form data-toggle="validator" role="form" id="volunteerForm" method="POST">
+                              <!-- Menu - Bootstrap Accordian -->
                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                    <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
@@ -85,27 +90,30 @@
                                                   <div class="row">
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="lastName">Last Name: </label>
-                                                                 <input type="text" class="form-control" id="lastName" placeholder="Last-Name..">
+                                                                 <label for="lastName" class="control-label">Last Name: </label>
+                                                                 <input type="text" class="form-control" id="lastName" placeholder="Last-Name.." required>
+                                                                 <div class="help-block with-errors"></div>
                                                             </div>
                                                        </div>
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="firstName">First Name: </label>
-                                                                 <input type="text" class="form-control" id="firstName" placeholder="First-Name..">
+                                                                 <label for="firstName" class="control-label">First Name: </label>
+                                                                 <input type="text" class="form-control" id="firstName" placeholder="First-Name.." required>
+                                                                 <div class="help-block with-errors"></div>
                                                             </div>
                                                        </div>
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="dob">DOB: </label>
-                                                                 <input type="date" class="form-control" id="dob">
+                                                                 <label for="dob" class="control-label">Date of Birth: </label>
+                                                                 <input type="date" class="form-control" id="dob" required>
+                                                                 <div class="help-block with-errors"></div>
                                                             </div>
                                                        </div>
                                                   </div>
                                                   <div class="row">
                                                        <div class="col-md-12">
                                                             <div class="form-group">
-                                                                 <label for="address">Address: </label>
+                                                                 <label for="address" class="control-label">Address: </label>
                                                                  <input type="text" class="form-control" id="address" placeholder="Address..">
                                                             </div>
                                                        </div>
@@ -113,25 +121,25 @@
                                                   <div class="row">
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="city">City: </label>
+                                                                 <label for="city" class="control-label">City: </label>
                                                                  <input type="text" class="form-control" id="city" placeholder="City..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-2">
                                                             <div class="form-group">
-                                                                 <label for="state">State: </label>
+                                                                 <label for="state" class="control-label">State: </label>
                                                                  <input type="text" class="form-control" id="state" placeholder="State..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-2">
-                                                            <div class="form-group">
+                                                            <div class="form-group" class="control-label">
                                                                  <label for="zip">Zip: </label>
                                                                  <input type="text" class="form-control" id="zip" placeholder="Zip..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="phone">Phone Number: </label>
+                                                                 <label for="phone" class="control-label">Phone Number: </label>
                                                                  <input type="tel" class="form-control" id="phone" placeholder="Phone Number..">
                                                             </div>
                                                        </div>
@@ -139,15 +147,17 @@
                                                   <div class="row">
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="email">Email: </label>
+                                                                 <label for="email" class="control-label">Email: </label>
                                                                  <input type="email" class="form-control" id="email" placeholder="Email..">
                                                             </div>
                                                        </div>
                                                   </div>
+                                                  <!-- Need to figure out how to best handle this -->
+                                                  <hr>
                                                   <div class="row">
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="age">If Student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age: </label>
+                                                                 <label for="age" class="control-label">If Student&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Age: </label>
                                                                  <input type="number" class="form-control" id="age" placeholder="Age..">
                                                             </div>                            
                                                        </div>
@@ -155,7 +165,7 @@
                                                   <div class="row">
                                                        <div class="col-md-12">
                                                             <div class="form-group">
-                                                                 <label for="employer">Employer: </label>
+                                                                 <label for="employer" class="control-label">Employer: </label>
                                                                  <input type="text" class="form-control" id="employer" placeholder="Employer..">
                                                             </div>
                                                        </div>
@@ -163,13 +173,13 @@
                                                   <div class="row">
                                                        <div class="col-md-8">
                                                             <div class="form-group">
-                                                                 <label for="empAddress">Address: </label>
+                                                                 <label for="empAddress" class="control-label">Address: </label>
                                                                  <input type="text" class="form-control" id="empAddress" placeholder="Address..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="empEail">Email: </label>
+                                                                 <label for="empEail" class="control-label">Email: </label>
                                                                  <input type="email" class="form-control" id="empEail" placeholder="Email..">
                                                             </div>
                                                        </div>
@@ -177,36 +187,543 @@
                                                   <div class="row">
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="empCity">City: </label>
+                                                                 <label for="empCity" class="control-label">City: </label>
                                                                  <input type="text" class="form-control" id="empCity" placeholder="City..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-2">
                                                             <div class="form-group">
-                                                                 <label for="empState">State: </label>
+                                                                 <label for="empState" class="control-label">State: </label>
                                                                  <input type="text" class="form-control" id="empState" placeholder="State..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-2">
                                                             <div class="form-group">
-                                                                 <label for="empZip">Zip: </label>
+                                                                 <label for="empZip" class="control-label">Zip: </label>
                                                                  <input type="text" class="form-control" id="empZip" placeholder="Zip..">
                                                             </div>
                                                        </div>
                                                        <div class="col-md-4">
                                                             <div class="form-group">
-                                                                 <label for="empPhone">Phone Number: </label>
+                                                                 <label for="empPhone" class="control-label">Phone Number: </label>
                                                                  <input type="tel" class="form-control" id="empPhone" placeholder="Phone Number..">
                                                             </div>
+                                                       </div>
+                                                  </div>
+
+
+
+
+
+                                                  <p>Parent Guardian Name and Address (If Applicable)</p>
+                                                  <div class="row">
+                                                       <div class="col-md-8">
+                                                            <div class="form-group">
+                                                                 <label for="parentAddress1">* </label>
+                                                                 <input type="text" class="form-control" id="parentAddress1" placeholder="Address..">
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                 <label for="parentPhone1">Phone Number: </label>
+                                                                 <input type="tel" class="form-control" id="parentPhone1" placeholder="Phone Number..">
+                                                            </div>
+                                                       </div>
+                                                  </div> 
+                                                  <div class="row">
+                                                       <div class="col-md-8">
+                                                            <div class="form-group">
+                                                                 <label for="parentAddress2">* </label>
+                                                                 <input type="text" class="form-control" id="parentAddress2" placeholder="Address..">
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                 <label for="parentPhone2">Phone Number: </label>
+                                                                 <input type="tel" class="form-control" id="parentPhone2" placeholder="Phone Number..">
+                                                            </div>
+                                                       </div>
+                                                  </div> 
+                                                  <div class="row">
+                                                       <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                 <label>CPR Certified: </label>
+                                                                 <input type="radio" name="certified" value="yes"> Yes
+                                                                 <input type="radio" name="certified" value="no"> No
+                                                            </div>
+                                                       </div>
+                                                       <div class="col-md-4">
+                                                            <div class="form-group">
+                                                                 <label for="certificationDate">Date of Certification: </label>
+                                                                 <input type="date" class="form-control" id="certificationDate" >
+                                                            </div>
+                                                       </div>
+                                                  </div>
+
+
+                                                  <hr>
+                                                  <div class="row">
+                                                       <div class="col-md-12">
+                                                            <p><strong>Photo Release</strong><br>
+                                                                 I consent to authorize the use and reproduction by LifeStriders Inc. of any and all photographs
+                                                                 and any other audio/visual materials taken of me for promotional material, educational activities,
+                                                                 exhibitions or for any other use for the benefit of the program.
+                                                            </p>
+                                                       </div>
+                                                  </div>
+                                                  <div class="row">
+                                                       <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                 <label for="releaseDate">Signature __________________________________________________ <br><br>Date</label>
+                                                                 <input type="date" class="form-control" id="releaseDate" >
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                                  <hr>
+
+
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingTwo">
+                                             <h4 class="panel-title">
+                                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                                     aria-controls="collapseTwo">
+                                                       Liability Release
+                                                  </a>
+                                             </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h5><strong>Volunteer and Guests Liability Release</strong></h5>
+                                                       <p>As a volunteer at LifeStriders: I acknowledge the risk of a horseback-riding program. However, I 
+                                                            feel that the possible benefits to myself and the clients I work with, are greater than the risk 
+                                                            I assume. I hereby, intending to be legally bound, for myself, my heirs and assigns, executors or 
+                                                            administrators waive, and release forever all claims for damage against LifeStriders Inc., its 
+                                                            Board of Directors, instructors, therapists, volunteers, and or employees for any and all injuries 
+                                                            and or losses I may sustain, while participating in LifeStriders program.  All Volunteers and 
+                                                            guests (guests = participants, siblings, parents, other relatives, friends) entering LifeStriders 
+                                                            premises understand that they will be in contact with animals, and assume the risk of injury, and 
+                                                            that it is possible that I or my guest(s) be bitten, scratched, and/or otherwise injured while on 
+                                                            LifeStriders premises. I also understand that I or my guest(s) may be exposed to equine and/or 
+                                                            other animal illness and disease and that it is also possible that I or my guest(s) could indirectly 
+                                                            expose other animals to such illness and disease. My signature to this liability release attests to 
+                                                            my, and my guest(s) intent to hold harmless and release from all liability against LifeStriders Inc., 
+                                                            its Board of Directors, instructors, therapists, volunteers, and or employees for any and all 
+                                                            injuries and or losses I or my guest(s) may sustain, while attending LifeStriders premises.</p>  
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <div class="form-group">
+                                                            <label for="liabilityReleaseSignature">Signature ______________________________________________ </label>
+                                                            <input type="text" class="form-control" id="liabilityReleaseSignature" >
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-4">
+                                                       <div class="form-group">
+                                                            <label for="liabilityReleaseSignatureDate">DOB: </label>
+                                                            <input type="text" class="form-control" id="liabilityReleaseSignatureDate" >
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <div class="form-group">
+                                                            <label for="liabilityReleaseGuardianSignature">Signature of parent or guardian ______________________________________________ </label>
+                                                            <input type="text" class="form-control" id="liabilityReleaseGuardianSignature" >
+                                                            <p>(if volunteer is under age 18)</p>
+                                                       </div>
+                                                  </div>
+                                             </div><br><br>
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h5 class="text-center"><strong>VOLUNTEER AUTHORIZATION<br>FOR EMERGENCY MEDICAL TREATMENT</strong></h5> 
+                                                       <p>In the event emergency medical aid/treatment is required due to illness or 
+                                                            injury during the process of volunteering, or while being on the property of the 
+                                                            agency, I authorize a representative of LifeStriders to secure and retain 
+                                                            medical treatment and transportation if needed.</p>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-8">
+                                                       <div class="form-group">
+                                                            <label for="volunteerName">Volunteer’s Name</label>
+                                                            <input type="text" class="form-control" id="volunteerName" placeholder="Name..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                       <div class="form-group">
+                                                            <label for="volunteerPhone">Phone</label>
+                                                            <input type="tel" class="form-control" id="volunteerPhone" placeholder="Phone Number..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <div class="form-group">
+                                                            <label for="volunteerAddress">Address: </label>
+                                                            <input type="text" class="form-control" id="volunteerAddress" placeholder="Address..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-6">
+                                                       <div class="form-group">
+                                                            <label for="volunteerCity">City: </label>
+                                                            <input type="text" class="form-control" id="volunteerCity" placeholder="City..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                       <div class="form-group">
+                                                            <label for="volunteerState">State: </label>
+                                                            <input type="text" class="form-control" id="volunteerState" placeholder="State..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-3">
+                                                       <div class="form-group">
+                                                            <label for="volunteerZip">Zip: </label>
+                                                            <input type="text" class="form-control" id="volunteerZip" placeholder="Zip..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <p><strong>In the event of an emergency, Please notify:</strong></p>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-8">
+                                                       <div class="form-group">
+                                                            <label for="iceName1">Name</label>
+                                                            <input type="text" class="form-control" id="iceName1" placeholder="Name..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                       <div class="form-group">
+                                                            <label for="icePhone1">Phone</label>
+                                                            <input type="tel" class="form-control" id="icePhone1" placeholder="Phone Number..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-8">
+                                                       <div class="form-group">
+                                                            <label for="iceName2">Name</label>
+                                                            <input type="text" class="form-control" id="iceName2" placeholder="Name..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                       <div class="form-group">
+                                                            <label for="icePhone2">Phone</label>
+                                                            <input type="tel" class="form-control" id="icePhone2" placeholder="Phone Number..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-8">
+                                                       <div class="form-group">
+                                                            <label for="physicianName">Physician’s Name</label>
+                                                            <input type="text" class="form-control" id="physicianName" placeholder="Name..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-4">
+                                                       <div class="form-group">
+                                                            <label for="physicianPhone">Phone</label>
+                                                            <input type="tel" class="form-control" id="physicianPhone" placeholder="Phone Number..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <div class="form-group">
+                                                            <label for="preferredFacility">Preferred Medical Facility</label>
+                                                            <input type="text" class="form-control" id="preferredFacility" placeholder="Address..">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col-md-6">
+                                                       <div class="form-group">
+                                                            <label for="insuranceName">Health Insurance Company</label>
+                                                            <input type="text" class="form-control" id="insuranceName" placeholder="Last-Name..">
+                                                       </div>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                       <div class="form-group">
+                                                            <label for="policyNumber">Policy Number</label>
+                                                            <input type="text" class="form-control" id="policyNumber" placeholder="First-Name..">
                                                        </div>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
+                                   <!-- MOVED TO PRINT PREVIEW ---------------------------------------------------------------------------------------------//
+                                   
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingThree">
+                                             <h4 class="panel-title">
+                                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                                     aria-controls="collapseThree">
+                                                       Consent
+                                                  </a>
+                                             </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h5><strong>Consent Plan</strong></h5>
+                                                       <p>This Authorization includes x-rays, surgery, hospitalization, and 
+                                                            medication and any treatment deemed “life saving” by the physician. This 
+                                                            provision will only be invoked if the person above is unable to be reached.<br>     
+
+                                                            Print Name: _________________________________________________________________<br>       
+                                                            Date ___________________ Consent Signature ____________________________________<br>                                                  
+                                                            (Volunteer Parent or Guardian if volunteer is under age 18)</p>     
+                                                       <h5><strong>Non-Consent Plan</strong></h5>
+
+                                                       <p>I do not give my consent for emergency medical treatment/aid in the case of 
+                                                            illness or injury during the process of volunteering or while on the property 
+                                                            of the agency. In the event that emergency treatment/aid is required, I wish 
+                                                            the following procedure to take place:<br>
+
+                                                            _____________________________________________________________________________<br> 
+
+                                                            Print Name: _________________________________________________Date ______________<br> 
+
+                                                            Non-Consent Signature _______________________________________ Date ______________<br> 
+                                                            (Volunteer Parent or Guardian if volunteer is under age 18)</p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFour">
+                                             <h4 class="panel-title">
+                                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                                     aria-controls="collapseFour">
+                                                       Safety Rules
+                                                  </a>
+                                             </h4>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">   
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h5 class="text-center"><strong>SAFETY RULES</strong></h5>
+                                                       <p>LifeStriders strives to provide a safe riding experience for all of 
+                                                            our participants and requires that all participants, families and volunteers 
+                                                            abide by our safety regulations. Please review and sign our safety rules.</p>  
+                                                       <ul>
+                                                            <li>Please reserve parking in front of the building for Riders and Participants. 
+                                                                 Volunteer and Staff parking is available along the side and rear of the 
+                                                                 building.</li>
+                                                            <li>To avoid traffic jams in the driveways please arrive earlier than your 
+                                                                 designated class time.</li>
+                                                            <li>Parents/caregivers must keep siblings, friends and relatives of the rider in 
+                                                                 the Viewing Areas.</li> 
+                                                            <li>Please do not bring pets.</li>
+                                                            <li>When a volunteer escorts a rider to the parents/caregiver, upon class 
+                                                                 completion, the parents/caregivers need to contain the rider to the Viewing 
+                                                                 Areas</li> 
+                                                            <li>Parents/caregivers will be solely responsible for their rider before and 
+                                                                 after arena/therapeutic riding time is completed</li>
+                                                            <li>Parents/caregivers please walk to the gate to meet your rider after they 
+                                                                 have dismounted the horse. Once riders are done with arena/therapeutic 
+                                                                 riding time, parents/caregivers are asked to please help their rider with 
+                                                                 feeding treats to the horses.</li>
+                                                            <li>Parents/caregivers need to remain on LifeStriders premises during 
+                                                                 therapeutic riding and/or Social skills group sessions.</li>
+                                                            <li>For training and safety purposes, we ask that volunteers and participants 
+                                                                 NEVER HAND FEED THE HORSES.</li>
+                                                            <li>Hitting or kicking of horses is NEVER allowed, and will result in dismissal 
+                                                                 from the program.</li> 
+                                                            <li>NO guns, knives, weapons or violence of any kind are allowed on LifeStriders 
+                                                                 premises. This is a zero tolerance rule. Violators will be asked to leave 
+                                                                 and not allowed to return.</li>
+                                                            <li>Please do not climb or lean on any fences, gates or doors.</li>
+                                                            <li>No one is to enter the Barn Manager’s apartment or other buildings on the 
+                                                                 property, other than the barn.</li>
+                                                            <li>In order to ensure the safest riding conditions, we ask that children and 
+                                                                 visitors refrain from screaming, running, or ball playing on the 
+                                                                 premises.</li>
+                                                            <li>Only the rider and staff/volunteers are allowed in the teaching arena, 
+                                                                 unless parent or health care professional presence is requested by 
+                                                                 instructor.</li>
+                                                            <li>Please refrain from giving the riders instructions that are not in line with 
+                                                                 the instructors directions.</li>
+                                                       </ul>
+                                                       <h5><strong>Attire</strong></h5>
+                                                       <ul>
+                                                            <li>A helmet must be worn by all riders at all times during the lesson hour.</li>  
+                                                            <li>Riders MUST wear long pants to ride, jeans are preferred.</li> 
+                                                            <li>All Riders must wear shoes. No one will be allowed to ride or be around the 
+                                                                 horses if they are bare foot or in sandals. We prefer the shoes have a ¼” heel 
+                                                                 rather than tennis-type shoes. Volunteers must wear sturdy non-opened toed shoes. We do not recommend steel-toed shoes.</li>
+                                                            <li>Volunteers- Please refrain from wearing clothes that is too tight or revealing- No tank tops, bra tops etc.</li>
+                                                       </ul><br>
+                                                       <p>I have read and understand LifeStriders Safety Policy<br> <br>
+                                                            Volunteer Signature: _____________________________________________     Date_________<br> <br>
+                                                            Participant Signature: ____________________________________________     Date_________<br><br>
+                                                            Parent/Guardian Signature: ________________________________________     Date_________<br><br></p>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingFive">
+                                             <h4 class="panel-title">
+                                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                                                     aria-controls="collapseFive">
+                                                       Dismissal
+                                                  </a>
+                                             </h4>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
+                                                       <p>
+                                                            LifeStriders relies greatly on volunteers as important members of the team who provide services to and assist our
+                                                            clients. We also recognize the extreme importance of the safety and well-being of our clients, volunteers, staff,
+                                                            guests and animals. All Volunteers and guests (guests = participants, siblings, parents, other relatives, friends) are
+                                                            expected to follow LifeStriders rules and policies and may not engage in disruptive, unsafe or inappropriate
+                                                            behavior. In the event a volunteer or guest does not comply, the following actions may be taken:
+                                                       </p>
+                                                       <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                 <h3>Level 1 : Verbal Warning</h3>
+                                                                 <br>
+                                                                 <p>Breaking of LifeStriders rules and /or policies and procedures may be followed
+                                                                      by a verbal warning from LifeStriders Staff to be documented in the incident report book. 
+                                                                 </p>
+                                                            </li>
+                                                            <li class="list-group-item"><h3>Level 2 : Written Warning</h3>
+                                                                 <br>
+                                                                 <p>Breaking of LifeStriders rules and/or policies and procedures for a second time will be followed
+                                                                      by a Personnel/Staff meeting for discussion regarding the infraction. The purpose of the meeting
+                                                                      is to determine the exact reason the infraction occurred for second time and discuss with the
+                                                                      volunteer/guest how to avoid the circumstance ever occurring again. This meeting will be
+                                                                      documented and placed in the incident report book.
+
+                                                                 </p>
+                                                            </li>
+                                                            <li class="list-group-item"><h3>Level 3 : Dismissal from Organization</h3>
+                                                                 <br>
+                                                                 <p>Immediate dismissal from the property and organization will occur for:</p>
+                                                                 <ol>
+                                                                      <li>Endangering the safety of others</li>
+                                                                      <li>Inappropriate use of the facilities, mailing lists or monies</li>
+                                                                      <li>Disruptive or abusive behavior to the animals or individuals at LifeStriders</li>
+                                                                      <li>Repeated disregard of the organizations rules, policies and procedures</li>
+                                                                      <li>Possession of a weapon, illegal drugs or a paraphernalia</li>
+                                                                      <li>Being under the influence of alcohol or drugs</li>
+
+                                                                 </ol>
+                                                            </li>
+                                                       </ul>
+                                                       <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
+                                                       <p>
+                                                            I have read and understand the policies and program rules by which LifeStriders operates. By signing below, I
+                                                            indicate my willingness to abide by these rules and policies. I further understand that failure to comply with these
+                                                            policies and rules will result in discharge from the program.
+                                                       </p>
+                                                       <div id="dismissalfield">
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingSix">
+                                             <h4 class="panel-title">
+                                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false"
+                                                     aria-controls="collapseSix">
+                                                       Registration
+                                                  </a>
+                                             </h4>
+                                        </div>
+                                        <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                             <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h2>VOLUNTEER REGISTRATION</h2>
+                                                       <p>
+                                                            Thank you for inquiring about volunteer opportunities at LifeStriders. Please review the following
+                                                            positions available. Applicants may sign up for more than one position per session.
+                                                       </p>
+                                                       <ul class="list-group">
+                                                            <li class="list-group-item">
+                                                                 <h3>Side Walker/ Leader</h3>
+                                                                 <p>
+                                                                      In order to ensure safety and continuity of service for our clients, LifeStriders aims to have three
+                                                                      committed volunteers per rider. We require prospective volunteers to commit to 1 lesson a week
+                                                                      (minimum) for an 6-8 week session that they can attend regularly. This way we are sure not to
+                                                                      disappoint a child or rider who has eagerly been waiting to ride all week long.
+                                                                      <br>
+                                                                      Side walkers and Leaders assist in therapeutic riding classes as well as horse care. We need interested
+                                                                      people willing to commit to an ongoing volunteer position (6-8 weeks). Interested volunteers will be
+                                                                      provided training. 
+                                                                 </p>
+                                                                 <br>
+                                                                 <p>
+                                                                      <b>Skills and requirements:</b> Must be at least 13 years old. Must be able to walk for 45 minute sessions
+                                                                      and not be afraid of horses. Horse experience preferred but not required.
+                                                                 </p>
+                                                                 <br>
+                                                                 <h4>
+                                                                      If this hands on, rewarding experience sounds like something you would like to experience, please visit
+                                                                      the VolunteerSpot link on our web-site to sign up for the day (s) and time(s) you are willing to
+                                                                      volunteer for!
+                                                                 </h4>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                 <h3>Barn helper /grounds management</h3>
+                                                                 <p>
+                                                                      This ongoing volunteer position assists the barn manager with various horse care and barn chores and
+                                                                      basic grounds keeping. Helpers also assist with preparing horses for lessons (grooming, tacking etc.) and
+                                                                      assisting instructors set up arenas or other jobs as needed
+                                                                 </p>
+                                                                 <br>
+                                                                 <p>
+                                                                      <b>Skills and Requirements:</b> Must be at least 12 years of age and not afraid of horses. Horse experience
+                                                                      or work with disabled individuals is not required, but is a plus.
+                                                                 </p>
+                                                                 <br>
+                                                                 <h4>
+                                                                      If this hands on, rewarding experience sounds like something you would like to experience, please visit
+                                                                      the VolunteerSpot link on our web-site to sign up for the day (s) and time(s) you are willing to
+                                                                      volunteer for!
+                                                                 </h4>
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                                 <h3>Grant Writing/Marketing/Fundraising</h3>
+                                                                 <p>
+                                                                      This ongoing position assists staff write and submit grant applications, plans and coordinates fundraising
+                                                                      events and works to help staff with special events. Flexible hours, work from home or in office.
+                                                                 </p>
+                                                            </li>
+                                                       </ul>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
                               </div>
+                                   -->
+
+                              
+
                               <div class="row">
+                                   <button type="button" class="btn btn-warning btn-lg" value="ScrollToTopOfPage">
+                                        <span class="glyphicon glyphicon-ok-sign">
+                                             Scroll to Top
+                                        </span>
+                                   </button>
                                    <!-- Button trigger modal -->
-                                   <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                                   <button id="subModal" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
                                         <span class="glyphicon glyphicon-modal-window">
                                              Submit
                                         </span>
@@ -221,7 +738,6 @@
                               <div class=" row" style="margin-top: 15px;">
                                    <div class="col-md-8" style="margin-left: 2.0em;" >  
                                         <h1 style="color: #CC0000;">LifeStriders</h1>
-                                        
                                    </div>
                                    <div class="col-md-1"> </div>
                                    <div class="col-md-2 text-right">
@@ -233,125 +749,209 @@
                                         Waukesha, WI 53188 <wbr>
                                    </div>
                               </div>
+                              
                               <div class="row">
                                    <h3 class="text-center">Volunteer Form</h3>
-                                   <h3>Volunteer Signature</h3>
-                                   <!-- Bring in filed out form fields into the printPreviewDisplay (Located within Javascript) -->
+                                   <h3>Volunteer Information</h3>
+                                   <!-- Import filed out form fields into the printPreviewDisplay (Located within Javascript) -->
                                    <ul class='list-group' id='printPreviewDisplay'>
                                    </ul>
                                    <hr>
                                    <div class="row">
-                                        <div class="col-md-12">
-                                             <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
-                                             <p>
-                                                  LifeStriders relies greatly on volunteers as important members of the team who provide services to and assist our
-                                                  clients. We also recognize the extreme importance of the safety and well-being of our clients, volunteers, staff,
-                                                  guests and animals. All Volunteers and guests (guests = participants, siblings, parents, other relatives, friends) are
-                                                  expected to follow LifeStriders rules and policies and may not engage in disruptive, unsafe or inappropriate
-                                                  behavior. In the event a volunteer or guest does not comply, the following actions may be taken:
-                                             </p>
-                                             <ul class="list-group">
-                                                  <li class="list-group-item">
-                                                       <h3>Level 1 : Verbal Warning</h3>
-                                                       <br>
-                                                       <p>Breaking of LifeStriders rules and /or policies and procedures may be followed
-                                                            by a verbal warning from LifeStriders Staff to be documented in the incident report book. 
-                                                       </p>
-                                                  </li>
-                                                  <li class="list-group-item"><h3>Level 2 : Written Warning</h3>
-                                                       <br>
-                                                       <p>Breaking of LifeStriders rules and/or policies and procedures for a second time will be followed
-                                                            by a Personnel/Staff meeting for discussion regarding the infraction. The purpose of the meeting
-                                                            is to determine the exact reason the infraction occurred for second time and discuss with the
-                                                            volunteer/guest how to avoid the circumstance ever occurring again. This meeting will be
-                                                            documented and placed in the incident report book.
+                                                  <div class="col-md-12">
+                                                       <h5><strong>Consent Plan</strong></h5>
+                                                       <p>This Authorization includes x-rays, surgery, hospitalization, and 
+                                                            medication and any treatment deemed “life saving” by the physician. This 
+                                                            provision will only be invoked if the person above is unable to be reached.<br>     
 
-                                                       </p>
-                                                  </li>
-                                                  <li class="list-group-item"><h3>Level 3 : Dismissal from Organization</h3>
-                                                       <br>
-                                                       <p>Immediate dismissal from the property and organization will occur for:</p>
-                                                       <ol>
-                                                            <li>Endangering the safety of others</li>
-                                                            <li>Inappropriate use of the facilities, mailing lists or monies</li>
-                                                            <li>Disruptive or abusive behavior to the animals or individuals at LifeStriders</li>
-                                                            <li>Repeated disregard of the organizations rules, policies and procedures</li>
-                                                            <li>Possession of a weapon, illegal drugs or a paraphernalia</li>
-                                                            <li>Being under the influence of alcohol or drugs</li>
+                                                            Print Name: _________________________________________________________________<br>       
+                                                            Date ___________________ Consent Signature ____________________________________<br>                                                  
+                                                            (Volunteer Parent or Guardian if volunteer is under age 18)</p>     
+                                                       <h5><strong>Non-Consent Plan</strong></h5>
 
-                                                       </ol>
-                                                  </li>
-                                             </ul>
-                                             <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
-                                             <p>
-                                                  I have read and understand the policies and program rules by which LifeStriders operates. By signing below, I
-                                                  indicate my willingness to abide by these rules and policies. I further understand that failure to comply with these
-                                                  policies and rules will result in discharge from the program.
-                                             </p>
-                                             <div id="dismissalfield">
+                                                       <p>I do not give my consent for emergency medical treatment/aid in the case of 
+                                                            illness or injury during the process of volunteering or while on the property 
+                                                            of the agency. In the event that emergency treatment/aid is required, I wish 
+                                                            the following procedure to take place:<br>
+
+                                                            _____________________________________________________________________________<br> 
+
+                                                            Print Name: _________________________________________________Date ______________<br> 
+
+                                                            Non-Consent Signature _______________________________________ Date ______________<br> 
+                                                            (Volunteer Parent or Guardian if volunteer is under age 18)</p>
+                                                  </div>
                                              </div>
-                                        </div>
-                                        <div class="row">
-                                             <div class="col-md-12">
-                                                  <h2>VOLUNTEER REGISTRATION</h2>
-                                                  <p>
-                                                       Thank you for inquiring about volunteer opportunities at LifeStriders. Please review the following
-                                                       positions available. Applicants may sign up for more than one position per session.
+                                   <hr>
+                                   <div class="row">
+                                                  <div class="col-md-12">
+                                                       <h5 class="text-center"><strong>SAFETY RULES</strong></h5>
+                                                       <p>LifeStriders strives to provide a safe riding experience for all of 
+                                                            our participants and requires that all participants, families and volunteers 
+                                                            abide by our safety regulations. Please review and sign our safety rules.</p>  
+                                                       <ul>
+                                                            <li>Please reserve parking in front of the building for Riders and Participants. 
+                                                                 Volunteer and Staff parking is available along the side and rear of the 
+                                                                 building.</li>
+                                                            <li>To avoid traffic jams in the driveways please arrive earlier than your 
+                                                                 designated class time.</li>
+                                                            <li>Parents/caregivers must keep siblings, friends and relatives of the rider in 
+                                                                 the Viewing Areas.</li> 
+                                                            <li>Please do not bring pets.</li>
+                                                            <li>When a volunteer escorts a rider to the parents/caregiver, upon class 
+                                                                 completion, the parents/caregivers need to contain the rider to the Viewing 
+                                                                 Areas</li> 
+                                                            <li>Parents/caregivers will be solely responsible for their rider before and 
+                                                                 after arena/therapeutic riding time is completed</li>
+                                                            <li>Parents/caregivers please walk to the gate to meet your rider after they 
+                                                                 have dismounted the horse. Once riders are done with arena/therapeutic 
+                                                                 riding time, parents/caregivers are asked to please help their rider with 
+                                                                 feeding treats to the horses.</li>
+                                                            <li>Parents/caregivers need to remain on LifeStriders premises during 
+                                                                 therapeutic riding and/or Social skills group sessions.</li>
+                                                            <li>For training and safety purposes, we ask that volunteers and participants 
+                                                                 NEVER HAND FEED THE HORSES.</li>
+                                                            <li>Hitting or kicking of horses is NEVER allowed, and will result in dismissal 
+                                                                 from the program.</li> 
+                                                            <li>NO guns, knives, weapons or violence of any kind are allowed on LifeStriders 
+                                                                 premises. This is a zero tolerance rule. Violators will be asked to leave 
+                                                                 and not allowed to return.</li>
+                                                            <li>Please do not climb or lean on any fences, gates or doors.</li>
+                                                            <li>No one is to enter the Barn Manager’s apartment or other buildings on the 
+                                                                 property, other than the barn.</li>
+                                                            <li>In order to ensure the safest riding conditions, we ask that children and 
+                                                                 visitors refrain from screaming, running, or ball playing on the 
+                                                                 premises.</li>
+                                                            <li>Only the rider and staff/volunteers are allowed in the teaching arena, 
+                                                                 unless parent or health care professional presence is requested by 
+                                                                 instructor.</li>
+                                                            <li>Please refrain from giving the riders instructions that are not in line with 
+                                                                 the instructors directions.</li>
+                                                       </ul>
+                                                       <h5><strong>Attire</strong></h5>
+                                                       <ul>
+                                                            <li>A helmet must be worn by all riders at all times during the lesson hour.</li>  
+                                                            <li>Riders MUST wear long pants to ride, jeans are preferred.</li> 
+                                                            <li>All Riders must wear shoes. No one will be allowed to ride or be around the 
+                                                                 horses if they are bare foot or in sandals. We prefer the shoes have a ¼” heel 
+                                                                 rather than tennis-type shoes. Volunteers must wear sturdy non-opened toed shoes. We do not recommend steel-toed shoes.</li>
+                                                            <li>Volunteers- Please refrain from wearing clothes that is too tight or revealing- No tank tops, bra tops etc.</li>
+                                                       </ul><br>
+                                                       <p>I have read and understand LifeStriders Safety Policy<br> <br>
+                                                            Volunteer Signature: _____________________________________________     Date_________<br> <br>
+                                                            Participant Signature: ____________________________________________     Date_________<br><br>
+                                                            Parent/Guardian Signature: ________________________________________     Date_________<br><br></p>
+                                                  </div>
+                                             </div>
+                                   <hr>
+                                   <div class="col-md-12">
+                                        <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
+                                        <p>
+                                             LifeStriders relies greatly on volunteers as important members of the team who provide services to and assist our
+                                             clients. We also recognize the extreme importance of the safety and well-being of our clients, volunteers, staff,
+                                             guests and animals. All Volunteers and guests (guests = participants, siblings, parents, other relatives, friends) are
+                                             expected to follow LifeStriders rules and policies and may not engage in disruptive, unsafe or inappropriate
+                                             behavior. In the event a volunteer or guest does not comply, the following actions may be taken:
+                                        </p>
+                                        <ul class="list-group">
+                                             <li class="list-group-item">
+                                                  <h3>Level 1 : Verbal Warning</h3>
+                                                  <br>
+                                                  <p>Breaking of LifeStriders rules and /or policies and procedures may be followed
+                                                       by a verbal warning from LifeStriders Staff to be documented in the incident report book. 
                                                   </p>
-                                                  <ul class="list-group">
-                                                       <li class="list-group-item">
-                                                            <h3>Side Walker/ Leader</h3>
-                                                            <p>
-                                                                 In order to ensure safety and continuity of service for our clients, LifeStriders aims to have three
-                                                                 committed volunteers per rider. We require prospective volunteers to commit to 1 lesson a week
-                                                                 (minimum) for an 6-8 week session that they can attend regularly. This way we are sure not to
-                                                                 disappoint a child or rider who has eagerly been waiting to ride all week long.
-                                                                 <br>
-                                                                 Side walkers and Leaders assist in therapeutic riding classes as well as horse care. We need interested
-                                                                 people willing to commit to an ongoing volunteer position (6-8 weeks). Interested volunteers will be
-                                                                 provided training. 
-                                                            </p>
-                                                            <br>
-                                                            <p>
-                                                                 <b>Skills and requirements:</b> Must be at least 13 years old. Must be able to walk for 45 minute sessions
-                                                                 and not be afraid of horses. Horse experience preferred but not required.
-                                                            </p>
-                                                            <br>
-                                                            <h4>
-                                                                 If this hands on, rewarding experience sounds like something you would like to experience, please visit
-                                                                 the VolunteerSpot link on our web-site to sign up for the day (s) and time(s) you are willing to
-                                                                 volunteer for!
-                                                            </h4>
-                                                       </li>
-                                                       <li class="list-group-item">
-                                                            <h3>Barn helper /grounds management</h3>
-                                                            <p>
-                                                                 This ongoing volunteer position assists the barn manager with various horse care and barn chores and
-                                                                 basic grounds keeping. Helpers also assist with preparing horses for lessons (grooming, tacking etc.) and
-                                                                 assisting instructors set up arenas or other jobs as needed
-                                                            </p>
-                                                            <br>
-                                                            <p>
-                                                                 <b>Skills and Requirements:</b> Must be at least 12 years of age and not afraid of horses. Horse experience
-                                                                 or work with disabled individuals is not required, but is a plus.
-                                                            </p>
-                                                            <br>
-                                                            <h4>
-                                                                 If this hands on, rewarding experience sounds like something you would like to experience, please visit
-                                                                 the VolunteerSpot link on our web-site to sign up for the day (s) and time(s) you are willing to
-                                                                 volunteer for!
-                                                            </h4>
-                                                       </li>
-                                                       <li class="list-group-item">
-                                                            <h3>Grant Writing/Marketing/Fundraising</h3>
-                                                            <p>
-                                                                 This ongoing position assists staff write and submit grant applications, plans and coordinates fundraising
-                                                                 events and works to help staff with special events. Flexible hours, work from home or in office.
-                                                            </p>
-                                                       </li>
-                                                  </ul>
-                                             </div>
+                                             </li>
+                                             <li class="list-group-item"><h3>Level 2 : Written Warning</h3>
+                                                  <br>
+                                                  <p>Breaking of LifeStriders rules and/or policies and procedures for a second time will be followed
+                                                       by a Personnel/Staff meeting for discussion regarding the infraction. The purpose of the meeting
+                                                       is to determine the exact reason the infraction occurred for second time and discuss with the
+                                                       volunteer/guest how to avoid the circumstance ever occurring again. This meeting will be
+                                                       documented and placed in the incident report book.
+
+                                                  </p>
+                                             </li>
+                                             <li class="list-group-item"><h3>Level 3 : Dismissal from Organization</h3>
+                                                  <br>
+                                                  <p>Immediate dismissal from the property and organization will occur for:</p>
+                                                  <ol>
+                                                       <li>Endangering the safety of others</li>
+                                                       <li>Inappropriate use of the facilities, mailing lists or monies</li>
+                                                       <li>Disruptive or abusive behavior to the animals or individuals at LifeStriders</li>
+                                                       <li>Repeated disregard of the organizations rules, policies and procedures</li>
+                                                       <li>Possession of a weapon, illegal drugs or a paraphernalia</li>
+                                                       <li>Being under the influence of alcohol or drugs</li>
+
+                                                  </ol>
+                                             </li>
+                                        </ul>
+                                        <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
+                                        <p>
+                                             I have read and understand the policies and program rules by which LifeStriders operates. By signing below, I
+                                             indicate my willingness to abide by these rules and policies. I further understand that failure to comply with these
+                                             policies and rules will result in discharge from the program.
+                                        </p>
+                                        <div id="dismissalfield">
                                         </div>
+                                   </div>
+                                   <div class="col-md-12">
+                                        <h2>VOLUNTEER REGISTRATION</h2>
+                                        <p>
+                                             Thank you for inquiring about volunteer opportunities at LifeStriders. Please review the following
+                                             positions available. Applicants may sign up for more than one position per session.
+                                        </p>
+                                        <ul class="list-group">
+                                             <li class="list-group-item">
+                                                  <h3>Side Walker/ Leader</h3>
+                                                  <p>
+                                                       In order to ensure safety and continuity of service for our clients, LifeStriders aims to have three
+                                                       committed volunteers per rider. We require prospective volunteers to commit to 1 lesson a week
+                                                       (minimum) for an 6-8 week session that they can attend regularly. This way we are sure not to
+                                                       disappoint a child or rider who has eagerly been waiting to ride all week long.
+                                                       <br>
+                                                       Side walkers and Leaders assist in therapeutic riding classes as well as horse care. We need interested
+                                                       people willing to commit to an ongoing volunteer position (6-8 weeks). Interested volunteers will be
+                                                       provided training. 
+                                                  </p>
+                                                  <br>
+                                                  <p>
+                                                       <b>Skills and requirements:</b> Must be at least 13 years old. Must be able to walk for 45 minute sessions
+                                                       and not be afraid of horses. Horse experience preferred but not required.
+                                                  </p>
+                                                  <br>
+                                                  <h4>
+                                                       If this hands on, rewarding experience sounds like something you would like to experience, please visit
+                                                       the VolunteerSpot link on our web-site to sign up for the day (s) and time(s) you are willing to
+                                                       volunteer for!
+                                                  </h4>
+                                             </li>
+                                             <li class="list-group-item">
+                                                  <h3>Barn helper /grounds management</h3>
+                                                  <p>
+                                                       This ongoing volunteer position assists the barn manager with various horse care and barn chores and
+                                                       basic grounds keeping. Helpers also assist with preparing horses for lessons (grooming, tacking etc.) and
+                                                       assisting instructors set up arenas or other jobs as needed
+                                                  </p>
+                                                  <br>
+                                                  <p>
+                                                       <b>Skills and Requirements:</b> Must be at least 12 years of age and not afraid of horses. Horse experience
+                                                       or work with disabled individuals is not required, but is a plus.
+                                                  </p>
+                                                  <br>
+                                                  <h4>
+                                                       If this hands on, rewarding experience sounds like something you would like to experience, please visit
+                                                       the VolunteerSpot link on our web-site to sign up for the day (s) and time(s) you are willing to
+                                                       volunteer for!
+                                                  </h4>
+                                             </li>
+                                             <li class="list-group-item">
+                                                  <h3>Grant Writing/Marketing/Fundraising</h3>
+                                                  <p>
+                                                       This ongoing position assists staff write and submit grant applications, plans and coordinates fundraising
+                                                       events and works to help staff with special events. Flexible hours, work from home or in office.
+                                                  </p>
+                                             </li>
+                                        </ul>
                                    </div>
                                    <hr>
                                    <div id="checklists" class="text-center">
@@ -372,14 +972,15 @@
                                         </div>
                                    </div>
                               </div>
-                         </div>
-                         <input class="btn btn-danger" type="submit" id="printButton" value="Print">
+                              <input class="btn btn-danger" type="submit" id="printButton" value="Print">
+                         </div>  
                     </div>
                </div>
           </div>
-          <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+          <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
           <script src="Scripts/volunteerForm.js" type="text/javascript"></script>
           <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
      </body>
 </html>

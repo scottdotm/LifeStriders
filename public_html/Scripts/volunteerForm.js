@@ -5,6 +5,9 @@
 //10/13/2016
 
 $(document).ready(function (e) {
+     var dob = null;
+     var age = null;
+     var checklist = [];
      /*   
       * UserException can be used to throw custom exceptions in Javascript,
       * this helped myself with debuging the logic located within this Javascript file.
@@ -14,34 +17,31 @@ $(document).ready(function (e) {
           this.name = "UserException";
      }
      ;
-     //New age logic happening on blur of the age field
+     //Determines how old a user is
      $('#dob').blur(function () {
           dob = $('#dob').val();
           var dobConcat = dob.substring(0, 4);
           var guardianAge = new Date();
           var x = guardianAge.getFullYear();
           age = x - dobConcat;
-          //Proof that the age property is working properly.
-//          console.log(age);
      });
-          
+     $('#subModal').click(function(){
+        if(age<=0 || age>=115 || age===null){
+               $('#printPreviewButton').prop('disabled', true);
+               $('#error').html("<div class='alert alert-danger' role='alert'> There seems to be an error with your age. </div>");
+          } else {
+               $('#printPreviewButton').prop('disabled', false);
+               $('#error').remove();
+          }  
+     });
+     //Initially Hide printPreview
      $('#printPreviewVolunteerFormOVER').hide();
+     //When user clicks printPreview button on form
      $('#printPreviewButton').click(function () {
           try {
-               /*This is where the pages 1-4 print preview displays/id's would go Example would be 
-                * volInfoField = [
-                * {display: "Volunteer Name: " + $('#volName').val(), id: '#VN'},
-                * {display: "Volunteer Age: " + $('#volAge').val(), id: '#VA'}
-                * ];
-                * Nothing else is done here for additional fields, all gets taken care of by my functions,
-                * unless new data is entered into our map in which case, new functions are needed to 
-                * exctract data from the map.
-                */
-               
                var formfield = [
                     {label: "Last Name: ", display: $('#lastName').val(), id: '#LN'},
                     {label: "First Name: ", display: $('#firstName').val(), id: '#FN'},
-                    //dob called in a global javascript variable.
                     {label: "Date of Birth: ", display: dob, id: '#DOB'},
                     {label: "Address: ", display: $('#address').val(), id: '#ADD'},
                     {label: "City: ", display: $('#city').val(), id: '#CIT'},
@@ -52,12 +52,7 @@ $(document).ready(function (e) {
                     
                     {label: "Employer: ", display: $('#employer').val(), id: '#EMP'}
                ];
-               var checklist = [];
-
-
-
-               //------------------------------------------------------------//
-               //This will be taken from the given date in the above form.
+               //Age logic to determine if a user is > , or < 18.
                if (age >= 18) {
                     
                     $('#dismissalfield').append("<br><hr id='signHr1' class='divider'><label>Volunteer's Full Name</label> <br>");
@@ -87,7 +82,7 @@ $(document).ready(function (e) {
                          "No weapons, illegal drugs or paraphernalia policy",
                          "Clothing"
                     ];
-                    for (i = 0, len = checklist.length; i < len; i++) {
+                    for (var i = 0, len = checklist.length; i < len; i++) {
                          $('#volunteerChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else if (age < 18) {
@@ -131,10 +126,13 @@ $(document).ready(function (e) {
                          $('#minorChecklist').append("<div class='box'></div><div class='field'>" + checklist[i] + "</div><br>");
                     }
                } else {
-//                    window.location = "VolunteerForm.html";
-                    throw new UserException("Please fill out Age");
+                    console.log(age);
+                    throw new UserException("Didn't work");
                }
                ;
+               /*
+                * Need to extract Label from map.
+                */
                function getLabel(item, index) {
                     var getFullLabel = [item.label];
                     return getFullLabel.toString();
@@ -172,6 +170,7 @@ $(document).ready(function (e) {
           $('#formVolunteerForm').hide();
           $('#printPreviewVolunteerFormOVER').show();
      });
+     //Print Button from Print Preview
      $("#printButton").click(function () {
           var mode = 'iframe';
           var close = mode === "popup";
