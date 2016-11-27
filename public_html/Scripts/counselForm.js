@@ -4,10 +4,10 @@
 
 $(document).ready(function (e) {
  
-
+    //hide the print preview page to start off
     $('#printPreviewConsultingFormOVER').hide();
 
-
+    //Gets the values from the form and puts the values on the print preview page
     $('#printPreviewButton').click(function (e) {
         
 
@@ -33,6 +33,7 @@ $(document).ready(function (e) {
         $('#pSocSecNum').html($('#socSecNum').val());
 
 
+        // if person is not a minor, hides the row so blank information isn't shown
         if ($('#parentName').val().length === 0 || $('#hisherDOB').val().length === 0 || $('#hisherSSN').val().length === 0) {
             $('#listRow5').hide();
         } else {
@@ -74,12 +75,12 @@ $(document).ready(function (e) {
 
         //--------------------------------------------------------
 
-
+        //Showes the print review(print preview) page and hides the input form
         $('#printPreviewConsultingFormOVER').show();
         $('#formConsultingForm').hide();
     });
 
-
+    //takes the review page(print preview page) and launches the iframe to print.
     $("#printButton").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
@@ -90,19 +91,6 @@ $(document).ready(function (e) {
 
 
 
-//   $.validator.setDefaults({
-//        debug: true//,
-//        //success: "valid"
-//    });
-//    
-//    var form = $('#counselingInputForm');
-//        form.validate();
-//        $('#printPreviewButton').click(function(){
-//            alert("Valid: " + form.valid());
-//            
-//            
-//            
-//            
-//        });
+
 
 });
