@@ -13,6 +13,12 @@ body{
 .wrapperOverall{
     background-color: #EDE4BD;
 }
+.box {
+  border: 1px solid black ;
+  width: 10px;
+  padding: 5px;
+  display:inline-block;
+}
 /* Div that encompasses either the input or printPreview page */
 .pageWrapper{
     margin-top: 20px;
@@ -36,6 +42,9 @@ body{
 /* ------------------------------------------------- */
 h1 {
     margin-top: 35px;
+}
+.field{
+     padding: 5px;
 }
 /* Lifestrider red head */
 .lsH2Div{
@@ -142,6 +151,7 @@ hr {
     height: 20px;
     width: 20px;
     border: 1px solid black
+         
 }
 /* Bold and underline text (for this I used a h4 but it doesn't matter') */
 .clientCopyH4{

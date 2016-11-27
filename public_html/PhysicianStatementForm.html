@@ -7,6 +7,45 @@
         <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
     </head>
     <body>
+         <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h2 class="modal-title" id="myModalLabel">Submitting Filled Out Form</h2>
+                         </div>
+                         <div class="modal-body">
+                              <p>
+                                   You are submitting the filed out form to the print preview
+                                   screen, this screen resembles what the printout form will
+                                   look like (with filled out information).  After viewing
+                                   this screen, please click "Print" to be taken to the actual
+                                   print screen.
+                              </p>
+                              <br>
+                              <div id='error'>
+                              </div>
+                         </div>
+                         <div class="modal-footer">
+                              <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-remove-sign" >
+                                        Close
+                                   </span>
+                              </button>
+                              <!-- Button class used for import of glyphicon,
+                              this will need to be changed when the user uses
+                              Internet Explorer due to input/button conflicts-->
+                              <button type="button" id="printPreviewButton" class="btn btn-danger" value="Submit" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-ok-sign">
+                                        Print Preview
+                                   </span>
+                              </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- /Modal -->
         <div class="container wrapperOverall">
             <div class="container row pageWrapper">
                 <!--Insert form name -->
@@ -103,7 +142,12 @@
                             
 
                         </div>
-                        <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
+                        <!-- Button trigger modal -->
+                              <button id="subModal" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                                   <span class="glyphicon glyphicon-modal-window">
+                                        Submit
+                                   </span>
+                              </button>
                     </form>
                 </div>
             </div>
