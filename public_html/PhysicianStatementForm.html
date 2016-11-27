@@ -61,7 +61,7 @@
                                 <label for="NP" class="paddingRight"><input type="radio" id="NP" name="physicianStatementPhysicianTitle" value="NP"> NP</label>
                                 <label for="PA" class="paddingRight"><input type="radio" id="PA" name="physicianStatementPhysicianTitle" value="PA"> PA</label>
                                 <label>
-                                    <input type="radio" id="physicianStatementPhysicianTitle" name="physicianStatementPhysicianTitle" value="Other">
+                                    <input type="radio" id="physicianStatementPhysicianTitle" name="physicianStatementPhysicianTitle" value="other">
                                 </label>
                                 <label for="physicianStatementPhysicianTitle">Other: </label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianTitleOther" placeholder="Other..">
@@ -94,7 +94,7 @@
                                 <label for="physicianStatementPhysicianLicense">License/UPIN Number:</label>
                                 <input type="text" class="form-control" id="physicianStatementPhysicianLicense" placeholder="License/UPIN Number..">
                             </div>
-                            
+
                         </div>
                         <input type="button" id="printPreviewButton" class="btn btn-danger" value="Submit">
                     </form>
@@ -135,49 +135,90 @@
                             <!--*************************************************************************************************************************************************-->
                             <!--Start of the Consent For Physician Statement Form Print Preview Page which is hidden when the form first loads-->
                             <!--*************************************************************************************************************************************************-->
+                            <h3 class="text-center">Physician's Statement</h3>
+                            
+                            <p>
+                                To my knowledge, there is no reason why this person cannot participate in supervised equestrian activities. 
+                                However, I understand that the therapeutic riding center will weigh the medical information above against 
+                                the existing precautions and contraindications. I concur with a review of this person’s abilities/limitations 
+                                by a licensed/credentialed health professional (e.g. PT, OT, Speech, Psychologist, etc.) in the implementation 
+                                of an effective equestrian program.
+                            </p>
+                            
+                            <ul class="list-inline text-center listRowTop listRowLi2Elems">
+                                <li>
+                                    <label for="ppPhysicianStatementFirst">Participant's First Name:</label>
+                                    <p id="ppPhysicianStatementFirst"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementLast">Participant's Last Name:</label>
+                                    <p id="ppPhysicianStatementLast"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi3Elems">
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianName">Physician's Name:</label>
+                                    <p id="ppPhysicianStatementPhysicianName"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianTitle">Title:</label>
+                                    <p id="ppPhysicianStatementPhysicianTitle"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianLicense">License/UPIN Number:</label>
+                                    <p id="ppPhysicianStatementPhysicianLicense"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi4Elems">
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianAddress">Address:</label>
+                                    <p id="ppPhysicianStatementPhysicianAddress"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianCity">City:</label>
+                                    <p id="ppPhysicianStatementPhysicianCity"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianState">State:</label>
+                                    <p id="ppPhysicianStatementPhysicianState"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianZip">Zip Code:</label>
+                                    <p id="ppPhysicianStatementPhysicianZip"></p>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianPhone">Phone Number:</label>
+                                    <p id="ppPhysicianStatementPhysicianPhone"></p>
+                                </li>
+                                <li>
+                                    <label for="ppPhysicianStatementPhysicianEmail">Email:</label>
+                                    <p id="ppPhysicianStatementPhysicianEmail"></p>
+                                </li>
+                            </ul>
 
-                            <label for="ppPhysicianStatementFirst">Participant's First Name:</label>
-                            <p id="ppPhysicianStatementFirst"></p>
 
-                            <label for="ppPhysicianStatementLast">Participant's Last Name:</label>
-                            <p id="ppPhysicianStatementLast"></p>
+                            <table class="sign">
+                                <thead class="thSign">
+                                    <tr>
+                                        <td class="tdSignName" id="ppPhysicianStatementPhysicianSignName"></td>
+                                        <td class="tdSign">X</td>
+                                        <td class="tdSignDate" id="ppPhysicianStatementSignedDate"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tdSignName">Name</td>
+                                        <td class="tdSign">Signature</td>
+                                        <td class="tdSignDate">Date</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
-                            <label for="ppPhysicianStatementPhysicianName">Physician's Name:</label>
-                            <p id="ppPhysicianStatementPhysicianName"></p>
 
-                            <label for="ppPhysicianStatementPhysicianTitle">Title:</label>
-                            <p id="ppPhysicianStatementPhysicianTitle"></p>
-
-                            <label for="ppPhysicianStatementPhysicianAddress">Address:</label>
-                            <p id="ppPhysicianStatementPhysicianAddress"></p>
-
-                            <label for="ppPhysicianStatementPhysicianCity">City:</label>
-                            <p id="ppPhysicianStatementPhysicianCity"></p>
-
-                            <label for="ppPhysicianStatementPhysicianState">State:</label>
-                            <p id="ppPhysicianStatementPhysicianState"></p>
-
-                            <label for="ppPhysicianStatementPhysicianZip">Zip Code:</label>
-                            <p id="ppPhysicianStatementPhysicianZip"></p>
-
-                            <label for="ppPhysicianStatementPhysicianPhone">Phone Number:</label>
-                            <p id="ppPhysicianStatementPhysicianPhone"></p>
-
-                            <label for="ppPhysicianStatementPhysicianEmail">Email:</label>
-                            <p id="ppPhysicianStatementPhysicianEmail"></p>
-
-                            <label for="ppPhysicianStatementPhysicianLicense">License/UPIN Number:</label>
-                            <p id="ppPhysicianStatementPhysicianLicense"></p>
-
-                            <label for="ppConsentSign">Consent Signature:</label>
-                            <p id="ppConsentSign">___________________________________________</p>
-
-                            <label for="ppPhysicianStatementSignedDate">Date: </label>
-                            <p id="ppPhysicianStatementSignedDate"></p>
-
-                            <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                         </div>
-
+                        <input class="btn btn-danger" type="submit" id="printButton" value="Submit for Print Preview">
                     </div>
                 </div>
             </div>
