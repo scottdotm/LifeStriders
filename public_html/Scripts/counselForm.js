@@ -5,7 +5,9 @@
 $(document).ready(function (e) {
 
     $('#printPreviewConsultingFormOVER').hide();
-
+    $('#subModal').click(function(){
+         
+    });
 
 
     $('#printPreviewButton').click(function (e) {

@@ -26,11 +26,7 @@ $(document).ready(function (e) {
         $('#ppPhysicianStatementFirst').html($('#physicianStatementFirst').val());
         $('#ppPhysicianStatementLast').html($('#physicianStatementLast').val());
         $('#ppPhysicianStatementPhysicianName').html($('#physicianStatementPhysicianName').val());
-        if ($('input[name="physicianStatementPhysicianTitle"]:checked').val() == "other") {
-            $('#ppPhysicianStatementPhysicianTitle').html($('#physicianStatementPhysicianTitleOther').val());
-        } else {
-            $('#ppPhysicianStatementPhysicianTitle').html($('input[name="physicianStatementPhysicianTitle"]:checked').val());
-        }
+        $('#ppPhysicianStatementPhysicianTitle').html($('input[name="physicianStatementPhysicianTitle"]:checked').val());
         $('#ppPhysicianStatementPhysicianAddress').html($('#physicianStatementPhysicianAddress').val());
         $('#ppPhysicianStatementPhysicianCity').html($('#physicianStatementPhysicianCity').val());
         $('#ppPhysicianStatementPhysicianState').html($('#physicianStatementPhysicianState').val());
@@ -38,13 +34,13 @@ $(document).ready(function (e) {
         $('#ppPhysicianStatementPhysicianPhone').html($('#physicianStatementPhysicianPhone').val());
         $('#ppPhysicianStatementPhysicianEmail').html($('#physicianStatementPhysicianEmail').val());
         $('#ppPhysicianStatementPhysicianLicense').html($('#physicianStatementPhysicianLicense').val());
-        $('#ppPhysicianStatementPhysicianSignName').html($('#physicianStatementPhysicianName').val());
+        
         // This prints out the date on the form to be signed
         $('#ppPhysicianStatementSignedDate').html(todaysdate)
-
-
-        //-----------------------------------------------------------------------
-
+        
+        
+ //-----------------------------------------------------------------------
+        
         // Scrolles to the top of the page
         $('html,body').scrollTop(0);
         // Shows the print preview page 
