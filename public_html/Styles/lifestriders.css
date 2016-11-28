@@ -233,7 +233,9 @@ td.tdSignName{
 .padding {
     padding: 2.5%;
 }
-
+.paddingRight {
+    padding-right: 2.5%;
+}
 #PAnext, #PHHnext, #EMTnext{
     float: right;
 }
