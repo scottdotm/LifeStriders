@@ -13,13 +13,21 @@ $(document).ready(function (e) {
     // Hides the Print Preview Half of this Form
     $('#printPreviewRiderFormOVER').hide();
     
-    /* Scrolls the page to the top each time a next or previous button is clicked*/
-    $('#PAnext,#PHHnext,#EMTnext,#PHHprevious,#EMTprevious,#PRprevious').click(function() {
-        $('html,body').scrollTop(325);
+    $('#enablePrint').click(function() {
+        $('#printButton').prop('disabled', false);
     });
     
-   
-
+    $('#edit').click(function() {
+        $('#printPreviewRiderFormOVER').hide();
+        $('html,body').scrollTop(0);
+        $('#formRiderForm').show();
+    });
+    
+    /* Scrolls the page to the top each time a next or previous button is clicked*/
+    $('#PAnext,#PHHnext,#EMTnext,#PHHprevious,#EMTprevious,#PRprevious,#PRnext,#Cprevious,#headingOne,#headingTwo,#headingThree,#headingFour,#headingFive').click(function() {
+        $('html,body').scrollTop(225);
+    });
+  
     /* adds another emergency contact and stops at 3*/
     var count = 1;
     $('#addEMT').click(function () {
@@ -406,6 +414,73 @@ $(document).ready(function (e) {
 
 
         //***********************************************************************
+        //Consent For Release Form
+        //***********************************************************************
+
+        $('#ppConsentDoctorName').html($('#consentDoctorName').val());
+        $('#ppConsentPartName').html($('#consentPartName').val());
+        $('#ppConsentPartDob').html($('#consentPartDob').val());
+        $('#ppConsentQuestion3').html($('#consentQuestion3').val());
+        if ($('#consentMedHistory').is(':checked')) {
+            $('#ppConsentMedHistoryL').html($('#consentMedHistory:checked').val());
+            $('#ppConsentMedHistory').html("Yes");
+        } else {
+            $('#ppConsentMedHistoryL').html($('#consentMedHistory').val());
+            $('#ppConsentMedHistory').html("No");
+        }
+        if ($('#consentPhysicalTherapy').is(':checked')) {
+            $('#ppConsentPhysicalTherapyL').html($('#consentPhysicalTherapy:checked').val());
+            $('#ppConsentPhysicalTherapy').html("Yes");
+        } else {
+            $('#ppConsentPhysicalTherapyL').html($('#consentPhysicalTherapy').val());
+            $('#ppConsentPhysicalTherapy').html("No");
+        }
+        if ($('#consentOccupationalTherapy').is(':checked')) {
+            $('#ppConsentOccupationalTherapyL').html($('#consentOccupationalTherapy:checked').val());
+            $('#ppConsentOccupationalTherapy').html("Yes");
+        } else {
+            $('#ppConsentOccupationalTherapyL').html($('#consentOccupationalTherapy').val());
+            $('#ppConsentOccupationalTherapy').html("No");
+        }
+        if ($('#consentSpeechTherapy').is(':checked')) {
+            $('#ppConsentSpeechTherapyL').html($('#consentSpeechTherapy:checked').val());
+            $('#ppConsentSpeechTherapy').html("Yes");
+        } else {
+            $('#ppConsentSpeechTherapyL').html($('#consentSpeechTherapy').val());
+            $('#ppConsentSpeechTherapy').html("No");
+        }
+        if ($('#consentClassroom').is(':checked')) {
+            $('#ppConsentClassroomL').html($('#consentClassroom:checked').val());
+            $('#ppConsentClassroom').html("Yes");
+        } else {
+            $('#ppConsentClassroomL').html($('#consentClassroom').val());
+            $('#ppConsentClassroom').html("No");
+        }
+        if ($('#consentPsychosocial').is(':checked')) {
+            $('#ppConsentPsychosocialL').html($('#consentPsychosocial:checked').val());
+            $('#ppConsentPsychosocial').html("Yes");
+        } else {
+            $('#ppConsentPsychosocialL').html($('#consentPsychosocial').val());
+            $('#ppConsentPsychosocial').html("No");
+        }
+        if ($('#consentCognitive').is(':checked')) {
+            $('#ppConsentCognitiveL').html($('#consentCognitive:checked').val());
+            $('#ppConsentCognitive').html("Yes");
+        } else {
+            $('#ppConsentCognitiveL').html($('#consentCognitive').val());
+            $('#ppConsentCognitive').html("No");
+        }
+        if ($('#consentOther').is(':checked')) {
+            $('#ppConsentOtherL').html($('#consentOtherText').val());
+            $('#ppConsentOther').html("Yes");
+            $('#ppConsentOtherText').html($('#consentOtherText').val());
+        } else {
+            $('#ppConsentOtherL').html($('#consentOther').val());
+            $('#ppConsentOther').html("No");
+        }
+        $('#ppConsentSignedDate').html(todaysdate)
+   
+        //***********************************************************************
         // Participant Waiver and Guest Liability Release Agreement
         //***********************************************************************
 
@@ -475,6 +550,7 @@ $(document).ready(function (e) {
         var close = mode === "popup";
         var options = {mode: mode, popClose: close};
         $("#printPreviewRiderForm").printArea(options);
+        
     });
 
 });
