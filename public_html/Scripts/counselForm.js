@@ -9,6 +9,15 @@ $(document).ready(function (e) {
          
     });
 
+    $('#edit').click(function(){
+         $('#printPreviewConsultingFormOVER').hide();
+         $('html,body').scrollTop(0);
+         $('#formConsultingForm').show();
+    });
+    
+    $('#enablePrint2').click(function(){
+       $('#printButtonCF').prop('disabled',false); 
+    });
 
     $('#printPreviewButton').click(function (e) {
 
@@ -75,11 +84,12 @@ $(document).ready(function (e) {
         //--------------------------------------------------------
 
         $('#printPreviewConsultingFormOVER').show();
+        $('html,body').scrollTop(0);
         $('#formConsultingForm').hide();
     });
 
 
-    $("#printButton").click(function () {
+    $("#printButtonCF").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
         var options = {mode: mode, popClose: close};
