@@ -1,34 +1,44 @@
 $(document).ready(function (e) {
     // Instantiates an empty date object as d
     var d = new Date();
+
     // Stores the day of the Month as curr_date
     var curr_date = d.getDate();
+
     // Months are zero based 
     // Stores the Month as curr_month
     var curr_month = d.getMonth() + 1;
+
     // Stores the year as curr_year
     var curr_year = d.getFullYear();
+
     // Scrolls to the top of the document
     $('html,body').scrollTop(0);
-    // Hides the Print Preview Half of this Form
+
+    // Hides the Print Preview Half of this Form at start up
     $('#printPreviewRiderFormOVER').hide();
-    
-    $('#enablePrint').click(function() {
-        $('#printButton').prop('disabled', false);
+
+    // Enables print Button by clicking the physicians forms buttion
+    $('#enablePrint').click(function () {
+        $('#printButtonRF').prop('disabled', false);
     });
-    
-    $('#edit').click(function() {
+
+    // Simulates a back button by hiding the print preview page and showing the rider form
+    // Also it scroles to the top
+    $('#edit').click(function () {
         $('#printPreviewRiderFormOVER').hide();
         $('html,body').scrollTop(0);
         $('#formRiderForm').show();
     });
-    
+
     /* Scrolls the page to the top each time a next or previous button is clicked*/
-    $('#PAnext,#PHHnext,#EMTnext,#PHHprevious,#EMTprevious,#PRprevious,#PRnext,#Cprevious,#headingOne,#headingTwo,#headingThree,#headingFour,#headingFive').click(function() {
+    $('#PAnext,#PHHnext,#EMTnext,#PHHprevious,#EMTprevious,#PRprevious,#PRnext,#Cprevious,\n\
+        #headingOne,#headingTwo,#headingThree,#headingFour,#headingFive').click(function () {
         $('html,body').scrollTop(225);
     });
-  
-    /* adds another emergency contact and stops at 3*/
+
+    /* Adds another emergency contact by showing the hidden divs
+     * and stops at 3*/
     var count = 1;
     $('#addEMT').click(function () {
         count++;
@@ -40,112 +50,118 @@ $(document).ready(function (e) {
         }
 
     });
-    /* toggles the comment text area on the health history*/
+    /* Toggles the comment text area on the health history*/
     $('.healthCheck').change(function () {
+        // If the value checked is the same show the comment text area and focus the cursor
+        // in the text area.
+        // The prefix 'PHH' Stands for Participants Health History
         if ($(this).is(':checked')) {
-
-            if (this.value == "vision") {
-                $('#PHH1').show(function() {
+            if (this.value === "vision") {
+                $('#PHH1').show(function () {
                     $('#PHHvisionComment').focus();
-                })
-            } else if (this.value == "hearing") {
-                $('#PHH2').show(function() {
+                });
+            } else if (this.value === "hearing") {
+                $('#PHH2').show(function () {
                     $('#PHHhearingComment').focus();
-                })
-            } else if (this.value == "sensation") {
-                $('#PHH3').show(function() {
+                });
+            } else if (this.value === "sensation") {
+                $('#PHH3').show(function () {
                     $('#PHHsensationComment').focus();
-                })
-            } else if (this.value == "comm") {
-                $('#PHH4').show(function() {
+                });
+            } else if (this.value === "comm") {
+                $('#PHH4').show(function () {
                     $('#PHHcommComment').focus();
-                })
-            } else if (this.value == "heart") {
-                $('#PHH5').show(function() {
+                });
+            } else if (this.value === "heart") {
+                $('#PHH5').show(function () {
                     $('#PHHheartComment').focus();
-                })
-            } else if (this.value == "breathing") {
-                $('#PHH6').show(function() {
+                });
+            } else if (this.value === "breathing") {
+                $('#PHH6').show(function () {
                     $('#PHHbreathingComment').focus();
-                })
-            } else if (this.value == "digest") {
-                $('#PHH7').show(function() {
+                });
+            } else if (this.value === "digest") {
+                $('#PHH7').show(function () {
                     $('#PHHdigestComment').focus();
-                })
-            } else if (this.value == "eliminate") {
-                $('#PHH8').show(function() {
+                });
+            } else if (this.value === "eliminate") {
+                $('#PHH8').show(function () {
                     $('#PHHeliminateComment').focus();
-                })
-            } else if (this.value == "circulate") {
-                $('#PHH9').show(function() {
+                });
+            } else if (this.value === "circulate") {
+                $('#PHH9').show(function () {
                     $('#PHHcirculateComment').focus();
-                })
-            } else if (this.value == "emotion") {
-                $('#PHH10').show(function() {
+                });
+            } else if (this.value === "emotion") {
+                $('#PHH10').show(function () {
                     $('#PHHemotionComment').focus();
-                })
-            } else if (this.value == "behave") {
-                $('#PHH11').show(function() {
+                });
+            } else if (this.value === "behave") {
+                $('#PHH11').show(function () {
                     $('#PHHbehaveComment').focus();
-                })
-            } else if (this.value == "pain") {
-                $('#PHH12').show(function() {
+                });
+            } else if (this.value === "pain") {
+                $('#PHH12').show(function () {
                     $('#PHHpainComment').focus();
-                })
-            } else if (this.value == "bone") {
-                $('#PHH13').show(function() {
+                });
+            } else if (this.value === "bone") {
+                $('#PHH13').show(function () {
                     $('#PHHboneComment').focus();
-                })
-            } else if (this.value == "muscle") {
-                $('#PHH14').show(function() {
+                });
+            } else if (this.value === "muscle") {
+                $('#PHH14').show(function () {
                     $('#PHHmuscleComment').focus();
-                })
-            } else if (this.value == "think") {
-                $('#PHH15').show(function() {
+                });
+            } else if (this.value === "think") {
+                $('#PHH15').show(function () {
                     $('#PHHthinkComment').focus();
-                })
-            } else if (this.value == "allergy") {
-                $('#PHH16').show(function() {
+                });
+            } else if (this.value === "allergy") {
+                $('#PHH16').show(function () {
                     $('#PHHallergyComment').focus();
-                })
+                });
             }
+            // The opposite happens if the value is unchecked the corrisponding text area is hidden
+            // If a value is entered hiding and showing it does not delete the entered text.
         } else {
-            if (this.value == "vision") {
+            if (this.value === "vision") {
                 $('#PHH1').hide();
-            } else if (this.value == "hearing") {
+            } else if (this.value === "hearing") {
                 $('#PHH2').hide();
-            } else if (this.value == "sensation") {
+            } else if (this.value === "sensation") {
                 $('#PHH3').hide();
-            } else if (this.value == "comm") {
+            } else if (this.value === "comm") {
                 $('#PHH4').hide();
-            } else if (this.value == "heart") {
+            } else if (this.value === "heart") {
                 $('#PHH5').hide();
-            } else if (this.value == "breathing") {
+            } else if (this.value === "breathing") {
                 $('#PHH6').hide();
-            } else if (this.value == "digest") {
+            } else if (this.value === "digest") {
                 $('#PHH7').hide();
-            } else if (this.value == "eliminate") {
+            } else if (this.value === "eliminate") {
                 $('#PHH8').hide();
-            } else if (this.value == "circulate") {
+            } else if (this.value === "circulate") {
                 $('#PHH9').hide();
-            } else if (this.value == "emotion") {
+            } else if (this.value === "emotion") {
                 $('#PHH10').hide();
-            } else if (this.value == "behave") {
+            } else if (this.value === "behave") {
                 $('#PHH11').hide();
-            } else if (this.value == "pain") {
+            } else if (this.value === "pain") {
                 $('#PHH12').hide();
-            } else if (this.value == "bone") {
+            } else if (this.value === "bone") {
                 $('#PHH13').hide();
-            } else if (this.value == "muscle") {
+            } else if (this.value === "muscle") {
                 $('#PHH14').hide();
-            } else if (this.value == "think") {
+            } else if (this.value === "think") {
                 $('#PHH15').hide();
-            } else if (this.value == "allergy") {
+            } else if (this.value === "allergy") {
                 $('#PHH16').hide();
             }
         }
     });
-    /* Toggles The Guardians tab*/
+    /* Toggles The option to fill in the guardian fields
+     * The prefix 'pp' stands for print preview
+     * Thr prefix 'PA' stands for Participant's Application*/
     $('#PAguardianCheckbox').change(function () {
         if ($(this).is(':checked')) {
             $('#g1').show();
@@ -175,31 +191,34 @@ $(document).ready(function (e) {
             $('#PAguardianZip').val("");
             $('#PAguardianPhone').val("");
         }
-
     });
     // Brings up the hidden half of the page with the fields filled out for print preview
     $('#printPreviewButton').click(function (e) {
         // Formats the date as mm-dd-yyyy
         var todaysdate = curr_month + "-" + curr_date + "-" + curr_year;
 
-
-
         //***********************************************************************
         // Participant’s Application 
         //***********************************************************************
-
+        // The lowercase 'pp' prefix stands for print preview
+        // The the Uppercase "PA" prefix stands for Participants Aplication
+        // Each section of the accordion is prefexed by its title
         $('#ppPAFirstName').html($('#PAfirstName').val());
         $('#ppPALastName').html($('#PAlastName').val());
+        // If Male is checked show the 'male' string
         if ($('#PAoptMale').is(':checked')) {
             $('#ppPAGender').text('Male');
+            // If female is checked show the 'female' string
         } else if ($('#PAoptFemale').is(':checked')) {
             $('#ppPAGender').text('Female');
         }
         $('#ppPABirthDate').html($('#PAbirthDate').val());
         $('#ppPAHeight').html($('#PAheight').val());
         $('#ppPAWeight').html($('#PAweight').val());
+        // If no is checked show the 'no' string
         if ($('#PAoptNo').is(':checked')) {
             $('#ppPAVeteran').text('No');
+            // If yes is checked show the 'yes' string
         } else if ($('#PAoptYes').is(':checked')) {
             $('#ppPAVeteran').text('Yes');
         }
@@ -217,7 +236,6 @@ $(document).ready(function (e) {
         $('#ppPACompanyState').html($('#PAcompanyState').val());
         $('#ppPACompanyZip').html($('#PAcompanyZip').val());
         $('#ppPACompanyPhone').html($('#PAcompanyPhone').val());
-
         $('#ppPAGuardianFirstName').html($('#PAguardianFirstName').val());
         $('#ppPAGuardianLastName').html($('#PAguardianLastName').val());
         $('#ppPAGuardianAddress').html($('#PAguardianAddress').val());
@@ -225,7 +243,6 @@ $(document).ready(function (e) {
         $('#ppPAGuardianState').html($('#PAguardianState').val());
         $('#ppPAGuardianZip').html($('#PAguardianZip').val());
         $('#ppPAGuardianPhone').html($('#PAguardianPhone').val());
-
         $('#ppPAReferral').html($('#PAreferral').val());
         $('#ppPAReferralNum').html($('#PAreferralNum').val());
         $('#ppPAHearAbout').html($('#PAhearAbout').val());
@@ -233,7 +250,9 @@ $(document).ready(function (e) {
         //***********************************************************************
         // Participant’s Health History
         //***********************************************************************
-
+        // The Uppercase 'PHH' prefix stands for Participant's Health History
+        // Each if statement checks if the value of the checkbox matches the value of the 
+        // corrisponding textarea, opposite is true if the checkbox is unchecked
         $('#ppPHHDiagnosis').html($('#PHHdiagnosis').val());
         if ($('#PHHvision').is(':checked')) {
             $('#ppPHHVision').html("Yes");
@@ -347,19 +366,19 @@ $(document).ready(function (e) {
         $('#ppPHHSleeping').html($("input[name='sleeping']:checked").val());
         $('#ppPHHRelationships').html($("input[name='relationships']:checked").val());
         $('#ppPHHAnger').html($("input[name='anger']:checked").val());
-        if ($('#PHHother').val() == "") {
+        // Hides the "other" div on the print preview page if there is nothing entered
+        if ($('#PHHother').val() === "") {
             $('#ppPHHOtherText').hide();
             $('#ppPHHOther').hide();
-        }else{
-        $('#ppPHHOtherText').html($('#PHHother').val());
-        $('#ppPHHOther').html($("input[name='other']:checked").val());
+        } else {
+            $('#ppPHHOtherText').html($('#PHHother').val());
+            $('#ppPHHOther').html($("input[name='other']:checked").val());
         }
-        
 
         //***********************************************************************
         //Authorization for Emergency Medical Treatment Form
         //***********************************************************************
-
+        // The Uppercase "EMT" prefix string stands for Emergency Medical Treatment
         if ($('#EMTopt1').is(':checked')) {
             $('#ppEMTRiderType').text('Therapeutic Riding');
         } else if ($('#EMTopt2').is(':checked')) {
@@ -390,20 +409,23 @@ $(document).ready(function (e) {
         $('#ppEMTContactName3').html($('#EMTcontactName3').val());
         $('#ppEMTRelation3').html($('#EMTrelation3').val());
         $('#ppEMTContactNum3').html($('#EMTcontactNum3').val());
-        if ($('#PAguardianFirstName').val() == "" && $('#PAguardianLastName').val() == "") {
-            $('#ppNameGuard').html("Participant's Name")
+        // If logic to display the participants name or if there is a guardian the guardian name
+        // on the line where the signature goes
+        if ($('#PAguardianFirstName').val() === "" && $('#PAguardianLastName').val() === "") {
+            $('#ppNameGuard').html("Participant's Name");
             $('#ppEMTName').html($('#PAfirstName').val() + " " + $('#PAlastName').val());
         } else {
-            $('#ppNameGuard').html("Guardian's Name")
+            $('#ppNameGuard').html("Guardian's Name");
             $('#ppEMTName').html($('#PAguardianFirstName').val() + " " + $('#PAguardianLastName').val());
         }
+        // Displays todays date on the line where the signature goes
         $('#ppEMTSignedDate').html(todaysdate);
 
 
         //***********************************************************************
         // Progress Reporting
         //***********************************************************************
-
+        // The Uppercase "PR" prefix stands for Progress Reporting
         $('#ppPRquestion1').html($('#PRquestion1').val());
         $('#ppPRquestion2').html($("input[name='concern']:checked").val());
         $('#ppPRother').html($('#PRother').val());
@@ -420,7 +442,15 @@ $(document).ready(function (e) {
         $('#ppConsentDoctorName').html($('#consentDoctorName').val());
         $('#ppConsentPartName').html($('#consentPartName').val());
         $('#ppConsentPartDob').html($('#consentPartDob').val());
-        $('#ppConsentQuestion3').html($('#consentQuestion3').val());
+        // If nothing is selected on who the information should be released to
+        // It returns as if they selected all
+        // Else the actuall selection is displayed
+        if ($('#consentQuestion3').val() === "0") {
+            $('#ppConsentQuestion3').html("Veronica Sosa/Chrystal Schipper/Amber Osterberger/LifeStriders Therapists/Intelirev");
+        } else {
+            $('#ppConsentQuestion3').html($('#consentQuestion3').val());
+        }
+        // Shows what records are to be released
         if ($('#consentMedHistory').is(':checked')) {
             $('#ppConsentMedHistoryL').html($('#consentMedHistory:checked').val());
             $('#ppConsentMedHistory').html("Yes");
@@ -478,14 +508,17 @@ $(document).ready(function (e) {
             $('#ppConsentOtherL').html($('#consentOther').val());
             $('#ppConsentOther').html("No");
         }
-        $('#ppConsentSignedDate').html(todaysdate)
-   
+        // Displays todays date on the line where the signature goes
+        $('#ppConsentSignedDate').html(todaysdate);
+
         //***********************************************************************
         // Participant Waiver and Guest Liability Release Agreement
         //***********************************************************************
-
+        // The Upercase "GLR" prefix stands for Guest Liability Release
         $('#ppGLRPartName').html($('#PAfirstName').val() + " " + $('#PAlastName').val());
         $('#ppGLRPartSignedDate').html(todaysdate);
+        // If there is something entered in the guardian name text fields it shows the guardian name
+        // If there is not sometihing it just shows the participant's name instead
         if ($('#PAguardianFirstName').val() !== "" && $('#PAguardianLastName').val() !== "") {
             $('#ppGLRGuardSignBox').show();
             $('#ppGLRGuardianName').html($('#PAguardianFirstName').val() + " " + $('#PAguardianLastName').val());
@@ -496,6 +529,7 @@ $(document).ready(function (e) {
             $('#ppGLRPhotoGuardName').html("Participant's Name");
             $('#ppGLRPhotoName').html($('#PAfirstName').val() + " " + $('#PAlastName').val());
         }
+        // Shows todays date
         $('#ppGLRPhotoSignedDate').html(todaysdate);
 
 
@@ -505,6 +539,7 @@ $(document).ready(function (e) {
         //***********************************************************************
         // Safety Rules
         //***********************************************************************
+        // SHows either the guardians name if needed
         $('#ppSafetyRulesPartName').html($('#PAfirstName').val() + " " + $('#PAlastName').val());
         $('#ppSafetyRulesPartSignDate').html(todaysdate);
         if ($('#PAguardianFirstName').val() !== "" && $('#PAguardianLastName').val() !== "") {
@@ -517,7 +552,7 @@ $(document).ready(function (e) {
         //***********************************************************************
         // Dismissal of Volunteers and Guest From Center Activities
         //***********************************************************************
-
+        // SHows either the guardians name if needed
         $('#ppDismisalPartName').html($('#PAfirstName').val() + " " + $('#PAlastName').val());
         $('#ppDismisalPartSignDate').html(todaysdate);
         if ($('#PAguardianFirstName').val() !== "" && $('#PAguardianLastName').val() !== "") {
@@ -529,7 +564,7 @@ $(document).ready(function (e) {
         //***********************************************************************
         // LifeStriders Make-Up and Payment Policy
         //***********************************************************************
-
+        // SHows either the guardians name if needed
         $('#ppPaymentPartName').html($('#PAfirstName').val() + " " + $('#PAlastName').val());
         $('#ppPaymentPartSignDate').html(todaysdate);
         if ($('#PAguardianFirstName').val() !== "" && $('#PAguardianLastName').val() !== "") {
@@ -538,19 +573,19 @@ $(document).ready(function (e) {
             $('#ppPaymentGuardSignDate').html(todaysdate);
         }
         //-----------------------------------------------------------------------
-
+        // scrolls to the top of the page while hiding all the input fields and showing the print preview page
         $('html,body').scrollTop(0);
         $('#printPreviewRiderFormOVER').show();
         $('#formRiderForm').hide();
     });
 
-
-    $("#printButton").click(function () {
+    // Captures the print preview print area and sends it to the printer
+    $("#printButtonRF").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
         var options = {mode: mode, popClose: close};
         $("#printPreviewRiderForm").printArea(options);
-        
+
     });
 
 });
