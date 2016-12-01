@@ -20,7 +20,7 @@ $(document).ready(function (e) {
         //***********************************************************************
         //Consent For Release Form
         //***********************************************************************
-        
+
         $('#ppConsentDoctorName').html($('#consentDoctorName').val());
         $('#ppConsentPartName').html($('#consentPartName').val());
         $('#ppConsentPartDob').html($('#consentPartDob').val());
@@ -82,17 +82,17 @@ $(document).ready(function (e) {
             $('#ppConsentOtherL').html($('#consentOther').val());
             $('#ppConsentOther').html("No");
         }
-        $('#ppConsentSignedDate').html(todaysdate)
-        
-        
- //-----------------------------------------------------------------------
-        
+        $('#ppConsentSignedDate').html(todaysdate);
+
+
+        //-----------------------------------------------------------------------
+
         $('html,body').scrollTop(0);
         $('#printPreviewReleaseFormOVER').show();
         $('#formReleaseForm').hide();
     });
-
-
+    
+    
     $("#printButton").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
