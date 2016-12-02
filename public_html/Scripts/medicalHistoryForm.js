@@ -17,10 +17,10 @@ $(document).ready(function (e) {
     $('.healthCheck').change(function () {
         if ($(this).is(':checked')) {
 
-            if (this.value == "medHisAuditory") {
+            if (this.value === "medHisAuditory") {
                 $('#PHH1').show(function () {
                     $('#medHisAuditoryComment').focus();
-                })
+                });
             } else if (this.value == "medHisVisual") {
                 $('#PHH2').show(function () {
                     $('#medHisVisualComment').focus();
@@ -314,7 +314,7 @@ $(document).ready(function (e) {
         } else {
             $('#ppMedHisOtherComment').html($('#medHisOtherComment').val());
         }
-        $('#ppMedHisSignedDate').html(todaysdate)
+        $('#ppMedHisSignedDate').html(todaysdate);
 
         //-----------------------------------------------------------------------
 

@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
         <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
+        <link rel="shortcut icon" href="http://www.lifestriders.org/favicon.ico">
     </head>
     <body>
          <!-- Modal -->
@@ -73,65 +74,79 @@
 
                     <br>
                     <h3 class="text-center">Participant's Medical History</h3>
-                    <form method="POST">
+                    <form role="form" data-toggle="validator" method="POST">
 
                         <div class="row">
                             <div class="form-group col-md-4">
                                 <label for="medHisPartFirst">Participant First Name: </label>
-                                <input type="text" class="form-control" id="medHisPartFirst" placeholder="Participant's First Name..">
+                                <input type="text" class="form-control" id="medHisPartFirst" placeholder="Participant's First Name.." required>
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="medHisPartLast">Participant Last Name: </label>
-                                <input type="text" class="form-control" id="medHisPartLast" placeholder="Participant's Last Name..">
+                                <input type="text" class="form-control" id="medHisPartLast" placeholder="Participant's Last Name.." required>
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="medHisDob">DOB: </label>
                                 <input type="date" class="form-control" id="medHisDob" >
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="medHisHeight">Height: </label>
                                 <input type="text" class="form-control" id="medHisHeight" placeholder="In Inches..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="medHisWeight">Weight: </label>
-                                <input type="text" class="form-control" id="medHisWeight" placeholder="In Lbs..">
+                                <input type="text" class="form-control" id="medHisWeight" placeholder="In Lbs.." required>
+                                <div class="help-block with-errors"></div>
                             </div>
 
                             <div class="form-group col-md-5">
                                 <label for="medHisAddress">Address: </label>
                                 <input type="text" class="form-control" id="medHisAddress" placeholder="Address..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="medHisCity">City: </label>
                                 <input type="text" class="form-control" id="medHisCity" placeholder="City..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="medHisState">State: </label>
                                 <input type="text" class="form-control" id="medHisState" placeholder="State..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="medHisZip">Zip Code: </label>
-                                <input type="text" class="form-control" id="medHisZip" placeholder="Zip Code..">
+                                <input type="number" data-minlength="5" class="form-control" id="medHisZip" placeholder="Zip Code..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="medHisDiagnosis">Diagnosis: </label>
                                 <input type="text" class="form-control" id="medHisDiagnosis" placeholder="Diagnosis..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="medHisOnset">Date of Onset: </label>
                                 <input type="date" class="form-control" id="medHisOnset" >
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="medHisSurgeries">Past/Prospective Surgeries: </label>
                                 <textarea class="form-control" id="medHisSurgeries" row="2" placeholder="Surgeries.."></textarea> 
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="medHisMedications">Medications: </label>
                                 <textarea class="form-control" id="medHisMedications" row="2" placeholder="Medications.."></textarea> 
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="medHisSeizureType">Seizure Type: </label>
                                 <input type="text" class="form-control" id="medHisSeizureType" placeholder="Seizure type..">
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="medHisControlled">Controlled:</label><br>
@@ -142,6 +157,7 @@
                             <div class="form-group col-md-2">
                                 <label for="medHisLastSeizureDate">Last Seizure Date: </label>
                                 <input type="date" class="form-control" id="medHisLastSeizureDate" >
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="medHisShunt">Shunt Present:</label><br>
@@ -152,6 +168,7 @@
                             <div class="form-group col-md-3">
                                 <label for="medHisRevisionDate">Date of Last Revision: </label>
                                 <input type="date" class="form-control" id="medHisRevisionDate" >
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="medHisNeeds">Special Precautions/Needs: </label>
@@ -726,5 +743,6 @@
         <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
         <script src="Scripts/medicalHistoryForm.js" type="text/javascript"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
     </body>
 </html>

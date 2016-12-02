@@ -60,7 +60,7 @@
 
         PrintArea.write( PrintAreaWindow.doc, $printSource );
 
-        setTimeout( function () { PrintArea.print( PrintAreaWindow ); }, 5000 );
+        setTimeout( function () { PrintArea.print( PrintAreaWindow ); }, 3000 );
     };
 
     var PrintArea = {
