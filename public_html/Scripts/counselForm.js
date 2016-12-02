@@ -17,6 +17,11 @@ $(document).ready(function (e) {
             '\n\<label for="medication-'+medId+'-duration">Taken How Long?</label>'+
             '\n\<input type="text" class="medication-duration" id="medication-'+medId+'-duration">'+
             '\n\</div>')
+        $("#pMeds").append(
+                '<div id="pMedication-'+medId+'">'+
+                 '\n\<p id="pMedVal-'+medId+'">'+
+                 '\n\</p> \n\</div>'
+            )
     });
 
     $('#printPreviewConsultingFormOVER').hide();
@@ -35,6 +40,15 @@ $(document).ready(function (e) {
     });
 
     $('#printPreviewButton').click(function (e) {
+        
+        for(var i = 1; i <= medId; i++){
+            $('#pMedication-'+medId).html('Name: '+$('#medication-'+medId+'name').val() +
+                                     ', Prescriber: ' + $('#medication-'+medId+'prescriber').val()) +
+                                     ', Dosage: ' + $('#medication-' + medId+'dosage').val()) + 
+                                     ', How Long: ' + $('#medication-'+medId+'duration').val());
+        }
+        
+        
 
         $('#printPreviewTD').html($('#todayDate').val());
         $('#printPreviewFN').html($('#firstName').val());
