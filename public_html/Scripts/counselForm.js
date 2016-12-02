@@ -42,10 +42,10 @@ $(document).ready(function (e) {
     $('#printPreviewButton').click(function (e) {
         
         for(var i = 1; i <= medId; i++){
-            $('#pMedication-'+medId).html('Name: '+$('#medication-'+medId+'name').val() +
-                                     ', Prescriber: ' + $('#medication-'+medId+'prescriber').val()) +
-                                     ', Dosage: ' + $('#medication-' + medId+'dosage').val()) + 
-                                     ', How Long: ' + $('#medication-'+medId+'duration').val());
+            $('#pMedication-'+i).html('Name: '+$('#medication-'+i+'-name').val() +
+                                     ', Prescriber: ' + $('#medication-'+i+'-prescriber').val() +
+                                     ', Dosage: ' + $('#medication-' + i+'-dosage').val() + 
+                                     ', How Long: ' + $('#medication-'+i+'-duration').val());
         }
         
         
