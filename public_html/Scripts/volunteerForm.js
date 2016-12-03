@@ -102,7 +102,15 @@ $(document).ready(function (e) {
                          "Where to go in case of tornado",
                          "Bathrooms and bubbler",
                          "Sign in and name tags",
+                         "Tack room lay out and organization",
+                         "Where treats are located and how many treats to feed",
+                         "How clients should offer treats to horses",
                          "Job of a barn helper",
+                         "Stalls",
+                         "Safety stirrups",
+                         "Please don’t tie horses unless necessary, and never tie the horse with a rider on",
+                         "Loading areas and protocol as well as gates",
+                         "Quick Release ties and no horse left alone protocol",
                          "Make sure stall doors are all the way open and locks are out of the way when taking horses in and out of stalls",
                          "Pasture etiquette",
                          "Fence gates, latched and closed behind you, unless you are leaving them open for horses to graze",
@@ -111,23 +119,38 @@ $(document).ready(function (e) {
                          "Use a carrot stick when feeding grain in paddocks and never do by yourself",
                          "Make sure to check with staff which paddocks horses should be returned to",
                          "Boarder horses are not to be handled by volunteers unless approved by Program Manager",
+                         "<h2>Checklist (Continued)</h2>",
                          "Individual personalities of equines, body language of horses",
                          "How to hold a lead rope",
+                         "Emergency dismounts - practice",
+                         "Different holds – on and off of the horse",
+                         "How to position correctly as a side walker",
                          "How to groom, needing initials to do it by yourself",
                          "No more than 2 people to a horse while grooming",
+                         "Be respectful of clients",
+                         "Job of a leader",
+                         "Job of a side walker",
+                         "Job of a barn helper, i.e. hoof picking, grooming, turn out",
+                         "Ability to walk (fast) and trot along side or leading",
+                         "Individual personalities of equines",
+                         "Come into center for any questions",
                          "How to sign up and / or cancel volunteer times",
                          "No “striking” policy",
                          "No weapons, illegal drugs or paraphernalia policy",
                          "Clothing"
                     ];
                     for (var i = 0, len = checklist.length; i < len; i++) {
-                         $('#volunteerChecklist').append("<div class='field row col-md-7 col-md-offset-3'>______<div class='box col-md-3 col-md-offset-1'></div>" + checklist[i] + "<br></div>");
+                         if (checklist[i] === "<h2>Checklist (Continued)</h2>"){
+                              $('#volunteerChecklist').append(checklist[i]);
+                         } else if (checklist[i]!== "<h2>Checklist (Continued)</h2>") {
+                         $('#volunteerChecklist').append("<p><div class='field row'>______<div class='box'></div>      " + checklist[i] + "</div></p>");
+                    }
                     }
                } else if (age < 18) {
-                    $('#dismissalfield').append("<br><hr id='signHr1' class='divider'><label>Volunteer's Full Name</label> <br>");
-                    $('#dismissalfield').append("<br><hr id='signHr2' class='divider'><label>Volunteer's Signature</label><br>");
-                    $('#dismissalfield').append("<br><hr id='signHr1' class='divider'><label>Guardian's Full Name</label> <br>");
-                    $('#dismissalfield').append("<br><hr id='signHr2' class='divider'><label>Guardian's Signature</label>");
+                    $('#dismissalfield').append("<hr id='signHr1' class='divider'><label>Volunteer's Full Name</label> <br>");
+                    $('#dismissalfield').append("<hr id='signHr2' class='divider'><label>Volunteer's Signature</label><br>");
+                    $('#dismissalfield').append("<hr id='signHr1' class='divider'><label>Guardian's Full Name</label> <br>");
+                    $('#dismissalfield').append("<hr id='signHr2' class='divider'><label>Guardian's Signature</label>");
 
                     checklist = [
                          "Tour of facility",
@@ -159,10 +182,11 @@ $(document).ready(function (e) {
                          "How to sign up and/or cancel volunteer times",
                          "No Weapons, illegal drugs or paraphernalia policy",
                          "Clothing",
+                         //
                          "Communication between instructor and volunteers about comfort in job being done"
                     ];
                     for (i = 0, len = checklist.length; i < len; i++) {
-                         $('#minorChecklist').append("<div class='field row col-md-7 col-md-offset-3'>______<div class='box col-md-3 col-md-offset-1'></div>" + checklist[i] + "<br></div>");
+                         $('#minorChecklist').append("<p><div class='field row'>______<div class='box'></div>      " + checklist[i] + "</div></p>");
                     }
                } else {
                     console.log(age);
@@ -196,7 +220,7 @@ $(document).ready(function (e) {
                 * div in the HTML.
                 */
                for (i = 0, len = formfield.length; i < len; i++) {
-                    $('#printPreviewDisplay').append("<li class='list-group-item'"+ "title='"+ formfield.map(getLabel)[i] +"'" +">" + "<strong>" + formfield.map(getLabel)[i] + "</strong>" + formfield.map(getDisplay)[i] + "</li>");
+                    $('#printPreviewDisplay').append("<li class='list-group-item' title='"+ formfield.map(getLabel)[i] +"'>" + "<strong>" + formfield.map(getLabel)[i] + "</strong>" + formfield.map(getDisplay)[i] + "</li>");
                     $(formfield.map(getId)[i]).html(formfield.map(getLabel)[i] + formfield.map(getDisplay)[i]);
                }
                //Empty all arrays

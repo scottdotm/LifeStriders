@@ -3,6 +3,26 @@
 //Hide one div and show a div. tado
 
 $(document).ready(function (e) {
+    
+    var medId = 1;
+    $("#add-medication").click(function(){
+        medId++;
+        $("#meds").append('<div class="input-group medication-'+medId+'">'+
+            '\n\<label for="medication-'+medId+'-name">Medication</label>'+
+            '\n\<input type="text" class="medication-name" id="medication-'+medId+'-name">'+
+            '\n\<label for="medication-'+medId+'-prescriber">Prescribed By</label>'+
+            '\n\<input type="text" class="medication-prescriber" id="medication-'+medId+'-prescriber">'+
+            '\n\<label for="medication-'+medId+'-dosage">Dosage</label>'+
+            '\n\<input type="text" class="medication-dosage" id="medication-'+medId+'-dosage">'+
+            '\n\<label for="medication-'+medId+'-duration">Taken How Long?</label>'+
+            '\n\<input type="text" class="medication-duration" id="medication-'+medId+'-duration">'+
+            '\n\</div>')
+        $("#pMeds").append(
+                '<div id="pMedication-'+medId+'">'+
+                 '\n\<p id="pMedVal-'+medId+'">'+
+                 '\n\</p> \n\</div>'
+            )
+    });
 
     $('#printPreviewConsultingFormOVER').hide();
     $('#subModal').click(function(){
@@ -20,6 +40,15 @@ $(document).ready(function (e) {
     });
 
     $('#printPreviewButton').click(function (e) {
+        
+        for(var i = 1; i <= medId; i++){
+            $('#pMedication-'+i).html('Name: '+$('#medication-'+i+'-name').val() +
+                                     ', Prescriber: ' + $('#medication-'+i+'-prescriber').val() +
+                                     ', Dosage: ' + $('#medication-' + i+'-dosage').val() + 
+                                     ', How Long: ' + $('#medication-'+i+'-duration').val());
+        }
+        
+        
 
         $('#printPreviewTD').html($('#todayDate').val());
         $('#printPreviewFN').html($('#firstName').val());

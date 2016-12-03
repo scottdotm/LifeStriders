@@ -5,8 +5,8 @@
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-          <link href="Styles/lifestridersP.css" rel="stylesheet" type="text/css"/>
-          <link rel="shortcut icon" href="">
+          <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
+          <link rel="shortcut icon" href="http://www.lifestriders.org/favicon.ico">
      </head>
      <body>
           <!-- Modal -->
@@ -22,7 +22,7 @@
                                    You are submitting the filed out form to the print preview
                                    screen, this screen resembles what the printout form will
                                    look like (with filled out information).  After viewing
-                                   this screen, please click "Print" to be taken to the actual
+                                   this screen, please click "Print" to be taken to your browsers
                                    print screen.
                               </p>
                               <br>
@@ -49,24 +49,25 @@
           </div>
           <!-- /Modal -->
           <div class="container" id="wrapperOverall">
-               <div class="container row theWrapper">
-                    <!--Insert form name -->
-                    <div id="formPhysicianForm" class ="well ">
-                         <div class="row" style="margin-top: 15px;">
-                              <div class="col-md-8" style="margin-left: 2.0em;">  
-                                   <h1 style="color: #CC0000;">LifeStriders</h1>
-                                   <img src="Assets/PATHlogo.png" class="img-fluid" alt="Responsive image">
+               <div class="container row pageWrapper">
+                    
+                    <div id ="formPhysicianForm" class="well">
+                         <h1 class="text-center"> Physician Form </h1>
+                         <div class="row headElementsDiv">
+
+                              <div class="col-md-8 lsH2Div">  
+                                   <h2>LifeStriders</h1>
                               </div>
                               <div class="col-md-1"> </div>
                               <div class="col-md-2 text-right">
-                                   Phone: 262.309.9297 <wbr>
-                                   Fax: 866.404.3105  <wbr>
-                                   counseling@lifestriders.org  <wbr>
+                                   Phone: 262.309.9297 <br>
+                                   Fax: 866.404.3105 <br> 
+                                   counseling@lifestriders.org <br>
 
                                    <br>
 
-                                   Sll W29667 Summit Avenue (US HWY 18) <wbr>
-                                   Waukesha, WI 53188  <wbr>
+                                   Sll W29667 Summit Avenue (US HWY 18) <br>
+                                   Waukesha, WI 53188 <br>
 
                               </div>
                          </div>
@@ -92,7 +93,6 @@
                                         <label for="phone">Phone Number: </label>
                                         <input type="tel" class="form-control" id="phone" required>
                                    </div>
-                                   <!-- Needs to be implementing -->
                                    <div class="form-group">
                                         <h3>Has been deemed eligible for: </h3>
                                         <br>
@@ -128,60 +128,57 @@
                                         <label for="physAddress">Physician's Address: </label>
                                         <input type="text" class="form-control" id="physAddress">
                                    </div>
-                                   <!-- This is where the big question of signatures comes into place -->
-                                   <div class="form-group">
-                                        <label for="physSig">Physician's Signature: </label>
-                                        <input type="text" class="form-control" id="physSig">
-                                   </div>
-                                   <div class="form-group">
-                                        <label for="todayDate">Todays Date: </label>
-                                        <input type="text" class="form-control" id="todayDate">
-                                   </div>
                                    <!-- Button trigger modal -->
-                              <button id="subModal" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-                                   <span class="glyphicon glyphicon-modal-window">
-                                        Submit
-                                   </span>
-                              </button>
-                               </form>
+                                   <button id="subModal" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                                        <span class="glyphicon glyphicon-modal-window">
+                                             Submit
+                                        </span>
+                                   </button>
+                              </form>
                          </div>
                     </div>
                </div>
-               <div class="container row theWrapper">
-                    <div id="printPreviewPhysicianFormOVER"  class="container row"> 
+               <div class="container row pageWrapper">
+                    
+                    <div id="printPreviewPhysicianFormOVER"  class="container printPreviewOVER row"> 
+                         <div id="printPreviewPhysicianFormForm" class="printPreviewDiv col-md-12 container">
                          <div class="row">
                               <div id="printPreviewPhysicianForm" class=" col-md-12 container">
                                    <div class=" row" style="margin-top: 15px;">
-                                        <div class="col-md-8" style="margin-left: 2.0em;" >  
-                                             <h1 style="color: #CC0000;">LifeStriders</h1>
+                                        <div class="row headElementsDiv">
+
+                                             <div class="col-md-8 lsH2Div">  
+                                                  <h2>LifeStriders</h1>
+                                             </div>
+                                             <div class="col-md-1"> </div>
+                                             <div class="col-md-2 text-right">
+                                                  Phone: 262.309.9297 <br>
+                                                  Fax: 866.404.3105 <br> 
+                                                  counseling@lifestriders.org <br>
+
+                                                  <br>
+
+                                                  Sll W29667 Summit Avenue (US HWY 18) <br>
+                                                  Waukesha, WI 53188 <br>
+
+                                             </div>
                                         </div>
-                                        <div class="col-md-1"> </div>
-                                        <div class="col-md-2 text-right">
-                                             <!-- make a list with no bullet points -->
-                                             Phone: 262.309.9297 <wbr>
-                                             Fax: 866.404.3105 <wbr>
-                                             counseling@lifestriders.org <wbr>
-                                             <br>
-                                             Sll W29667 Summit Avenue (US HWY 18) <wbr>
-                                             Waukesha, WI 53188 <wbr>
+                                        <br>
+                                        <div class="alert alert-info">
+                                        <p>This referral form will be valid for 1 year, unless services are terminated, there is a change in the above mentioned participants medical status, or an updated order is necessary. If you have any questions, we will be happy to answer them.<p>
                                         </div>
+                                        <!--These are the imports for the Physician's Form javascript file - make sure not to reuse naming convensions-->
+                                        <!--Client-->
+                                        <h2>Physician's Form</h2>
+                                        <ul class='list-group' id='printPreviewDisplay'>
+                                        </ul>
                                    </div>
-                                   <br>
-                                   <p>Welcome to LifeStriders. We look forward to helping you reach your personal Life Strides. This form requests information about your needs
-                                        and informs you of the services offered and the policies we adhere to. Please take a few moments to complete these forms. The questions on
-                                        the following pages are designed to help us best meet your treatment needs. <span style="font-weight:bold;"> <wbr> If the person seeking care is a child, the parent / guardian
-                                             should complete this form.</span>  If you have any questions, we will be happy to answer them <p>
-                                   <h3 class="text-center">Physician's Form</h3>
-                                   <!--These are the imports for the Physician's Form javascript file - make sure not to reuse naming convensions-->
-                                   <!--Client-->
-                                   <h2>Physician's Form</h2>
-                                   <ul class='list-group' id='printPreviewDisplay'>
-                                   </ul>
                               </div>
-                              <input class="btn btn-danger" type="submit" id="printButton" value="Print">
+                              <input class="btn btn-danger btn-lg" type="submit" id="printButton" value="Print">
                          </div>
                     </div>
                </div>
+          </div>
           </div>
           <script src="http://code.jquery.com/jquery-latest.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

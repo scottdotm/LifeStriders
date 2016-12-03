@@ -6,7 +6,7 @@
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
           <link rel="stylesheet" href="Styles/lifestriders.css" type="text/css"/>
-          <link rel="shortcut icon" href="">
+          <link rel="shortcut icon" href="http://www.lifestriders.org/favicon.ico">
      </head>
      <body>
           <!-- Modal -->
@@ -51,8 +51,9 @@
           <div class="container wrapperOverall">
 
                <div class="container row pageWrapper">
-                    <h1 class="text-center"> Volunteer Information Form </h1>
+                    
                     <div id ="formVolunteerForm" class="well">
+                         <h1 class="text-center"> Volunteer Information Form </h1>
                          <div class="row headElementsDiv">
 
                               <div class="col-md-8 lsH2Div">  
@@ -75,7 +76,7 @@
                          <!-- /LifeStriders Info -->
                          <!-- Volunteer Form -->
                          <form role="form" data-toggle="validator" id="volunteerForm" method="POST">
-                              <!-- Menu - Bootstrap Accordian -->
+                              <!-- Menu - Bootstrap Accordion -->
                               <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                    <div class="panel panel-default">
                                         <div class="panel-heading" role="tab" id="headingOne">
@@ -137,7 +138,7 @@
                                                        <div class="col-md-2">
                                                             <div class="form-group" class="control-label">
                                                                  <label for="zip">Zip: </label>
-                                                                 <input type="text" class="form-control" id="zip" placeholder="Zip..">
+                                                                 <input type="number" data-minlength="5" class="form-control" id="zip" placeholder="Zip..">
                                                                  <div class="help-block with-errors"></div>
                                                             </div>
                                                        </div>
@@ -158,7 +159,6 @@
                                                             </div>
                                                        </div>
                                                   </div>
-                                                  <!-- Need to figure out how to best handle this -->
                                                   <hr>
                                                   <div class="row">
                                                        <div class="col-md-4">
@@ -241,8 +241,6 @@
                                                             </div>
                                                        </div>
                                                   </div>
-
-
                                                   <hr>
                                                   <div class="row">
                                                        <div class="col-md-12">
@@ -262,7 +260,7 @@
                                                        </div>
                                                   </div>
                                                   <hr>
-
+                                                  <input type="button" class="btn btn-success collapsed" id="next" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" value="Next">
                                              </div>
                                         </div>
                                    </div>
@@ -399,6 +397,10 @@
                                                        </div>
                                                   </div>
                                              </div>
+                                             <hr>
+                                             <p>
+                                             <input type="button" class="btn btn-info collapsed" id="previous" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" value="Previous">
+                                             </p>
                                         </div>
                                    </div>
                               </div>
@@ -437,7 +439,7 @@
                                         <!-- Import filed out form fields into the printPreviewDisplay (Located within Javascript) -->
                                         <ul class='list-group' id='printPreviewDisplay'>
                                         </ul>
-                                        <hr>
+                                        <footer></footer>
                                         <div class="row">
                                              <div class="col-md-12">
                                                   <h5><strong>Volunteer and Guests Liability Release</strong></h5>
@@ -507,7 +509,7 @@
                                                        (Volunteer Parent or Guardian if volunteer is under age 18)</p>
                                              </div>
                                         </div>
-                                        <hr>
+                                        <footer></footer>
                                         <div class="row">
                                              <div class="col-md-12">
                                                   <h5 class="text-center"><strong>SAFETY RULES</strong></h5>
@@ -568,7 +570,7 @@
                                                        Parent/Guardian Signature: ________________________________________     Date_________<br><br></p>
                                              </div>
                                         </div>
-                                        <hr>
+                                        <footer></footer>
                                         <div class="col-md-12">
                                              <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
                                              <p>
@@ -610,7 +612,8 @@
                                                        </ol>
                                                   </li>
                                              </ul>
-                                             <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h2>
+                                             <footer></footer>
+                                             <h2>DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES (Continued)</h2>
                                              <p>
                                                   I have read and understand the policies and program rules by which LifeStriders operates. By signing below, I
                                                   indicate my willingness to abide by these rules and policies. I further understand that failure to comply with these
@@ -619,6 +622,7 @@
                                              <div id="dismissalfield">
                                              </div>
                                         </div>
+                                        <footer></footer>
                                         <div class="col-md-12">
                                              <h2>VOLUNTEER REGISTRATION</h2>
                                              <p>
@@ -678,7 +682,7 @@
                                                   </li>
                                              </ul>
                                         </div>
-                                        <hr>
+                                        <footer></footer>
                                         <div id="checklists" class="text-center">
                                              <h2>Checklist</h2>
                                              <p>
@@ -686,7 +690,6 @@
                                                   As you are instructed in certain fields, please ask your instructor/volunteer to initial
                                                   the related checkbox. Please alert staff if you have been unable to receive training
                                                   in all fields. Please hand in to staff when your checklist is complete.
-                                             <hr>
                                              </p>
 
                                              <!-- Standard Checklist for Volunteers - Located within Javascript -->
