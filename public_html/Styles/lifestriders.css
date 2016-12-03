@@ -255,3 +255,7 @@ td.tdSignName{
 #addEMT{
     margin: 5px;
 }
+/* Margin for print preview counseling page */
+.leftMarginCF {
+    margin-left: 18px;
+}

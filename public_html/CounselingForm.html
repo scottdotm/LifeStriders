@@ -66,8 +66,15 @@ and open the template in the editor.
                     </div>
                     <div class="modal-body">
                         <p>
-                            
+                            You're Almost Done!
                         </p>
+                        <ol>
+                            <li> There is one more form your Physician needs to fill out and sign.</li>
+                            <li> Click on the blue Physician Form button and select print or save. </li>
+                            <li> Return here and click the red print / save button. </li>
+                            <li> Make Sure to sign all forms where indicated. </li>
+                            <li> Produce all signed forms to LifeStriders. </li>
+                        </ol>
                         <br>
                         <div id='error'>
                         </div>
@@ -78,13 +85,13 @@ and open the template in the editor.
                                 Close
                             </span>
                         </button>
-                        
+
                         <a href="Assets/counselPhysicanPart.pdf" target="_blank" class="btn btn-info" id="enablePrint2">
                             <span class="glyphicon glyphicon-edit">
                                 Physican Form
                             </span>
                         </a>
-                        
+
                         <!-- Button class used for import of glyphicon,
                         this will need to be changed when the user uses
                         Internet Explorer due to input/button conflicts-->
@@ -130,501 +137,541 @@ and open the template in the editor.
                         the following pages are designed to help us best meet your treatment needs. <span class="boldElement"> If the person seeking care is a child, the parent / guardian
                             should complete this form.</span>  If you have any questions, we will be happy to answer them <p>
 
-                    <h3 class="text-center">Client Information Form</h3>
+
+
 
                     <form role="form" data-toggle="validator" id="counselingInputForm" name="counselingInputForm" method="post">
 
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="todayDate">Todays Date: </label>
-                            <input type="date" class="col-sm-11 form-control" id="todayDate"  >
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">   
+
+                            <div class="panel panel-default">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            Client Information Form
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        
+                                        <h3 class="text-center">  Client Information Form </h3>
+                                        
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="todayDate">Todays Date: </label>
+                                            <input type="date" class="col-sm-11 form-control" id="todayDate"  >
+
+                                        </div>
+
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="firstName">Name: </label>
+                                            <input type="text" class="col-sm-5 form-control" id="firstName" placeholder="First-Name.." required>
+
+                                            <input type="text" class="col-sm-5 form-control" id="lastName" placeholder="Last-Name.." required>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="birthDate">Birth Date: </label>
+                                            <input type="date" class="col-sm-11 form-control" id="birthDate">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+
+                                        <div class="row form-group form-inline">
+
+                                            <label class="col-sm-1" for="sex"> Sex: </label>
+                                            <select class="col-sm-11 form-control" id="sex">
+                                                <option> Male </option>
+                                                <option> Female </option>
+                                                <option> I wish not to say </option>
+                                            </select>
+                                        </div>
+
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="marital"> Marital Status: </label>
+                                            <select class="col-sm-12 form-control" id="marital">
+                                                <option> Married </option>
+                                                <option> Single </option>
+                                                <option> Separated  </option>
+                                                <option> Divorced </option>
+                                                <option> Widowed </option>
+                                            </select>
+                                        </div>
+
+
+                                        <div id="clientAddress" class="row form-inline form-group input-group-sm ">
+                                            <label class="col-sm-2" for="clientAddress"> Where Do you Live?  </label>
+
+
+                                            <input type="text" class="form-control col-sm-3 input-sm" id="cAddress" placeholder="Address">
+
+
+
+                                            <input type="text" class="form-control col-sm-3" id="cCity" placeholder="City">
+
+
+                                            <input type="text" class="form-control col-sm-3" id="cState" placeholder="State">
+
+                                            <input type="number" data-minlength="5" class="form-control col-sm-3" id="cZipCode" placeholder="Zip Code">
+                                            <div title="Zip Code" class="help-block with-errors"></div>
+                                        </div>
+
+                                        <div class="row form-group form-inline">
+                                            <div class="form-group">
+                                                <label class="col-sm-4" for="homePhone">Home Phone #: </label>
+                                                <input title="(xxx)-xxx-xxxx" type="tel" pattern="[\(]\d{3}[\)-]\d{3}[\-]\d{4}" class=" col-sm-7 form-control" id="homePhone" placeholder="(xxx)-xxx-xxxx">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-4" for="myEmail">My E-Mail: </label>
+                                                <input type="email" class="col-sm-7 form-control" id="myEmail" placeholder="My Email...">
+                                                <br><br>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-sm-4" for="workPhone">Work Phone #: </label>
+                                                <input title="(xxx)-xxx-xxxx" type="tel" pattern="[\(]\d{3}[\)-]\d{3}[\-]\d{4}" class="col-sm-7 form-control" id="workPhone" placeholder="(xxx)-xxx-xxxx">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-sm-4" for="cellPhone">Cell Phone #: </label>
+                                                <input title="(xxx)-xxx-xxxx" type="tel" pattern="[\(]\d{3}[\)-]\d{3}[\-]\d{4}" class="col-sm-7 form-control" id="cellPhone" placeholder="(xxx)-xxx-xxxx">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="employerName"> Employer's Name: </label>
+                                            <input type="text" class="form-control col-sm-11" id="employerName" placeholder="Employer's Name...">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="socSecNum"> Your SSN: </label>
+                                            <input type="number" pattern="^\d{3}-\d{2}-\d{4}$" class="form-control col-sm-11" id="socSecNum" placeholder="SSN...">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
 
-                        </div>
 
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="firstName">Name: </label>
-                            <input type="text" class="col-sm-5 form-control" id="firstName" placeholder="First-Name.." required>
+                                        <label class="sectionHeader boldElement">If minor:</label>
+                                        <div class="row form-group form-inline">
 
-                            <input type="text" class="col-sm-5 form-control" id="lastName" placeholder="Last-Name.." required>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="birthDate">Birth Date: </label>
-                            <input type="date" class="col-sm-11 form-control" id="birthDate">
-                            <div class="help-block with-errors"></div>
-                        </div>
 
-                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="parentName">  Parents Name </label>
+                                            <input type="text" class="form-control col-sm-11" id="parentName" placeholder="Parents Name..">
 
-                            <label class="col-sm-1" for="sex"> Sex: </label>
-                            <select class="col-sm-11 form-control" id="sex">
-                                <option> Male </option>
-                                <option> Female </option>
-                                <option> I wish not to say </option>
-                            </select>
-                        </div>
+                                            <label class="col-sm-1" for="hisherDOB"> His / Her Date of Birth </label>
+                                            <input type="date" class="form-control col-sm-11" id="hisherDOB">
 
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="marital"> Marital Status: </label>
-                            <select class="col-sm-12 form-control" id="marital">
-                                <option> Married </option>
-                                <option> Single </option>
-                                <option> Separated  </option>
-                                <option> Divorced </option>
-                                <option> Widowed </option>
-                            </select>
-                        </div>
 
+                                            <label class="col-sm-1" for="hisherSSN"> His / Her SSN:  </label>
+                                            <input type="number" data-minlenght="9" pattern="^\d{3}-\d{2}-\d{4}$" class="form-control col-sm-11" id="hisherSSN" placeholder="His / Her SSN...">
+                                            <div class="help-block with-errors"></div>
+                                        </div>
 
-                        <div id="clientAddress" class="row form-inline form-group input-group-sm ">
-                            <label class="col-sm-2" for="clientAddress"> Where Do you Live?  </label>
 
-
-                            <input type="text" class="form-control col-sm-3 input-sm" id="cAddress" placeholder="Address">
-
-
-
-                            <input type="text" class="form-control col-sm-3" id="cCity" placeholder="City">
-
-
-                            <input type="text" class="form-control col-sm-3" id="cState" placeholder="State">
-
-                            <input type="number" data-minlength="5" class="form-control col-sm-3" id="cZipCode" placeholder="Zip Code">
-                            <div title="Zip Code" class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="row form-group form-inline">
-                            <div class="form-group">
-                                <label class="col-sm-4" for="homePhone">Home Phone #: </label>
-                                <input title="(xxx)-xxx-xxxx" type="tel" pattern="[\(]\d{3}[\)-]\d{3}[\-]\d{4}" class=" col-sm-7 form-control" id="homePhone" placeholder="(xxx)-xxx-xxxx">
-                                <div class="help-block with-errors"></div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-4" for="myEmail">My E-Mail: </label>
-                                <input type="email" class="col-sm-7 form-control" id="myEmail" placeholder="My Email...">
-                                <br><br>
-                                <div class="help-block with-errors"></div>
-                            </div>
+                                        <label class="sectionHeader boldElement">Emergency Contact: </label>
+                                        <div class="row form-group form-inline">
+                                            <label class="col-sm-1" for="emerCon"> Name: </label>
+                                            <input type="text" class="form-control col-sm-11" id="emerCon" placeholder="Emergency Contract...">
 
-                            <div class="form-group">
-                                <label class="col-sm-4" for="workPhone">Work Phone #: </label>
-                                <input title="(xxx)-xxx-xxxx" type="tel" pattern="[\(]\d{3}[\)-]\d{3}[\-]\d{4}" class="col-sm-7 form-control" id="workPhone" placeholder="(xxx)-xxx-xxxx">
-                            <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-4" for="cellPhone">Cell Phone #: </label>
-                                <input title="(xxx)-xxx-xxxx" type="tel" pattern="[\(]\d{3}[\)-]\d{3}[\-]\d{4}" class="col-sm-7 form-control" id="cellPhone" placeholder="(xxx)-xxx-xxxx">
-                            <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
+                                            <label class="col-sm-1" for="emerRelation"> Relationship: </label>
+                                            <input type="text" class="leftIndent2 form-control col-sm-11" id="emerRelation" placeholder="Relationship...">
 
+                                            <label class="col-sm-1" for="emerPhone"> Phone #: </label>
+                                            <input type="tel" class=" form-control col-sm-11" id="emerPhone" placeholder="(xxx)-xxx-xxxx">
+                                        </div>
 
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="employerName"> Employer's Name: </label>
-                            <input type="text" class="form-control col-sm-11" id="employerName" placeholder="Employer's Name...">
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="socSecNum"> Your SSN: </label>
-                            <input type="number" pattern="^\d{3}-\d{2}-\d{4}$" class="form-control col-sm-11" id="socSecNum" placeholder="SSN...">
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-
-                        <label class="sectionHeader boldElement">If minor:</label>
-                        <div class="row form-group form-inline">
-
-
-                            <label class="col-sm-1" for="parentName">  Parents Name </label>
-                            <input type="text" class="form-control col-sm-11" id="parentName" placeholder="Parents Name..">
-
-                            <label class="col-sm-1" for="hisherDOB"> His / Her Date of Birth </label>
-                            <input type="date" class="form-control col-sm-11" id="hisherDOB">
-                            
-
-                            <label class="col-sm-1" for="hisherSSN"> His / Her SSN:  </label>
-                            <input type="number" data-minlenght="9" pattern="^\d{3}-\d{2}-\d{4}$" class="form-control col-sm-11" id="hisherSSN" placeholder="His / Her SSN...">
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-
-                        <label class="sectionHeader boldElement">Emergency Contact: </label>
-                        <div class="row form-group form-inline">
-                            <label class="col-sm-1" for="emerCon"> Name: </label>
-                            <input type="text" class="form-control col-sm-11" id="emerCon" placeholder="Emergency Contract...">
-
-                            <label class="col-sm-1" for="emerRelation"> Relationship: </label>
-                            <input type="text" class="leftIndent2 form-control col-sm-11" id="emerRelation" placeholder="Relationship...">
-
-                            <label class="col-sm-1" for="emerPhone"> Phone #: </label>
-                            <input type="tel" class=" form-control col-sm-11" id="emerPhone" placeholder="(xxx)-xxx-xxxx">
-                        </div>
-
-                        <div class="form-group">
-                            <label  for="hearAbout"> How did you hear about LifeStriders?  </label>
-                            <textarea id="hearAbout" class="form-control input-sm" rows="3"></textarea>
-                        </div>
-
-                        <br><br>
-                        <hr class="divider">
-
-                        <h3 class="text-center"> Medical Form</h3>
-
-                          <label for='medSec1'> 1) Please fill in all current medications you are taking: </label>
-                               <div id='medSec1' class='formgroup'>
-                                     <div class="medication-group" id="medication-group">
-                                      Please list all current medications you are taking
-                                      <br>
-                                      <div id="meds">
-                                          <div class="input-group medication-1">
-                                              <label for="medication-1-name">Medication</label>
-                                              <input type="text" class="medication-name" id="medication-1-name">
-                                              <label for="medication-1-prescriber">Prescribed By</label>
-                                              <input type="text" class="medication-prescriber" id="medication-1-prescriber">
-                                              <label for="medication-1-dosage">Dosage</label>
-                                              <input type="text" class="medication-dosage" id="medication-1-dosage">
-                                              <label for="medication-1-duration">Taken How Long?</label>
-                                              <input type="text" class="medication-duration" id="medication-1-duration">
-                                          </div>
-                                      </div>
-                                      <br>
-                                      <button type="button" id="add-medication" value="add">More</button>
-                                  </div>
-
-                               </div>
-
-
-                        <br>
-
-                        <label for='medSec2'> 2) Allergy (Medication): </label>
-                        <div id='medSec2' class='formgroup'>
-
-                            <textarea id="allegMed" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-
-                        <div id='medSec3' class='formgroup'>
-                            <label for='currentCare'> 3) Are You currently under a physicians's care?: </label>
-                            <input type="text" class="form-control form-inline" id="currentCare" placeholder="...">
-
-
-                            <label for="currentName"> &nbsp;&nbsp; Name: </label>
-                            <input type="text" class="form-control" id="currentName" placeholder="Name...">
-                            <label for="currentDateSeen"> &nbsp; &nbsp; Date Last Seen: </label>
-                            <input type="Date" class="form-control" id="currentDateSeen">
-                            <label for="currentProblem"> &nbsp;&nbsp; Problem: </label>
-                            <input type="text" class="form-control" id="currentProblem" placeholder="Problem...">
-
-                        </div>
-
-                        <br>
-
-                        <div id='medSec4' class='formgroup'>
-                            <label for='medDoctorName'>4) Medical Doctor: </label>
-                            <input type="text" class="form-control" id="medDoctorName" placeholder="Medical Doctor...">
-
-                            <label for="medDocPhone"> &nbsp;&nbsp; Phone #: </label>
-                            <input type="tel" class="form-control" id="medDocPhone" placeholder="(xxx)-xxx-xxxx">
-
-                            <label for="medDocDate"> &nbsp; &nbsp; Date of Last Physical Exam: </label>
-                            <input type="Date" class="form-control" id="medDocDate">
-                        </div>
-
-                        <br>
-
-                         <label for='medSec5'> 5) Current Medical Conditions: (Please Check) </label>
-                           <div class="row">
-                               <div id="medSec5" class="form-group">
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Allergies">
-                                        <input type="checkbox" name="medical-condition" id="Allergies" value="Allergies"> Allergies</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Athsma">
-                                        <input type="checkbox" name="medical-condition" id="Athsma" value="Athsma"> Athsma</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Arthritis">
-                                        <input type="checkbox" name="medical-condition" id="Arthritis" value="Arthritis"> Arthritis</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Back">
-                                        <input type="checkbox" name="medical-condition" id="Back" value="Back Trouble"> Back Trouble</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Cancer">
-                                        <input type="checkbox" name="medical-condition" id="Cancer" value="Cancer"> Cancer</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Pain">
-                                        <input type="checkbox" name="medical-condition" id="Pain" value="Chronic Pain"> Chronic Pain</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Diabetes">
-                                        <input type="checkbox" name="medical-condition" id="Diabetes" value="Diabetes"> Diabetes</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Constipation">
-                                        <input type="checkbox" name="medical-condition" id="Constipation" value="Frequent Constipation">Frequent Constipation</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Headaches">
-                                        <input type="checkbox" name="medical-condition" id="Headaches" value="Frequent Headaches">Frequent Headaches</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Bowels">
-                                        <input type="checkbox" name="medical-condition" id="Bowels" value="Iritable Bowels">Iritable Bowels</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Stomach">
-                                        <input type="checkbox" name="medical-condition" id="Stomach" value="Stomach Problem">Stomach Problem</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Skin">
-                                        <input type="checkbox" name="medical-condition" id="Skin" value="Skin Problem">Skin Problem</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Vision">
-                                        <input type="checkbox" name="medical-condition" id="Vision" value="Vision Problem">Vision Problem</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Heart">
-                                        <input type="checkbox" name="medical-condition" id="Heart" value="Heart Problem">Heart Problem</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Hay">
-                                        <input type="checkbox" name="medical-condition" id="Hay" value="Hay Fever">Hay Fever</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Hearing">
-                                        <input type="checkbox" name="medical-condition" id="Hearing" value="Hearing Problem">Hearing Problem</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Blood">
-                                        <input type="checkbox" name="medical-condition" id="Blood" value="High Blood Pressure">High Blood Pressure</label></div>
-                                    <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Other">
-                                        <input type="checkbox" name="medical-condition" id="Other" value="Other">Other</label></div>
-
-                                </div>
-                           </div>
-
-                        <br>
-
-
-                        <div id='medSec6' class='formgroup'>
-                            <label for='sigMedProb'> 6) Significant past medical problems if not indicated above: </label>
-                            <textarea id="sigMedProb" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-                        <div id='medSec7' class='formgroup'>
-                            <label for='pastSurg'> 7) Past Surgery: </label>
-                            <textarea id="pastSurg" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-                        <div id='medSec8' class='formgroup'>
-                            <label for='pastAccid'> 8) Past Accidents: </label>
-                            <textarea id="pastAccid" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-                        <div id='medSec9' class="form-group">
-                            <label  for="rateHealth"> 9) How do you rate your current physical health? </label>
-                            <select class="form-control " id="rateHealth">
-                                <option> Excellent </option>
-                                <option> Good </option>
-                                <option> Fair  </option>
-                                <option> Poor </option>
-                            </select>
-                        </div>
-
-                        <br>
-
-                        <div id='medSec10' class='formgroup'>
-                            <label for='reasonSeekTreat'> 10) Please describe your reasons for seeking treatment at this time. If there is a particular event which triggered you decision to seek treatment <wbr>
-                                now please list the event(s): </label>
-                            <textarea id="reasonSeekTreat" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-                        <!-- On paper / pdf version 11 was skipped and went to 12/13 right away  -->
-
-                        <div id='medSec11' class='formgroup'>
-                            <label for='expectTreatment'> 11) What results do you expect from treatment? </label>
-                            <textarea id="expectTreatment" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-                        <!-- On paper / pdf version 11 was skipped and went to 12/13 right away  -->
-
-                        <div id='medSec12' class='formgroup'>
-                            <label for='mentalHealthTreatment'> 12) If you received mental health treatment in the past, please list the aspects of treatment that you feel worked the best and what did not work for <wbr>
-                                you. </label>
-                            <textarea id="mentalHealthTreatment" class="form-control input-sm" rows="3"></textarea>
-
-                        </div>
-
-                        <br>
-
-                        <label for='medSec13'> 13) How is the issue(s) for which you are seeking treatment affecting the following areas of your life? </label>
-                                   <div id='medSec13' class='formgroup'>
                                         <div class="form-group">
-                                <label for="effect-relationship">Relationship/Marriage</label>
-                                <select class="form-control" id="effect-relationship">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-family">Family</label>
-                                <select class="form-control" id="effect-family">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-jobSchool">Job/School</label>
-                                <select class="form-control" id="effect-jobSchool">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-friendship">Friendships</label>
-                                <select class="form-control" id="effect-friendship">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-financial">Financial Situation</label>
-                                <select class="form-control" id="effect-financial">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-health">Physical Health</label>
-                                <select class="form-control" id="effect-health">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-anxiety">Anxiety Levels/Nerves</label>
-                                <select class="form-control" id="effect-anxiety">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-mood">Mood</label>
-                                <select class="form-control" id="effect-mood">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-eat">Eating Habits</label>
-                                <select class="form-control" id="effect-eat">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-sleep">Sleeping Habits</label>
-                                <select class="form-control" id="effect-sleep">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-sex">Sexual Functioning</label>
-                                <select class="form-control" id="effect-sex">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-drug">Alcohol/Drug Use</label>
-                                <select class="form-control" id="effect-drug">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-concentrate">Ability to Concentrate</label>
-                                <select class="form-control" id="effect-concentrate">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                              <div class="form-group">
-                                <label for="effect-anger">Ability to Control Anger</label>
-                                <select class="form-control" id="effect-anger">
-                                        <option value="no">No Effect</option>
-                                        <option value="lit">Little Effect</option>
-                                        <option value="some">Some Effect</option>
-                                        <option value="much">Much Effect</option>
-                                        <option value="sig">Significant Effect</option>
-                                        <option value="na" selected="selected">Not Applicable</option>
-                                </select>
-                              </div>
-                           </div>
+                                            <label  for="hearAbout"> How did you hear about LifeStriders?  </label>
+                                            <textarea id="hearAbout" class="form-control input-sm" rows="3"></textarea>
+                                        </div>
+                                        <input type="button" class="collapsed btn btn-success" id="PAnext" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                               aria-controls="collapseTwo" value="Next">
+                                    </div>
+                                </div>
+                            </div>
 
 
-                        <br>
-                        <br>
+                            <div class="panel panel-default">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                   aria-controls="collapseTwo">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            Medical Form
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+
+                                        <h3 class="text-center"> Medical Form</h3>
+
+                                        <label for='medSec1'> 1) Please fill in all current medications you are taking: </label>
+                                        <div id='medSec1' class='formgroup'>
+                                            <div class="medication-group" id="medication-group">
+                                                Please list all current medications you are taking
+                                                <br>
+                                                <div id="meds">
+                                                    <div class="input-group medication-1">
+                                                        <label for="medication-1-name">Medication</label>
+                                                        <input type="text" class="medication-name" id="medication-1-name">
+                                                        <label for="medication-1-prescriber">Prescribed By</label>
+                                                        <input type="text" class="medication-prescriber" id="medication-1-prescriber">
+                                                        <label for="medication-1-dosage">Dosage</label>
+                                                        <input type="text" class="medication-dosage" id="medication-1-dosage">
+                                                        <label for="medication-1-duration">Taken How Long?</label>
+                                                        <input type="text" class="medication-duration" id="medication-1-duration">
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <button type="button" id="add-medication" value="add">More</button>
+                                            </div>
+
+                                        </div>
 
 
+                                        <br>
 
-                        <br>
-                        <hr class="divider">
-                        <!-- Button trigger modal -->
-                        <button id="subModal" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
-                            <span class="glyphicon glyphicon-modal-window">
-                                Submit
-                            </span>
-                        </button>
+                                        <label for='medSec2'> 2) Allergy (Medication): </label>
+                                        <div id='medSec2' class='formgroup'>
+
+                                            <textarea id="allegMed" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+
+                                        <div id='medSec3' class='formgroup'>
+                                            <label for='currentCare'> 3) Are You currently under a physicians's care?: </label>
+                                            <input type="text" class="form-control form-inline" id="currentCare" placeholder="...">
+
+
+                                            <label for="currentName"> &nbsp;&nbsp; Name: </label>
+                                            <input type="text" class="form-control" id="currentName" placeholder="Name...">
+                                            <label for="currentDateSeen"> &nbsp; &nbsp; Date Last Seen: </label>
+                                            <input type="Date" class="form-control" id="currentDateSeen">
+                                            <label for="currentProblem"> &nbsp;&nbsp; Problem: </label>
+                                            <input type="text" class="form-control" id="currentProblem" placeholder="Problem...">
+
+                                        </div>
+
+                                        <br>
+
+                                        <div id='medSec4' class='formgroup'>
+                                            <label for='medDoctorName'>4) Medical Doctor: </label>
+                                            <input type="text" class="form-control" id="medDoctorName" placeholder="Medical Doctor...">
+
+                                            <label for="medDocPhone"> &nbsp;&nbsp; Phone #: </label>
+                                            <input type="tel" class="form-control" id="medDocPhone" placeholder="(xxx)-xxx-xxxx">
+
+                                            <label for="medDocDate"> &nbsp; &nbsp; Date of Last Physical Exam: </label>
+                                            <input type="Date" class="form-control" id="medDocDate">
+                                        </div>
+
+                                        <br>
+
+                                        <label for='medSec5'> 5) Current Medical Conditions: (Please Check) </label>
+                                        <div class="row">
+                                            <div id="medSec5" class="form-group">
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Allergies">
+                                                        <input type="checkbox" name="medical-condition" id="Allergies" value="Allergies"> Allergies</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Athsma">
+                                                        <input type="checkbox" name="medical-condition" id="Athsma" value="Athsma"> Athsma</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Arthritis">
+                                                        <input type="checkbox" name="medical-condition" id="Arthritis" value="Arthritis"> Arthritis</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Back">
+                                                        <input type="checkbox" name="medical-condition" id="Back" value="Back Trouble"> Back Trouble</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Cancer">
+                                                        <input type="checkbox" name="medical-condition" id="Cancer" value="Cancer"> Cancer</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Pain">
+                                                        <input type="checkbox" name="medical-condition" id="Pain" value="Chronic Pain"> Chronic Pain</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Diabetes">
+                                                        <input type="checkbox" name="medical-condition" id="Diabetes" value="Diabetes"> Diabetes</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Constipation">
+                                                        <input type="checkbox" name="medical-condition" id="Constipation" value="Frequent Constipation">Frequent Constipation</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Headaches">
+                                                        <input type="checkbox" name="medical-condition" id="Headaches" value="Frequent Headaches">Frequent Headaches</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Bowels">
+                                                        <input type="checkbox" name="medical-condition" id="Bowels" value="Iritable Bowels">Iritable Bowels</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Stomach">
+                                                        <input type="checkbox" name="medical-condition" id="Stomach" value="Stomach Problem">Stomach Problem</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Skin">
+                                                        <input type="checkbox" name="medical-condition" id="Skin" value="Skin Problem">Skin Problem</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Vision">
+                                                        <input type="checkbox" name="medical-condition" id="Vision" value="Vision Problem">Vision Problem</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Heart">
+                                                        <input type="checkbox" name="medical-condition" id="Heart" value="Heart Problem">Heart Problem</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Hay">
+                                                        <input type="checkbox" name="medical-condition" id="Hay" value="Hay Fever">Hay Fever</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Hearing">
+                                                        <input type="checkbox" name="medical-condition" id="Hearing" value="Hearing Problem">Hearing Problem</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Blood">
+                                                        <input type="checkbox" name="medical-condition" id="Blood" value="High Blood Pressure">High Blood Pressure</label></div>
+                                                <div class="col-md-3 col-sm-4 col-xs-6 checkbox"><label for="Other">
+                                                        <input type="checkbox" name="medical-condition" id="Other" value="Other">Other</label></div>
+
+                                            </div>
+                                        </div>
+
+                                        <br>
+
+
+                                        <div id='medSec6' class='formgroup'>
+                                            <label for='sigMedProb'> 6) Significant past medical problems if not indicated above: </label>
+                                            <textarea id="sigMedProb" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+                                        <div id='medSec7' class='formgroup'>
+                                            <label for='pastSurg'> 7) Past Surgery: </label>
+                                            <textarea id="pastSurg" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+                                        <div id='medSec8' class='formgroup'>
+                                            <label for='pastAccid'> 8) Past Accidents: </label>
+                                            <textarea id="pastAccid" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+                                        <div id='medSec9' class="form-group">
+                                            <label  for="rateHealth"> 9) How do you rate your current physical health? </label>
+                                            <select class="form-control " id="rateHealth">
+                                                <option> Excellent </option>
+                                                <option> Good </option>
+                                                <option> Fair  </option>
+                                                <option> Poor </option>
+                                            </select>
+                                        </div>
+
+                                        <br>
+
+                                        <div id='medSec10' class='formgroup'>
+                                            <label for='reasonSeekTreat'> 10) Please describe your reasons for seeking treatment at this time. If there is a particular event which triggered you decision to seek treatment <wbr>
+                                                now please list the event(s): </label>
+                                            <textarea id="reasonSeekTreat" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+                                        <!-- On paper / pdf version 11 was skipped and went to 12/13 right away  -->
+
+                                        <div id='medSec11' class='formgroup'>
+                                            <label for='expectTreatment'> 11) What results do you expect from treatment? </label>
+                                            <textarea id="expectTreatment" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+                                        <!-- On paper / pdf version 11 was skipped and went to 12/13 right away  -->
+
+                                        <div id='medSec12' class='formgroup'>
+                                            <label for='mentalHealthTreatment'> 12) If you received mental health treatment in the past, please list the aspects of treatment that you feel worked the best and what did not work for <wbr>
+                                                you. </label>
+                                            <textarea id="mentalHealthTreatment" class="form-control input-sm" rows="3"></textarea>
+
+                                        </div>
+
+                                        <br>
+
+                                        <label for='medSec13'> 13) How is the issue(s) for which you are seeking treatment affecting the following areas of your life? </label>
+                                        <div id='medSec13' class='formgroup'>
+                                            <div class="form-group">
+                                                <label for="effect-relationship">Relationship/Marriage</label>
+                                                <select class="form-control" id="effect-relationship">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-family">Family</label>
+                                                <select class="form-control" id="effect-family">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-jobSchool">Job/School</label>
+                                                <select class="form-control" id="effect-jobSchool">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-friendship">Friendships</label>
+                                                <select class="form-control" id="effect-friendship">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-financial">Financial Situation</label>
+                                                <select class="form-control" id="effect-financial">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-health">Physical Health</label>
+                                                <select class="form-control" id="effect-health">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-anxiety">Anxiety Levels/Nerves</label>
+                                                <select class="form-control" id="effect-anxiety">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-mood">Mood</label>
+                                                <select class="form-control" id="effect-mood">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-eat">Eating Habits</label>
+                                                <select class="form-control" id="effect-eat">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-sleep">Sleeping Habits</label>
+                                                <select class="form-control" id="effect-sleep">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-sex">Sexual Functioning</label>
+                                                <select class="form-control" id="effect-sex">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-drug">Alcohol/Drug Use</label>
+                                                <select class="form-control" id="effect-drug">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-concentrate">Ability to Concentrate</label>
+                                                <select class="form-control" id="effect-concentrate">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="effect-anger">Ability to Control Anger</label>
+                                                <select class="form-control" id="effect-anger">
+                                                    <option value="no">No Effect</option>
+                                                    <option value="lit">Little Effect</option>
+                                                    <option value="some">Some Effect</option>
+                                                    <option value="much">Much Effect</option>
+                                                    <option value="sig">Significant Effect</option>
+                                                    <option value="na" selected="selected">Not Applicable</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
+                                         <input type="button" class="collapsed btn btn-info" id="PHHprevious" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                                               aria-controls="collapseOne" value="Previous">
+
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+
+                             
+
+                            </div>
+
+                           
+
+                        </div>
+
+                           <!-- Button trigger modal -->
+                            <button id="subModal" type="button" class="btn btn-danger btn-lg  bottomMargin" data-toggle="modal" data-target="#myModal">
+                                <span class="glyphicon glyphicon-modal-window">
+                                    Submit
+                                </span>
+                            </button>
 
                     </form>
+
                 </div>
             </div>
-
             <!--   ----------------------------------------------------------------------------------------------------------------------------------------------      -->
 
             <div class="container row pageWrapper">
@@ -1147,7 +1194,7 @@ and open the template in the editor.
                             <br>
                         </div>
 
-                        <button  type="button" class="btn btn-danger btn-lg bottomMargin" data-toggle="modal" data-target="#myModal2">
+                        <button  type="button" class="btn btn-danger btn-lg bottomMargin leftMarginCF" data-toggle="modal" data-target="#myModal2">
                             <span class="glyphicon glyphicon-modal-window">
                                 Save / Print
                             </span>
