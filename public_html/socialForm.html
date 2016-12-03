@@ -1,0 +1,2017 @@
+<html>
+    <head>
+        <title>Social Skills Group Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+        <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="http://www.lifestriders.org/favicon.ico">
+    </head>
+    <body>
+        <!-- Modal1 -->
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h2 class="modal-title" id="myModalLabel1">Submitting Filled Out Form For Review</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            You are submitting the filled out form to the review
+                            screen, this screen resembles what the printout form will
+                            look like.  
+                        </p>
+                        <ol>
+                            <li>
+                                Make sure the information is correct on the 
+                                next screen.
+                            </li>
+                            <li>
+                                Scroll to the bottom of the page and please click 
+                                "Print/Save" button to be taken to the 
+                                print preview screen.
+                            </li>
+                        </ol>
+                        <br>
+                        <div id='error'>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove-sign" >
+                                Close
+                            </span>
+                        </button>
+                        <!-- Button class used for import of glyphicon,
+                        this will need to be changed when the user uses
+                        Internet Explorer due to input/button conflicts-->
+                        <button type="button" id="printPreviewButton" class="btn btn-danger" value="Submit" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-ok-sign">
+                                Review My Info
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal1 -->
+        <!-- Modal2 -->
+        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h2 class="modal-title" id="myModalLabel2">Print Or Save Your Document</h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            You're Almost Done!
+                        </p>
+                        <ol>
+                            <li>
+                                There is one more form your Physician needs to fill out and sign.
+                            </li>
+                            <li>
+                                Click on the blue Physician Form link and select print or save.
+                            </li>
+                            <li>
+                                Return Here and click the Red Print/Save Button
+                            </li>
+                            <li>
+                                Make Sure to sign all forms where indicated.
+                            </li>
+                            <li>
+                                Produce all signed forms to LifeStriders.
+                            </li>
+                        </ol>
+                        <br>
+                        <div id='error'>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove-sign" >
+                                Close
+                            </span>
+                        </button>
+                        <a href="Assets/counselPhysicanPart.pdf" target="_blank" id="enablePrint" class="btn btn-info">
+                            <span class="glyphicon glyphicon-edit" >
+                                Physician Form
+                            </span>
+                        </a>
+                        <!-- Button class used for import of glyphicon,
+                        this will need to be changed when the user uses
+                        Internet Explorer due to input/button conflicts-->
+                        <button id="printButtonSF" type="button"  class="btn btn-danger" data-dismiss="modal" disabled>
+                            <span class="glyphicon glyphicon-ok-sign">
+                                Print/Save
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Modal2 -->
+        <div class="container wrapperOverall">
+            <div class="container row pageWrapper">
+                <div id="formSocialForm" class ="well">
+
+                    <div class="row headElementsDiv">
+                        <div class="col-md-8 lsH2Div">  
+                            <h2>LifeStriders</h1>
+                        </div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2 text-right">
+                            Phone: 262.309.9297 <br>
+                            Fax: 866.404.3105 <br> 
+                            counseling@lifestriders.org <br>
+                            <br>
+                            Sll W29667 Summit Avenue (US HWY 18) <br>
+                            Waukesha, WI 53188 <br>
+                        </div>
+                    </div>
+                    <br>
+                    <h2 class="text-center">Life By the Reins</h2>
+                    <h3 class="text-center">Social Skills Group Application</h3>
+                    <form method="post">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <!--*************************************************************************************************************************************************-->
+                            <!--Start of the Participant’s Application Form-->
+                            <!--*************************************************************************************************************************************************-->
+
+                            <div class="panel panel-default">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title">
+                                            Participant’s Application
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Participant's Application</h3>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAfirstName">First Name: </label>
+                                            <input type="text" class="form-control" id="PAfirstName" placeholder="First-Name..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAlastName">Last Name: </label>
+                                            <input type="text" class="form-control" id="PAlastName" placeholder="Last-Name..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAgender">Gender</label><br>
+                                            <input type="radio" id="PAoptMale" name="PAgender" value="male" checked> Male
+                                            <input type="radio" id="PAoptFemale" name="PAgender" value="female"> Female
+                                            <br>
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAbirthDate">Birth Date: </label>
+                                            <input type="date" class="form-control" id="PAbirthDate" >
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="PAheight">Height: </label>
+                                            <input type="text" class="form-control" id="PAheight" placeholder="In Inches..">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="PAweight">Weight: </label>
+                                            <input type="text" class="form-control" id="PAweight" placeholder="In Lbs..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAveteran">Veteran</label><br>
+                                            <input type="radio" id="PAoptNo" name="PAveteran" value="no" checked> No
+                                            <input type="radio" id="PAoptYes" name="PAveteran" value="yes"> Yes
+                                            <br>
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAethnicity">Ethnicity: </label>
+                                            <input type="text" class="form-control" id="PAethnicity" placeholder="For Grant Writing Purposes Only..">
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                            <label for="PAaddress">Address: </label>
+                                            <input type="text" class="form-control" id="PAaddress" placeholder="Address..">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="PAcity">City: </label>
+                                            <input type="text" class="form-control" id="PAcity" placeholder="City..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAstate">State: </label>
+                                            <input type="text" class="form-control" id="PAstate" placeholder="State..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAzip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="PAzip" placeholder="Zip Code..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAphone">Phone: </label>
+                                            <input type="text" class="form-control" id="PAphone" placeholder="Phone-Number..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAaltPhone">Alternate Phone Number: </label>
+                                            <input type="text" class="form-control" id="PAaltPhone" placeholder="Alternate Number..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAemail">Email: </label>
+                                            <input type="text" class="form-control" id="PAemail"placeholder="Email..">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="PAcompanyName">Name:</label>
+                                            <input type="text" class="form-control" id="PAcompanyName"placeholder="School/Employer..">
+                                        </div> 
+                                        <div class="form-group col-md-3">
+                                            <label for="PAgrade">Grade:</label>
+                                            <select id="PAgrade" class="form-control">
+                                                <option value="N/A">-- Not Applicable --</option>
+                                                <option value="K-5">K-5</option>
+                                                <option value="1st">1st</option>
+                                                <option value="2nd">2nd</option>
+                                                <option value="3rd">3rd</option>
+                                                <option value="4th">4th</option>
+                                                <option value="5th">5th</option>
+                                                <option value="6th">6th</option>
+                                                <option value="7th">7th</option>
+                                                <option value="8th">8th</option>
+                                                <option value="9th">9th</option>
+                                                <option value="10th">10th</option>
+                                                <option value="11th">11th</option>
+                                                <option value="12th">12th</option>     
+                                            </select>
+                                        </div> 
+                                        <div class="form-group col-md-3">
+                                            <label for="PAcompanyPhone">Phone: </label>
+                                            <input type="text" class="form-control" id="PAcompanyPhone" placeholder="Company Phone..">
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                            <label for="PAcompanyAddress">Address: </label>
+                                            <input type="text" class="form-control" id="PAcompanyAddress" placeholder="Company Address..">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="PAcompanyCity">City: </label>
+                                            <input type="text" class="form-control" id="PAcompanyCity" placeholder="Company City..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAcompanyState">State: </label>
+                                            <input type="text" class="form-control" id="PAcompanyState" placeholder="Company State..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="PAcompanyZip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="PAcompanyZip" placeholder="Company Zip Code..">
+                                        </div>   
+                                        <div class="form-group col-md-12">
+                                            <label for="PAguardianCheckbox"><input type="checkbox" id="PAguardianCheckbox">Check If Under 18</label>
+                                        </div>
+                                        <div class="form-group col-md-4" id="g1" hidden>
+                                            <label for="PAguardianFirstName">Parent/Legal Guardian First Name: </label>
+                                            <input type="text" class="form-control" id="PAguardianFirstName" placeholder="First..">
+                                        </div>
+                                        <div class="form-group col-md-4" id="g2" hidden>
+                                            <label for="PAguardianLastName">Parent/Legal Guardian Last Name: </label>
+                                            <input type="text" class="form-control" id="PAguardianLastName" placeholder="Last..">
+                                        </div>
+                                        <div class="form-group col-md-4" id="g3" hidden>
+                                            <label for="PAguardianPhone">Phone: </label>
+                                            <input type="text" class="form-control" id="PAguardianPhone" placeholder="Guardian Phone..">
+                                        </div>
+                                        <div class="form-group col-md-5" id="g4" hidden>
+                                            <label for="PAguardianAddress">Address: </label>
+                                            <input type="text" class="form-control" id="PAguardianAddress" placeholder="Guardian Address..">
+                                        </div>
+                                        <div class="form-group col-md-3" id="g5" hidden>
+                                            <label for="PAguardianCity">City: </label>
+                                            <input type="text" class="form-control" id="PAguardianCity" placeholder="Guardian City..">
+                                        </div>
+                                        <div class="form-group col-md-2" id="g6" hidden>
+                                            <label for="PAguardianState">State: </label>
+                                            <input type="text" class="form-control" id="PAguardianState" placeholder="Guardian State..">
+                                        </div>
+                                        <div class="form-group col-md-2" id="g7" hidden>
+                                            <label for="PAguardianZip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="PAguardianZip" placeholder="Guardian Zip Code..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAreferral">Referral Source: </label>
+                                            <input type="text" class="form-control" id="PAreferral" placeholder="Referral..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAreferralNum">Contact Number: </label>
+                                            <input type="text" class="form-control" id="PAreferralNum" placeholder="Referral Number..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="PAhearAbout">How Did you Hear About the Program: </label>
+                                            <textarea class="form-control" id="PAhearAbout" row="3" placeholder="Let us know here.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHdiagnosis">Diagnosis: </label>
+                                            <textarea class="form-control" id="PHHdiagnosis" row="3" placeholder="Diagnosis(s).."></textarea>
+                                        </div>
+                                        <input type="button" class="collapsed btn btn-success" id="PAnext" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                               aria-controls="collapseTwo" value="Next">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--*************************************************************************************************************************************************-->
+                            <!--Start of the Participant's Health History Form-->
+                            <!--*************************************************************************************************************************************************-->
+
+                            <div class="panel panel-default">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                   aria-controls="collapseTwo">
+                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title">
+                                            Participant’s Health History
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Participant's Health History</h3>
+                                        <div class="form-group">
+                                            <label for="PHHmedications">What Medications is your child/teen currently taking including over-the-counter medications? If prescribed 
+                                                medication, please list medication name, purpose, dosage, and time.</label>
+                                            <textarea class="form-control" id="PHHmedications" row="3" placeholder="Medications.."></textarea>
+                                        </div>
+                                        <table class="form-group">
+                                            <caption>Please Indicate Current or Past Problems in the Following Areas: </caption>
+                                            <tr>
+                                                <th></th>
+                                                <th>Yes</th>
+                                                <th>Comments</th>
+                                            </tr>
+                                            <tr>
+                                                <td class="td1">Vision</td>
+                                                <td class="td2"><input type="checkbox" class="healthCheck" id="PHHvision" name="vision" value="vision"></td>
+                                                <td class="td3" id="PHH1" hidden><textarea class="form-control" id="PHHvisionComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hearing</td>
+                                                <td><input type="checkbox" id="PHHhearing" class="healthCheck" name="hearing" value="hearing"></td>
+                                                <td id="PHH2" hidden><textarea class="form-control" id="PHHhearingComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sensation</td>
+                                                <td><input type="checkbox" id="PHHsensation" class="healthCheck" name="sensation" value="sensation"></td>
+                                                <td id="PHH3" hidden><textarea class="form-control" id="PHHsensationComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Communication</td>
+                                                <td><input type="checkbox" id="PHHcomm" class="healthCheck" name="comm" value="comm"></td>
+                                                <td id="PHH4" hidden><textarea class="form-control" name="1" id="PHHcommComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Heart</td>
+                                                <td><input type="checkbox" id="PHHheart" class="healthCheck" name="heart" value="heart"></td>
+                                                <td id="PHH5" hidden><textarea class="form-control" id="PHHheartComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Breathing</td>
+                                                <td><input type="checkbox" id="PHHbreathing" class="healthCheck" name="breathing" value="breathing"></td>
+                                                <td id="PHH6" hidden><textarea class="form-control" id="PHHbreathingComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Digestion</td>
+                                                <td><input type="checkbox" id="PHHdigest" class="healthCheck" name="digest" value="digest"></td>
+                                                <td id="PHH7" hidden><textarea class="form-control" id="PHHdigestComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Elimination</td>
+                                                <td><input type="checkbox" id="PHHeliminate" class="healthCheck" name="eliminate" value="eliminate"></td>
+                                                <td id="PHH8" hidden><textarea class="form-control" id="PHHeliminateComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Circulation</td>
+                                                <td><input type="checkbox" id="PHHcirculate" class="healthCheck" name="circulate" value="circulate"></td>
+                                                <td id="PHH9" hidden><textarea class="form-control" id="PHHcirculateComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Emotional</td>
+                                                <td><input type="checkbox" id="PHHemotion" class="healthCheck" name="emotion" value="emotion"></td>
+                                                <td id="PHH10" hidden><textarea class="form-control" id="PHHemotionComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Behavioral</td>
+                                                <td><input type="checkbox" id="PHHbehave" class="healthCheck" name="behave" value="behave"></td>
+                                                <td id="PHH11" hidden><textarea class="form-control" id="PHHbehaveComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Pain</td>
+                                                <td><input type="checkbox" id="PHHpain" class="healthCheck" name="pain" value="pain"></td>
+                                                <td id="PHH12" hidden><textarea class="form-control" id="PHHpainComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bone/Joint</td>
+                                                <td><input type="checkbox" id="PHHbone" class="healthCheck" name="bone" value="bone"></td>
+                                                <td id="PHH13" hidden><textarea class="form-control" id="PHHboneComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Muscular</td>
+                                                <td><input type="checkbox" id="PHHmuscle" class="healthCheck" name="muscle" value="muscle"></td>
+                                                <td id="PHH14" hidden><textarea class="form-control" id="PHHmuscleComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Thinking/Cognition</td>
+                                                <td><input type="checkbox" id="PHHthink" class="healthCheck" name="think" value="think"></td>
+                                                <td id="PHH15" hidden><textarea class="form-control" id="PHHthinkComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Allergies</td>
+                                                <td><input type="checkbox" id="PHHallergy" class="healthCheck" name="allergy" value="allergy"></td>
+                                                <td id="PHH16" hidden><textarea class="form-control" id="PHHallergyComment" row="2" placeholder="Comment here.." ></textarea></td>
+                                            </tr>
+                                        </table> 
+                                        <div class="form-group">
+                                            <label for="PHHenrolling">What is your primary reason for enrolling your child/teen in Life By the Reins?</label>
+                                            <textarea class="form-control" id="PHHenrolling" row="3" placeholder="Enter Primary Reason Here.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHfunction">FUNCTION Describe your child/teens abilities/difficulties with communication and mobility skills.</label>
+                                            <textarea class="form-control" id="PHHfunction" row="3" placeholder="i.e. Mobility skills such as transfers, walking, wheelchair use, driving/bus riding.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHsocial">SOCIAL (i.e. Work/school including grade completed, leisure interests, relationships-family structure, support systems, companion animals, fears/concerns, etc.) 
+                                                Also please describe your child/teens personality.</label>
+                                            <textarea class="form-control" id="PHHsocial" row="3" placeholder="i.e. Work/school including grade completed, leisure interests, relationships-family structure, support systems, companion animals, fears/concerns, etc..."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <h5><strong>GOALS What would you like to accomplish within the first 8 week session? Prioritize at least three goals for the Life By the Reins staff to concentrate on.</strong></h5>
+                                            <label for="PHHgoal1" >Goal 1:</label>
+                                            <textarea class="form-control" id="PHHgoal1" row="2" placeholder="Goal 1.."></textarea>
+                                            <label for="PHHgoal2" >Goal 2:</label>
+                                            <textarea class="form-control" id="PHHgoal2" row="2" placeholder="Goal 2.."></textarea>
+                                            <label for="PHHgoal3" >Goal 3:</label>
+                                            <textarea class="form-control" id="PHHgoal3" row="2" placeholder="Goal 3.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHsocialSuccess">What social areas is your child/teen successful/comfortable with?</label>
+                                            <textarea class="form-control" id="PHHsocialSuccess" row="3" placeholder="Successful social areas.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHsocialStruggle">What social areas does your child/teen struggle with?</label>
+                                            <textarea class="form-control" id="PHHsocialStruggle" row="3" placeholder="Social area struggles.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHtriggers">What triggers negative behaviors from your child/teen?</label>
+                                            <textarea class="form-control" id="PHHtriggers" row="3" placeholder="Negative behavioral triggers.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHsensitive">Does your child/teen have sensitive subjects staff should be aware of?</label>
+                                            <textarea class="form-control" id="PHHsensitive" row="3" placeholder="Sensitive subjects.."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PHHmotivate">What strategies work well to motivate your child?</label>
+                                            <textarea class="form-control" id="PHHmotivate" row="3" placeholder="Motivations.."></textarea>
+                                        </div>
+                                        <table style="width:100%" class="form-group">
+                                            <caption>How is the issue for which you are seeking treatment affecting the following areas of your life? </caption>
+                                            <tr>
+                                                <th></th>
+                                                <th>No Effect</th>
+                                                <th>Little Effect</th>
+                                                <th>Some Effect</th>
+                                                <th>Significant Effect</th>
+                                                <th>Not Applicable</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Friendships</td>
+                                                <td><input type="radio" name="friendships" value="No Effect"></td>
+                                                <td><input type="radio" name="friendships" value="Little Effect"></td>
+                                                <td><input type="radio" name="friendships" value="Some Effect"></td>
+                                                <td><input type="radio" name="friendships" value="Significant Effect"></td>
+                                                <td><input type="radio" name="friendships" value="Not Applicable" checked></td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>Family</td>
+                                                <td><input type="radio" name="family" value="No Effect"></td>
+                                                <td><input type="radio" name="family" value="Little Effect"></td>
+                                                <td><input type="radio" name="family" value="Some Effect"></td>
+                                                <td><input type="radio" name="family" value="Significant Effect"></td>
+                                                <td><input type="radio" name="family" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Job/School Performance</td>
+                                                <td><input type="radio" name="jobSchool" value="No Effect"></td>
+                                                <td><input type="radio" name="jobSchool" value="Little Effect"></td>
+                                                <td><input type="radio" name="jobSchool" value="Some Effect"></td>
+                                                <td><input type="radio" name="jobSchool" value="Significant Effect"></td>
+                                                <td><input type="radio" name="jobSchool" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Financial Situation</td>
+                                                <td><input type="radio" name="financial" value="No Effect"></td>
+                                                <td><input type="radio" name="financial" value="Little Effect"></td>
+                                                <td><input type="radio" name="financial" value="Some Effect"></td>
+                                                <td><input type="radio" name="financial" value="Significant Effect"></td>
+                                                <td><input type="radio" name="financial" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Physical Health</td>
+                                                <td><input type="radio" name="physical" value="No Effect"></td>
+                                                <td><input type="radio" name="physical" value="Little Effect"></td>
+                                                <td><input type="radio" name="physical" value="Some Effect"></td>
+                                                <td><input type="radio" name="physical" value="Significant Effect"></td>
+                                                <td><input type="radio" name="physical" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mood</td>
+                                                <td><input type="radio" name="mood" value="No Effect"></td>
+                                                <td><input type="radio" name="mood" value="Little Effect"></td>
+                                                <td><input type="radio" name="mood" value="Some Effect"></td>
+                                                <td><input type="radio" name="mood" value="Significant Effect"></td>
+                                                <td><input type="radio" name="mood" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ability to Concentrate</td>
+                                                <td><input type="radio" name="concentrate" value="No Effect"></td>
+                                                <td><input type="radio" name="concentrate" value="Little Effect"></td>
+                                                <td><input type="radio" name="concentrate" value="Some Effect"></td>
+                                                <td><input type="radio" name="concentrate" value="Significant Effect"></td>
+                                                <td><input type="radio" name="concentrate" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Eating Habits</td>
+                                                <td><input type="radio" name="eating" value="No Effect"></td>
+                                                <td><input type="radio" name="eating" value="Little Effect"></td>
+                                                <td><input type="radio" name="eating" value="Some Effect"></td>
+                                                <td><input type="radio" name="eating" value="Significant Effect"></td>
+                                                <td><input type="radio" name="eating" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sleeping Habits</td>
+                                                <td><input type="radio" name="sleeping" value="No Effect"></td>
+                                                <td><input type="radio" name="sleeping" value="Little Effect"></td>
+                                                <td><input type="radio" name="sleeping" value="Some Effect"></td>
+                                                <td><input type="radio" name="sleeping" value="Significant Effect"></td>
+                                                <td><input type="radio" name="sleeping" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ability to Form Lasting Relationships</td>
+                                                <td><input type="radio" name="relationships" value="No Effect"></td>
+                                                <td><input type="radio" name="relationships" value="Little Effect"></td>
+                                                <td><input type="radio" name="relationships" value="Some Effect"></td>
+                                                <td><input type="radio" name="relationships" value="Significant Effect"></td>
+                                                <td><input type="radio" name="relationships" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Ability to Control Anger</td>
+                                                <td><input type="radio" name="anger" value="No Effect"></td>
+                                                <td><input type="radio" name="anger" value="Little Effect"></td>
+                                                <td><input type="radio" name="anger" value="Some Effect"></td>
+                                                <td><input type="radio" name="anger" value="Significant Effect"></td>
+                                                <td><input type="radio" name="anger" value="Not Applicable" checked></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"class="form-control" id="PHHother" placeholder="Other"></td>
+                                                <td><input type="radio" name="other" value="No Effect"></td>
+                                                <td><input type="radio" name="other" value="Little Effect"></td>
+                                                <td><input type="radio" name="other" value="Some Effect"></td>
+                                                <td><input type="radio" name="other" value="Significant Effect"></td>
+                                                <td><input type="radio" name="other" value="Not Applicable" checked></td>
+                                            </tr>
+                                        </table>
+                                        <div class='form-group col-md-12'>
+                                            <label for="PHHparent">PARENTS, would you be interested in participating in ONE parent support 
+                                                group throughout each eight week session at the same time as your child/teens social skills group?</label>
+                                            <label for='PHHoptNo' class='paddingRight'><input type='radio' id='PHHoptNo' name='PHHparent' value='No' checked> No </label>
+                                            <label for='PHHoptYes'><input type='radio' id='PHHoptYes' name='PHHparent' value='Yes'> Yes </label>
+                                                
+                                        </div>
+                                        <div class='form-group col-md-12'>
+                                            <label for='PHHadditional'>Additional Comments:</label>
+                                            <textarea class="form-control" id="PHHadditional" row="3" placeholder="Additional Comments.."></textarea>
+                                        </div>
+                                        <input type="button" class="collapsed btn btn-info" id="PHHprevious" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false"
+                                               aria-controls="collapseOne" value="Previous">
+                                        <input type="button" class="collapsed btn btn-success" id="PHHnext" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                               aria-controls="collapseThree" value="Next">
+                                    </div>    
+                                </div>
+                            </div>
+
+                            <!--*************************************************************************************************************************************************-->
+                            <!--Start of the Authorization for Emergency Medical Treatment Form-->
+                            <!--*************************************************************************************************************************************************-->
+
+                            <div class="panel panel-default">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                   aria-controls="collapseThree">
+                                    <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title">
+                                            Authorization for Emergency Medical Treatment
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Authorization for Emergency Medical Treatment</h3>
+                                        
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTfirstName">First Name: </label>
+                                            <input type="text" class="form-control" id="EMTfirstName" placeholder="First-Name..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTlastName">Last Name: </label>
+                                            <input type="text" class="form-control" id="EMTlastName" placeholder="Last-Name..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTbirthDate">Birth Date: </label>
+                                            <input type="date" class="form-control" id="EMTbirthDate" >
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMThomePhone">Home Phone: </label>
+                                            <input type="text" class="form-control" id="EMThomePhone" placeholder="Phone-Number..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTemail">Email: </label>
+                                            <input type="text" class="form-control" id="EMTemail" placeholder="Email..">
+                                        </div>
+                                        <div class="form-group col-md-5">
+                                            <label for="EMTaddress">Address: </label>
+                                            <input type="text" class="form-control" id="EMTaddress" placeholder="Address..">
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <label for="EMTcity">City: </label>
+                                            <input type="text" class="form-control" id="EMTcity" placeholder="City..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="EMTstate">State: </label>
+                                            <input type="text" class="form-control" id="EMTstate" placeholder="State..">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                            <label for="EMTzip">Zip Code: </label>
+                                            <input type="text" class="form-control" id="EMTzip" placeholder="Zip Code..">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="EMTdoctor">Physician's Name: </label>
+                                            <input type="text" class="form-control" id="EMTdoctor" placeholder="Physician's Name..">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="EMTmedical">Medical Facility: </label>
+                                            <input type="text" class="form-control" id="EMTmedical" placeholder="Medical Facility..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTinsurance">Health Insurance Company: </label>
+                                            <input type="text" class="form-control" id="EMTinsurance" placeholder="Health Insurance Co..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTpolicyNo">Policy Number: </label>
+                                            <input type="text" class="form-control" id="EMTpolicyNo" placeholder="Policy Number..">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <label for="EMTprimaryDob">Primary Insured's DOB: </label>
+                                            <input type="date" class="form-control" id="EMTprimaryDob" >
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="EMTmedicationAllergies"> Allergies to Medications?  </label>
+                                            <textarea id="EMTmedicationAllergies" class="form-control" rows="3" placeholder="List Medications Here.."></textarea>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="EMTcurrentMedications"> Current Medications? </label>
+                                            <textarea id="EMTcurrentMedications" class="form-control" rows="3" placeholder="List Current Medications"></textarea>
+                                        </div>
+                                        <br>
+                                        <h4>In the event of an emergency, contact: </h4>  
+                                        <div class="form-group">
+                                            <div class="row"  id="EMT1">
+                                                <div class="col-md-4">
+                                                    <label for="EMTcontactName1">Name: </label>
+                                                    <input type="text" class="form-control" id="EMTcontactName1" placeholder="First and Last Name..">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="EMTrelation1">Relation: </label>
+                                                    <input type="text" class="form-control" id="EMTrelation1" placeholder="Relationship..">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="EMTcontactNum1">Phone: </label>
+                                                    <input type="text" class="form-control" id="EMTcontactNum1" placeholder="Contact Number..">
+                                                </div>
+                                            </div>
+                                            <div class="row"  id="EMT2" hidden>
+                                                <div class="col-md-4">
+                                                    <label for="EMTcontactName2">Name: </label>
+                                                    <input type="text" class="form-control" id="EMTcontactName2" placeholder="First and Last Name..">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="EMTrelation2">Relation: </label>
+                                                    <input type="text" class="form-control" id="EMTrelation2" placeholder="Relationship..">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="EMTcontactNum2">Phone: </label>
+                                                    <input type="text" class="form-control" id="EMTcontactNum2" placeholder="Contact Number..">
+                                                </div>
+                                            </div>   
+                                            <div class="row" id="EMT3" hidden>
+                                                <div class="col-md-4">
+                                                    <label for="EMTcontactName3">Name: </label>
+                                                    <input type="text" class="form-control" id="EMTcontactName3" placeholder="First and Last Name..">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="EMTrelation3">Relation: </label>
+                                                    <input type="text" class="form-control" id="EMTrelation3" placeholder="Relationship..">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="EMTcontactNum3">Phone: </label>
+                                                    <input type="text" class="form-control" id="EMTcontactNum3" placeholder="Contact Number..">
+                                                </div>
+                                            </div>
+                                            <input type="button" class="btn btn-warning" id="addEMT" value="Add Additional Contact">
+                                        </div>
+                                        <br>
+                                        <h3>In the event emergency medical aid/treatment is required due to illness or injury during the process of 
+                                            receiving services, or while being on the property of the agency, I authorize LifeStriders to:</h3>
+                                        <p class="leftIndent2">
+                                            1. Secure and retain medical treatment and transportation if needed.<br>
+                                            2. Release client records upon request to the authorized individual or agency involved in the medical emergency treatment.
+                                        </p>
+                                        <h4>Consent Plan</h4>
+                                        <p class="leftIndent2">This authorization includes x-ray, surgery, hospitalization, medication and any treatment procedure 
+                                            deemed “life saving'' by the physician. This provision will only be invoked if the person(s) above is unable to be reached.</p>
+                                        <input type="button" class="collapsed btn btn-info" id="EMTprevious" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                               aria-controls="collapseTwo" value="Previous">
+                                        <input type="button" class="collapsed btn btn-success" id="EMTnext" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                               aria-controls="collapseFour" value="Next">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--*************************************************************************************************************************************************-->
+                            <!--Start of the Progress Reporting Form-->
+                            <!--*************************************************************************************************************************************************-->
+
+                            <div class="panel panel-default">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                   aria-controls="collapseFour">
+                                    <div class="panel-heading" role="tab" id="headingFour">
+                                        <h4 class="panel-title">
+                                            Progress Reporting
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Progress Reporting</h3>
+                                        <p>
+                                            At LifeStriders we strive to provide services that enhance the lives of individuals in a variety of ways. Please answer the following
+                                            questions to help us design a program that fits the needs of our clients. Thank you.
+                                        </p>
+                                        <ol>
+                                            <li>
+                                                <label for="PRquestion1">What lead you to seek therapeutic riding services?</label><br>
+                                                <textarea class="form-control" id="PRquestion1" row="3" placeholder="Explain Here.."></textarea>
+                                            </li><br>
+                                            <li>
+                                                <label>The concerns you wanted to address, for the most part, were: (please check one)</label>
+                                                <label><input  id="optA" name="concern" type="radio" value="Psychological" checked>Psychological (assertiveness training, building self-esteem, anxiety, depression, anger, etc.)</label><br>
+                                                <label><input  id="optB" name="concern" type="radio" value="Behavioral">Behavioral (ADHD related symptoms, oppositional, defiant, etc.)</label><br>
+                                                <label><input  id="optC" name="concern" type="radio" value="Physical">Physical (Symptoms related to Cerebral Palsy, Down Syndrome, Neurological Disorders, Paralysis, or othermedically diagnosed conditions)</label><br>
+                                                <label><input  id="optD" name="concern" type="radio" value="Speech and Language">Speech and Language</label><br>
+
+                                                <div class="radio inline-radio">
+                                                    <label>
+                                                        <input  type="radio" id="optE" name="concern"  value="Other" >
+                                                    </label>
+                                                    Other: 
+                                                    <input type="text" class="form-control" id="PRother" placeholder="Other..">
+                                                </div>
+                                            </li><br>
+                                            <li>
+                                                <label for="PRquestion3">When you first came to LifeStriders, how serious were your concerns? (Scale of 1-10)</label><br>
+                                                <select id="PRquestion3" >
+                                                    <option value="0">--select one--</option>
+                                                    <option value="1 - Not Serious">1 - Not Serious</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6 - Moderately Serious">6 - Moderately Serious</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10 - Very Serious">10 - Very Serious</option>
+                                                </select>
+                                            </li><br>
+                                            <li>
+                                                <label>Occurrence of concern(s) before starting therapeutic riding:</label><br>
+                                                <label for="PRq4check1" class="q45"><input type="radio" name="PRquestion4" id="PRq4check1" value="At least once a day" checked>At least once a day</label>
+                                                <label for="PRq4check2" class="q45"><input type="radio" name="PRquestion4" id="PRq4check2" value="2-3 times a week">2-3 times a week</label>
+                                                <label for="PRq4check3" class="q45"><input type="radio" name="PRquestion4" id="PRq4check3" value="Once a week">Once a week</label>
+                                                <label for="PRq4check4" class="q45"><input type="radio" name="PRquestion4" id="PRq4check4" value="Once every 2 weeks">Once every 2 weeks</label>
+                                                <label for="PRq4check5" class="q45"><input type="radio" name="PRquestion4" id="PRq4check5" value="Once a month">Once a month</label>
+                                            </li><br>
+                                            <li>
+                                                <label>Frequency of overcoming concern(s) before starting therapeutic riding:</label><br>
+                                                <label for="PRq5check1" class="q45"><input type="radio" name="PRquestion5" id="PRq5check1" value="At least once a day" checked>At least once a day</label>
+                                                <label for="PRq5check2" class="q45"><input type="radio" name="PRquestion5" id="PRq5check2" value="2-3 times a week">2-3 times a week</label>
+                                                <label for="PRq5check3" class="q45"><input type="radio" name="PRquestion5" id="PRq5check3" value="Once a week">Once a week</label>
+                                                <label for="PRq5check4" class="q45"><input type="radio" name="PRquestion5" id="PRq5check4" value="Once every 2 weeks">Once every 2 weeks</label>
+                                                <label for="PRq5check5" class="q45"><input type="radio" name="PRquestion5" id="PRq5check5" value="Once a month">Once a month</label>
+                                            </li>
+                                        </ol>
+                                        <p>
+                                            <label for="PRadditionalComments">Additional comments:</label>
+                                            <textarea class="form-control" id="PRadditionalComments" row="3" placeholder="Explain Here.."></textarea>
+                                        </p>
+                                        <input type="button" class="collapsed btn btn-info" id="PRprevious" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                               aria-controls="collapseThree" value="Previous">
+                                        <input type="button" class="collapsed btn btn-success" id="PRnext" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                                               aria-controls="collapseFive" value="Next">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--*************************************************************************************************************************************************-->
+                            <!--Start of the Consent Form-->
+                            <!--*************************************************************************************************************************************************-->
+
+                            <div class="panel panel-default">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false"
+                                   aria-controls="collapseFive">
+                                    <div class="panel-heading" role="tab" id="headingFive">
+                                        <h4 class="panel-title">
+                                            Participant’s Consent for Release of Information
+                                        </h4>
+                                    </div>
+                                </a>
+                                <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                    <div class="panel-body">
+                                        <h3 class="text-center">Participant’s Consent for Release of Information</h3>
+                                        <div class="form-group">
+                                            <label for="consentDoctorName">I Hereby Authorize: </label>
+                                            <input type="text" class="form-control" id="consentDoctorName" placeholder="Doctor-Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="consentPartName">to release information from the records of: </label>
+                                            <input type="text" class="form-control" id="consentPartName" placeholder="Participant's-Name..">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="consentPartDob">DOB: </label>
+                                            <input type="date" class="form-control" id="consentPartDob" placeholder="DOB..">
+                                        </div>
+                                        <label for="consentQestion3">The Information is to be released to:</label><br>
+                                        <select id="consentQuestion3" class="form-control">
+                                            <option value="0">-- Select One --</option>
+                                            <option value="Veronica Sosa/Chrystal Schipper/Amber Osterberger/LifeStriders Therapists/Intelirev">All</option>
+                                            <option value="Veronica Sosa">Veronica Sosa</option>
+                                            <option value="Chrystal Schipper">Chrystal Schipper</option>
+                                            <option value="Amber Osterberger">Amber Osterberger</option>
+                                            <option value="LifeStriders Therapists">LifeStriders Therapists</option>
+                                            <option value="Intelirev">Intelirev</option>
+                                        </select>
+                                        <h3>For the purpose of developing a therapeutic riding/equine activity program for the above named participant. The information to be released is marked below.</h3>
+                                        <div class="form-group">
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentMedHistory" type="checkbox"  value="Medical History" >Medical History</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentPhysicalTherapy" type="checkbox" value="Physical Therapy evaluation">Physical Therapy evaluation, assessment and program plan</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentOccupationalTherapy" type="checkbox" value="Occupational Therapy evaluation">Occupational Therapy evaluation, assessment and program plan</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentSpeechTherapy" type="checkbox" value="Speech Therapy evaluation">Speech Therapy evaluation, assessment and program plan(I.E.P)</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentClassroom" type="checkbox" value="Classroom Individual Education Plan" >Classroom Individual Education Plan</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentPsychosocial" type="checkbox" value="Psychosocial evaluation">Psychosocial evaluation, assessment and program plan</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label><input  id="consentCognitive" type="checkbox" value="Cognitive-Behavioral Management plan" >Cognitive-Behavioral Management plan</label><br>
+                                            </div>
+                                            <div class="radio inline-radio">
+                                                <label>
+                                                    <input  id="consentOther" type="checkbox" value="Other" >
+                                                </label>
+                                                <label for="consentOther">Other: </label>
+                                                <input type="text" class="form-control" id="consentOtherText" placeholder="Other..">
+                                            </div>
+                                        </div>
+                                        <input type="button" class="collapsed btn btn-info" id="Cprevious" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false"
+                                               aria-controls="collapseFour" value="Previous">
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <!-- Button trigger modal -->
+                            <button id="subModal1" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal1">
+                                <span class="glyphicon glyphicon-modal-window">
+                                    Submit
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!--*************************************************************************************************************************************************-->
+                <!--Start of the Print Preview Page which is hidden when the form first loads-->
+                <!--*************************************************************************************************************************************************-->
+
+                <div class="container row pageWrapper">
+                    <div id="printPreviewSocialFormOVER" class="container printPreviewOVER row"> 
+                        <div class="row">
+                            <!--h1 style="margin-top: 25px;" class="text-center"> Rider Form </h1-->
+                            <div id="printPreviewSocialForm" class=" col-md-12 container">
+                                <div class="row headElementsDiv">
+                                    <div class="col-md-8 lsH2Div" >  
+                                        <h2>LifeStriders</h2>
+                                    </div>
+                                    <div class="col-md-1"> </div>
+                                    <div class="col-md-2 text-right">
+                                        <!-- make a list with no bullet points -->
+                                        Phone: 262.309.9297 <br>
+                                        Fax: 866.404.3105 <br>
+                                        counseling@lifestriders.org <br>
+                                        <br>
+                                        Sll W29667 Summit Avenue (US HWY 18) <br>
+                                        Waukesha, WI 53188 <br>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <!--*************************************************************************************************************************************************-->
+                                <!--Start of the Participant's Application Page on the Print Preview Page-->
+                                <!--*************************************************************************************************************************************************-->
+
+                                <h3 class="text-center">Participant's Application</h3>
+                                <ul class="list-inline text-center listRowTop listRowLi4Elems">
+                                    <li>
+                                        <label for="ppPAFirstName">First Name: </label>
+                                        <p id="ppPAFirstName"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPALastName">Last Name: </label>
+                                        <p id="ppPALastName"></p>
+                                    </li>
+                                    <li>
+                                        <Label for="ppPAGender">Gender:</Label>
+                                        <p id="ppPAGender"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPABirthDate">Date of Birth:</label>
+                                        <p id="ppPABirthDate"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi4Elems">
+                                    <li>
+                                        <label for="ppPAHeight">Height:</label>
+                                        <p id="ppPAHeight"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAWeight">Weight:</label>
+                                        <p id="ppPAWeight"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAVeteran">Veteran:</label>
+                                        <p id="ppPAVeteran"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAEthnicity">Ethnicity:</label>
+                                        <p id="ppPAEthnicity"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi4Elems">
+                                    <li>
+                                        <label for="ppPAAddress">Address:</label>
+                                        <p id="ppPAAddress"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPACity">City:</label>
+                                        <p id="ppPACity"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAState">State:</label>
+                                        <p id="ppPAState"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAZip">Zip:</label>
+                                        <p id="ppPAZip"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi3Elems">
+                                    <li>
+                                        <label for="ppPAPhone">Phone:</label>
+                                        <p id="ppPAPhone"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAAltPhone">Alternate Phone:</label>
+                                        <p id="ppPAAltPhone"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAEmail">Email:</label>
+                                        <p id="ppPAEmail"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi3Elems">
+                                    <li>
+                                        <label for="ppPACompanyName">School/Company Name:</label>
+                                        <p id="ppPACompanyName"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAGrade">Grade:</label>
+                                        <p id="ppPAGrade"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPACompanyPhone">School/Company Phone:</label>
+                                        <p id="ppPACompanyPhone"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi4Elems">
+                                    <li>
+                                        <label for="ppPACompanyAddress">Co. Address:</label>
+                                        <p id="ppPACompanyAddress"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPACompanyCity">Co. City:</label>
+                                        <p id="ppPACompanyCity"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPACompanyState">Co. State:</label>
+                                        <p id="ppPACompanyState"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPACompanyZip">Co. Zip:</label>
+                                        <p id="ppPACompanyZip"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi3Elems" id="ppG1" hidden>
+                                    <li>
+                                        <label for="ppPAGuardianFirstName">Guardian First Name: </label>
+                                        <p id="ppPAGuardianFirstName"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAGuardianLastName">Guardian Last Name: </label>
+                                        <p id="ppPAGuardianLastName"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAGuardianPhone">Guardian Phone:</label>
+                                        <p id="ppPAGuardianPhone"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi4Elems" id="ppG2" hidden>
+                                    <li>
+                                        <label for="ppPAGuardianAddress">G. Address:</label>
+                                        <p id="ppPAGuardianAddress"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAGuardianCity">G. City:</label>
+                                        <p id="ppPAGuardianCity"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAGuardianState">G. State:</label>
+                                        <p id="ppPAGuardianState"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAGuardianZip">G. Zip:</label>
+                                        <p id="ppPAGuardianZip"></p>
+                                    </li>
+                                </ul>
+                                <ul class="list-inline text-center listRowStandard listRowLi4Elems">
+                                    <li>
+                                        <label for="ppPAReferral">Referral Source:</label>
+                                        <p id="ppPAReferral"></p>
+                                    </li>
+                                    <li>
+                                        <label for="ppPAReferralNum">Contact Number:</label>
+                                        <p id="ppPAReferralNum"></p>
+                                    </li>
+                                </ul>
+                                <label for="ppPAHearAbout">How did you hear about the program?</label>
+                                <p id="ppPAHearAbout" class="leftIndent2"></p>
+                                <label for="ppPHHDiagnosis">Diagnosis:</label>
+                                <p id="ppPHHDiagnosis" class="leftIndent2"></p>
+
+                                <!--*************************************************************************************************************************************************-->
+                                <!--Start of the Participant's Health History Page on the Print Preview Page-->
+                                <!--*************************************************************************************************************************************************-->
+
+                                <h3 class="text-center">Participant's Health History</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td class="padding">Name</td>
+                                            <td class="padding">Yes/No</td>
+                                            <td class="padding">Comment</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHVision">Vision</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHVision"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHVisionComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHHearing">Hearing:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHHearing"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHHearingComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHSensation">Sensation:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHSensation"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHSensationComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHComm">Communication:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHComm"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHCommComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHHeart">Heart:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHHeart"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHHeartComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHBreathing">Breathing:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHBreathing"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHBreathingComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHDigest">Digestion:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHDigest"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHDigestComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHEliminate">Elimination:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHEliminate"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHEliminateComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHCirculate">Circulation:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHCirculate"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHCirculateComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHEmotion">Emotional:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHEmotion"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHEmotionComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHBehave">Behavioral:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHBehave"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHBehaveComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHPain">Pain:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHPain"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHPainComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHBone">Bone/Joint:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHBone"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHBoneComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHMuscle">Muscular:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHMuscle"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHMuscleComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHThink">Thinking/Cognition:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHThink"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHThinkComment"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHAllergy">Allergies:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHAllergy"></p>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHAllergyComment"></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>       
+                                <label for="ppPHHMedications">What Medications Are You Currently Taking Including Over The Counter?</label>
+                                <p id="ppPHHMedications" class="leftIndent2"></p>
+                                <label for="ppPHHEnrolling">What is your primary reason for enrolling your child/teen in Life By the Reins?</label>
+                                <p id="ppPHHEnrolling" class="leftIndent2"></p>
+                                <label for="ppPHHFunction">FUNCTION Describe your child/tens abilities/difficulties with communication and mobility skills.</label>
+                                <p id="ppPHHFunction" class="leftIndent2"></p>
+                                <label for="ppPHHSocial">SOCIAL (i.e. Work/school including grade completed, leisure interests, relationships-family structure, support systems, companion animals, fears/concerns, etc.) 
+                                    Also please describe your child/teens personality.</label>
+                                <p id="ppPHHSocial" class="leftIndent2"></p>
+                                <h5><strong>GOALS What would you like to accomplish within the first 8 week session? Prioritize at least three goals for the Life By the Reins staff to concentrate on.</strong></h5>
+                                <label for="ppPHHGoal1">Goal 1: </label>
+                                <p id="ppPHHGoal1" class="leftIndent2"></p>
+                                <label for="ppPHHGoal2">Goal 2: </label>
+                                <p id="ppPHHGoal2" class="leftIndent2"></p>
+                                <label for="ppPHHGoal3">Goal 3: </label>
+                                <p id="ppPHHGoal3" class="leftIndent2"></p>
+                                <label for="ppPHHSocialSuccess">What social areas is your child/teen successful/comfortable with?</label>
+                                <p id="ppPHHSocialSuccess" class="leftIndent2"></p>
+                                <label for="ppPHHSocialStruggle">What social areas does your child/teen struggle with?</label>
+                                <p id="ppPHHSocialStruggle" class="leftIndent2"></p>
+                                <label for="ppPHHTriggers">What triggers negative behaviors from your child/teen?</label>
+                                <p id="ppPHHTriggers" class="leftIndent2"></p>
+                                <label for="ppPHHSensitive">Does your child/teen have sensitive subjects staff should be aware of?</label>
+                                <p id="ppPHHSensitive" class="leftIndent2"></p>
+                                <label for="ppPHHMotivate">What strategies work well to motivate your child?</label>
+                                <p id="ppPHHMotivate" class="leftIndent2"></p>
+                                <h3>How is the issue for which you are seeking treatment affecting the following areas of your life?</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Effect</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHFriendships">Friendships:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHFriendships"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHFamily">Family:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHFamily"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHJobSchool">Job/School Performance:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHJobSchool"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHFinancial">Financial Situation:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHFinancial"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHPhysical">Physical Health:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHPhysical"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHMood">Mood:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHMood"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHConcentrate">Ability to Concentrate:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHConcentrate"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHEating">Eating Habits:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHEating"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHSleeping">Sleeping Habits:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHSleeping"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHRelationships">Ability to form lasting Relationships:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHRelationships"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHAnger">Ability to Control Anger:</label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHAnger"></p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="ppPHHOther"><p id="ppPHHOtherText"></p></label>
+                                            </td>
+                                            <td>
+                                                <p id="ppPHHOther"></p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <label for="ppPHHParent">PARENTS, would you be interested in participating in ONE parent support 
+                                                group throughout each eight week session at the same time as your child/teens social skills group?</label>
+                                <p id='ppPHHParent'></p>
+                                <label for='ppPHHAdditional'>Additional Comments</label>
+                                <p id='ppPHHAdditional'></p>
+                                <footer><hr></footer>
+
+                                <!--*************************************************************************************************************************************************-->
+                                <!--Start of the Authorization for Emergency Medical Treatment Form Print Preview Page which is hidden when the form first loads-->
+                                <!--*************************************************************************************************************************************************-->
+
+                                <h3 class="text-center">Authorization for Emergency Medical Treatment</h3>
+                                <div id="riderFormPrintDiv" class="container-fluid">
+                                    
+
+                                    <ul class="list-inline  text-center  listRowTop listRowLi2Elems">
+                                        <li class="text-center " >
+                                            <label for="ppEMTFirstName">First Name: </label>
+                                            <p id="ppEMTFirstName"></p>
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTLastName">Last Name: </label>
+                                            <p id="ppEMTLastName"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi3Elems">
+                                        <li class="text-center">
+                                            <label for="ppEMTBirthDate">Birth Date: </label>
+                                            <p id="ppEMTBirthDate"></p>
+                                        </li>
+                                        <li class="text-center ">
+                                            <label for="ppEMTHomePhone">Home Phone: </label>
+                                            <p id="ppEMTHomePhone"></p>
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTEmail">Email: </label>
+                                            <p id="ppEMTEmail"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi4Elems">
+                                        <li class="text-center">
+                                            <label for="ppEMTAddress">Address: </label>
+                                            <p id="ppEMTAddress"></p> 
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTCity">City: </label>
+                                            <p id="ppEMTCity"></p>
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTState">State: </label>
+                                            <p id="ppEMTState"></p>
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTZip">Zip Code: </label>
+                                            <p id="ppEMTZip"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi3Elems">
+                                        <li class="text-center " >
+                                            <label for="ppEMTDoctor">Physician's Name: </label>
+                                            <p id="ppEMTDoctor"></p>
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTMedical">Medical Facility: </label>
+                                            <p id="ppEMTMedical"></p>
+                                        </li>
+                                        <li class="text-center">
+                                            <label for="ppEMTPrimaryDob">Primary Insured's DOB: </label>
+                                            <p id="ppEMTPrimaryDob"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                        <li class="text-center">
+                                            <label for="ppEMTInsurance">Health Insurance Company: </label>
+                                            <p id="ppEMTInsurance"></p>
+                                        </li>
+                                        <li class="text-center ">
+                                            <label for="ppEMTPolicyNo">Policy Number: </label>
+                                            <p id="ppEMTPolicyNo"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline listRowLi2Elems">
+                                        <li>
+                                            <label for="ppEMTMedicationAllergies"> Allergies to Medications?  </label>
+                                            <p id="ppEMTMedicationAllergies" class="leftIndent2"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTCurrentMedications"> Current Medications? </label>
+                                            <p id="ppEMTCurrentMedications" class="leftIndent2"></p>
+                                        </li>
+                                    </ul>
+                                    <h4>In the event of an emergency, contact: </h4>  
+                                    <ul class="list-inline text-center listRowTop listRowLi3Elems" >
+                                        <li>
+                                            <label for="ppEMTContactName1">Name: </label>
+                                            <p id="ppEMTContactName1"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTRelation1">Relation: </label>
+                                            <p id="ppEMTRelation1"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTContactNum1">Phone: </label>
+                                            <p id="ppEMTContactNum1"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi3Elems" id="ppEMT2" hidden>
+                                        <li>
+                                            <label for="ppEMTContactName2">Name: </label>
+                                            <p id="ppEMTContactName2"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTRelation2">Relation: </label>
+                                            <p id="ppEMTRelation2"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTContactNum2">Phone: </label>
+                                            <p id="ppEMTContactNum2"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi3Elems" id="ppEMT3" hidden>
+                                        <li>
+                                            <label for="ppEMTContactName3">Name: </label>
+                                            <p id="ppEMTContactName3"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTRelation3">Relation: </label>
+                                            <p id="ppEMTRelation3"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppEMTContactNum3">Phone: </label>
+                                            <p id="ppEMTContactNum3"></p>
+                                        </li>
+                                    </ul>
+                                    <h3>In the event emergency medical aid/treatment is required due to illness or injury during the 
+                                        process of receiving services, or while being on the property of the agency, I authorize LifeStriders to:</h3>
+                                    <p class="leftIndent2">
+                                        1. Secure and retain medical treatment and transportation if needed.<br>
+                                        2. Release client records upon request to the authorized individual or agency involved in the medical emergency treatment.
+                                    </p>
+                                    <h4>Consent Plan</h4>
+                                    <p class="leftIndent2">
+                                        This authorization includes x-ray, surgery, hospitalization, medication and any treatment procedure deemed “life saving'' by the physician. This 
+                                        provision will only be invoked if the person(s) above is unable to be reached.
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppEMTName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppEMTSignedDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName" id="ppNameGuard"></td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <footer><hr></footer>
+
+                                    <!--*************************************************************************************************************************************************-->
+                                    <!--Start of the Progress Reporting Page on the Print Preview Page-->
+                                    <!--*************************************************************************************************************************************************-->
+
+                                    <h3 class="text-center">Progress Reporting</h3>
+                                    <p>
+                                        At LifeStriders we strive to provide services that enhance the lives of individuals in a variety of ways. Please answer the following
+                                        questions to help us design a program that fits the needs of our clients. Thank you.
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            <label for="ppPRquestion1">What lead you to seek therapeutic riding services?</label>
+                                            <p id="ppPRquestion1"></p>
+                                        </li><br>
+                                        <li>
+                                            <label for="ppPRquestion2">The concerns you wanted to address, for the most part, were:</label>                                        
+                                            <p id="ppPRother"></p>
+                                        </li><br>
+                                        <li>
+                                            <label for="ppPRquestion3">When you first came to LifeStriders, how serious were your concerns? (Scale of 1-10)</label>
+                                            <p id="ppPRquestion3"></p>
+                                        </li><br>
+                                        <li>
+                                            <label for="ppPRquestion4">Occurrence of concern(s) before starting therapeutic riding:</label>
+                                            <p id="ppPRquestion4"></p>
+                                        </li><br>
+                                        <li>
+                                            <label for="ppPRquestion5">Frequency of overcoming concern(s) before starting therapeutic riding:</label>
+                                            <p id="ppPRquestion5"></p>
+                                        </li>
+                                    </ol>
+                                    <p>
+                                        <label for="ppPRadditionalComments">Additional comments:</label>
+                                    <p id="ppPRadditionalComments"></p>
+                                    </p>
+                                    <footer><hr></footer>
+
+                                    <!--*************************************************************************************************************************************************-->
+                                    <!--Start of the Consent For Release Form Print Preview Page which is hidden when the form first loads-->
+                                    <!--*************************************************************************************************************************************************-->
+
+                                    <h3 class="text-center">Consent for Release of Information</h3>
+                                    <ul class="list-inline text-center listRowTop listRowLi3Elems">
+                                        <li>
+                                            <label for="ppConsentDoctorName">Doctor's Name:</label>
+                                            <p id="ppConsentDoctorName"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppConsentPartName">Participant's Name:</label>
+                                            <p id="ppConsentPartName"></p>
+                                        </li>
+                                        <li>
+                                            <label for="ppConsentPartDob">Participant's DOB:</label>
+                                            <p id="ppConsentPartDob"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi1Elem">
+                                        <li>
+                                            <label for="ppConsentQuestion3">The Information is to be released to:</label>
+                                            <p id="ppConsentQuestion3"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                        <li>
+                                            <label id="ppConsentMedHistoryL"></label>
+                                            <p id="ppConsentMedHistory"></p>
+                                        </li>
+                                        <li>
+                                            <label id="ppConsentPhysicalTherapyL"></label>
+                                            <p id="ppConsentPhysicalTherapy"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                        <li>
+                                            <label id="ppConsentOccupationalTherapyL"></label>
+                                            <p id="ppConsentOccupationalTherapy"></p>
+                                        </li>
+                                        <li>
+                                            <label id="ppConsentSpeechTherapyL"></label>
+                                            <p id="ppConsentSpeechTherapy"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                        <li>
+                                            <label id="ppConsentClassroomL"></label>
+                                            <p id="ppConsentClassroom"></p>
+                                        </li>
+                                        <li>
+                                            <label id="ppConsentPsychosocialL"></label>
+                                            <p id="ppConsentPsychosocial"></p>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center listRowStandard listRowLi2Elems">
+                                        <li>
+                                            <label id="ppConsentCognitiveL"></label>
+                                            <p id="ppConsentCognitive"></p>
+                                        </li>
+                                        <li>
+                                            <label id="ppConsentOtherL"></label>
+                                            <p id="ppConsentOther"></p>
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        Please send materials to: <br>
+                                        LifeStriders Therapeudic Riding Center<br>
+                                        S11 W29667 Summit Avenue (US HWY 18)<br>
+                                        Waukesha, WI 53188
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppConsentSignedDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Client/Parent/Guardian Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <footer><hr></footer>
+
+                                    <!--*************************************************************************************************************************************************-->
+                                    <!--Start of the PARTICIPATION WAIVER AND GUEST LIABILITY RELEASE AGREEMENT Page on the Print Preview Page-->
+                                    <!--*************************************************************************************************************************************************-->
+
+                                    <h3 class="text-center">PARTICIPATION WAIVER AND GUEST LIABILITY RELEASE AGREEMENT</h3>
+                                    <p>
+                                        As a participant/rider at LifeStriders Therapeutic Riding Center, I acknowledge the risks and potential risks of horseback-riding and equine relate
+                                        activities. (Under the Wisconsin Equine Activity Civil Liability Act [WI Statute 895.481], each participant who engages in an equine activity 
+                                        expressly assumes the risks of engaging in and legal responsibility for injury, loss or damage to person or property resulting from the risk of 
+                                        equine activities) However, I feel that the possible benefits are greater than the risks assumed. I hereby, intending to be legally bound, for 
+                                        myself, my heirs, and assigns, executors or administrators, waive and release forever all claims for damages against LifeStriders, Inc., its 
+                                        Board of Directors, Advisors, Board, Action Committee, Instructors, Therapists, Aids, Volunteers, and/or employees for any and all injuries 
+                                        sustained while participating in the LifeStriders Therapeutic Riding Program. All Volunteers and guests (guests = participants, siblings, parents, 
+                                        other relatives, friends) entering LifeStriders premises understand that they will be in contact with animals, and assume the risk of injury, and 
+                                        that it is possible that I or my guest(s) be bitten, scratched, and/or otherwise injured while on LifeStriders premises. I also understand that                                 
+                                        I or my guest(s) may be exposed to equine and/or other animal illness and disease and that it is also possible that I or my guest(s) could indirectly 
+                                        expose other animals to such illness and disease. My signature to this liability release attests to my, and my guest(s) intent to hold harmless 
+                                        and release from all liability against LifeStriders Inc., its Board of Directors, instructors, therapists, volunteers, and or employees for any 
+                                        and all injuries and or losses I or my guest(s) may sustain, while attending LifeStriders premises.
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppGLRPartName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppGLRPartSignedDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Participant's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="sign" id="ppGLRGuardSignBox" hidden>
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppGLRGuardianName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppGLRGuardianSignedDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Parent/Guardian's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <h3>Photo Release</h3>
+                                    <p>
+                                        I
+                                    </p>
+                                    <label><input  id="ppGLROptionDo" type="checkbox" value="do" >Do</label><br>
+                                    <label><input  id="ppGLROptionDoNot" type="checkbox" value="doNot">Do Not</label>
+                                    <br>
+                                    <p>
+                                        consent to and authorize the use and reproduction by LifeStriders of any and all photographs and any other 
+                                        audio/visual materials taken of me for promotional material, educational activities, exhibitions or for any other use for in benefit of tie program.
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppGLRPhotoName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppGLRPhotoSignedDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName" id="ppGLRPhotoGuardName"></td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <footer><hr></footer>
+
+                                    <!--*************************************************************************************************************************************************-->
+                                    <!--Start of the Safety Rules Page on the Print Preview Page-->
+                                    <!--*************************************************************************************************************************************************-->
+
+                                    <h3 class="text-center">Safety Rules</h3>
+                                    <p>
+                                        LifeStriders strives to provide a safe riding experience for all of our participants and requires that all participants, families and volunteers abide 
+                                        by our safety regulations. Please review and sign our safety rules.
+                                    </p>
+                                    <ul>
+                                        <li>Please reserve parking in front of the building for Riders and Participants. Volunteer and Staff parking is available along the side and rear of the building.</li>
+                                        <li>To avoid traffic jams in the driveways please arrive earlier than your designated class time.</li>
+                                        <li>Parents/caregivers must keep siblings, friends and relatives of the rider in the Viewing Areas.</li>
+                                        <li>Please do not bring pets.</li>
+                                        <li>When a volunteer escorts a rider to the parents/caregiver, upon class completion, the parents/caregivers need to contain the rider to the Viewing Areas</li>
+                                        <li>Parents/caregivers will be solely responsible for their rider before and after arena/therapeutic riding time is completed</li>
+                                        <li>Parents/caregivers please walk to the gate to meet your rider after they have dismounted the horse. Once riders are done with arena/therapeutic riding time, parents/caregivers are asked to please help their rider with feeding treats to the horses.</li>
+                                        <li>Parents/caregivers need to remain on LifeStriders premises during therapeutic riding and/or Social skills group sessions.</li>
+                                        <li>For training and safety purposes, we ask that volunteers and participants NEVER HAND FEED THE HORSES.</li>
+                                        <li>Hitting or kicking of horses is NEVER allowed, and will result in dismissal from the program.</li>
+                                        <li>NO guns, knives, weapons or violence of any kind are allowed on LifeStriders premises. This is a zero tolerance rule. Violators will be asked to leave and not allowed to return.</li>
+                                        <li>Please do not climb or lean on any fences, gates or doors.</li>
+                                        <li>No one is to enter the Barn Manager’s apartment or other buildings on the property, other than the barn.</li>
+                                        <li>In order to ensure the safest riding conditions, we ask that children and visitors refrain from screaming, running, or ball playing on the premises.</li>
+                                        <li>Only the rider and staff/volunteers are allowed in the teaching arena, unless parent or health care professional presence is requested by instructor.</li>
+                                        <li>Please keep the guidance given to riders in alignment with the therapeutic riding instructor’s directions.</li>
+                                        <h4>Attire</h4>
+                                        <li>A helmet must be worn at all times during the lesson hour.</li>
+                                        <li>Riders MUST wear long pants to ride, jeans are preferred.</li>
+                                        <li>All Riders must wear shoes. No one will be allowed to ride or be around the horses if they are bare foot or in sandals. We prefer the shoes have a ¼” heel rather than tennis-type shoes. Volunteers must wear sturdy non-opened toed shoes. We do not recommend steel-toed shoes.</li>
+                                        <li>Volunteers- Please refrain from wearing clothes that is too tight or revealing- No tank tops, bra tops etc.</li>
+                                    </ul>
+                                    <p>
+                                        I have read and understand LifeStriders Safety Policy
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppSafetyRulesPartName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppSafetyRulesPartSignDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Participant's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="sign" id="ppSafetyRulesGuardSignBox" hidden>
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppSafetyRulesGuardName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppSafetyRulesGuardSignDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Parent/Guardian's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                    <footer><hr></footer>
+                                    <!--*************************************************************************************************************************************************-->
+                                    <!--Start of the DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES Page on the Print Preview Page-->
+                                    <!--*************************************************************************************************************************************************-->
+
+                                    <h3 class="text-center">DISMISSAL OF VOLUNTEERS AND GUESTS FROM CENTER ACTIVITIES</h3>
+                                    <p>
+                                        LifeStriders relies greatly on volunteers as important members of the team who provide services to and assist our
+                                        clients. We also recognize the extreme importance of the safety and well-being of our clients, volunteers, staff,
+                                        guests and animals. All Volunteers and guests (guests = participants, siblings, parents, other relatives, friends) are
+                                        expected to follow LifeStriders rules and policies and may not engage in disruptive, unsafe or inappropriate
+                                        behavior. In the event a volunteer or guest does not comply, the following actions may be taken:
+                                    </p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <h4>Level 1 : Verbal Warning</h4>
+                                            <p>Breaking of LifeStriders rules and /or policies and procedures may be followed
+                                                by a verbal warning from LifeStriders Staff to be documented in the incident report book. 
+                                            </p>
+                                        </li>
+                                        <li class="list-group-item"><h4>Level 2 : Written Warning</h4>
+                                            <p>Breaking of LifeStriders rules and/or policies and procedures for a second time will be followed
+                                                by a Personnel/Staff meeting for discussion regarding the infraction. The purpose of the meeting
+                                                is to determine the exact reason the infraction occurred for second time and discuss with the
+                                                volunteer/guest how to avoid the circumstance ever occurring again. This meeting will be
+                                                documented and placed in the incident report book.
+                                            </p>
+                                        </li>
+                                        <li class="list-group-item"><h4>Level 3 : Dismissal from Organization</h4>
+                                            <p>Immediate dismissal from the property and organization will occur for:</p>
+                                            <ol>
+                                                <li>Endangering the safety of others</li>
+                                                <li>Inappropriate use of the facilities, mailing lists or monies</li>
+                                                <li>Disruptive or abusive behavior to the animals or individuals at LifeStriders</li>
+                                                <li>Repeated disregard of the organizations rules, policies and procedures</li>
+                                                <li>Possession of a weapon, illegal drugs or a paraphernalia</li>
+                                                <li>Being under the influence of alcohol or drugs</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        I have read and understand the policies and program rules by which LifeStriders operates. By signing below, I
+                                        indicate my willingness to abide by these rules and policies. I further understand that failure to comply with these
+                                        policies and rules will result in discharge from the program.
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppDismisalPartName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppDismisalPartSignDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Participant's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="sign" id="ppDismisalGuardSignBox" hidden>
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppDismisalGuardName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppDismisalGuardSignDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Parent/Guardian's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                    <footer><hr></footer>
+                                    <!--*************************************************************************************************************************************************-->
+                                    <!--Start of the LifeStriders Make-up and Payment Policy Page on the Print Preview Page-->
+                                    <!--*************************************************************************************************************************************************-->
+
+                                    <h3 class="text-center">
+                                        LifeStriders Make-up and Payment Policy
+                                    </h3>
+                                    <p>
+                                        LifeStriders is now accepting Major Credit Cards.
+                                        PAYMENT POLICY: LifeStriders is a non-profit organization that is committed to offering accessible therapeutic services to our community. 
+                                        We raise funds to offset the cost for parents or participants paying out of pocket and who are not receiving any form of assistance through 
+                                        county agencies, grants, funds etc. One of the ways we are able to keep our prices significantly below going rates is by minimizing accounting 
+                                        costs. LifeStriders charges $30.00/per therapeutic hour if paid for an entire session in advance, or $65.00/per therapeutic hour if paid one (1) 
+                                        week past the session start date, if the participant receives any source of outside funding, or if the participant chooses to stop after 
+                                        starting the session. We ask that the entire session be paid in advance to reserve a spot.
+                                        ** Billing County Agencies - If you or your child has a case with Milwaukee County and billing has been paid through them in the past, we will 
+                                        continue to bill accordingly unless you tell LifeStriders otherwise. Parents/guardians must email/contact us of any changes in billing agencies, 
+                                        case managers or responsible parties in advance. If payment is not received, the parent(s)/guardian(s) are responsible for any outstanding fees.
+                                        ** Billing Insurance - LifeStriders will collect payment for all participants at the out of pocket rates to reserve the participants spot and 
+                                        pay for sessions cost up front. LifeStriders will bill your insurance agency at $200 per therapeutic hour. If and/or when insurance remits 
+                                        payment to LifeStriders for dates of service, LifeStriders will reimburse any out of pocket payments for previously paid dates of service. 
+                                        Deductible, co-pay’s and co-insurance payments are the responsibility of the named insured card holder/parent(s)/guardian(s), and previous out 
+                                        of pocket payments will be credited towards patient responsibility balances. If billing has been paid through insurance in the past, LifeStriders 
+                                        will continue to bill the same plan unless you tell LifeStriders otherwise. Parent(s)/guardian(s) must email/contact us of any changes in 
+                                        insurance plans, or responsible parties in advance. If payment is not received from insurance, the parent(s)/guardian(s) are responsible for 
+                                        any outstanding fees at the out of pocket rates.
+                                    </p>
+                                    <p>
+                                        I have read and understand the make-up and payment policies by which LifeStriders operates. By signing below, I indicate my willingness to abide by 
+                                        these rules and policies.
+                                    </p>
+                                    <table class="sign">
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppPaymentPartName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppPaymentPartSignDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Participant's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="sign" id="ppPaymentGuardSignBox" hidden>
+                                        <thead class="thSign">
+                                            <tr>
+                                                <td class="tdSignName" id="ppPaymentGuardName"></td>
+                                                <td class="tdSign">X</td>
+                                                <td class="tdSignDate" id="ppPaymentGuardSignDate"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="tdSignName">Parent/Guardian's Name</td>
+                                                <td class="tdSign">Signature</td>
+                                                <td class="tdSignDate">Date</td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                    <footer><hr></footer>
+                                    <div class="row no-print">
+                                        <!-- Button trigger modal -->
+                                        <button id="subModal2" type="button" class="btn btn-danger btn-lg bottomMargin" data-toggle="modal" data-target="#myModal2">
+                                            <span class="glyphicon glyphicon-modal-window">
+                                                Print/Save
+                                            </span>
+                                        </button>
+                                        <button id="edit" type="button" class="btn btn-warning btn-lg bottomMargin">
+                                            <span class="glyphicon glyphicon-edit">
+                                                Edit
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
+        <script src="Scripts/socialForm.js" type="text/javascript"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+
+</html>
