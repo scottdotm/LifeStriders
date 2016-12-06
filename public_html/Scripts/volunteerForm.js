@@ -1,12 +1,23 @@
-/* global volCheckList, minorCheckList */
-
 //JavaScript Document
 //Scott M.
 //10/13/2016
 
+/*
+ * JavaScript file for LifeStriders - VolunteerForm
+ * This handles all custom JS for Volunteer Form, also uses jquery.PrintArea
+ */
+
 $(document).ready(function (e) {
+     /*   
+      * Variables to be used throughout this JS file.
+      * dob = Date of Birth of Volunteer
+      * age = age of volunteer
+      * date = The date of when the browser navigated to this page
+      * checklist = Array of checklist items
+      */
      var dob = null;
      var age = null;
+     var td = null;
      var date = new Date();
      var checklist = [];
      /*   
@@ -18,16 +29,30 @@ $(document).ready(function (e) {
           this.name = "UserException";
      }
      ;
-     //Determines how old a user is
+     /*   
+      * When the dob field is entered and the user navigates away from the form field.
+      * 
+      *   dobConcat - This is used to concat the date object to just take its year, 
+      * to be used to figure out how old a user is by subtracting the browsers date from that of the volunteers Date of Birth
+      *   x,y,z - These are retrieved from the browsers date object, we use these to display the actual date of when the form was filled out.
+      */
      $('#dob').blur(function () {
           dob = $('#dob').val();
           var dobConcat = dob.substring(0, 4);
+          var z = date.getMonth() + 1;
+          var y = date.getDate();
           var x = date.getFullYear();
+          td = z + "/" + y + "/" + x;
+          //Date of signature for Photo Release
+          $('#releaseDate').html(td);
+          //Age of Volunteer
           age = x - dobConcat;
-          if (age <= 18) {
+          //If volunteer is less than 18 then the user needs Parent/Guardian input fields.
+          if (age < 18) {
                $('#parentGuardianInfo').html("<p>Parent Guardian Name and Address</p><div class='row'><div class='col-md-8'><div class='form-group'><label for='parentAddress1'>*</label><input type='text' class='form-control' id='parentAddress1' placeholder='Address..'><div class='help-block with-errors'></div></div></div><div class='col-md-4'><div class='form-group'><label for='parentPhone1'>Phone Number:</label><input type='tel' class='form-control' id='parentPhone1' placeholder='Phone Number..'><div class='help-block with-errors'></div></div></div></div><div class='row'><div class='col-md-8'><div class='form-group'><label for='parentAddress2'>*</label><input type='text' class='form-control' id='parentAddress2' placeholder='Address..'><div class='help-block with-errors'></div></div></div><div class='col-md-4'><div class='form-group'><label for='parentPhone2'>Phone Number:</label><input type='tel' class='form-control' id='parentPhone2' placeholder='Phone Number..'><div class='help-block with-errors'></div></div></div></div>");
           }
      });
+     //Validation check for Volunteer's Age - This will not allow a user to pass the form to the PrintPreview screen unless we have there Date of Birth.
      $('#subModal').click(function () {
           if (age <= 0 || age >= 115 || age === null) {
                $('#printPreviewButton').prop('disabled', true);
@@ -37,8 +62,6 @@ $(document).ready(function (e) {
                $('#error').remove();
           }
      });
-
-
      //Initially Hide printPreview
      $('#printPreviewVolunteerFormOVER').hide();
      //When user clicks printPreview button on form
@@ -84,8 +107,13 @@ $(document).ready(function (e) {
 
                ];
 
-               //Age logic to determine if a user is > , or < 18 to determine what
-               //Fields need to be displayed to user
+               /*
+                * Age logic to determine if a user is > , or < 18 to determine what
+                * Check for Volunteer's Age, and display fields for normal Volunteer (age>18)
+                * '#formfield' - Fields for Guardian/Volunteer
+                * checklist - Customized for Guardian/Volunteer based on age of applicant.
+                * dismissalfields - Volunteer Signature required.
+                */
                if (age >= 18) {
                     $('#formfield').push(
                             {label: "Parent Address One: ", display: $('#parentAddress1').val(), id: '#PAO'},
@@ -139,19 +167,26 @@ $(document).ready(function (e) {
                          "No weapons, illegal drugs or paraphernalia policy",
                          "Clothing"
                     ];
+                    /*
+                     * Pull checklist items out of the Array and display them to the user inside of the volunteerChecklist.
+                     */
                     for (var i = 0, len = checklist.length; i < len; i++) {
-                         if (checklist[i] === "<h2>Checklist (Continued)</h2>"){
+                         if (checklist[i] === "<h2>Checklist (Continued)</h2>") {
                               $('#volunteerChecklist').append(checklist[i]);
-                         } else if (checklist[i]!== "<h2>Checklist (Continued)</h2>") {
-                         $('#volunteerChecklist').append("<p><div class='field row'>______<div class='box'></div>      " + checklist[i] + "</div></p>");
+                         } else if (checklist[i] !== "<h2>Checklist (Continued)</h2>") {
+                              $('#volunteerChecklist').append("<p><div class='field row'>______<div class='box'></div>      " + checklist[i] + "</div></p>");
+                         }
                     }
-                    }
+                    /*
+                     * Check for Volunteer's Age, and display fields if user is less than 18
+                     * checklist - Customized checklist for minors
+                     * dismisalfield - Need Guardian Signature as well as minors for Volunteer applicant.
+                     */
                } else if (age < 18) {
                     $('#dismissalfield').append("<hr id='signHr1' class='divider'><label>Volunteer's Full Name</label> <br>");
                     $('#dismissalfield').append("<hr id='signHr2' class='divider'><label>Volunteer's Signature</label><br>");
                     $('#dismissalfield').append("<hr id='signHr1' class='divider'><label>Guardian's Full Name</label> <br>");
                     $('#dismissalfield').append("<hr id='signHr2' class='divider'><label>Guardian's Signature</label>");
-
                     checklist = [
                          "Tour of facility",
                          "Fire extinguishers, first aid kits, and emergency number locations",
@@ -182,15 +217,16 @@ $(document).ready(function (e) {
                          "How to sign up and/or cancel volunteer times",
                          "No Weapons, illegal drugs or paraphernalia policy",
                          "Clothing",
-                         //
                          "Communication between instructor and volunteers about comfort in job being done"
                     ];
                     for (i = 0, len = checklist.length; i < len; i++) {
                          $('#minorChecklist').append("<p><div class='field row'>______<div class='box'></div>      " + checklist[i] + "</div></p>");
                     }
                } else {
+                    //If something is wrong with the date (such as it not being avalible due to change in logic)
+                    //We throw an exception - 
                     console.log(age);
-                    throw new UserException("Didn't work");
+                    throw new UserException("Sorry Something Went Wrong, check browser Console.");
                }
                ;
                /*
@@ -220,13 +256,15 @@ $(document).ready(function (e) {
                 * div in the HTML.
                 */
                for (i = 0, len = formfield.length; i < len; i++) {
-                    $('#printPreviewDisplay').append("<li class='list-group-item' title='"+ formfield.map(getLabel)[i] +"'>" + "<strong>" + formfield.map(getLabel)[i] + "</strong>" + formfield.map(getDisplay)[i] + "</li>");
+                    $('#printPreviewDisplay').append("<li class='list-group-item' title='" + formfield.map(getLabel)[i] + "'>" + "<strong>" + formfield.map(getLabel)[i] + "</strong>" + formfield.map(getDisplay)[i] + "</li>");
                     $(formfield.map(getId)[i]).html(formfield.map(getLabel)[i] + formfield.map(getDisplay)[i]);
                }
+               $('#liabilityDate').html('<p><b>Todays Date : </b>'+td+'</p>');
                //Empty all arrays
                formfield = [];
                checklist = [];
           } catch (err) {
+               //Throw error message when Form is submited to PrintPreview Screen (Generic Error).
                alert(err.message);
           }
           $('html,body').scrollTop(0);
@@ -234,6 +272,7 @@ $(document).ready(function (e) {
           $('#printPreviewVolunteerFormOVER').show();
      });
      //Print Button from Print Preview
+     //Uses jquery.PrintArea
      $("#printButton").click(function () {
           var mode = 'iframe';
           var close = mode === "popup";
