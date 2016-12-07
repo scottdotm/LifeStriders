@@ -12,6 +12,13 @@ $(document).ready(function (e) {
     $('html,body').scrollTop(0);
     // Hides the Print Preview Half of this Form
     $('#printPreviewReleaseFormOVER').hide();
+    
+    $('#edit').click(function () {
+        $('#printPreviewReleaseFormOVER').hide();
+        $('html,body').scrollTop(0);
+        $('#formReleaseForm').show();
+    });
+    
     // Brings up the hidden half of the page with the fields filled out for print preview
     $('#printPreviewButton').click(function (e) {
         // Formats the date as mm-dd-yyyy
@@ -93,7 +100,7 @@ $(document).ready(function (e) {
     });
     
     
-    $("#printButton").click(function () {
+    $("#printButtonCR").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
         var options = {mode: mode, popClose: close};

@@ -12,7 +12,12 @@ $(document).ready(function (e) {
     $('html,body').scrollTop(0);
     // Hides the Print Preview Half of this Form
     $('#printPreviewMedicalHistoryFormOVER').hide();
-
+    
+    $('#edit').click(function () {
+        $('#printPreviewMedicalHistoryFormOVER').hide();
+        $('html,body').scrollTop(0);
+        $('#formMedicalHistoryForm').show();
+    });
     /* toggles the comment text area on the health history*/
     $('.healthCheck').change(function () {
         if ($(this).is(':checked')) {
@@ -324,7 +329,7 @@ $(document).ready(function (e) {
     });
 
 
-    $("#printButton").click(function () {
+    $("#printButtonMH").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
         var options = {mode: mode, popClose: close};

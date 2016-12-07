@@ -12,6 +12,13 @@ $(document).ready(function (e) {
     $('html,body').scrollTop(0);
     // Hides the Print Preview Half of this Form
     $('#printPreviewPhysicianStatementFormOVER').hide();
+    
+    $('#edit').click(function () {
+        $('#printPreviewPhysicianStatementFormOVER').hide();
+        $('html,body').scrollTop(0);
+        $('#formPhysicianStatementForm').show();
+    });
+    
     // Brings up the hidden half of the page with the fields filled out for print preview
     $('#printPreviewButton').click(function (e) {
         // Formats the date as mm-dd-yyyy
@@ -36,7 +43,7 @@ $(document).ready(function (e) {
         $('#ppPhysicianStatementPhysicianLicense').html($('#physicianStatementPhysicianLicense').val());
         
         // This prints out the date on the form to be signed
-        $('#ppPhysicianStatementSignedDate').html(todaysdate)
+        $('#ppPhysicianStatementSignedDate').html(todaysdate);
         
         
  //-----------------------------------------------------------------------
@@ -50,7 +57,7 @@ $(document).ready(function (e) {
     });
 
     // Sends all items in the print area to the printer
-    $("#printButton").click(function () {
+    $("#printButtonPS").click(function () {
         var mode = 'iframe';
         var close = mode === "popup";
         var options = {mode: mode, popClose: close};
