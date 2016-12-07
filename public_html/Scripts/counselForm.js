@@ -1,7 +1,5 @@
 //JavaScript Document
-
 //Hide one div and show a div. tado
-
 $(document).ready(function (e) {
     
     var medId = 1;
@@ -48,7 +46,30 @@ $(document).ready(function (e) {
                                      ', How Long: ' + $('#medication-'+i+'-duration').val());
         }
         
-        
+		$("#pMedCons").empty();
+		$(".medCon").each(function(i, obj){
+			if(this.checked){
+				$("#pMedCons").append(" "+ $('#'+this.id).val() +",");
+			}
+		});
+		$("#pMedConsNot").empty();
+		$(".medCon").each(function(i, obj){
+			if(!this.checked){
+				$("#pMedConsNot").append(" "+ $('#'+ this.id).val() + ",");
+			}
+		});
+		
+		$("#pSec13").empty();
+		$('#medSec13 .form-control').each(function(i, obj){
+			//$("#pSec13").append($('#'+ this.id).attr('title'));
+			$("#pSec13").append("<strong>" + $('#'+ this.id).attr('title') + ":</strong> "+ $('#'+ this.id + ' option:selected' ).text()+" ");
+			if(i%2 === 1){
+				$("#pSec13").append('<br>');
+			}else{
+				$("#pSec13").append();
+			}
+			
+		});
 
         $('#printPreviewTD').html($('#todayDate').val());
         $('#printPreviewFN').html($('#firstName').val());
