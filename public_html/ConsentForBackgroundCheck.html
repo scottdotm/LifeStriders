@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title>Consent for Background Check Form</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+          <link href="Styles/lifestriders.css" rel="stylesheet" type="text/css"/>
+          <link rel="shortcut icon" href="http://www.lifestriders.org/favicon.ico">
+     </head>
+     <body>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h2 class="modal-title" id="myModalLabel">Submitting Filled Out Form</h2>
+                         </div>
+                         <div class="modal-body">
+                              <p>
+                                   You are submitting the filed out form to the print preview
+                                   screen, this screen resembles what the printout form will
+                                   look like (with filled out information).  After viewing
+                                   this screen, please click "Print" to be taken to your browsers
+                                   print screen.
+                              </p>
+                              <br>
+                              <div id='error'>
+                              </div>
+                         </div>
+                         <div class="modal-footer">
+                              <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-remove-sign" >
+                                        Close
+                                   </span>
+                              </button>
+                              <!-- Button class used for import of glyphicon,
+                              this will need to be changed when the user uses
+                              Internet Explorer due to input/button conflicts-->
+                              <button type="button" id="printPreviewButton" class="btn btn-danger" value="Submit" data-dismiss="modal">
+                                   <span class="glyphicon glyphicon-ok-sign">
+                                        Print Preview
+                                   </span>
+                              </button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!-- /Modal -->
+          <div class="container" id="wrapperOverall">
+               <div class="container row pageWrapper">
+
+                    <div id ="formBackgroundCheckForm" class="well">
+                         <h1 class="text-center"> Consent For Background Check </h1>
+                         <div class="row headElementsDiv">
+
+                              <div class="col-md-8 lsH2Div">  
+                                   <h2>LifeStriders</h1>
+                              </div>
+                              <div class="col-md-1"> </div>
+                              <div class="col-md-2 text-right">
+                                   Phone: 262.309.9297 <br>
+                                   Fax: 866.404.3105 <br> 
+                                   counseling@lifestriders.org <br>
+
+                                   <br>
+
+                                   Sll W29667 Summit Avenue (US HWY 18) <br>
+                                   Waukesha, WI 53188 <br>
+
+                              </div>
+                         </div>
+                         <div class='row'>
+                              <div class='text-center'>
+                                   <h2>THIS BACKGROUND CHECK MUST BE COMPLETED BEFORE VOLUNTEER ACTIVITY</h2>
+                                   <h3>
+                                        CONSENT TO PERFORM CRIMINAL HISTORY/BACKGROUND CHECK IN
+                                        COMPLIANCE WITH THE FCRA (FAIR CREDIT REPORTING ACT)
+                                   </h3>
+                              </div>
+                              <hr>
+                              <form id="backgroundCheckForm" method="post" >
+                                   <div class='row'>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="firstName">First Name: </label>
+                                                  <input name="firstName" type="text" class="form-control" id="firstName" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="middleName">Middle Name: </label>
+                                                  <input name="middleName" type="text" class="form-control" id="middleName" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="lastName">Last Name: </label>
+                                                  <input name="lastName" type="text" class="form-control" id="lastName" required>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <hr>
+                                   <div class='row'>
+                                        <center><h4 class='boldElement'>If you've had Former Name(s) please provide all of these names below.</h4></center>
+                                        <div class='col-md-12'>
+                                             <div class="form-group">
+                                                  <label for="formerName">Former Name(s): </label>
+                                                  <input name="formerName" type="text" class="form-control" id="formerName" required>
+                                             </div>
+                                        </div>
+
+                                        <center><h4 class='boldElement'>Dates used</h4></center>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="startNameDate">Start Date: </label>
+                                                  <input type="date" class="form-control" id="startNameDate" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="endNameDate">End Date: </label>
+                                                  <input type="date" class="form-control" id="endNameDate" required>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <hr>
+                                   <div class='row'>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="currentAddress">Current Street Address: </label>
+                                                  <input type="text" class="form-control" id="currentAddress" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="currentDate">Current Address Since: </label>
+                                                  <input type="date" class="form-control" id="currentDate" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="currentCity">Current City: </label>
+                                                  <input type="text" class="form-control" id="currentCity" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="currentState">Current State: </label>
+                                                  <input type="text" class="form-control" id="currentState" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="currentZip">Current Zip: </label>
+                                                  <input type="text" class="form-control" id="currentZip" required>
+                                             </div>
+                                        </div>
+                                        
+                                   </div>
+
+                                   <hr>
+
+                                   <div class='row'>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="previousAddress">Previous Street Address: </label>
+                                                  <input type="text" class="form-control" id="previousAddress" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="previousDate">Previous Address Since: </label>
+                                                  <input type="date" class="form-control" id="previousDate" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="previousCity">Previous City: </label>
+                                                  <input type="text" class="form-control" id="previousCity" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="previousState">Previous State: </label>
+                                                  <input type="text" class="form-control" id="previousState" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-4'>
+                                             <div class="form-group">
+                                                  <label for="previousZip">Previous Zip: </label>
+                                                  <input type="text" class="form-control" id="previousZip" required>
+                                             </div>
+                                        </div>
+                                        
+                                   </div>
+
+                                   <hr>
+
+                                   <div class='row'>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="birthDate">Date Of Birth: </label>
+                                                  <input type="date" class="form-control" id="birthDate" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="phone">Phone Number: </label>
+                                                  <input type="tel" class="form-control" id="phone" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-12'>
+                                             <div class="form-group">
+                                                  <label for="ssn">Social Security Number: </label>
+                                                  <input type="number" class="form-control" id="ssn" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="dln">Drivers License Number: </label>
+                                                  <input type="text" class="form-control" id="dln" required>
+                                             </div>
+                                        </div>
+                                        <div class='col-md-6'>
+                                             <div class="form-group">
+                                                  <label for="dlnState">State: </label>
+                                                  <input type="text" class="form-control" id="dlnState" required>
+                                             </div>
+                                        </div>
+                                   </div>
+
+                                   <!-- Button trigger modal -->
+                                   <button id="subModal" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
+                                        <span class="glyphicon glyphicon-modal-window">
+                                             Submit
+                                        </span>
+                                   </button>
+                              </form>
+                         </div>
+                    </div>
+               </div>
+               <div class="container row pageWrapper">
+
+                    <div id="printPreviewBackgroundFormOVER"  class="container printPreviewOVER row"> 
+                         <div id="printPreviewBackgroundFormForm" class="printPreviewDiv col-md-12 container">
+                              <div class="row">
+                                   <div id="printPreviewBackgroundForm" class=" col-md-12 container">
+                                        <div class=" row" style="margin-top: 15px;">
+                                             <div class="row headElementsDiv">
+
+                                                  <div class="col-md-8 lsH2Div">  
+                                                       <h2>LifeStriders</h1>
+                                                  </div>
+                                                  <div class="col-md-1"> </div>
+                                                  <div class="col-md-2 text-right">
+                                                       Phone: 262.309.9297 <br>
+                                                       Fax: 866.404.3105 <br> 
+                                                       counseling@lifestriders.org <br>
+
+                                                       <br>
+
+                                                       Sll W29667 Summit Avenue (US HWY 18) <br>
+                                                       Waukesha, WI 53188 <br>
+
+                                                  </div>
+                                             </div>
+                                             <br>
+                                             <h2>Background Check Information</h2>
+                                             <ul class='list-group' id='printPreviewDisplay'>
+                                             </ul>
+                                             <center>
+                                                  <h3>
+                                                       Consent For Background Check
+                                                  </h3>
+                                             
+                                             <p>
+                                                  The information contained in this application is correct to the best of my knowledge. I hereby authorize
+                                                  and its designated agents and representatives to conduct a comprehensive review of my background
+                                                  causing a consumer report and/or an investigative consumer report to be generated for employment
+                                                  and/or volunteer purposes. I understand that the scope of the consumer report/ investigative consumer
+                                                  report may include, but is not limited to the following areas: current and previous residences;
+                                                  employment history, civil and criminal history records from any criminal justice agency in any or all
+                                                  federal, state, county jurisdictions; driving records, and any other public records. I further authorize any
+                                                  individual, company, firm, corporation, or public agency to divulge any and all information, verbal or
+                                                  written, pertaining to me, to or its agents. I further authorize the complete release of any records or
+                                                  data pertaining to me which the individual, company, firm, corporation, or public agency may have, to
+                                                  include information or data received from other sources. and its designated agents and representatives
+                                                  shall maintain all information received from this authorization in a confidential manner in order to
+                                                  protect the applicants personal information, including, but not limited to, addresses, numbers, and dates
+                                                  of birth. 
+                                             </p>
+                                             
+                                             <br>
+                                             <div class='row'>
+                                                  <div class='col-md-12'>
+                                                       <h3>Signature: _____________________________________________</h3> 
+                                                  </div>
+                                             </div>
+                                             </center>
+                                             <hr>
+                                        </div>
+                                   </div>
+                                   <input class="btn btn-danger btn-lg" type="submit" id="printButton" value="Print">
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="Scripts/jquery.PrintArea.js" type="text/javascript"></script>
+          <script src="Scripts/backgroundCheckForm.js" type="text/javascript"></script>
+     </body>
+</html>

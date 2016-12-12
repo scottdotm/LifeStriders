@@ -20,6 +20,7 @@ $(document).ready(function (e) {
      var td = null;
      var date = new Date();
      var checklist = [];
+     
      /*   
       * UserException can be used to throw custom exceptions in Javascript,
       * this helped myself with debuging the logic located within this Javascript file.
@@ -52,12 +53,15 @@ $(document).ready(function (e) {
                $('#parentGuardianInfo').html("<p>Parent Guardian Name and Address</p><div class='row'><div class='col-md-8'><div class='form-group'><label for='parentAddress1'>*</label><input type='text' class='form-control' id='parentAddress1' placeholder='Address..'><div class='help-block with-errors'></div></div></div><div class='col-md-4'><div class='form-group'><label for='parentPhone1'>Phone Number:</label><input type='tel' class='form-control' id='parentPhone1' placeholder='Phone Number..'><div class='help-block with-errors'></div></div></div></div><div class='row'><div class='col-md-8'><div class='form-group'><label for='parentAddress2'>*</label><input type='text' class='form-control' id='parentAddress2' placeholder='Address..'><div class='help-block with-errors'></div></div></div><div class='col-md-4'><div class='form-group'><label for='parentPhone2'>Phone Number:</label><input type='tel' class='form-control' id='parentPhone2' placeholder='Phone Number..'><div class='help-block with-errors'></div></div></div></div>");
           }
      });
+     $('#enablePrint2').click(function(){
+       $('#printButtonCF').prop('disabled',false); 
+    });
      //Validation check for Volunteer's Age - This will not allow a user to pass the form to the PrintPreview screen unless we have there Date of Birth.
      $('#subModal').click(function () {
           if (age <= 0 || age >= 115 || age === null) {
                $('#printPreviewButton').prop('disabled', true);
                $('#error').html("<div class='alert alert-danger' role='alert'> There seems to be an error with your age. </div>");
-          } else {
+          } else  {
                $('#printPreviewButton').prop('disabled', false);
                $('#error').remove();
           }
@@ -273,7 +277,7 @@ $(document).ready(function (e) {
      });
      //Print Button from Print Preview
      //Uses jquery.PrintArea
-     $("#printButton").click(function () {
+     $("#printButtonCF").click(function () {
           var mode = 'iframe';
           var close = mode === "popup";
           var options = {mode: mode, popClose: close};

@@ -48,6 +48,55 @@
                </div>
           </div>
           <!-- /Modal -->
+          <!-- Modal2 -->
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h2 class="modal-title" id="myModalLabel2"> Print Or Save Your Document </h2>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            You're Almost Done!
+                        </p>
+                        <ol>
+                            <li> There is one more form your Volunteer needs to fill out and sign.</li>
+                            <li> Click on the blue Consent For Background Check Form button and fill out and print/save the document. </li>
+                            <li> Return here and click the red print / save button. </li>
+                            <li> Make Sure to sign all forms where indicated. </li>
+                            <li> Produce all signed forms to LifeStriders. </li>
+                        </ol>
+                        <br>
+                        <div id='error'>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="cancel" type="button" class="btn btn-warning" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove-sign" >
+                                Close
+                            </span>
+                        </button>
+
+                        <a href="ConsentForBackgroundCheck.html" target="_blank" class="btn btn-info" id="enablePrint2">
+                            <span class="glyphicon glyphicon-edit">
+                                Consent For Background Check Form
+                            </span>
+                        </a>
+
+                        <!-- Button class used for import of glyphicon,
+                        this will need to be changed when the user uses
+                        Internet Explorer due to input/button conflicts-->
+                        <button type="button" id="printButtonCF" class="btn btn-danger" value="Submit" data-dismiss="modal" disabled>
+                            <span class="glyphicon glyphicon-ok-sign">
+                                Print / Save
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- /Modal2 -->
           <div class="container wrapperOverall">
 
                <div class="container row pageWrapper">
@@ -703,8 +752,13 @@
                                         </div>
                                    </div>
 
-                              </div>  
-                              <center><input title='Submit to Browser Print' class="text-center btn btn-danger btn-lg" type="submit" id="printButton" value="Print"></center>
+                              </div>
+                              <button  type="button" class="btn btn-danger btn-lg bottomMargin leftMarginCF" data-toggle="modal" data-target="#myModal2">
+                                   <span class="glyphicon glyphicon-modal-window">
+                                        Save / Print
+                                   </span>
+                              </button>
+                              
                          </div>
                     </div>
                </div>
